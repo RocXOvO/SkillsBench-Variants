@@ -3,9 +3,7 @@
 
 ## Experimental Setup
 
-We evaluate SkillEvolver ([Zhang et al., 2026](https://arxiv.org/abs/2605.10500)), SPARK ([Zhou et al., 2026](https://arxiv.org/abs/2605.09192)), and CoEvoSkills ([Zhang et al., 2026](https://arxiv.org/abs/2604.01687)) on SkillsBench ([Li et al., 2026](https://arxiv.org/abs/2602.12670)), with two runs per method. Each run pairs an execution using the generated or evolved skill with a no-skill execution of the same task. Both runs of each method use the same task set: 81 tasks for SkillEvolver, 84 for SPARK, and 85 for CoEvoSkills. For CoEvoSkills, we take the intersection of the two completed task sets, removing the additional `mhc-layer-impl` task from the first run.
-
-All six runs use Codex with GPT-5.5 and medium reasoning effort. SkillEvolver uses the ChatGPT subscription channel in both runs, SPARK uses the OpenLux API in both runs, and CoEvoSkills uses the subscription channel in run 1 and OpenLux in run 2. Each method follows its own skill-generation procedure. SPARK produces skill artifacts for 43/84 and 41/84 tasks; tasks without a generated artifact remain in the evaluation as no-skill executions. For CoEvoSkills run 2, duplicate evaluation records are resolved after collection by selecting the latest completed valid pair for each task, preserving the baseline and evolved results from the same pair.
+We evaluate SkillEvolver ([Zhang et al., 2026](https://arxiv.org/abs/2605.10500)), SPARK ([Zhou et al., 2026](https://arxiv.org/abs/2605.09192)), and CoEvoSkills ([Zhang et al., 2026](https://arxiv.org/abs/2604.01687)) on SkillsBench ([Li et al., 2026](https://arxiv.org/abs/2602.12670)), with two runs per method. Each run pairs an execution using the generated or evolved skill with a no-skill execution of the same task. Both runs of each method use the same task set: 81 tasks for SkillEvolver, 84 for SPARK, and 85 for CoEvoSkills.
 
 We report mean verifier reward on a 0–100 scale and the mean within-task difference between the skill and no-skill conditions. For a run with $N$ tasks, the paired gain is
 $$
@@ -24,7 +22,7 @@ We also count tasks with positive, negative, and zero differences.
 | CoEvoSkills | 1 | 85 | 42.21 | 52.44 | +10.24 | 17 | 9 | 59 |
 | CoEvoSkills | 2 | 85 | 23.54 | 33.31 | +9.76 | 17 | 10 | 58 |
 
-**Table 1.** Two runs per method on SkillsBench. Scores are mean verifier rewards multiplied by 100; Δ is the mean paired gain in percentage points. Each method uses an identical task set across its two runs. SPARK run 1 denotes the Rep01 budget rerun, and run 2 denotes Rep02.
+**Table 1.** Two runs per method on SkillsBench. Scores are mean verifier rewards multiplied by 100; Δ is the mean paired gain in percentage points. Each method uses an identical task set across its two runs.
 
 
 ## Results across Two Runs
@@ -33,4 +31,4 @@ All three methods achieve positive mean paired gains in both runs (Table 1). Ski
 
 SPARK increases mean reward from 17.82 to 19.66 in run 1 and from 14.37 to 20.81 in run 2. Its paired gain rises from 1.84 to 6.45 points, with nine versus 13 improved tasks and eight versus five regressions. CoEvoSkills improves from 42.21 to 52.44 and from 23.54 to 33.31 on the aligned 85-task set. Its paired gains are 10.24 and 9.76 points, with 17 improved tasks in each run and nine versus ten regressions.
 
-The direction of the average gain repeats for every method. SkillEvolver's gain remains near 25 points and CoEvoSkills' near ten, while SPARK shows a larger change in gain between runs. Improvements and regressions coexist within each run, making the paired task outcomes informative alongside the aggregate score. The benchmark results quantify the utility of generated and evolved skills under paired deployment. The lifecycle experiments that follow examine how score gains relate to retention, task variation, and the mechanisms of revision.
+The direction of the average gain repeats for every method. SkillEvolver's gain remains near 25 points and CoEvoSkills' near ten, while SPARK shows a larger change in gain between runs. Improvements and regressions coexist within each run, making the paired task outcomes informative alongside the aggregate score. The benchmark results quantify the utility of generated and evolved skills under paired deployment. The variant experiments below examine how these gains extend to changed tasks and which artifact-level decisions support transfer.

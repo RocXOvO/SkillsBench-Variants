@@ -5,8 +5,6 @@
 
 We evaluate SkillEvolver~\cite{zhang2026skillevolver}, SPARK~\cite{zhou2026spark}, and CoEvoSkills~\cite{zhang2026coevoskills} on SkillsBench~\cite{li2026skillsbench}, with two runs per method. Each run pairs an execution using the generated or evolved skill with a no-skill execution of the same task. Both runs of each method use the same task set: 81 tasks for SkillEvolver, 84 for SPARK, and 85 for CoEvoSkills.
 
-All six runs use Codex with GPT-5.5 and medium reasoning effort. SkillEvolver uses the ChatGPT subscription channel in both runs, SPARK uses the OpenLux API in both runs, and CoEvoSkills uses the subscription channel in run~1 and OpenLux in run~2. Each method follows its own skill-generation procedure. SPARK produces skill artifacts for 43/84 and 41/84 tasks; tasks without a generated artifact remain in the evaluation as no-skill executions. For CoEvoSkills run~2, duplicate evaluation records are resolved after collection by selecting the latest completed valid pair for each task, preserving the baseline and evolved results from the same pair.
-
 We report mean verifier reward on a 0--100 scale and the mean within-task difference between the skill and no-skill conditions. For a run with $N$ tasks, the paired gain is
 \begin{equation}
 \Delta = \frac{100}{N}\sum_{i=1}^{N}
@@ -32,7 +30,7 @@ CoEvoSkills & 1 & 85 & 42.21 & 52.44 & $+10.24$ & 17 & 9 & 59 \\
 CoEvoSkills & 2 & 85 & 23.54 & 33.31 & $+9.76$ & 17 & 10 & 58 \\
 \bottomrule
 \end{tabular}
-\caption{Two runs per method on SkillsBench. Scores are mean verifier rewards multiplied by 100; $\Delta$ is the mean paired gain in percentage points. Each method uses an identical task set across its two runs. SPARK run~1 denotes the Rep01 budget rerun, and run~2 denotes Rep02.}
+\caption{Two runs per method on SkillsBench. Scores are mean verifier rewards multiplied by 100; $\Delta$ is the mean paired gain in percentage points. Each method uses an identical task set across its two runs.}
 \label{tab:skillsbench-six-runs}
 \end{table*}
 
