@@ -18,3 +18,8 @@
 !/output/pdf/
 /output/pdf/*
 !/output/pdf/main.pdf
+
+# Auditable derived selection records; raw experiment workspaces stay excluded.
+!/paper/audits/
+/paper/audits/*
+!/paper/audits/coevo-server-selection-20260921/
