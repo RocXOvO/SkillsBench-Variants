@@ -1,0 +1,20 @@
+# Version only the paper source and its current compiled PDF.
+/*
+!/.gitignore
+!/AGENTS.md
+!/README.md
+!/paper/
+/paper/*
+!/paper/maintext-20260921/
+/paper/maintext-20260921/*
+!/paper/maintext-20260921/*.tex
+!/paper/maintext-20260921/*.bib
+!/paper/maintext-20260921/*.sty
+!/paper/maintext-20260921/*.bst
+!/paper/maintext-20260921/Makefile
+!/paper/maintext-20260921/README.md
+!/output/
+/output/*
+!/output/pdf/
+/output/pdf/*
+!/output/pdf/main.pdf

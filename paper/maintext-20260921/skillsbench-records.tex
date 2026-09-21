@@ -1,0 +1,59 @@
+\refstepcounter{section}
+\section{Appendix \thesection. SkillsBench Evaluation Records}
+\label{app:skillsbench-records}
+\setcounter{table}{0}
+\renewcommand{\thetable}{\thesection\arabic{table}}
+
+\subsection{Standard-task accounting}
+The first SkillEvolver evaluation combines an original 76-task summary with five completed recovery evaluations. The second 81-task evaluation combines fresh paired records and task-specific engineering recoveries; its records identify source runs, skill trees, checkpoints, and selected result paths. CoEvoSkills' first evaluation combines an 85-task audit with a recovered MHC task whose baseline and evolved rewards are both zero; scheduling-email-assistant is excluded because its verifier requires unavailable Gmail OAuth access.
+
+SPARK Rep01 and Rep02 use the two server-native final paired summaries on the same 84-task set, excluding fix-druid-loophole-cve and syzkaller-ppdev-syzlang. Both request GPT-5.5 with medium reasoning through OpenLux and use a task timeout multiplier of 0.5. Rep01 has 43 generated skills and 41 no-skill outcomes; Rep02 has 41 generated skills and 43 no-skill outcomes. The selected reward files and result hashes agree with both summaries across all 336 condition-level evaluations. Rep01 includes recorded budget and process-cleanup repairs; its final audit preserves the selected trial paths. The earlier local subscription run copied to the server is archived and excluded from the reported SPARK results. SkillEvolver and the reported CoEvoSkills evaluation use the subscription backend.
+
+The second CoEvoSkills evaluation has paired records for 85 unique tasks across its main run and recovery runs. Ten tasks have multiple valid records, including four with conflicting rewards: gravitational-wave-detection, lean4-proof, earthquake-phase-association, and offer-letter-generator. This evaluation remains outside the main results table pending a final manifest recording each selected result path, content hash, and selection rationale independent of reward. Evolution-artifact source resolution is recorded separately from evaluation-result selection.
+
+\subsection{Variant scope and historical conflicts}
+The original collection has 228 variants. Six variants from the parallel-TFIDF and MHC families are excluded for unavailable execution resources or evolution provenance, leaving 222 variants. Two PG-audiobook P3 method cells are subsequently excluded for unavailable transcription service, giving 886 numerical-result identities. The 838 historical identities comprise 819 literal-valid entries and 19 budget-terminal or status-alias entries. Forty-eight identities have separately recorded recovery evaluations. Five historical identities retain both 0 and 1 outcomes (Table~\ref{tab:variant-conflicts}); their entries remain marked as conflicts in the per-variant inventory.
+
+Table~\ref{tab:variant-examples} selects examples with unambiguous historical rewards to illustrate changes in the direction of the observed difference and variation across methods. All 20 displayed rewards were checked against the original result files. Full task identifiers, source paths, and content hashes accompany the table in the evidence package. Historical entries and recoveries retain their own environment, skill-delivery, and grading versions; the collection is reported descriptively at the task--condition level.
+
+\begin{table}[ht]
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lll}
+\toprule
+Variant & Condition & Rewards\\
+\midrule
+Energy-market-pricing P1 & No skill & 0, 1\\
+Energy-market-pricing P3 & SPARK & 0, 1\\
+Flink-query P2 & SPARK & 0, 1\\
+Organize-messy-files P1 & SkillEvolver & 0, 1\\
+Organize-messy-files P1 & SPARK & 0, 1\\
+\bottomrule
+\end{tabular}
+\caption{Historical outcome conflicts retained in the variant inventory.}
+\label{tab:variant-conflicts}
+\end{table}
+
+\subsection{File-reading evaluations}
+Three recovery cells have both an earlier inline-Skill evaluation and a later file-reading evaluation (Table~\ref{tab:file-reading-records}). AgentOps retains its environment-v2 configuration. P1 completes with reward zero. P2 reuses the stopped model artifact and connects the existing typed build-verdict classifier to the clean native grader; the evaluation completes in 172.96 seconds within the 240-second budget. Both tasks fail the timestamp assertion in all five Python environments.
+
+The first Speaker attempt misses line 121 of its 122-line Skill and has a null reward. The subsequent prompt specifies complete chunked reads of the frozen file. The model run completes in approximately 564 seconds; native grading takes 268.83 seconds within the 2,700-second budget. Seven of 11 checks pass. The four failed quality checks yield DER 136.29\%, JER 93.99\%, WER 30.19\%, and CER 30.21\%, against thresholds of 20\%, 25\%, 20\%, and 25\%, respectively. The final reward is zero. The original tests and Skill bytes are retained, with the prompt and scoring-entry revisions recorded separately.
+
+\begin{table}[ht]
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llrr}
+\toprule
+Variant & Method & Inline & File read\\
+\midrule
+AgentOps P1 & SkillEvolver & 0 & 0\\
+AgentOps P2 & SPARK & 1 & 0\\
+Speaker P3 & CoEvoSkills & 0 & 0\\
+\bottomrule
+\end{tabular}
+\caption{Earlier inline and subsequent file-reading results, with execution and repair versions retained in the accompanying records.}
+\label{tab:file-reading-records}
+\end{table}
+
+\subsection{Evidence provenance}
+The accompanying evidence map records source paths, SHA-256 digests, task-level selections, and the coverage-ledger chain. Standard-task sources are the reconciled SkillEvolver first-81 report, its second-81 paired audit, the two server-native SPARK 84-task summaries, and the CoEvoSkills union87-minus-google-auth report. The second-run audit also preserves the CoEvoSkills coverage and conflicting attempts. Variant sources include the final-r5 coverage ledger and its parents, the historical attempt inventory, and the file-read-rerun-r1 and file-read-repair-r2 records. The per-variant paper view selects the three final file-reading records while retaining earlier outcomes and failed attempts in the evidence package.
