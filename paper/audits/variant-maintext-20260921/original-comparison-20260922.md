@@ -4,11 +4,11 @@
 
 ## 本轮摘要修改
 
-删除摘要中各方法的变体数量、具体分数与两位数增益描述，改为一句工作概述：
+将两组方法及实验操作的枚举合并为围绕全文研究问题的一句概述：
 
-> We evaluate SkillEvolver, SPARK, and CoEvoSkills on standard tasks and controlled variants, and analyze skill artifacts and execution traces to examine transfer.
+> We combine repeated evaluations, controlled task variations, and lifecycle interventions to examine whether improvements from skill evolution persist and transfer, and to trace their origins to feedback, revision, selection, skill content, and evaluation.
 
-中文：我们在标准任务和受控变体上评估 SkillEvolver、SPARK 和 CoEvoSkills，并通过技能内容和执行轨迹分析迁移能力。
+中文：我们结合重复评估、受控任务变化和生命周期干预，考察技能进化带来的改进能否持续并迁移，并追溯反馈、修订、选择、技能内容及评估在其中的作用。
 
 本轮没有调整正文实验分数、逐题选源或实验运行。
 
@@ -16,7 +16,7 @@
 
 | 最新稿位置 | 内容变化 | 红色标记 |
 |---|---|---|
-| 第1页摘要 | 新增标准任务、变体及迁移分析概述 | 新增句子 |
+| 第1页摘要 | 将原版方法枚举替换为改进的保持、迁移与来源的整体研究概述 | 替换句子 |
 | 第1页引言 | 新增三个方法的评估与技能/轨迹分析概述 | 新增段落 |
 | 第2页问题定义末尾 | 将 “The next two sections…” 改成 “The following experiments…” | 替换句子；批注保留原文 |
 | 第2–3页实验部分 | 新增 SkillsBench 设置、配对指标、每方法两次标准任务结果、独立变体结果 | 整个新增实验部分 |

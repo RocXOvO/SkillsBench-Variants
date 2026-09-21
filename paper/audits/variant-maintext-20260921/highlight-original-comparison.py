@@ -35,8 +35,8 @@ def blocks(pi,indices,comment):
     for i in indices:
         b=bs[i];assert b['type']==0
         mark(pi,[l['bbox'] for l in b['lines']],' '.join(''.join(s['text'] for s in l['spans']) for l in b['lines']),comment)
-abstract='We evaluate SkillEvolver, SPARK, and CoEvoSkills on standard tasks and controlled variants, and analyze skill artifacts and execution traces to examine transfer.'
-search(abstract,'摘要新增：概述标准任务、变体评估和迁移归因，不列具体得分。')
+abstract='We combine repeated evaluations, controlled task variations, and lifecycle interventions to examine whether improvements from skill evolution persist and transfer, and to trace their origins to feedback, revision, selection, skill content, and evaluation.'
+search(abstract,'摘要替换：围绕改进能否保持、迁移及其来源合并实验概述；替换原版 Across SkillRevise 开头的方法枚举句。')
 search('We first evaluate SkillEvolver, SPARK, and CoEvoSkills on standard tasks and controlled variants, then use artifact content and execution traces to examine how successful procedures adapt to changed inputs and requirements.','引言新增：说明标准任务、变体评估及轨迹分析。')
 search('The following experiments address these questions in turn.','替换原文：The next two sections address these questions in turn. 因新增实验章节而更新衔接。')
 blocks(1,range(19,28),'相对基线新增的 SkillsBench 实验：设置、配对指标、两次重复结果及变体评估。')

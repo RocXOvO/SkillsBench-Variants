@@ -1,0 +1,11 @@
+{
+  "source_sha256": "cb459157491dfc70d383485f37d77ea1a7c058d6b05ad579ff61a82708516091",
+  "output_sha256": "9ef8348ec691aa6116edbad539b86ba2d5f0c9b1156f6b5463e7b29991629197",
+  "pages": 8,
+  "highlights": 29,
+  "task_id": "9d03ba22-1436-47f0-86a1-d05b1e0acda8",
+  "completed_at": "2026-09-22T00:18:58.859811",
+  "service": "siliconflowfree",
+  "engine": "pdf2zh_next",
+  "baseline_commit": "121a6182b"
+}

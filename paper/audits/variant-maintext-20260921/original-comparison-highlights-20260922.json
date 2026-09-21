@@ -2,7 +2,7 @@
   "baseline_commit": "121a6182b",
   "baseline": "Original Overleaf manuscript, not the separately supplied PDF/main.pdf.",
   "baseline_tex_sha256": "3d9db737004a3037b971e3019dcc3c1e6c5e9093d0d40c64397a1efa18541678",
-  "current_pdf_sha256": "ff1caae846dbe8686f1e67c9adb66b36b365e49c41de2ab322beda9a34df3a0a",
+  "current_pdf_sha256": "cb459157491dfc70d383485f37d77ea1a7c058d6b05ad579ff61a82708516091",
   "scope": "All substantive text, table and bibliography additions/replacements relative to the original. Layout moves and automatic numbering changes are recorded separately.",
   "layout_changes": [
     "Removed FloatBarrier breaks and advanced float declarations to keep figures/tables near the relevant discussion.",
@@ -12,33 +12,39 @@
   "annotations": [
     {
       "page": 1,
-      "text": "We evaluate SkillEvolver, SPARK, and CoEvoSkills on standard tasks and controlled variants, and analyze skill artifacts and execution traces to examine transfer.",
-      "comment": "摘要新增：概述标准任务、变体评估和迁移归因，不列具体得分。",
+      "text": "We combine repeated evaluations, controlled task variations, and lifecycle interventions to examine whether improvements from skill evolution persist and transfer, and to trace their origins to feedback, revision, selection, skill content, and evaluation.",
+      "comment": "摘要替换：围绕改进能否保持、迁移及其来源合并实验概述；替换原版 Across SkillRevise 开头的方法枚举句。",
       "color": "#ff6666",
       "rects": [
         [
-          188.17453002929688,
-          283.67584228515625,
-          280.6539306640625,
-          292.6422424316406
-        ],
-        [
-          63.9630126953125,
-          293.6378479003906,
-          282.53692626953125,
-          302.604248046875
-        ],
-        [
-          63.9630126953125,
-          303.6008605957031,
+          184.18447875976562,
+          287.8638610839844,
           279.55108642578125,
-          312.5672607421875
+          296.83026123046875
         ],
         [
           63.9630126953125,
-          313.5638732910156,
-          115.58256530761719,
-          322.5302734375
+          297.8268737792969,
+          282.53692626953125,
+          306.79327392578125
+        ],
+        [
+          63.9630126953125,
+          307.7898864746094,
+          282.536865234375,
+          316.75628662109375
+        ],
+        [
+          63.9630126953125,
+          317.75189208984375,
+          280.2952880859375,
+          326.7182922363281
+        ],
+        [
+          63.9630126953125,
+          327.71490478515625,
+          205.47071838378906,
+          336.6813049316406
         ]
       ]
     },
