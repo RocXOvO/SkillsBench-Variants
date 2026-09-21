@@ -1,0 +1,20 @@
+{
+  "pages": 9,
+  "variant_body_pages": [
+    3,
+    4
+  ],
+  "variant_table_page": 4,
+  "source_results_checked": 792,
+  "result_score_mismatches": 0,
+  "historical_cohort": 198,
+  "all_artifacts_cohort": 103,
+  "all_parent_hashes_verified": true,
+  "source_selection": "complete historical four-condition set, excluding any disagreeing numeric scores; separate recovery protocols not pooled",
+  "statistical_unit": "base-task family, 20000 percentile bootstrap draws, seed20260921",
+  "scoped_case_review": "Case claims checked against frozen skills, trajectories, and native verifier; availability causation wording corrected.",
+  "overfull_boxes": false,
+  "undefined_references": false,
+  "pdf_sha256": "6308743bc9992aac47430ef081afb463ffc17bfba36daf7d3d35c9a0d0bebc88",
+  "visual_review": "All nine pages inspected; final changed pages 1, 3 and 4 rerendered and inspected. No clipped text, table overflow, or overlaps."
+}

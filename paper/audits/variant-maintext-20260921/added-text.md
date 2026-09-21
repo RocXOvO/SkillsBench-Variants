@@ -1,0 +1,34 @@
+## Generalization under Task Variations
+
+
+We test how source-task skills perform when the task changes along three axes: input representation (P1), task-instance structure (P2), and coupled task requirements (P3). The reviewed collection contains 222 variants from 77 task families. Complete, unambiguous historical scores for all four conditions define a common comparison set of 198 variants from 71 families. Each variant contributes a no-skill score and scores for SkillEvolver, SPARK, and CoEvoSkills. The separate recovery evaluations are retained with their own protocol records. Table 2 summarizes paired outcomes within the historical comparison set.
+
+
+**A. Common historical comparison set: 71 task families**
+
+| Method | Variants | No skill | Skill | Δ | Improved | Regressed | Tied |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| SkillEvolver | 198 | 41.90 | 56.80 | +14.90 | 46 | 16 | 136 |
+| SPARK | 198 | 41.90 | 43.63 | +1.73 | 29 | 32 | 137 |
+| CoEvoSkills | 198 | 41.90 | 39.34 | -2.56 | 25 | 34 | 139 |
+
+**B. All three methods supply a skill: 36 task families**
+
+| Method | Variants | No skill | Skill | Δ | Improved | Regressed | Tied |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| SkillEvolver | 103 | 51.21 | 69.87 | +18.67 | 25 | 6 | 72 |
+| SPARK | 103 | 51.21 | 57.17 | +5.96 | 18 | 14 | 71 |
+| CoEvoSkills | 103 | 51.21 | 51.46 | +0.25 | 16 | 15 | 72 |
+
+**Table 2.** Descriptive comparison on matched task variants. Scores and paired gains use the same scale as Table 1. Panel B restricts Panel A to variants whose launch records confirm an available skill for every method, separating artifact availability from performance when artifacts are supplied.
+
+
+SkillEvolver retains a substantial advantage on the variants: mean reward rises from 41.90 without a skill to 56.80, a paired gain of 14.90 points. It improves 46 variants and regresses on 16, compared with 29 improvements and 32 regressions for SPARK, and 25 improvements and 34 regressions for CoEvoSkills. SkillEvolver's paired gains are positive in all three variant groups: 14.89 points on P1, 17.03 on P2, and 12.85 on P3. The structural P2 group shows the largest separation: SPARK and CoEvoSkills have paired changes of $-2.43$ and $-6.98$ points, respectively.
+
+Artifact availability differs across methods. SPARK has no generated skill for 95 of the 198 variants, whereas SkillEvolver and CoEvoSkills supply artifacts for all 198. On the 103 variants where every method supplies a skill, SkillEvolver still reaches 69.87, compared with 57.17 for SPARK and 51.46 for CoEvoSkills. Its paired advantages over these methods are 12.70 points (95% CI $[1.97,24.35]$) and 18.42 points ($[6.68,30.36]$). These percentile intervals use 20,000 bootstrap samples of the 36 base-task families, retaining each sampled family's variants together. The advantage therefore persists when the comparison is restricted to supplied artifacts.
+
+## Tracing the Source of Transfer
+
+Execution traces connect the aggregate result to concrete decisions encoded in the skills. In exoplanet period detection, SkillEvolver separates candidate discovery from refinement and checks whether a dominant peak reflects stellar modulation or a transit. After the input columns are reordered in P1, the executor rejects the approximately 1.395-day modulation and recovers the accepted 5.35907-day period. When P3 requires two signals, the same frozen skill supports a narrower-duration search and refinement to 2.40052 and 5.35958 days. CoEvoSkills' end-to-end period routine encounters duration-grid errors in P1 and returns the stellar-modulation period; in P3 it selects approximately 1.40 days and its 0.70-day harmonic as separate signals. SkillEvolver succeeds on P1 and P3, while CoEvoSkills fails both. On the replacement-data P2 instance, both skills receive zero, giving the case a specific transfer pattern across the three changes.
+
+Scheduling locates the difference at a constraint that determines correctness. SkillEvolver's artifact explicitly preserves baseline-relative right shifts and precedence-aware local minimality. The executor carries these rules across renamed inputs, a replacement scheduling instance, and an added machine-handoff requirement, passing all three variants; SPARK also passes all three. CoEvoSkills passes P3, but its P1 output fails the local-minimality check: an operation starts at 29 with an anchor of 24 and can move earlier. The other structural and policy checks pass. This trace-based attribution connects the outcome to preservation of a repair invariant. Together, the cases illustrate a transferable skill as a set of diagnostic and constraint-preserving decisions that the executor adapts to the new task.
