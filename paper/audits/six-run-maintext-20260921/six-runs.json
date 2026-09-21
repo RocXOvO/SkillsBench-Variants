@@ -1,0 +1,3245 @@
+{
+  "sources": [
+    {
+      "path": "paper/maintext-20260921/evidence/skillevolver-first81.json",
+      "sha256": "8b9041dd45f4ae696fbf128ffa175ae98206c94d8a02c579462ae3a20a12c28f"
+    },
+    {
+      "path": "experiments/skillevolver-skillsbench/runs/skillevolver-codex-subscription-gpt55-medium-paper81-fresh-paired76-final.json",
+      "sha256": "fe2f6aa161178b41d28519a59d7e71dfa784e1c573ff1228d06f079b5fd26a94"
+    },
+    {
+      "path": "paper/maintext-20260921/evidence/skillevolver-repeat2-81.json",
+      "sha256": "ad25438af7410f63e8001ec7e255169b2815a540e1209876872dbf51f1dc1aa1"
+    },
+    {
+      "path": "paper/maintext-20260921/evidence/spark-server-runs-r2/rep01-summary.json",
+      "sha256": "1cf478953dfb51d8c87835a40a07897a687d3052b8b52351959391f396a4f575"
+    },
+    {
+      "path": "paper/maintext-20260921/evidence/spark-server-runs-r2/rep02-summary.json",
+      "sha256": "dbf4f5d91f6621fb4931bbdf9435c5133b53ce4013b77a66077cde2af44ea8c6"
+    },
+    {
+      "path": "experiments/coevoskills-skillsbench/reports/union87-minus-google-auth-final-r71.json",
+      "sha256": "0ce8eafd6a8c81e9f8db322caa0f40ba77e86ea934e405c374be699bce2bde7e"
+    },
+    {
+      "path": "experiments/coevoskills-skillsbench/reports/finalized85-zero-start-paired-final-r66.json",
+      "sha256": "623e12c5b1a551280f2e2c7c4ce5c4d82c8b31472ee2bd19e67c11f0c0715d37"
+    },
+    {
+      "path": "experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-union87-mhc-recovery-r69/evaluation/mhc-layer-impl/result.json",
+      "sha256": "82ab9aaba562a8dd88ac154e880872221e3fa0e8c9b649d9f3254cb5bb59c7d8"
+    },
+    {
+      "path": "paper/audits/coevo-server-selection-20260921/selection-manifest.json",
+      "sha256": "78763a5969b7a2a168b9364c7d44ff96b42ca5003ee4462827c0d5b6473b8456"
+    }
+  ],
+  "coevo_alignment": {
+    "rule": "Task-name intersection of the two selected runs, independent of reward.",
+    "common_tasks": [
+      "3d-scan-calc",
+      "adaptive-cruise-control",
+      "azure-bgp-oscillation-route-leak",
+      "citation-check",
+      "civ6-adjacency-optimizer",
+      "court-form-filling",
+      "crystallographic-wyckoff-position-analysis",
+      "dapt-intrusion-detection",
+      "data-to-d3",
+      "dialogue-parser",
+      "dynamic-object-aware-egomotion",
+      "earthquake-phase-association",
+      "earthquake-plate-calculation",
+      "econ-detrending-correlation",
+      "energy-ac-optimal-power-flow",
+      "energy-market-pricing",
+      "enterprise-information-search",
+      "exceltable-in-ppt",
+      "exoplanet-detection-period",
+      "financial-modeling-qa",
+      "find-topk-similiar-chemicals",
+      "fix-build-agentops",
+      "fix-build-google-auto",
+      "fix-druid-loophole-cve",
+      "fix-erlang-ssh-cve",
+      "fix-visual-stability",
+      "flink-query",
+      "flood-risk-analysis",
+      "gh-repo-analytics",
+      "glm-lake-mendota",
+      "gravitational-wave-detection",
+      "grid-dispatch-operator",
+      "hvac-control",
+      "invoice-fraud-detection",
+      "jax-computing-basics",
+      "jpg-ocr-stat",
+      "lab-unit-harmonization",
+      "lake-warming-attribution",
+      "latex-formula-extraction",
+      "lean4-proof",
+      "manufacturing-codebook-normalization",
+      "manufacturing-equipment-maintenance",
+      "manufacturing-fjsp-optimization",
+      "mario-coin-counting",
+      "mars-clouds-clustering",
+      "multilingual-video-dubbing",
+      "offer-letter-generator",
+      "organize-messy-files",
+      "paper-anonymizer",
+      "parallel-tfidf-search",
+      "pddl-tpp-planning",
+      "pdf-excel-diff",
+      "pedestrian-traffic-counting",
+      "pg-essay-to-audiobook",
+      "powerlifting-coef-calc",
+      "pptx-reference-formatting",
+      "protein-expression-analysis",
+      "python-scala-translation",
+      "quantum-numerical-simulation",
+      "r2r-mpc-control",
+      "react-performance-debugging",
+      "reserves-at-risk-calc",
+      "sales-pivot-analysis",
+      "sec-financial-report",
+      "seismic-phase-picking",
+      "setup-fuzzing-py",
+      "shock-analysis-demand",
+      "shock-analysis-supply",
+      "simpo-code-reproduction",
+      "software-dependency-audit",
+      "speaker-diarization-subtitles",
+      "spring-boot-jakarta-migration",
+      "suricata-custom-exfil",
+      "syzkaller-ppdev-syzlang",
+      "taxonomy-tree-merge",
+      "threejs-structure-parser",
+      "threejs-to-obj",
+      "travel-planning",
+      "trend-anomaly-causal-inference",
+      "video-filler-word-remover",
+      "video-silence-remover",
+      "video-tutorial-indexer",
+      "virtualhome-agent-planning",
+      "weighted-gdp-calc",
+      "xlsx-recover-data"
+    ],
+    "removed_from_local": [
+      {
+        "task": "mhc-layer-impl",
+        "baseline_reward": 0.0,
+        "evolved_reward": 0.0
+      }
+    ],
+    "removed_from_server": [],
+    "local_selected_result_checks": [
+      {
+        "task": "3d-scan-calc",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/3d-scan-calc/result.json",
+        "result_sha256": "51b4b8880820321d5f49807ac2296e949306768f106c655af14e208e475e3d73"
+      },
+      {
+        "task": "adaptive-cruise-control",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/adaptive-cruise-control/result.json",
+        "result_sha256": "7b914813a80d395b8177df0aae6f697eddb2bb5168e08acb54233e0edbe39c61"
+      },
+      {
+        "task": "azure-bgp-oscillation-route-leak",
+        "source": "author85-new21-engineering-recovery-2",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-author85-zero-azure-paired-recovery-r59/evaluation/azure-bgp-oscillation-route-leak/result.json",
+        "result_sha256": "7535e8c6c064b3b4ee7dc2367ae9f7645c645397b8d4d0b2aeee3f4a36cefdba"
+      },
+      {
+        "task": "citation-check",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/citation-check/result.json",
+        "result_sha256": "73fbfb0f797ce503e5b8565237c3364a40f6433876fe240f95ac425482f25e69"
+      },
+      {
+        "task": "civ6-adjacency-optimizer",
+        "source": "author85-new21-primary",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-author85-zero-unified-evaluation21-r54/evaluation/civ6-adjacency-optimizer/result.json",
+        "result_sha256": "4ca98bbc9c434bd3c008d2b56644d535e79e7f7f3dc95b694391addada83ba8b"
+      },
+      {
+        "task": "court-form-filling",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/court-form-filling/result.json",
+        "result_sha256": "887165962bcdb060e0fc593635bcb6349acea9c2bff1c14876f82369c222730c"
+      },
+      {
+        "task": "crystallographic-wyckoff-position-analysis",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/crystallographic-wyckoff-position-analysis/result.json",
+        "result_sha256": "934dc6bc98e8e7eb02df47b4bf937fc13a22a78495b979209927584502d86a2c"
+      },
+      {
+        "task": "dapt-intrusion-detection",
+        "source": "author85-new21-primary",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-author85-zero-unified-evaluation21-r54/evaluation/dapt-intrusion-detection/result.json",
+        "result_sha256": "5272e3fea8df3e6a8aaa865ab44151b91662dc9d488ebaed865763a6881ccc37"
+      },
+      {
+        "task": "data-to-d3",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/data-to-d3/result.json",
+        "result_sha256": "f9014e29f990cb1ab7cef90a1a327769b3b07aa48a1d3d209da7b5d06d17e648"
+      },
+      {
+        "task": "dialogue-parser",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/dialogue-parser/result.json",
+        "result_sha256": "989ae6ba82ccf25c875836fb4cc72a4ed3a73d3021aca3006cc4b4cf8e63481e"
+      },
+      {
+        "task": "dynamic-object-aware-egomotion",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/dynamic-object-aware-egomotion/result.json",
+        "result_sha256": "4f2b20814664c6dc4364b81e0aa2385663848bc13428cc5479e0ea25e082da9e"
+      },
+      {
+        "task": "earthquake-phase-association",
+        "source": "paired64:earthquake-recovery-r37",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-earthquake-phase-wheel-filename-recovery-r37/evaluation/earthquake-phase-association/result.json",
+        "result_sha256": "b551ff0154a3a3df19abe6b7dde018a28c7738813be1870cceb8548903b82335"
+      },
+      {
+        "task": "earthquake-plate-calculation",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/earthquake-plate-calculation/result.json",
+        "result_sha256": "184e69bfcf58f5a36ccac2538240712239efcaf78d94270e4ce039eac13d0fd0"
+      },
+      {
+        "task": "econ-detrending-correlation",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/econ-detrending-correlation/result.json",
+        "result_sha256": "ba21a7f474f28caa5999c539e0afc4b577be403eb35247d9f0bc98b7e5f3b5be"
+      },
+      {
+        "task": "energy-ac-optimal-power-flow",
+        "source": "paired64:protocol-recovery-r31",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-paired-protocol-recovery-r31/evaluation/energy-ac-optimal-power-flow/result.json",
+        "result_sha256": "b776f417669fc0b2079e518dd3b65a9bc66da514b676320b3ebf4b382b7953c3"
+      },
+      {
+        "task": "energy-market-pricing",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/energy-market-pricing/result.json",
+        "result_sha256": "783b45b6247453fe6b65fce18a111b55006f443717a9b39e243cfa5f7c08705b"
+      },
+      {
+        "task": "enterprise-information-search",
+        "source": "author85-new21-primary",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-author85-zero-unified-evaluation21-r54/evaluation/enterprise-information-search/result.json",
+        "result_sha256": "251b4811fcf95d810cd3fe7507b2ce65b33401553224ed0041958179cf71ec5c"
+      },
+      {
+        "task": "exceltable-in-ppt",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/exceltable-in-ppt/result.json",
+        "result_sha256": "a6f2c2c51468f84b24af93dce093900c185cdcaccdbb24049b2f2ea08dfe6e7f"
+      },
+      {
+        "task": "exoplanet-detection-period",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/exoplanet-detection-period/result.json",
+        "result_sha256": "b52b67bf4e0cb33fedab67523da8b759b4dde9f336936a90f99c93e4dec5ee4d"
+      },
+      {
+        "task": "financial-modeling-qa",
+        "source": "author85-new21-primary",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-author85-zero-unified-evaluation21-r54/evaluation/financial-modeling-qa/result.json",
+        "result_sha256": "81a21da5db79f6b36c8b4e71444fd48317dbf5420b305467ce0c785143902829"
+      },
+      {
+        "task": "find-topk-similiar-chemicals",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/find-topk-similiar-chemicals/result.json",
+        "result_sha256": "6a8c83a3da7c51a7c09669258c5cb9cb5611c8aa3ffc3dc2ff45c3a375845b99"
+      },
+      {
+        "task": "fix-build-agentops",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/fix-build-agentops/result.json",
+        "result_sha256": "02882f35d00c62da8872515f62bf82c004dd324fe80b1e8daa71fa3ce4d6f859"
+      },
+      {
+        "task": "fix-build-google-auto",
+        "source": "author85-new21-engineering-recovery-1",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-author85-zero-fix-build-google-concurrent-recovery-r57/evaluation/fix-build-google-auto/result.json",
+        "result_sha256": "643923e64757a769f81660d02a63ef2645416eff641cb270568d8e1df84f9202"
+      },
+      {
+        "task": "fix-druid-loophole-cve",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/fix-druid-loophole-cve/result.json",
+        "result_sha256": "1529f1b28714a606e31564174e2774098380ddc796354caf4e6526c5892fbd14"
+      },
+      {
+        "task": "fix-erlang-ssh-cve",
+        "source": "author85-new21-primary",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-author85-zero-unified-evaluation21-r54/evaluation/fix-erlang-ssh-cve/result.json",
+        "result_sha256": "652c61ce6eff0b6b14dddcb93802d2700f65a0b41cf4db9a0affd5428fa05413"
+      },
+      {
+        "task": "fix-visual-stability",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/fix-visual-stability/result.json",
+        "result_sha256": "40a6be82c38ed201bf739c2ee6402dd7ba54b2562bbc0a321d2290a185cf1f1f"
+      },
+      {
+        "task": "flink-query",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/flink-query/result.json",
+        "result_sha256": "5a30bd60cd36d4230895be934eb816a02d3c6780da40a4ed6fda52fcfdca483e"
+      },
+      {
+        "task": "flood-risk-analysis",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/flood-risk-analysis/result.json",
+        "result_sha256": "f2d7bad077c7784696c5192b97c8aea8a4413c83206e3d51d625ff33938175b5"
+      },
+      {
+        "task": "gh-repo-analytics",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/gh-repo-analytics/result.json",
+        "result_sha256": "12f1b206a8729bc7897fdf9d720a097f689ff186f1a6f938056f5c56a3509e62"
+      },
+      {
+        "task": "glm-lake-mendota",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/glm-lake-mendota/result.json",
+        "result_sha256": "d0ca0875696db64d6c5c8023e5f32eb6ec2e73849bf16ba68ef8d87dc5026f6e"
+      },
+      {
+        "task": "gravitational-wave-detection",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/gravitational-wave-detection/result.json",
+        "result_sha256": "a6cf12cbc0038a0976e1cbdcd00f6d000f4ed53e0af56b4879ccddb47913bc55"
+      },
+      {
+        "task": "grid-dispatch-operator",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/grid-dispatch-operator/result.json",
+        "result_sha256": "35c69e6b361f99fadd0b1ccb2234a8f33671b7077e907383bf6b68833819f071"
+      },
+      {
+        "task": "hvac-control",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/hvac-control/result.json",
+        "result_sha256": "bb5d4a6d056e4c1832d729dfce8e0fd2e297add1d0543ccdac6ee71443a9b1bf"
+      },
+      {
+        "task": "invoice-fraud-detection",
+        "source": "author85-new21-primary",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-author85-zero-unified-evaluation21-r54/evaluation/invoice-fraud-detection/result.json",
+        "result_sha256": "2c803b24a9d67dabe12ccfff10dfe2fb7f25d31de4dc0dd2ab388baa61b76916"
+      },
+      {
+        "task": "jax-computing-basics",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/jax-computing-basics/result.json",
+        "result_sha256": "ca579a9787d196ab945c4a1938df26e9d97c270ec89ecf9b9622e955c734aa35"
+      },
+      {
+        "task": "jpg-ocr-stat",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/jpg-ocr-stat/result.json",
+        "result_sha256": "4c28c8a2a3f76e01ad4a9663648cd1fd4660fe1ca0fa396df402af9e4751fa4e"
+      },
+      {
+        "task": "lab-unit-harmonization",
+        "source": "author85-new21-primary",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-author85-zero-unified-evaluation21-r54/evaluation/lab-unit-harmonization/result.json",
+        "result_sha256": "4f1b3375e456366e3fe0b5c0f7920c2c1fe83812a0651987f4e34a80aaea4768"
+      },
+      {
+        "task": "lake-warming-attribution",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/lake-warming-attribution/result.json",
+        "result_sha256": "858972a095215ff2ce521091af889b4d0e96a91b9680f67c5f4b649327fdd525"
+      },
+      {
+        "task": "latex-formula-extraction",
+        "source": "paired64:protocol-recovery-r31",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-paired-protocol-recovery-r31/evaluation/latex-formula-extraction/result.json",
+        "result_sha256": "f68d98f53b5577305df1f0362e0a75e1639d75cd0b5601a956b9c25cad50e9fe"
+      },
+      {
+        "task": "lean4-proof",
+        "source": "paired64:protocol-recovery-r31",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-paired-protocol-recovery-r31/evaluation/lean4-proof/result.json",
+        "result_sha256": "8a5889da3bdfa4a982c203f98fbed32561a13bae05862fdfc69c2a10c996ae02"
+      },
+      {
+        "task": "manufacturing-codebook-normalization",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/manufacturing-codebook-normalization/result.json",
+        "result_sha256": "3c590f9409631c8c78033fe447b5d5eb91435e57c13e52a1679bbf5f392a953b"
+      },
+      {
+        "task": "manufacturing-equipment-maintenance",
+        "source": "author85-new21-primary",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-author85-zero-unified-evaluation21-r54/evaluation/manufacturing-equipment-maintenance/result.json",
+        "result_sha256": "7d78e2fd1987b2b6d059fb214d0311240ff584c740d82442a45351f113195cf7"
+      },
+      {
+        "task": "manufacturing-fjsp-optimization",
+        "source": "author85-new21-primary",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-author85-zero-unified-evaluation21-r54/evaluation/manufacturing-fjsp-optimization/result.json",
+        "result_sha256": "f7a3d07c245587d8d6540ed7278e730c69661a4577aa9a5b54f12381a77ce256"
+      },
+      {
+        "task": "mario-coin-counting",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/mario-coin-counting/result.json",
+        "result_sha256": "e706a8c3fe3ff8269dd9a0c8843a74846182a7ca9904bd4f46a25f5c8822a2ac"
+      },
+      {
+        "task": "mars-clouds-clustering",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/mars-clouds-clustering/result.json",
+        "result_sha256": "6f8ecc3c7224098fd909aae680654f091d23a49c36ca9080fe2be721c8433195"
+      },
+      {
+        "task": "multilingual-video-dubbing",
+        "source": "paired64:protocol-recovery-r31",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-paired-protocol-recovery-r31/evaluation/multilingual-video-dubbing/result.json",
+        "result_sha256": "767039fd9ceca940f50ca51c6def08769af2fa10fc6c01c138643c6abea7e7ea"
+      },
+      {
+        "task": "offer-letter-generator",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/offer-letter-generator/result.json",
+        "result_sha256": "0407d13e174b0ecf20ee1ddbdea62f5f15ea64d17261bed14962394a200d22b2"
+      },
+      {
+        "task": "organize-messy-files",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/organize-messy-files/result.json",
+        "result_sha256": "ef3fc69cb97d9bb4e93ccc536f900fbe5285fb4b00c9bbf2b46564de10974239"
+      },
+      {
+        "task": "paper-anonymizer",
+        "source": "author85-new21-primary",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-author85-zero-unified-evaluation21-r54/evaluation/paper-anonymizer/result.json",
+        "result_sha256": "376bb5757d354aaf379b3965e81f141749418fbebc02a47420f66ed02931b84d"
+      },
+      {
+        "task": "parallel-tfidf-search",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/parallel-tfidf-search/result.json",
+        "result_sha256": "2b9ef1a6a143cb842fce7cdfe256e273afeb3b654a21fb1ce431814be921a74c"
+      },
+      {
+        "task": "pddl-tpp-planning",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/pddl-tpp-planning/result.json",
+        "result_sha256": "2ed544128eec2f22c7ee78ec96f4e25d04a1e6fe41c301e715c33e06ec0e57fa"
+      },
+      {
+        "task": "pdf-excel-diff",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/pdf-excel-diff/result.json",
+        "result_sha256": "9e22fe61cf33ba9f0a54c89f3c0f7ec57488a25011cc12d0df869e18207ac89a"
+      },
+      {
+        "task": "pedestrian-traffic-counting",
+        "source": "author85-new21-engineering-recovery-5",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-author85-zero-pedestrian-cpu-recovery-r65/evaluation/pedestrian-traffic-counting/result.json",
+        "result_sha256": "369a60b165d7da0228317d799ca7454e71807dd9fb4b260dad15b465c271cfb2"
+      },
+      {
+        "task": "pg-essay-to-audiobook",
+        "source": "author85-new21-primary",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-author85-zero-unified-evaluation21-r54/evaluation/pg-essay-to-audiobook/result.json",
+        "result_sha256": "d35b68265a8ecc96ae4da0d2fa694846123337fa4d4dbc3bbc6f9b18d9fb0991"
+      },
+      {
+        "task": "powerlifting-coef-calc",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/powerlifting-coef-calc/result.json",
+        "result_sha256": "72bac8e5198739ac7e272a702880d3fc72d4d6abe1729b0a846e63560722a07f"
+      },
+      {
+        "task": "pptx-reference-formatting",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/pptx-reference-formatting/result.json",
+        "result_sha256": "084a67bbd31d601dfdb837d48baeeff56e0c8cf762a5c24ecfa6c5e11a8b4af4"
+      },
+      {
+        "task": "protein-expression-analysis",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/protein-expression-analysis/result.json",
+        "result_sha256": "7ddeb345dfa72ba7b6d93e3bad445559ecc170ff501fd543a9007b0491e16993"
+      },
+      {
+        "task": "python-scala-translation",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/python-scala-translation/result.json",
+        "result_sha256": "920c07be45198858ef32fbce3ec8d16d01f45fde8e19a250fd50683faf8f14b7"
+      },
+      {
+        "task": "quantum-numerical-simulation",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/quantum-numerical-simulation/result.json",
+        "result_sha256": "48e961030c4be65285b929efefadf9bbc67f7a995c6c61a2f3f7ab3cdd4777c7"
+      },
+      {
+        "task": "r2r-mpc-control",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/r2r-mpc-control/result.json",
+        "result_sha256": "e3618e6832dd1584cae83b160c4f7a54aa4d2b1260b1d3d714bd8727ef187000"
+      },
+      {
+        "task": "react-performance-debugging",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/react-performance-debugging/result.json",
+        "result_sha256": "5543a0ef2623d36d70c7c893e181b2ccc72f8eb77190d74729718f42c872310c"
+      },
+      {
+        "task": "reserves-at-risk-calc",
+        "source": "paired64:protocol-recovery-r31",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-paired-protocol-recovery-r31/evaluation/reserves-at-risk-calc/result.json",
+        "result_sha256": "8d79ce47e15a968fa4fcd946f0fdb7547aab6ae20214dd7721dca850a9f2cffc"
+      },
+      {
+        "task": "sales-pivot-analysis",
+        "source": "paired64:protocol-recovery-r31",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-paired-protocol-recovery-r31/evaluation/sales-pivot-analysis/result.json",
+        "result_sha256": "c8f6a2948bb006169e7a9a7626c8ba39e64f38d10dda19dc688a7e31243ec009"
+      },
+      {
+        "task": "sec-financial-report",
+        "source": "author85-new21-primary",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-author85-zero-unified-evaluation21-r54/evaluation/sec-financial-report/result.json",
+        "result_sha256": "e0984a6820f2f963deb669818e72138cf2b65bb5df1bf8e131e9694ef87f1732"
+      },
+      {
+        "task": "seismic-phase-picking",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/seismic-phase-picking/result.json",
+        "result_sha256": "fce81aef4bb3dde93bf03e885da561fa899a4508d17cf6e2c7773d68d098c070"
+      },
+      {
+        "task": "setup-fuzzing-py",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/setup-fuzzing-py/result.json",
+        "result_sha256": "dcde19649c9a15051687ffa4fe09f97c7abd46162b4536ab6155c8c615f0d93a"
+      },
+      {
+        "task": "shock-analysis-demand",
+        "source": "author85-new21-primary",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-author85-zero-unified-evaluation21-r54/evaluation/shock-analysis-demand/result.json",
+        "result_sha256": "6646d1554565665cb330a5b03c36f31db71543103d3115e287da8718f26d91a9"
+      },
+      {
+        "task": "shock-analysis-supply",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/shock-analysis-supply/result.json",
+        "result_sha256": "4c56637aecfc1c402ad06483959bfc1e763ccabbe977002630bb81c47731d7e9"
+      },
+      {
+        "task": "simpo-code-reproduction",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/simpo-code-reproduction/result.json",
+        "result_sha256": "f6e87897c4603fc3f7fea64e9732155c76eeb2b5584a924cccad04ae4f2cd0c6"
+      },
+      {
+        "task": "software-dependency-audit",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/software-dependency-audit/result.json",
+        "result_sha256": "871b698601831192bc2fae899fd21124d66f8700b94a7325b513b30ae2bb7433"
+      },
+      {
+        "task": "speaker-diarization-subtitles",
+        "source": "author85-new21-engineering-recovery-3",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-author85-zero-speaker-cache-warmed-recovery-r63/evaluation/speaker-diarization-subtitles/result.json",
+        "result_sha256": "5c843953c5cbc9236b81be3b81d468a63c1ccf69dbb6e6950b7c12f7cdd8ab15"
+      },
+      {
+        "task": "spring-boot-jakarta-migration",
+        "source": "paired64:protocol-recovery-r31",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-paired-protocol-recovery-r31/evaluation/spring-boot-jakarta-migration/result.json",
+        "result_sha256": "017f1f15d751956fbea6a4f55f256f46c10e21683e94bc523d929995203b3de4"
+      },
+      {
+        "task": "suricata-custom-exfil",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/suricata-custom-exfil/result.json",
+        "result_sha256": "e425c51178a500404110a766c3915b88632d87dd07f65d26915f102670e1d4ed"
+      },
+      {
+        "task": "syzkaller-ppdev-syzlang",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/syzkaller-ppdev-syzlang/result.json",
+        "result_sha256": "e9cbcb7285c458634261b126d9f104063e3e5d250d75b831a803ce095d4c17d2"
+      },
+      {
+        "task": "taxonomy-tree-merge",
+        "source": "author85-new21-primary",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-author85-zero-unified-evaluation21-r54/evaluation/taxonomy-tree-merge/result.json",
+        "result_sha256": "ac007a9623efd9f5eb3275a535e16754ff06e901e2fd52b3718207e976dea219"
+      },
+      {
+        "task": "threejs-structure-parser",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/threejs-structure-parser/result.json",
+        "result_sha256": "24c4453f9b07b3c41d44c1012bcb19dcc542306a1c894a09874508237236bde3"
+      },
+      {
+        "task": "threejs-to-obj",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/threejs-to-obj/result.json",
+        "result_sha256": "8d5511135a19057376b8d5883c9ab82a9956e7b2819139a05ef7bbafe3138c8d"
+      },
+      {
+        "task": "travel-planning",
+        "source": "author85-new21-primary",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-author85-zero-unified-evaluation21-r54/evaluation/travel-planning/result.json",
+        "result_sha256": "82d797bfed86a345d49b1cd6b2f52b593355b5d1ea6c94c3e2b2f346a1ef1354"
+      },
+      {
+        "task": "trend-anomaly-causal-inference",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/trend-anomaly-causal-inference/result.json",
+        "result_sha256": "7696eaa41f335768c69e7096837b702e7a8173412d9a2b44a583f0347621f45f"
+      },
+      {
+        "task": "video-filler-word-remover",
+        "source": "author85-new21-engineering-recovery-4",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-author85-zero-video-filler-cache-warmed-recovery-r64/evaluation/video-filler-word-remover/result.json",
+        "result_sha256": "bde7617667fb73aac07a7860870479f7a24b62bcc45bbf9d5450cd62a51fcb62"
+      },
+      {
+        "task": "video-silence-remover",
+        "source": "author85-new21-primary",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-author85-zero-unified-evaluation21-r54/evaluation/video-silence-remover/result.json",
+        "result_sha256": "9a318b431dc3c6d7797f64f25a81ea5ffe51ffbb6540a09a96e7fd014511aa11"
+      },
+      {
+        "task": "video-tutorial-indexer",
+        "source": "paired64:protocol-recovery-r31",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-paired-protocol-recovery-r31/evaluation/video-tutorial-indexer/result.json",
+        "result_sha256": "44121fa9ff25d92c20d38e97f72fc1f5991075200e662787357669dc5bbb7f8a"
+      },
+      {
+        "task": "virtualhome-agent-planning",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/virtualhome-agent-planning/result.json",
+        "result_sha256": "2347e9fd66952742e2052e4ee71e682e8b399ed1e080b2947a69324736c60bab"
+      },
+      {
+        "task": "weighted-gdp-calc",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/weighted-gdp-calc/result.json",
+        "result_sha256": "e599453286566277f3019460f9f52fd3113fc73fa5a08c9070065a316187f743"
+      },
+      {
+        "task": "xlsx-recover-data",
+        "source": "paired64:unified-primary-r28",
+        "result_path": "/Users/duchongyang/Documents/ICLR/experiments/coevoskills-skillsbench/runs/coevoskills-codex-subscription-gpt55-medium-finalized64-zero-unified-evaluation-r28/evaluation/xlsx-recover-data/result.json",
+        "result_sha256": "6ce8b79740a5345dac38b30564b1dc3ac0149c9e394dc4bc8cfde456a3a37acf"
+      }
+    ],
+    "server_selection_manifest": "paper/audits/coevo-server-selection-20260921/selection-manifest.json"
+  },
+  "runs": [
+    {
+      "method": "SkillEvolver",
+      "run": 1,
+      "origin": "Local execution, transferred to server; ChatGPT subscription",
+      "n": 81,
+      "baseline": 0.3019753086419753,
+      "skill": 0.5580864197530864,
+      "delta": 0.2561111111111111,
+      "improved": 27,
+      "regressed": 6,
+      "tied": 48,
+      "tasks": [
+        {
+          "task": "3d-scan-calc",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "adaptive-cruise-control",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "azure-bgp-oscillation-route-leak",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "citation-check",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "civ6-adjacency-optimizer",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.6
+        },
+        {
+          "task": "court-form-filling",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "crystallographic-wyckoff-position-analysis",
+          "baseline_reward": 0.55,
+          "evolved_reward": 0.82
+        },
+        {
+          "task": "dapt-intrusion-detection",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "data-to-d3",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "dialogue-parser",
+          "baseline_reward": 0.833,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "dynamic-object-aware-egomotion",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "earthquake-phase-association",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "earthquake-plate-calculation",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "econ-detrending-correlation",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "energy-ac-optimal-power-flow",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "energy-market-pricing",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "enterprise-information-search",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "exceltable-in-ppt",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "exoplanet-detection-period",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "financial-modeling-qa",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "find-topk-similiar-chemicals",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "fix-build-agentops",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "fix-build-google-auto",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "fix-erlang-ssh-cve",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "fix-visual-stability",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "flink-query",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "flood-risk-analysis",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "gh-repo-analytics",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "glm-lake-mendota",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "gravitational-wave-detection",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "grid-dispatch-operator",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "hvac-control",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "invoice-fraud-detection",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "jax-computing-basics",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "jpg-ocr-stat",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "lab-unit-harmonization",
+          "baseline_reward": 0.667,
+          "evolved_reward": 0.625
+        },
+        {
+          "task": "lake-warming-attribution",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "latex-formula-extraction",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "lean4-proof",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "manufacturing-codebook-normalization",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "manufacturing-equipment-maintenance",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "manufacturing-fjsp-optimization",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "mario-coin-counting",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "mars-clouds-clustering",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "multilingual-video-dubbing",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "offer-letter-generator",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "organize-messy-files",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "paper-anonymizer",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "parallel-tfidf-search",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "pddl-tpp-planning",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "pdf-excel-diff",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "pedestrian-traffic-counting",
+          "baseline_reward": 0.75,
+          "evolved_reward": 0.5
+        },
+        {
+          "task": "pg-essay-to-audiobook",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "powerlifting-coef-calc",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "pptx-reference-formatting",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "protein-expression-analysis",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "python-scala-translation",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "quantum-numerical-simulation",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "r2r-mpc-control",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "react-performance-debugging",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "reserves-at-risk-calc",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "sales-pivot-analysis",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "sec-financial-report",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "seismic-phase-picking",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "setup-fuzzing-py",
+          "baseline_reward": 0.66,
+          "evolved_reward": 0.66
+        },
+        {
+          "task": "shock-analysis-demand",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "shock-analysis-supply",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "simpo-code-reproduction",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "software-dependency-audit",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "spring-boot-jakarta-migration",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "suricata-custom-exfil",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "taxonomy-tree-merge",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "threejs-structure-parser",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "threejs-to-obj",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "travel-planning",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "video-filler-word-remover",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "video-silence-remover",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "video-tutorial-indexer",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "virtualhome-agent-planning",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "weighted-gdp-calc",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "xlsx-recover-data",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        }
+      ]
+    },
+    {
+      "method": "SkillEvolver",
+      "run": 2,
+      "origin": "Local execution, transferred to server; ChatGPT subscription",
+      "n": 81,
+      "baseline": 0.37320987654320986,
+      "skill": 0.623432098765432,
+      "delta": 0.25022222222222223,
+      "improved": 26,
+      "regressed": 3,
+      "tied": 52,
+      "tasks": [
+        {
+          "task": "3d-scan-calc",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "adaptive-cruise-control",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "azure-bgp-oscillation-route-leak",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "citation-check",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "civ6-adjacency-optimizer",
+          "baseline_reward": 0.7,
+          "evolved_reward": 0.9
+        },
+        {
+          "task": "court-form-filling",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "crystallographic-wyckoff-position-analysis",
+          "baseline_reward": 0.45,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "dapt-intrusion-detection",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "data-to-d3",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "dialogue-parser",
+          "baseline_reward": 0.833,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "dynamic-object-aware-egomotion",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "earthquake-phase-association",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "earthquake-plate-calculation",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "econ-detrending-correlation",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "energy-ac-optimal-power-flow",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "energy-market-pricing",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "enterprise-information-search",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "exceltable-in-ppt",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "exoplanet-detection-period",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "financial-modeling-qa",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "find-topk-similiar-chemicals",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "fix-build-agentops",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "fix-build-google-auto",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "fix-erlang-ssh-cve",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "fix-visual-stability",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "flink-query",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "flood-risk-analysis",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "gh-repo-analytics",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "glm-lake-mendota",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "gravitational-wave-detection",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "grid-dispatch-operator",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "hvac-control",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "invoice-fraud-detection",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "jax-computing-basics",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "jpg-ocr-stat",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "lab-unit-harmonization",
+          "baseline_reward": 0.667,
+          "evolved_reward": 0.688
+        },
+        {
+          "task": "lake-warming-attribution",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "latex-formula-extraction",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "lean4-proof",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "manufacturing-codebook-normalization",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "manufacturing-equipment-maintenance",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "manufacturing-fjsp-optimization",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "mario-coin-counting",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "mars-clouds-clustering",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "multilingual-video-dubbing",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "offer-letter-generator",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "organize-messy-files",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "paper-anonymizer",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "parallel-tfidf-search",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "pddl-tpp-planning",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "pdf-excel-diff",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "pedestrian-traffic-counting",
+          "baseline_reward": 0.75,
+          "evolved_reward": 0.75
+        },
+        {
+          "task": "pg-essay-to-audiobook",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "powerlifting-coef-calc",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "pptx-reference-formatting",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "protein-expression-analysis",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "python-scala-translation",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "quantum-numerical-simulation",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "r2r-mpc-control",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "react-performance-debugging",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "reserves-at-risk-calc",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "sales-pivot-analysis",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "sec-financial-report",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "seismic-phase-picking",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "setup-fuzzing-py",
+          "baseline_reward": 0.83,
+          "evolved_reward": 0.16
+        },
+        {
+          "task": "shock-analysis-demand",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "shock-analysis-supply",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "simpo-code-reproduction",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "software-dependency-audit",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "spring-boot-jakarta-migration",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "suricata-custom-exfil",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "taxonomy-tree-merge",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "threejs-structure-parser",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "threejs-to-obj",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "travel-planning",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "video-filler-word-remover",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "video-silence-remover",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "video-tutorial-indexer",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "virtualhome-agent-planning",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "weighted-gdp-calc",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "xlsx-recover-data",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        }
+      ]
+    },
+    {
+      "method": "SPARK",
+      "run": 1,
+      "origin": "Server-native; OpenLux API",
+      "n": 84,
+      "baseline": 0.17820357142857143,
+      "skill": 0.19660952380952382,
+      "delta": 0.01840595238095238,
+      "improved": 9,
+      "regressed": 8,
+      "tied": 67,
+      "tasks": [
+        {
+          "task": "3d-scan-calc",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "adaptive-cruise-control",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "azure-bgp-oscillation-route-leak",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "citation-check",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "civ6-adjacency-optimizer",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "court-form-filling",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "crystallographic-wyckoff-position-analysis",
+          "baseline_reward": 0.55,
+          "evolved_reward": 0.91
+        },
+        {
+          "task": "dapt-intrusion-detection",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "data-to-d3",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "dialogue-parser",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.5
+        },
+        {
+          "task": "dynamic-object-aware-egomotion",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "earthquake-phase-association",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "earthquake-plate-calculation",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "econ-detrending-correlation",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "energy-ac-optimal-power-flow",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "energy-market-pricing",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "enterprise-information-search",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "exceltable-in-ppt",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "exoplanet-detection-period",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "financial-modeling-qa",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "find-topk-similiar-chemicals",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "fix-build-agentops",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "fix-build-google-auto",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "fix-erlang-ssh-cve",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "fix-visual-stability",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "flink-query",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "flood-risk-analysis",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "gh-repo-analytics",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "glm-lake-mendota",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "gravitational-wave-detection",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "grid-dispatch-operator",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "hvac-control",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "invoice-fraud-detection",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "jax-computing-basics",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "jpg-ocr-stat",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "lab-unit-harmonization",
+          "baseline_reward": 0.646,
+          "evolved_reward": 0.583
+        },
+        {
+          "task": "lake-warming-attribution",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "latex-formula-extraction",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "lean4-proof",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "manufacturing-codebook-normalization",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "manufacturing-equipment-maintenance",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "manufacturing-fjsp-optimization",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "mario-coin-counting",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "mars-clouds-clustering",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "mhc-layer-impl",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "multilingual-video-dubbing",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "offer-letter-generator",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "organize-messy-files",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "paper-anonymizer",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "parallel-tfidf-search",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "pddl-tpp-planning",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "pdf-excel-diff",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "pedestrian-traffic-counting",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "pg-essay-to-audiobook",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "powerlifting-coef-calc",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "pptx-reference-formatting",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "protein-expression-analysis",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "python-scala-translation",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "quantum-numerical-simulation",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "r2r-mpc-control",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "react-performance-debugging",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "reserves-at-risk-calc",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "sales-pivot-analysis",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "scheduling-email-assistant",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "sec-financial-report",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "seismic-phase-picking",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "setup-fuzzing-py",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "shock-analysis-demand",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "shock-analysis-supply",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "simpo-code-reproduction",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "software-dependency-audit",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "speaker-diarization-subtitles",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "spring-boot-jakarta-migration",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "suricata-custom-exfil",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "taxonomy-tree-merge",
+          "baseline_reward": 0.7731,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "threejs-structure-parser",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "threejs-to-obj",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "travel-planning",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "trend-anomaly-causal-inference",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.5222
+        },
+        {
+          "task": "video-filler-word-remover",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "video-tutorial-indexer",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "virtualhome-agent-planning",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "weighted-gdp-calc",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "xlsx-recover-data",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        }
+      ],
+      "skill_generation_coverage": {
+        "generated": 43,
+        "selected": 84
+      }
+    },
+    {
+      "method": "SPARK",
+      "run": 2,
+      "origin": "Server-native; OpenLux API",
+      "n": 84,
+      "baseline": 0.1436511904761905,
+      "skill": 0.2081452380952381,
+      "delta": 0.06449404761904762,
+      "improved": 13,
+      "regressed": 5,
+      "tied": 66,
+      "tasks": [
+        {
+          "task": "3d-scan-calc",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "adaptive-cruise-control",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "azure-bgp-oscillation-route-leak",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "citation-check",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "civ6-adjacency-optimizer",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "court-form-filling",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "crystallographic-wyckoff-position-analysis",
+          "baseline_reward": 0.55,
+          "evolved_reward": 0.55
+        },
+        {
+          "task": "dapt-intrusion-detection",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "data-to-d3",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "dialogue-parser",
+          "baseline_reward": 0.833,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "dynamic-object-aware-egomotion",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "earthquake-phase-association",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "earthquake-plate-calculation",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "econ-detrending-correlation",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "energy-ac-optimal-power-flow",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "energy-market-pricing",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "enterprise-information-search",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "exceltable-in-ppt",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "exoplanet-detection-period",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "financial-modeling-qa",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "find-topk-similiar-chemicals",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "fix-build-agentops",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "fix-build-google-auto",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "fix-erlang-ssh-cve",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "fix-visual-stability",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "flink-query",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "flood-risk-analysis",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "gh-repo-analytics",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "glm-lake-mendota",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "gravitational-wave-detection",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "grid-dispatch-operator",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "hvac-control",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "invoice-fraud-detection",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "jax-computing-basics",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "jpg-ocr-stat",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "lab-unit-harmonization",
+          "baseline_reward": 0.417,
+          "evolved_reward": 0.562
+        },
+        {
+          "task": "lake-warming-attribution",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "latex-formula-extraction",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "lean4-proof",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "manufacturing-codebook-normalization",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "manufacturing-equipment-maintenance",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "manufacturing-fjsp-optimization",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "mario-coin-counting",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "mars-clouds-clustering",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "mhc-layer-impl",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "multilingual-video-dubbing",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "offer-letter-generator",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "organize-messy-files",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "paper-anonymizer",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "parallel-tfidf-search",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "pddl-tpp-planning",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "pdf-excel-diff",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "pedestrian-traffic-counting",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "pg-essay-to-audiobook",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "powerlifting-coef-calc",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "pptx-reference-formatting",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "protein-expression-analysis",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "python-scala-translation",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "quantum-numerical-simulation",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "r2r-mpc-control",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "react-performance-debugging",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "reserves-at-risk-calc",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "sales-pivot-analysis",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "scheduling-email-assistant",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "sec-financial-report",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "seismic-phase-picking",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "setup-fuzzing-py",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "shock-analysis-demand",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "shock-analysis-supply",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "simpo-code-reproduction",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "software-dependency-audit",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "speaker-diarization-subtitles",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "spring-boot-jakarta-migration",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "suricata-custom-exfil",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "taxonomy-tree-merge",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "threejs-structure-parser",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "threejs-to-obj",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "travel-planning",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "trend-anomaly-causal-inference",
+          "baseline_reward": 0.2667,
+          "evolved_reward": 0.3722
+        },
+        {
+          "task": "video-filler-word-remover",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "video-tutorial-indexer",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "virtualhome-agent-planning",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "weighted-gdp-calc",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "xlsx-recover-data",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        }
+      ],
+      "skill_generation_coverage": {
+        "generated": 41,
+        "selected": 84
+      }
+    },
+    {
+      "method": "CoEvoSkills",
+      "run": 1,
+      "origin": "Local execution, transferred to server; ChatGPT subscription",
+      "n": 85,
+      "baseline": 0.4220882352941176,
+      "skill": 0.52444,
+      "delta": 0.10235176470588235,
+      "improved": 17,
+      "regressed": 9,
+      "tied": 59,
+      "tasks": [
+        {
+          "task": "3d-scan-calc",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "adaptive-cruise-control",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "azure-bgp-oscillation-route-leak",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "citation-check",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "civ6-adjacency-optimizer",
+          "baseline_reward": 0.7,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "court-form-filling",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "crystallographic-wyckoff-position-analysis",
+          "baseline_reward": 0.55,
+          "evolved_reward": 0.91
+        },
+        {
+          "task": "dapt-intrusion-detection",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "data-to-d3",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "dialogue-parser",
+          "baseline_reward": 0.833,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "dynamic-object-aware-egomotion",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "earthquake-phase-association",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "earthquake-plate-calculation",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "econ-detrending-correlation",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "energy-ac-optimal-power-flow",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "energy-market-pricing",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "enterprise-information-search",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "exceltable-in-ppt",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "exoplanet-detection-period",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "financial-modeling-qa",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "find-topk-similiar-chemicals",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "fix-build-agentops",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "fix-build-google-auto",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "fix-druid-loophole-cve",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "fix-erlang-ssh-cve",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "fix-visual-stability",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "flink-query",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "flood-risk-analysis",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "gh-repo-analytics",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "glm-lake-mendota",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "gravitational-wave-detection",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "grid-dispatch-operator",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "hvac-control",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "invoice-fraud-detection",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "jax-computing-basics",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "jpg-ocr-stat",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "lab-unit-harmonization",
+          "baseline_reward": 0.667,
+          "evolved_reward": 0.417
+        },
+        {
+          "task": "lake-warming-attribution",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "latex-formula-extraction",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "lean4-proof",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "manufacturing-codebook-normalization",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "manufacturing-equipment-maintenance",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "manufacturing-fjsp-optimization",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "mario-coin-counting",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "mars-clouds-clustering",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "multilingual-video-dubbing",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "offer-letter-generator",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "organize-messy-files",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "paper-anonymizer",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "parallel-tfidf-search",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "pddl-tpp-planning",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "pdf-excel-diff",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "pedestrian-traffic-counting",
+          "baseline_reward": 0.75,
+          "evolved_reward": 0.2
+        },
+        {
+          "task": "pg-essay-to-audiobook",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "powerlifting-coef-calc",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "pptx-reference-formatting",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "protein-expression-analysis",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "python-scala-translation",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "quantum-numerical-simulation",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "r2r-mpc-control",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "react-performance-debugging",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "reserves-at-risk-calc",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "sales-pivot-analysis",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "sec-financial-report",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "seismic-phase-picking",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "setup-fuzzing-py",
+          "baseline_reward": 0.66,
+          "evolved_reward": 0.5
+        },
+        {
+          "task": "shock-analysis-demand",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "shock-analysis-supply",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "simpo-code-reproduction",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "software-dependency-audit",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "speaker-diarization-subtitles",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "spring-boot-jakarta-migration",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "suricata-custom-exfil",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "syzkaller-ppdev-syzlang",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "taxonomy-tree-merge",
+          "baseline_reward": 0.8231,
+          "evolved_reward": 0.8615
+        },
+        {
+          "task": "threejs-structure-parser",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "threejs-to-obj",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "travel-planning",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "trend-anomaly-causal-inference",
+          "baseline_reward": 0.8944,
+          "evolved_reward": 0.6889
+        },
+        {
+          "task": "video-filler-word-remover",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "video-silence-remover",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "video-tutorial-indexer",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "virtualhome-agent-planning",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "weighted-gdp-calc",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "xlsx-recover-data",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        }
+      ]
+    },
+    {
+      "method": "CoEvoSkills",
+      "run": 2,
+      "origin": "Server-native; OpenLux API",
+      "n": 85,
+      "baseline": 0.23544902352941174,
+      "skill": 0.33306057647058823,
+      "delta": 0.09761155294117647,
+      "improved": 17,
+      "regressed": 10,
+      "tied": 58,
+      "tasks": [
+        {
+          "task": "3d-scan-calc",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "adaptive-cruise-control",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "azure-bgp-oscillation-route-leak",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "citation-check",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "civ6-adjacency-optimizer",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "court-form-filling",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "crystallographic-wyckoff-position-analysis",
+          "baseline_reward": 0.55,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "dapt-intrusion-detection",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "data-to-d3",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "dialogue-parser",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.833
+        },
+        {
+          "task": "dynamic-object-aware-egomotion",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "earthquake-phase-association",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "earthquake-plate-calculation",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "econ-detrending-correlation",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "energy-ac-optimal-power-flow",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "energy-market-pricing",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "enterprise-information-search",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "exceltable-in-ppt",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "exoplanet-detection-period",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "financial-modeling-qa",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "find-topk-similiar-chemicals",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "fix-build-agentops",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "fix-build-google-auto",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "fix-druid-loophole-cve",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "fix-erlang-ssh-cve",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "fix-visual-stability",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "flink-query",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "flood-risk-analysis",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "gh-repo-analytics",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "glm-lake-mendota",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "gravitational-wave-detection",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "grid-dispatch-operator",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "hvac-control",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "invoice-fraud-detection",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "jax-computing-basics",
+          "baseline_reward": 1.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "jpg-ocr-stat",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "lab-unit-harmonization",
+          "baseline_reward": 0.604,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "lake-warming-attribution",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "latex-formula-extraction",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "lean4-proof",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "manufacturing-codebook-normalization",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "manufacturing-equipment-maintenance",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "manufacturing-fjsp-optimization",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "mario-coin-counting",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "mars-clouds-clustering",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "multilingual-video-dubbing",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "offer-letter-generator",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "organize-messy-files",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "paper-anonymizer",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "parallel-tfidf-search",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "pddl-tpp-planning",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "pdf-excel-diff",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "pedestrian-traffic-counting",
+          "baseline_reward": 0.416667,
+          "evolved_reward": 0.059649
+        },
+        {
+          "task": "pg-essay-to-audiobook",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "powerlifting-coef-calc",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "pptx-reference-formatting",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "protein-expression-analysis",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "python-scala-translation",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "quantum-numerical-simulation",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "r2r-mpc-control",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "react-performance-debugging",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "reserves-at-risk-calc",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "sales-pivot-analysis",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "sec-financial-report",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "seismic-phase-picking",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "setup-fuzzing-py",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "shock-analysis-demand",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "shock-analysis-supply",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "simpo-code-reproduction",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "software-dependency-audit",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "speaker-diarization-subtitles",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "spring-boot-jakarta-migration",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "suricata-custom-exfil",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "syzkaller-ppdev-syzlang",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "taxonomy-tree-merge",
+          "baseline_reward": 0.5981,
+          "evolved_reward": 0.6731
+        },
+        {
+          "task": "threejs-structure-parser",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "threejs-to-obj",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "travel-planning",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "trend-anomaly-causal-inference",
+          "baseline_reward": 0.8444,
+          "evolved_reward": 0.7444
+        },
+        {
+          "task": "video-filler-word-remover",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "video-silence-remover",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "video-tutorial-indexer",
+          "baseline_reward": 1.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "virtualhome-agent-planning",
+          "baseline_reward": 0.0,
+          "evolved_reward": 1.0
+        },
+        {
+          "task": "weighted-gdp-calc",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        },
+        {
+          "task": "xlsx-recover-data",
+          "baseline_reward": 0.0,
+          "evolved_reward": 0.0
+        }
+      ]
+    }
+  ]
+}

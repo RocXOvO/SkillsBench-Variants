@@ -1,0 +1,22 @@
+{
+  "page_count": 8,
+  "experiment_pages": [
+    2,
+    3
+  ],
+  "table_page": 3,
+  "method_runs": 6,
+  "paired_rows": 500,
+  "coevo_common_tasks": 85,
+  "table_rows_match_recomputed_values": true,
+  "existing_main_text_unchanged_except_roadmap_and_section_include": true,
+  "original_bibliography_preserved": true,
+  "undefined_references_or_citations": false,
+  "overfull_boxes": false,
+  "underfull_box_messages": [
+    "Underfull \\vbox (badness 1158) has occurred while \\output is active []",
+    "Underfull \\hbox (badness 10000) in paragraph at lines 6--7"
+  ],
+  "pdf_sha256": "e18202a1a2ad1fc46f2d88161fefbeee9f2642ad5354ccad7c0148fd0cbbb7df",
+  "visual_review": "All eight pages inspected; final page 3 rerender inspected after prose edit. No clipping or overlaps found."
+}
