@@ -1,0 +1,81 @@
+{
+  "source_pdf": "output/pdf/main.pdf",
+  "source_commit": "29e3ec4d8229c95bf7785851a5b81e83eed148aa",
+  "source_sha256": "38b162dca50436d321f2803e3d4eac4b1324aa55e3314511eb7fc691b7e8fb3f",
+  "bilingual_pdf": "output/pdf/main-bilingual-en-zh.pdf",
+  "bilingual_sha256": "4d7170237220d69c90a5ae5b735741dc29e43e4791bb08b8b546d4d869e53237",
+  "plugin": "Zotero PDF2zh 4.1.7",
+  "engine": "pdf2zh_next",
+  "service": "siliconflowfree",
+  "languages": [
+    "en",
+    "zh-CN"
+  ],
+  "layout": "English left, Chinese right",
+  "pages": 9,
+  "history": {
+    "history": [
+      {
+        "active": false,
+        "config": {
+          "dualMode": "LR",
+          "noWatermark": true,
+          "ocr": true,
+          "outputTypes": [
+            "mono",
+            "dual"
+          ],
+          "poolSize": 0,
+          "qps": 10,
+          "sourceLang": "en",
+          "targetLang": "zh-CN"
+        },
+        "endTime": "2026-09-21T21:53:55.156350",
+        "engine": "pdf2zh_next",
+        "fileList": [
+          "main.no_watermark.zh-CN.mono.pdf",
+          "main.no_watermark.zh-CN.LR_dual.pdf"
+        ],
+        "fileName": "main.pdf",
+        "filePaths": [
+          "/Users/duchongyang/Applications/zotero-pdf2zh/server/translated/main.no_watermark.zh-CN.mono.pdf",
+          "/Users/duchongyang/Applications/zotero-pdf2zh/server/translated/main.no_watermark.zh-CN.LR_dual.pdf"
+        ],
+        "finished": true,
+        "outputDir": "/Users/duchongyang/Applications/zotero-pdf2zh/server/translated",
+        "result": {
+          "fileList": [
+            "main.no_watermark.zh-CN.mono.pdf",
+            "main.no_watermark.zh-CN.LR_dual.pdf"
+          ],
+          "filePaths": [
+            "/Users/duchongyang/Applications/zotero-pdf2zh/server/translated/main.no_watermark.zh-CN.mono.pdf",
+            "/Users/duchongyang/Applications/zotero-pdf2zh/server/translated/main.no_watermark.zh-CN.LR_dual.pdf"
+          ],
+          "outputDir": "/Users/duchongyang/Applications/zotero-pdf2zh/server/translated",
+          "status": "success"
+        },
+        "service": "siliconflowfree",
+        "startTime": "2026-09-21T21:43:51.774183",
+        "status": "success",
+        "taskId": "305cf52b-8e16-4a25-93f4-754d9236f035"
+      }
+    ],
+    "status": "success"
+  },
+  "zotero_attachments": [
+    {
+      "path": "/Users/duchongyang/Zotero/storage/D97KMVA4/main.no_watermark.zh-CN.mono.pdf",
+      "sha256": "9126834f37db670a92ec55b2b0eda448e7b91cd2b86ecc3d98fb9d5f22949d68"
+    },
+    {
+      "path": "/Users/duchongyang/Zotero/storage/QMULX754/Are Self-Evolving Agent Skills Learning Skills.pdf",
+      "sha256": "38b162dca50436d321f2803e3d4eac4b1324aa55e3314511eb7fc691b7e8fb3f"
+    },
+    {
+      "path": "/Users/duchongyang/Zotero/storage/TMH6KRKR/main.no_watermark.zh-CN.LR_dual.pdf",
+      "sha256": "4d7170237220d69c90a5ae5b735741dc29e43e4791bb08b8b546d4d869e53237"
+    }
+  ],
+  "verification": "All 9 bilingual pages rendered and visually reviewed. Standard-task and variant-table figures checked visually against English panels. Machine translation, not a human-edited Chinese manuscript."
+}
