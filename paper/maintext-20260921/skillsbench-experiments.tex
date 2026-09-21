@@ -3,7 +3,7 @@
 
 \subsection{Experimental Setup}
 
-We evaluate SkillEvolver~\cite{zhang2026skillevolver}, SPARK~\cite{zhou2026spark}, and CoEvoSkills~\cite{zhang2026coevoskills} on SkillsBench~\cite{li2026skillsbench}, with two runs per method. Each run pairs an execution using the generated or evolved skill with a no-skill execution of the same task. Both runs of each method use the same task set: 81 tasks for SkillEvolver, 84 for SPARK, and 85 for CoEvoSkills. For CoEvoSkills, we take the intersection of the two completed task sets, removing the additional \texttt{mhc-layer-impl} task from the first run.
+We evaluate SkillEvolver~\cite{zhang2026skillevolver}, SPARK~\cite{zhou2026spark}, and CoEvoSkills~\cite{zhang2026coevoskills} on SkillsBench~\cite{li2026skillsbench}, with two runs per method. Each run pairs an execution using the generated or evolved skill with a no-skill execution of the same task. Both runs of each method use the same task set: 81 tasks for SkillEvolver, 84 for SPARK, and 85 for CoEvoSkills.
 
 All six runs use Codex with GPT-5.5 and medium reasoning effort. SkillEvolver uses the ChatGPT subscription channel in both runs, SPARK uses the OpenLux API in both runs, and CoEvoSkills uses the subscription channel in run~1 and OpenLux in run~2. Each method follows its own skill-generation procedure. SPARK produces skill artifacts for 43/84 and 41/84 tasks; tasks without a generated artifact remain in the evaluation as no-skill executions. For CoEvoSkills run~2, duplicate evaluation records are resolved after collection by selecting the latest completed valid pair for each task, preserving the baseline and evolved results from the same pair.
 
