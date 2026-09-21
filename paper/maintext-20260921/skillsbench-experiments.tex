@@ -34,6 +34,8 @@ CoEvoSkills & 2 & 85 & 23.54 & 33.31 & $+9.76$ & 17 & 10 & 58 \\
 \label{tab:skillsbench-six-runs}
 \end{table*}
 
+\input{skillsbench-variant-table}
+
 \subsection{Results across Two Runs}
 
 All three methods achieve positive mean paired gains in both runs (Table~\ref{tab:skillsbench-six-runs}). SkillEvolver improves from 30.20 to 55.81 in run~1 and from 37.32 to 62.34 in run~2, yielding gains of 25.61 and 25.02 percentage points. The corresponding task counts are 27 improvements versus six regressions, and 26 improvements versus three regressions.
@@ -41,6 +43,5 @@ All three methods achieve positive mean paired gains in both runs (Table~\ref{ta
 SPARK increases mean reward from 17.82 to 19.66 in run~1 and from 14.37 to 20.81 in run~2. Its paired gain rises from 1.84 to 6.45 points, with nine versus 13 improved tasks and eight versus five regressions. CoEvoSkills improves from 42.21 to 52.44 and from 23.54 to 33.31 on the aligned 85-task set. Its paired gains are 10.24 and 9.76 points, with 17 improved tasks in each run and nine versus ten regressions.
 
 The direction of the average gain repeats for every method. SkillEvolver's gain remains near 25 points and CoEvoSkills' near ten, while SPARK shows a larger change in gain between runs. Improvements and regressions coexist within each run, making the paired task outcomes informative alongside the aggregate score. The benchmark results quantify the utility of generated and evolved skills under paired deployment. The variant experiments below examine how these gains extend to changed tasks and which artifact-level decisions support transfer.
-\FloatBarrier
 
 \input{skillsbench-variants}

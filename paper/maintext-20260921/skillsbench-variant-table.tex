@@ -1,0 +1,17 @@
+% Queue both SkillsBench tables together so the variant table stays near its results.
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{7pt}
+\begin{tabular}{lrrrrrrr}
+\toprule
+\textbf{Method} & \textbf{Variants} & \textbf{No skill} & \textbf{Skill} & $\boldsymbol{\Delta}$ & \textbf{Improved} & \textbf{Regressed} & \textbf{Tied} \\
+\midrule
+SkillEvolver & 206 & 41.24 & 55.08 & $+13.84$ & 46 & 17 & 143 \\
+SPARK & 204 & 40.66 & 42.83 & $+2.17$ & 30 & 32 & 142 \\
+CoEvoSkills & 204 & 42.13 & 39.16 & $-2.98$ & 26 & 36 & 142 \\
+\bottomrule
+\end{tabular}
+\caption{Generalization to task variants. Each method is paired with its own same-variant no-skill baseline. Scores and paired gains use the scale in Table~\ref{tab:skillsbench-six-runs}.}
+\label{tab:variant-transfer}
+\end{table*}

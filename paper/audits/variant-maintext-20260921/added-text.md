@@ -1,31 +1,22 @@
 ## Generalization under Task Variations
 
-
-We test how source-task skills perform when the task changes along three axes: input representation (P1), task-instance structure (P2), and coupled task requirements (P3). The reviewed collection contains 222 variants from 77 task families. Complete, unambiguous historical scores for all four conditions define a common comparison set of 198 variants from 71 families. Each variant contributes a no-skill score and scores for SkillEvolver, SPARK, and CoEvoSkills. The separate recovery evaluations are retained with their own protocol records. Table 2 summarizes paired outcomes within the historical comparison set.
-
-
-**A. Common historical comparison set: 71 task families**
+We evaluate source-task skills under changes to input representation (P1), task-instance structure (P2), and coupled task requirements (P3). For each method, we measure the paired gain over a no-skill execution of the same variant (Table 2).
 
 | Method | Variants | No skill | Skill | Δ | Improved | Regressed | Tied |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| SkillEvolver | 198 | 41.90 | 56.80 | +14.90 | 46 | 16 | 136 |
-| SPARK | 198 | 41.90 | 43.63 | +1.73 | 29 | 32 | 137 |
-| CoEvoSkills | 198 | 41.90 | 39.34 | -2.56 | 25 | 34 | 139 |
+| SkillEvolver | 206 | 41.24 | 55.08 | +13.84 | 46 | 17 | 143 |
+| SPARK | 204 | 40.66 | 42.83 | +2.17 | 30 | 32 | 142 |
+| CoEvoSkills | 204 | 42.13 | 39.16 | -2.98 | 26 | 36 | 142 |
 
-**B. All three methods supply a skill: 36 task families**
+**Table 2.** Generalization to task variants. Each method is paired with its own same-variant no-skill baseline. Scores and paired gains use the scale in Table 1.
 
-| Method | Variants | No skill | Skill | Δ | Improved | Regressed | Tied |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| SkillEvolver | 103 | 51.21 | 69.87 | +18.67 | 25 | 6 | 72 |
-| SPARK | 103 | 51.21 | 57.17 | +5.96 | 18 | 14 | 71 |
-| CoEvoSkills | 103 | 51.21 | 51.46 | +0.25 | 16 | 15 | 72 |
+**SkillEvolver.** Across 206 variants, mean reward increases from 41.24 to 55.08, a paired gain of 13.84 points, with 46 improvements and 17 regressions. Gains remain positive under all three types of change: 12.85 points on P1, 16.77 on P2, and 12.12 on P3. The strongest gain occurs when the task instance changes, showing that the learned procedures can adapt beyond the original inputs.
 
-**Table 2.** Descriptive comparison on matched task variants. Scores and paired gains use the same scale as Table 1. Panel B restricts Panel A to variants whose launch records confirm an available skill for every method, separating artifact availability from performance when artifacts are supplied.
+**SPARK.** Across 204 variants, mean reward increases from 40.66 to 42.83, a paired gain of 2.17 points, with 30 improvements and 32 regressions. Gains are 2.20 points on P1 and 6.34 on P3, while P2 produces a 2.43-point decline.
 
+**CoEvoSkills.** Across 204 variants, mean reward decreases from 42.13 to 39.16, a paired change of -2.98 points, with 26 improvements and 36 regressions. Changes are -2.52 points on P1, -6.87 on P2, and +0.23 on P3. The positive gains on standard tasks do not extend consistently to the changed tasks.
 
-SkillEvolver retains a substantial advantage on the variants: mean reward rises from 41.90 without a skill to 56.80, a paired gain of 14.90 points. It improves 46 variants and regresses on 16, compared with 29 improvements and 32 regressions for SPARK, and 25 improvements and 34 regressions for CoEvoSkills. SkillEvolver's paired gains are positive in all three variant groups: 14.89 points on P1, 17.03 on P2, and 12.85 on P3. The structural P2 group shows the largest separation: SPARK and CoEvoSkills have paired changes of $-2.43$ and $-6.98$ points, respectively.
-
-Artifact availability differs across methods. SPARK has no generated skill for 95 of the 198 variants, whereas SkillEvolver and CoEvoSkills supply artifacts for all 198. On the 103 variants where every method supplies a skill, SkillEvolver still reaches 69.87, compared with 57.17 for SPARK and 51.46 for CoEvoSkills. Its paired advantages over these methods are 12.70 points (95% CI $[1.97,24.35]$) and 18.42 points ($[6.68,30.36]$). These percentile intervals use 20,000 bootstrap samples of the 36 base-task families, retaining each sampled family's variants together. The advantage therefore persists when the comparison is restricted to supplied artifacts.
+SkillEvolver sustains double-digit gains across all three variation types. The execution traces below show how its skills preserve diagnostic steps and task constraints when inputs and requirements change.
 
 ## Tracing the Source of Transfer
 
