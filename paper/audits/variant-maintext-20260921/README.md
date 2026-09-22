@@ -1,3 +1,7 @@
+# Current manuscript status — 2026-09-22
+
+The current manuscript uses the full 222/221/221 variant record and the diagnostic rewrite documented in `diagnostic-theme-revision-20260922.md`. Its exact prose is in `diagnostic-rewrite-original-text-20260922.md`. The historical intersection analysis below remains a provenance record and is **not** the current main-table cohort. Current statistics are in `../full-variant-records-20260922/`.
+
 # Variant results and trace-based attribution
 
 ## Purpose

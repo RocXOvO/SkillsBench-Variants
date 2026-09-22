@@ -1,28 +1,5 @@
-diff --git a/paper/maintext-20260921/README.md b/paper/maintext-20260921/README.md
-index 567ff010d..201ae55dd 100644
---- a/paper/maintext-20260921/README.md
-+++ b/paper/maintext-20260921/README.md
-@@ -1,9 +1,13 @@
--# Original Overleaf manuscript
-+# SkillsBench experiments in the manuscript
- 
--The active manuscript has been restored to the original Overleaf source downloaded on 2026-09-21. The four manuscript/template files match the preserved source snapshot exactly.
-+The manuscript includes a main-text section, `Experiments on SkillsBench`, with six evaluations: two runs each for SkillEvolver, SPARK, and CoEvoSkills. CoEvoSkills uses the same 85 tasks in both runs. The new section is in `skillsbench-experiments.tex` and is included before `Identifying Retained Skill Effects`.
- 
--Build with `make`. The compiled manuscript has 7 pages. The current deliverable is `../../output/pdf/main.pdf`.
-+Build with `make`. The compiled manuscript has 8 pages; both the six-run table and the variant table are on page 3. The current deliverable is `../../output/pdf/main.pdf`.
- 
--The revised manuscript before restoration is preserved in Git commit `59f5097`. Restoration is a separate commit so both versions remain recoverable. The initially supplied `PDF/main.pdf` is a different manuscript version.
-+The original Overleaf version is preserved in commit `121a618` and tag `paper-overleaf-original`. The earlier superseded revision is preserved in commit `59f5097`. Raw experiment evidence remains local and unchanged.
- 
--Raw experiment evidence and archived revisions remain local and are not included in this repository.
-+Derived task alignment, source hashes, all paired scores, and the aggregation script are in `../audits/six-run-maintext-20260921/`. Server-native CoEvoSkills source selection is in `../audits/coevo-server-selection-20260921/`.
-+
-+The variant analysis is in `skillsbench-variants.tex`: separate paired evaluations of 206 SkillEvolver variants, 204 SPARK variants, and 204 CoEvoSkills variants, followed by trace-based attribution in exoplanet period detection and scheduling. Source selection, scores, uncertainty calculations, and case evidence are in `../audits/variant-maintext-20260921/`.
-+
-+The current per-method variant statistics and selected source hashes are in `per-method-statistics.json` and `per-method-paired-scores.json`. Earlier shared-set analyses remain archived in the same audit directory. `skillsbench-variant-table.tex` queues the variant table immediately after the standard-task table to keep both within the experiments section.
 diff --git a/paper/maintext-20260921/main.tex b/paper/maintext-20260921/main.tex
-index 599fc1a4c..f95c1a4b6 100644
+index 599fc1a4c..68f1c794a 100644
 --- a/paper/maintext-20260921/main.tex
 +++ b/paper/maintext-20260921/main.tex
 @@ -14,6 +14,7 @@
@@ -49,7 +26,7 @@ index 599fc1a4c..f95c1a4b6 100644
 -We therefore ask two connected questions. When self-evolution raises the benchmark score, does the revised skill itself retain a behavioral improvement under fresh deployment and controlled task variation? Regardless of whether it does, which parts of the evolution-and-evaluation lifecycle produced the observed gain? We study these questions in SkillRevise, SkillHone, and SkillOpt, which represent trace-conditioned revision, history-based iterative honing, and validation-gated bounded editing. They form a mechanism-stratified sample of frozen-agent, feedback-driven systems with persistent external skill artifacts, rather than an exhaustive ranking of self-evolution methods.
 +We therefore ask two connected questions. When self-evolution raises the benchmark score, does the revised skill itself retain a behavioral improvement under fresh deployment and controlled task variation? Regardless of whether it does, which parts of the evolution-and-evaluation lifecycle produced the observed gain?
 +
-+We organize the experiments around utility, behavioral scope, and lifecycle attribution. Repeated standard-task evaluations of SkillEvolver, SPARK, and CoEvoSkills measure skill utility, and controlled task variants examine how far that utility extends. Inspection of skill content and execution traces then identifies reusable decisions expressed during deployment. Complementary mechanism studies in SkillRevise, SkillHone, and SkillOpt examine retention and the origins of observed gains. These studies represent trace-conditioned revision, history-based iterative honing, and validation-gated bounded editing in frozen-agent systems with persistent external skill artifacts.
++We organize the evidence as a diagnosis of utility, behavioral scope, and gain attribution. Standard-task evaluations of SkillEvolver, SPARK, and CoEvoSkills first establish the observed utility of completed artifacts across two runs. Controlled task changes then reveal different scopes of usefulness, and artifact and trace inspection examines the decisions preserved during reuse. This motivates the next diagnostic step: locating an improvement in the artifact's evolution history. Complementary studies of SkillRevise, SkillHone, and SkillOpt use retention tests and lifecycle interventions to examine trace-conditioned revision, history-based iterative honing, and validation-gated editing. Each study addresses a specific part of the identification question.
  
  Our audit follows the lifecycle from feedback to revision, selection or adoption, frozen artifact deployment, and measurement. We separate historical success from fresh retention, final-skill utility from actual parent-to-final revision effects, and same-task retention from controlled transfer. We then intervene on feedback, optimizer sampling, gate provenance, artifact components, and verifier choice. A short information-integrity check bounds direct answer or oracle exposure as an alternative explanation; it is not the paper's organizing hypothesis.
  
@@ -193,7 +170,7 @@ index 599fc1a4c..f95c1a4b6 100644
  \section{Conclusion}
  
 -We study whether benchmark gains from self-evolving persistent skills correspond to retained behavioral improvement and, independently, which lifecycle mechanisms produce those gains. Our audits show that revised skill artifacts can produce real behavioral changes, but selected gains can disappear under fresh deployment and the transfer established so far remains narrow. Feedback, optimizer variation, validation selection, artifact content, execution variability, and verifier choice can each shape the observed endpoint.
-+We study whether benchmark gains from self-evolving persistent skills correspond to retained behavioral improvement and, independently, which lifecycle mechanisms produce those gains. In the recorded variant evaluations, SkillEvolver retains positive mean gains across changes in input representation, task-instance structure, and coupled requirements; SPARK shows gains on two types of change, while CoEvoSkills shows declines on all three. Execution traces connect successful cases to reusable diagnostic steps and preservation of task constraints. Our audits show that revised skill artifacts can produce real behavioral changes, but selected gains can disappear under fresh deployment and the transfer established so far remains narrow. Feedback, optimizer variation, validation selection, artifact content, execution variability, and verifier choice can each shape the observed endpoint.
++We diagnose where the gains from self-evolving persistent skills reside and how far they extend. All three methods in the standard-task evaluations have positive paired gains in both runs, but task variation separates their utility profiles. SkillEvolver remains positive across representation, instance, and requirement changes; SPARK combines gains on two probes with a decline on instance changes; CoEvoSkills declines on all three. The inspected traces identify decision criteria and correctness checks expressed during successful reuse. Complementary lifecycle interventions show that adopted artifact components can change behavior, selected outcomes can disappear under fresh deployment, and fixed outputs can receive different verdicts under different verifiers. Together, these findings distinguish useful artifacts, their behavioral scope, and the processes that produce or measure their apparent improvement.
  
  A higher benchmark score should therefore be reported only at the strongest level supported by matched evidence: a selected gain, a retained artifact effect, bounded controlled transfer, evolution-pathway dependence, or measurement dependence. We provide a lifecycle audit that links each claim to the required intervention and reporting evidence. Claims of transferable skill learning require frozen parent-to-final improvement that survives fresh deployment and predeclared task variation under valid measurement; weaker evidence should be reported more narrowly.
  
@@ -233,21 +210,14 @@ index 68a75b1b8..e164402ac 100644
 +}
 diff --git a/paper/maintext-20260921/skillsbench-experiments.tex b/paper/maintext-20260921/skillsbench-experiments.tex
 new file mode 100644
-index 000000000..cca83adb3
+index 000000000..e5ea2c0e4
 --- /dev/null
 +++ b/paper/maintext-20260921/skillsbench-experiments.tex
-@@ -0,0 +1,56 @@
-+\section{Skill Utility and Reuse on SkillsBench}
+@@ -0,0 +1,49 @@
++\section{Diagnosing the Scope of Skill Utility}
 +\label{sec:skillsbench-experiments}
 +
-+We first ask whether completed skills help on their source tasks, then whether that utility extends when the tasks change. Repeated standard-task evaluations establish the observed benefit of deploying the final artifacts. Controlled variants examine their scope of reuse, and inspection of skill content and execution traces connects these outcomes to the decisions made during deployment.
-+
-+\begin{figure*}[t]
-+\centering
-+\includegraphics[width=\textwidth]{figures/variant-evaluation-logic.pdf}
-+\caption{Evaluation of skill reuse under task variation. A source-task skill is frozen and reused under representation (P1), instance (P2), and requirement (P3) changes. Comparison with a no-skill execution of the same variant measures the completed artifact's utility.}
-+\label{fig:variant-evaluation}
-+\end{figure*}
++The first diagnostic question is where a completed skill is useful. A positive source-task result can arise from content that applies across instances or from a procedure fitted to the original task. We distinguish these possibilities by first examining paired utility in two standard-task runs, then deploying frozen skills under three forms of task variation. Inspection of skill content and execution traces connects the resulting utility profiles to decisions made during deployment.
 +
 +\subsection{Experimental Setup}
 +
@@ -284,13 +254,13 @@ index 000000000..cca83adb3
 +
 +\input{skillsbench-variant-table}
 +
-+\subsection{Do Completed Skills Help on Their Source Tasks?}
++\subsection{Source-Task Gains Recur across Runs}
 +
-+All three methods achieve positive mean paired gains in both runs (Table~\ref{tab:skillsbench-six-runs}). SkillEvolver gains 25.61 and 25.02 points, with 27 versus six improved/regressed tasks in run~1 and 26 versus three in run~2. CoEvoSkills gains 10.24 and 9.76 points, with 17 improved tasks in each run and nine versus ten regressions. For these two methods, the paired gains remain similar even though absolute baseline rewards differ between runs.
++All three methods have positive mean paired gains in both runs (Table~\ref{tab:skillsbench-six-runs}). SkillEvolver gains 25.61 and 25.02 points, and CoEvoSkills gains 10.24 and 9.76 points. For both methods, the aggregate advantage is similar across runs even though absolute rewards change substantially. SkillEvolver's no-skill mean rises from 30.20 to 37.32, while CoEvoSkills' falls from 42.21 to 23.54. A comparison of skill-condition scores alone would obscure this pattern. The within-task contrast locates the observed benefit relative to what the executor achieves without the artifact in each run.
 +
-+SPARK has smaller positive gains of 1.84 and 6.45 points. Its first run has nearly balanced improvements and regressions (nine versus eight); the second has 13 improvements and five regressions. Thus, observing a positive mean gain twice can accompany different patterns of task-level benefit.
++Task-level outcomes clarify how those means arise. SkillEvolver improves 27 tasks and regresses six in run~1, followed by 26 improvements and three regressions in run~2. CoEvoSkills improves 17 tasks in each run, with nine and ten regressions. SPARK has positive gains of 1.84 and 6.45 points, but its first run has nearly balanced improvements and regressions (nine versus eight), whereas the second has 13 improvements and five regressions. A repeated positive mean can therefore coexist with different concentrations of benefit and harm.
 +
-+The repeated positive direction establishes a consistent aggregate pattern across the two runs for each method. The coexistence of improvements, regressions, and ties also shows that skill utility varies across tasks. These paired comparisons establish the observed source-task utility of the completed artifacts. They provide the starting point for the reuse question: whether the content that helps on a source task remains useful when its inputs, instance, or requirements change.
++The common finding is a recurring aggregate benefit on the source tasks, with heterogeneous effects across individual tasks. The next diagnostic question is which parts of this usefulness survive task changes. The next comparison holds the source skill fixed and changes the task, so that the executor must reuse existing content rather than receive a skill evolved for the new instance.
 +
 +\input{skillsbench-variants}
 diff --git a/paper/maintext-20260921/skillsbench-variant-table.tex b/paper/maintext-20260921/skillsbench-variant-table.tex
@@ -326,50 +296,50 @@ index 000000000..94d2519b2
 +\end{table*}
 diff --git a/paper/maintext-20260921/skillsbench-variants.tex b/paper/maintext-20260921/skillsbench-variants.tex
 new file mode 100644
-index 000000000..6b85a334e
+index 000000000..08c9a013e
 --- /dev/null
 +++ b/paper/maintext-20260921/skillsbench-variants.tex
 @@ -0,0 +1,43 @@
-+\subsection{Do Evolved Skills Remain Useful When Tasks Change?}
++\subsection{Task Changes Separate Different Scopes of Utility}
 +\label{sec:variant-transfer}
 +
-+A source-task skill may capture a reusable procedure, a decision rule, or assumptions specific to that instance. We deploy these skills on controlled variants while keeping each artifact frozen (Figure~\ref{fig:variant-evaluation}). The executor interprets the changed task and decides how to use the existing skill. Its reward difference from a no-skill execution of the same variant measures the final artifact's utility under that change.
++\paragraph{Probing what must change during reuse.}
++We apply each source-task skill to controlled variants without further evolution. Input-representation changes (P1) modify names, column arrangements, or schemas. The executor must recover the same semantic roles from a different presentation. Task-instance changes (P2) replace the data or instance structure, requiring the procedure to operate on new values and relationships. Coupled-requirement changes (P3) alter or add requirements that must be satisfied together, requiring the executor to adapt its solution while preserving the relevant constraints. These probes separate input interpretation, instance-specific computation, and requirement handling; they are not successive difficulty levels.
 +
-+\paragraph{Three forms of task change.}
-+Input-representation changes (P1) alter how the task is presented, including names, column arrangements, or schemas. They test whether the executor can recover the relevant roles of the inputs while using the skill. Task-instance changes (P2) replace the data or instance structure. They test whether the procedure can be instantiated with new values rather than relying on a solution specific to the source instance. Coupled-requirement changes (P3) alter or add requirements that must be handled together. They test whether the executor can adapt the procedure while preserving the constraints that determine a valid output. These changes probe different aspects of reuse rather than successive levels of difficulty.
++The complete record contains 222 variants and 886 condition-level results across no skill and the three methods. Table~\ref{tab:variant-transfer} summarizes historical and recovery evaluations for 222 SkillEvolver variants and 221 each for SPARK and CoEvoSkills. Each method's utility is measured against the no-skill result on the same variant. The paired contrast measures utility under the changed task; P1--P3 locate its behavioral scope.
 +
-+The record contains 222 task variants and 886 condition-level results across no skill and the three methods. Table~\ref{tab:variant-transfer} summarizes historical and recovery evaluations for 222 SkillEvolver variants and 221 each for SPARK and CoEvoSkills. Panel B separates the within-variant differences by type of change.
++\paragraph{Source-task gains have different extensions.}
++The positive source-task results lead to three distinct variant profiles. SkillEvolver increases mean reward from 41.87 to 53.81, a gain of 11.94 points, with 47 improvements and 20 regressions. Its skill utility extends beyond the instances on which the artifacts were produced. SPARK's average gain is much smaller, at 0.65 points, with 32 improvements and 37 regressions. CoEvoSkills changes from 41.61 to 36.60, a decline of 5.01 points, with 26 improvements and 41 regressions. Thus, a positive result on the original tasks can accompany positive, nearly neutral, or negative average utility after task variation. Source-task success alone does not characterize the scope of a skill.
 +
-+\paragraph{Overall utility under task variation.}
-+SkillEvolver increases mean reward from 41.87 to 53.81, a gain of 11.94 points, with 47 improved and 20 regressed variants. Thus, its source-task skills retain positive average utility after the tasks change. SPARK increases mean reward from 41.61 to 42.25, a gain of 0.65 points, with 32 improvements and 37 regressions. The positive mean alongside more regressions than improvements reflects the magnitudes of the reward changes: the mean and the number of benefited variants capture different properties. CoEvoSkills decreases mean reward from 41.61 to 36.60, a change of $-5.01$ points, with 26 improvements and 41 regressions. Its positive source-task gains therefore coexist with negative average utility on the recorded variants.
++\paragraph{Instance changes expose the clearest separation.}
++SkillEvolver remains positive under all three probes: 11.85 points on P1, 14.56 on P2, and 9.72 on P3. Improvements outnumber regressions within each category, at 15 versus seven, 15 versus six, and 17 versus seven. Its positive overall result is therefore supported across all three types of change rather than being concentrated in one category. The largest gain occurs on P2, where the source instance has been replaced and the executor must recompute a solution using the new task data.
 +
-+\paragraph{Where does utility extend?}
-+SkillEvolver has positive gains under every type of change: 11.85 points on P1, 14.56 on P2, and 9.72 on P3. Improved variants also outnumber regressed variants within each type: 15 versus seven, 15 versus six, and 17 versus seven, respectively. Its overall gain consequently spans all three forms of variation. The largest mean gain occurs under P2, where applying the source skill requires working with a changed instance.
++P2 also produces the largest average decline for the other two methods: 5.23 points for SPARK and 9.51 points for CoEvoSkills. This shared location of their largest decline makes instance changes particularly informative for the diagnosis. The relevant question is whether a source artifact helps the executor reconstruct the procedure for a new instance, rather than merely repeat an execution that worked before. SkillEvolver shows the strongest positive utility profile on this probe.
 +
-+The other methods exhibit different profiles. SPARK remains positive on P1 and P3, at 2.00 and 4.53 points, but falls by 5.23 points on P2. CoEvoSkills has negative average changes on all three types, with its largest decline also on P2 ($-9.51$ points, compared with $-3.59$ on P1 and $-2.42$ on P3). Instance changes thus separate the observed reuse profiles especially clearly: SkillEvolver's largest positive gain and the other methods' largest declines occur in the same category of variation.
++\paragraph{Representation and requirements reveal different sensitivities.}
++SPARK gains 2.00 points on P1 and 4.53 on P3 despite its negative P2 result. Its overall mean consequently combines benefits under some changes with losses under another. CoEvoSkills declines on both P1 and P3, by 3.59 and 2.42 points, so its negative overall result extends across the three probes. These profiles explain why a single aggregate variant score is an incomplete description: handling renamed inputs, instantiating a procedure on new data, and satisfying coupled requirements are different demands on skill reuse. The breakdown locates the observed strengths and failures without treating all task changes as interchangeable.
 +
-+\paragraph{What the combined results reveal.}
-+All three methods obtain positive mean gains in both standard-task runs, yet their variant profiles differ substantially. Success on the source tasks and usefulness after task changes are distinct empirical properties. SkillEvolver provides the clearest positive reuse pattern in these records, whereas SPARK's benefit depends on the type of change and CoEvoSkills' source-task benefit does not extend on average. Approximately seven in ten variants remain tied with the baseline for each method. The gains therefore arise from a subset of changed outcomes, motivating a closer examination of the decisions expressed when a skill helps or hinders execution.
++\paragraph{Benefit magnitude and benefit frequency differ.}
++SPARK's positive mean coexists with more regressions than improvements. Reward magnitudes determine the mean, whereas the sign counts describe how often the outcome changes in each direction. Both are needed to interpret utility. Moreover, 155 of 222 SkillEvolver variants, 152 of 221 SPARK variants, and 154 of 221 CoEvoSkills variants tie with their no-skill counterparts. Most evaluations therefore preserve the baseline reward, and the aggregate differences arise from a minority of changed outcomes. A reward tie does not reveal whether the executor ignored the skill or followed a different trajectory to the same score. This motivates inspecting how skill content enters execution, rather than inferring skill use directly from the final reward.
 +
-+\begin{figure*}[t]
-+\centering
-+\includegraphics[width=\textwidth]{figures/skill-reuse-logic.pdf}
-+\caption{Skill reuse in the inspected cases. Diagnostic rules guide adaptation, and correctness constraints guide output checks. Successful reuse preserves these decisions while adapting the solution; unsuccessful reuse can carry over a procedure while missing a required decision or constraint.}
-+\label{fig:skill-reuse}
-+\end{figure*}
-+
-+\subsection{What Is Preserved When a Skill Is Reused?}
++\subsection{Tracing Utility to Decisions Made during Reuse}
 +\label{sec:skill-reuse}
 +
-+To interpret the variant results, we inspect the skill artifacts together with their execution traces. We distinguish the procedure stored in a skill from the way an executor applies it to a new task. A script can preserve an action sequence, while successful reuse also depends on recognizing when that sequence applies, adjusting its inputs, and checking its output. Figure~\ref{fig:skill-reuse} organizes the inspected evidence around these decisions.
++The variant profiles establish where skill utility is observed. To examine how that utility is expressed, we inspect the source artifacts and execution traces in the signal-detection and scheduling cases. The analytical unit is a decision that connects stored content to a changed task: recognizing the inputs, choosing or revising an operation, and checking the resulting output. This separates the procedure available in the artifact from the behavior actually produced when the executor applies it.
 +
-+\paragraph{Diagnostic rules guide adaptation.}
-+In the inspected SkillEvolver artifacts, intermediate checks guide the choice and revision of a procedure. Candidate discovery, diagnosis, and refinement appear as separate operations, with conditions explaining when to revisit an intermediate result. This structure gives the executor opportunities to respond to changed inputs before committing to an output. In the signal-detection traces, for example, the executor uses diagnostic checks to distinguish competing candidate explanations and adjusts the search accordingly. The reusable content is the rule for evaluating a candidate; the candidate values and search settings can change with the task.
++\paragraph{Diagnostic rules preserve criteria while allowing new solutions.}
++The inspected SkillEvolver signal-detection artifact separates candidate discovery, diagnosis, and local refinement. Its rules specify when a candidate requires further checking and when the search should be adjusted. In the P1 and P3 executions, the executor uses these checks to distinguish competing explanations and revise the search before choosing an output. The reusable element is the criterion for accepting a candidate; the candidate itself and the numerical search settings are recomputed from the changed input.
 +
-+\paragraph{Correctness constraints survive solution changes.}
-+A second form of reusable content specifies which properties the output must preserve. The inspected scheduling skill expresses constraints relative to the supplied instance and baseline, allowing the executor to construct a different schedule while checking the same repair requirements. Failure traces make this distinction visible: much of a workflow can execute correctly while one omitted requirement invalidates the final result. This helps explain why preserving a familiar procedure is insufficient when a variant changes how inputs are represented or how requirements interact.
++This distinction matters because a stored action sequence can remain executable while the reason for trusting its result has changed. In the corresponding CoEvoSkills failure traces, executing the period-search routine does not reliably resolve the competing signal interpretations. The contrast directs attention to the checks between operations: whether an intermediate result is accepted, rejected, or used to trigger another search. The table records an outcome difference; the trace shows the decision at which the executions diverge.
 +
-+\paragraph{Reuse combines preserved rules with new execution.}
-+Across the inspected cases, successful adaptation preserves decision criteria and correctness checks while changing input handling, search choices, or the constructed solution. This illustrates how a transferred artifact can help the executor decide what to retain and what to recompute. SkillEvolver's positive profile across P1--P3 is consistent with this form of reuse. The trace evidence identifies concrete instances of that behavior. Complementary interventions on SkillRevise, SkillHone, and SkillOpt later in the paper test component effects within their respective artifact lineages.
++The same task family also exposes a boundary of this behavior: both skills fail on the replacement-instance P2 variant. Successful reuse under a changed representation or requirement does not ensure success when the underlying signal changes. This within-family contrast makes the scope question concrete. The diagnostic rules help resolve some changed executions, while the replacement instance remains a failure even with those rules available.
 +
-+The variant evaluations characterize how far final-skill utility extends beyond the source task. The following retention and lifecycle studies examine whether improvements persist under fresh deployment and which parts of the evolution process produce them.
++\paragraph{Output constraints preserve the task contract.}
++The scheduling case exposes a complementary form of reusable content. The inspected SkillEvolver artifact states repair constraints relative to the supplied instance and baseline schedule. This permits the concrete schedule to change while preserving the conditions that make the repair valid. The corresponding executions handle changed inputs and requirements while retaining those checks. SkillEvolver and SPARK both succeed on the three inspected scheduling variants, showing that this behavior is not exclusive to a single method.
++
++The CoEvoSkills P1 failure is more localized: the output satisfies other structural and policy checks but violates the required local-minimality condition. The diagnostic value lies in this separation. Producing a largely valid schedule and preserving the full repair contract are different outcomes, even when they arise from similar high-level workflows. Examining the failed predicate connects the reward change to a specific behavioral requirement rather than treating the entire execution as an undifferentiated failure.
++
++\paragraph{From behavioral evidence to lifecycle attribution.}
++Across these cases, successful reuse combines preserved decision criteria with task-dependent execution. Input names, search parameters, and constructed solutions can change, while diagnostic checks and correctness constraints remain relevant. This provides a concrete interpretation of the behavior sought by the variant probes: a useful skill supplies guidance for recomputing a solution, including how to recognize and correct an unsuitable intermediate result. SkillEvolver's positive profile across P1--P3 is consistent with this pattern, and the inspected traces show instances in which the pattern is expressed.
++
++The diagnostic sequence now separates three objects: the utility of a completed artifact, the scope of that utility under task changes, and the decisions observed during its use. Locating an improvement in the evolution process requires an additional contrast: the actual parent artifact against the adopted final artifact, followed by interventions on the feedback, selection, content, or verifier involved. The following studies apply these contrasts to SkillRevise, SkillHone, and SkillOpt. They move from identifying useful behavior to testing whether it is retained and which lifecycle components produce it.

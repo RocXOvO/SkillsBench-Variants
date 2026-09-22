@@ -1,14 +1,7 @@
-\section{Skill Utility and Reuse on SkillsBench}
+\section{Diagnosing the Scope of Skill Utility}
 \label{sec:skillsbench-experiments}
 
-We first ask whether completed skills help on their source tasks, then whether that utility extends when the tasks change. Repeated standard-task evaluations establish the observed benefit of deploying the final artifacts. Controlled variants examine their scope of reuse, and inspection of skill content and execution traces connects these outcomes to the decisions made during deployment.
-
-\begin{figure*}[t]
-\centering
-\includegraphics[width=\textwidth]{figures/variant-evaluation-logic.pdf}
-\caption{Evaluation of skill reuse under task variation. A source-task skill is frozen and reused under representation (P1), instance (P2), and requirement (P3) changes. Comparison with a no-skill execution of the same variant measures the completed artifact's utility.}
-\label{fig:variant-evaluation}
-\end{figure*}
+The first diagnostic question is where a completed skill is useful. A positive source-task result can arise from content that applies across instances or from a procedure fitted to the original task. We distinguish these possibilities by first examining paired utility in two standard-task runs, then deploying frozen skills under three forms of task variation. Inspection of skill content and execution traces connects the resulting utility profiles to decisions made during deployment.
 
 \subsection{Experimental Setup}
 
@@ -45,12 +38,12 @@ CoEvoSkills & 2 & 85 & 23.54 & 33.31 & $+9.76$ & 17 & 10 & 58 \\
 
 \input{skillsbench-variant-table}
 
-\subsection{Do Completed Skills Help on Their Source Tasks?}
+\subsection{Source-Task Gains Recur across Runs}
 
-All three methods achieve positive mean paired gains in both runs (Table~\ref{tab:skillsbench-six-runs}). SkillEvolver gains 25.61 and 25.02 points, with 27 versus six improved/regressed tasks in run~1 and 26 versus three in run~2. CoEvoSkills gains 10.24 and 9.76 points, with 17 improved tasks in each run and nine versus ten regressions. For these two methods, the paired gains remain similar even though absolute baseline rewards differ between runs.
+All three methods have positive mean paired gains in both runs (Table~\ref{tab:skillsbench-six-runs}). SkillEvolver gains 25.61 and 25.02 points, and CoEvoSkills gains 10.24 and 9.76 points. For both methods, the aggregate advantage is similar across runs even though absolute rewards change substantially. SkillEvolver's no-skill mean rises from 30.20 to 37.32, while CoEvoSkills' falls from 42.21 to 23.54. A comparison of skill-condition scores alone would obscure this pattern. The within-task contrast locates the observed benefit relative to what the executor achieves without the artifact in each run.
 
-SPARK has smaller positive gains of 1.84 and 6.45 points. Its first run has nearly balanced improvements and regressions (nine versus eight); the second has 13 improvements and five regressions. Thus, observing a positive mean gain twice can accompany different patterns of task-level benefit.
+Task-level outcomes clarify how those means arise. SkillEvolver improves 27 tasks and regresses six in run~1, followed by 26 improvements and three regressions in run~2. CoEvoSkills improves 17 tasks in each run, with nine and ten regressions. SPARK has positive gains of 1.84 and 6.45 points, but its first run has nearly balanced improvements and regressions (nine versus eight), whereas the second has 13 improvements and five regressions. A repeated positive mean can therefore coexist with different concentrations of benefit and harm.
 
-The repeated positive direction establishes a consistent aggregate pattern across the two runs for each method. The coexistence of improvements, regressions, and ties also shows that skill utility varies across tasks. These paired comparisons establish the observed source-task utility of the completed artifacts. They provide the starting point for the reuse question: whether the content that helps on a source task remains useful when its inputs, instance, or requirements change.
+The common finding is a recurring aggregate benefit on the source tasks, with heterogeneous effects across individual tasks. The next diagnostic question is which parts of this usefulness survive task changes. The next comparison holds the source skill fixed and changes the task, so that the executor must reuse existing content rather than receive a skill evolved for the new instance.
 
 \input{skillsbench-variants}

@@ -1,0 +1,12 @@
+{
+  "six_runs_recomputed": true,
+  "variant_overall_and_type_statistics_recomputed": true,
+  "experiment_records_modified": false,
+  "provisional_flow_figures_withdrawn": true,
+  "review_provenance": "inline self-review by the writing assistant",
+  "source_sha256": {
+    "paper/maintext-20260921/main.tex": "3164232cbed262a4af68c70f619152c5bcc66cc4185eab47eb175c86fc28e0d8",
+    "paper/maintext-20260921/skillsbench-experiments.tex": "15d049bf0fddcc57ad4c414874679372f2f808e45aa57684dc837622cf4e1795",
+    "paper/maintext-20260921/skillsbench-variants.tex": "c0589184ead22108d7568c35d0a99fa58b2ed7da3013771e8d806398d79f5624"
+  }
+}
