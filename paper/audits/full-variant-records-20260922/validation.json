@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "unique_cells": 886,
+  "method_pairs": 664,
+  "independent_recomputation": "means, deltas, outcome counts, subgroup totals and table values agree",
+  "server_files_verified": 892,
+  "pdf_generation": "deferred by user",
+  "unchanged_pdf_base_commit": "3949e5fb1",
+  "unchanged_pdf_hashes": {
+    "output/pdf/main.pdf": "cb459157491dfc70d383485f37d77ea1a7c058d6b05ad579ff61a82708516091",
+    "output/pdf/main-bilingual-en-zh.pdf": "9ef8348ec691aa6116edbad539b86ba2d5f0c9b1156f6b5463e7b29991629197",
+    "output/pdf/main-revision-highlighted.pdf": "6e1de3b2382faad147812ae6411de0bf16b4e01e64103bcf6acd925343a91d31"
+  },
+  "zotero_update": "deferred by user"
+}
