@@ -2,7 +2,7 @@
   "baseline_commit": "121a6182b",
   "baseline": "Original Overleaf manuscript, not the separately supplied PDF/main.pdf.",
   "baseline_tex_sha256": "3d9db737004a3037b971e3019dcc3c1e6c5e9093d0d40c64397a1efa18541678",
-  "current_pdf_sha256": "cb459157491dfc70d383485f37d77ea1a7c058d6b05ad579ff61a82708516091",
+  "current_pdf_sha256": "0ee2a2b39f6383b641f748235b69521f6326dc79f36d7361d1d70340e6b9d62f",
   "scope": "All substantive text, table and bibliography additions/replacements relative to the original. Layout moves and automatic numbering changes are recorded separately.",
   "layout_changes": [
     "Removed FloatBarrier breaks and advanced float declarations to keep figures/tables near the relevant discussion.",
@@ -50,20 +50,56 @@
     },
     {
       "page": 1,
-      "text": "We first evaluate SkillEvolver, SPARK, and CoEvoSkills on standard tasks and controlled variants, then use artifact content and execution traces to examine how successful procedures adapt to changed inputs and requirements.",
-      "comment": "引言新增：说明标准任务、变体评估及轨迹分析。",
+      "text": "We organize the experiments around utility, behavioral scope, and lifecycle attribution. Repeated standard-task evaluations of SkillEvolver, SPARK, and CoEvoSkills measure skill utility, and controlled task variants examine how far that utility extends. Inspection of skill content and execution traces then identifies reusable decisions expressed during deployment. Complementary mechanism studies in SkillRevise, SkillHone, and SkillOpt examine retention and the origins of observed gains. These studies represent trace-conditioned revision, history-based iterative honing, and validation-gated bounded editing in frozen-agent systems with persistent external skill artifacts.",
+      "comment": "引言替换：说明标准任务、变体评估、技能复用分析与后续机制研究的关系。",
       "color": "#ff6666",
       "rects": [
         [
           329.4630126953125,
+          262.2478332519531,
+          557.9949951171875,
+          272.21044921875
+        ],
+        [
+          319.5,
+          273.2068176269531,
+          554.677001953125,
+          283.16943359375
+        ],
+        [
+          319.5,
+          284.1658020019531,
+          557.99462890625,
+          294.12841796875
+        ],
+        [
+          319.5,
+          295.1247863769531,
+          557.9945678710938,
+          305.08740234375
+        ],
+        [
+          319.5,
+          306.0837707519531,
+          557.9945678710938,
+          316.04638671875
+        ],
+        [
+          319.5,
+          317.0427551269531,
+          557.9947509765625,
+          327.00537109375
+        ],
+        [
+          319.5,
           328.0017395019531,
-          557.9950561523438,
+          554.6770629882812,
           337.96435546875
         ],
         [
           319.5,
           338.9607238769531,
-          557.9945678710938,
+          557.9946899414062,
           348.92333984375
         ],
         [
@@ -75,8 +111,20 @@
         [
           319.5,
           360.8777160644531,
-          517.506591796875,
+          557.9946899414062,
           370.84033203125
+        ],
+        [
+          319.5,
+          371.8367004394531,
+          557.9945068359375,
+          381.79931640625
+        ],
+        [
+          319.5,
+          382.7956848144531,
+          466.40838623046875,
+          392.75830078125
         ]
       ]
     },
@@ -88,9 +136,9 @@
       "rects": [
         [
           53.99997329711914,
-          694.4497680664062,
+          694.44970703125,
           285.21197509765625,
-          704.412353515625
+          704.4122924804688
         ]
       ]
     },
@@ -102,111 +150,111 @@
       "rects": [
         [
           367.0969543457031,
-          177.4347686767578,
+          177.43470764160156,
           510.4039611816406,
-          189.3899688720703
+          189.38990783691406
         ],
         [
           319.49993896484375,
-          193.139892578125,
+          193.13983154296875,
           412.53265380859375,
-          204.0489959716797
+          204.04893493652344
         ],
         [
           319.49993896484375,
-          207.9077606201172,
+          207.90769958496094,
           332.6306457519531,
-          217.870361328125
+          217.87030029296875
         ],
         [
           343.87841796875,
-          207.9077606201172,
+          207.90769958496094,
           376.57568359375,
-          217.870361328125
+          217.87030029296875
         ],
         [
           387.8234558105469,
-          207.9077606201172,
+          207.90769958496094,
           437.1980285644531,
-          217.870361328125
+          217.87030029296875
         ],
         [
           448.44580078125,
-          207.9077606201172,
+          207.90769958496094,
           477.2177734375,
-          217.870361328125
+          217.87030029296875
         ],
         [
           488.4655456542969,
-          207.9077606201172,
+          207.90769958496094,
           495.6585388183594,
-          217.870361328125
+          217.87030029296875
         ],
         [
           506.90631103515625,
-          207.9077606201172,
+          207.90769958496094,
           516.5899658203125,
-          217.870361328125
+          217.87030029296875
         ],
         [
           527.8377685546875,
-          207.9077606201172,
+          207.90769958496094,
           557.9946899414062,
-          217.870361328125
+          217.87030029296875
         ],
         [
           319.49993896484375,
-          218.8667449951172,
+          218.86668395996094,
           557.9945678710938,
-          228.829345703125
+          228.82928466796875
         ],
         [
           319.49993896484375,
-          229.8257293701172,
+          229.82566833496094,
           557.99462890625,
-          239.788330078125
+          239.78826904296875
         ],
         [
           319.49993896484375,
-          240.7847137451172,
+          240.78465270996094,
           557.99462890625,
-          250.747314453125
+          250.74725341796875
         ],
         [
           319.49993896484375,
-          251.7436981201172,
+          251.74363708496094,
           557.9944458007812,
-          261.706298828125
+          261.70623779296875
         ],
         [
           319.49993896484375,
-          262.7026672363281,
+          262.7026062011719,
           557.9946899414062,
-          272.665283203125
+          272.66522216796875
         ],
         [
           319.49993896484375,
-          273.6616516113281,
+          273.6615905761719,
           531.3744506835938,
-          283.624267578125
+          283.62420654296875
         ],
         [
           329.46295166015625,
-          284.6206359863281,
+          284.6205749511719,
           557.9949951171875,
-          294.583251953125
+          294.58319091796875
         ],
         [
           319.49993896484375,
-          295.5796203613281,
+          295.5785827636719,
           557.9945678710938,
-          305.542236328125
+          305.54119873046875
         ],
         [
           319.49993896484375,
-          306.30169677734375,
+          306.3016357421875,
           529.8502197265625,
-          316.500244140625
+          316.50018310546875
         ]
       ]
     },
@@ -218,9 +266,9 @@
       "rects": [
         [
           372.8409423828125,
-          327.6726989746094,
+          327.6726379394531,
           410.5658264160156,
-          344.3752746582031
+          344.3752136230469
         ]
       ]
     },
@@ -959,7 +1007,7 @@
     {
       "page": 3,
       "text": "Method Variants No skill Skill ∆ Improved Regressed Tied",
-      "comment": "新增表2：各方法在自身变体集上的配对结果。",
+      "comment": "新增表2：纳入补跑与文件读取修复，描述性汇总 SkillEvolver 222、SPARK 221、CoEvoSkills 221 个变体。",
       "color": "#ff6666",
       "rects": [
         [
@@ -1014,8 +1062,8 @@
     },
     {
       "page": 3,
-      "text": "SkillEvolver 206 41.24 55.08 +13.84 46 17 143 SPARK 204 40.66 42.83 +2.17 30 32 142 CoEvoSkills 204 42.13 39.16 −2.98 26 36 142",
-      "comment": "新增表2：各方法在自身变体集上的配对结果。",
+      "text": "SkillEvolver 222 41.87 53.81 +11.94 47 20 155 SPARK 221 41.61 42.25 +0.65 32 37 152 CoEvoSkills 221 41.61 36.60 −5.01 26 41 154",
+      "comment": "新增表2：纳入补跑与文件读取修复，描述性汇总 SkillEvolver 222、SPARK 221、CoEvoSkills 221 个变体。",
       "color": "#ff6666",
       "rects": [
         [
@@ -1166,8 +1214,8 @@
     },
     {
       "page": 3,
-      "text": "Table 2: Generalization to task variants. Each method is paired with its own same-variant no-skill baseline. Scores and paired gains use the scale in Table 1.",
-      "comment": "新增表2：各方法在自身变体集上的配对结果。",
+      "text": "Table 2: Descriptive summary of historical and recovery evaluations on task variants. Each method is paired with its own same-variant no-skill baseline. Scores and within-variant differences use the scale in Table 1.",
+      "comment": "新增表2：纳入补跑与文件读取修复，描述性汇总 SkillEvolver 222、SPARK 221、CoEvoSkills 221 个变体。",
       "color": "#ff6666",
       "rects": [
         [
@@ -1179,442 +1227,418 @@
         [
           54.0,
           259.7248229980469,
-          172.3058319091797,
+          424.3497619628906,
           269.68743896484375
         ]
       ]
     },
     {
       "page": 3,
-      "text": "requirements (P3). For each method, we measure the paired gain over a no-skill execution of the same variant (Table 2).",
-      "comment": "新增变体实验：分别报告各方法总体效果和 P1/P2/P3 结果。",
+      "text": "requirements (P3). The final record covers 222 task variants and 886 condition-level results across no skill and the three methods, including completed recovery evaluations. For each method, Table 2 summarizes the recorded reward difference from a no-skill execution of the same variant.",
+      "comment": "新增变体实验：分别报告各方法完整记录的总体效果和 P1/P2/P3 结果。",
       "color": "#ff6666",
       "rects": [
         [
           54.0,
-          291.7698059082031,
+          289.7378234863281,
           292.49468994140625,
-          301.732421875
+          299.700439453125
         ],
         [
           54.0,
-          302.7287902832031,
-          290.4324035644531,
-          312.69140625
+          300.6968078613281,
+          292.49468994140625,
+          310.659423828125
+        ],
+        [
+          54.0,
+          311.6557922363281,
+          292.4946594238281,
+          321.618408203125
+        ],
+        [
+          54.0,
+          322.6147766113281,
+          292.4947204589844,
+          332.577392578125
+        ],
+        [
+          54.0,
+          333.5727844238281,
+          234.8112030029297,
+          343.535400390625
         ]
       ]
     },
     {
       "page": 3,
-      "text": "SkillEvolver. Across 206 variants, mean reward increases from 41.24 to 55.08, a paired gain of 13.84 points, with 46 improvements and 17 regressions. Gains remain positive under all three types of change: 12.85 points on P1, 16.77 on P2, and 12.12 on P3. The strongest gain occurs when the task instance changes, showing that the learned procedures can adapt beyond the original inputs.",
-      "comment": "新增变体实验：分别报告各方法总体效果和 P1/P2/P3 结果。",
+      "text": "SkillEvolver. Across 222 variants, mean recorded reward increases from 41.87 to 53.81, a mean within-variant gain of 11.94 points, with 47 improvements and 20 regressions. Gains remain positive under all three types of change: 11.85 points on P1, 14.56 on P2, and 9.72 on P3. The strongest gain occurs when the task instance changes, consistent with learned procedures adapting beyond the original inputs.",
+      "comment": "新增变体实验：分别报告各方法完整记录的总体效果和 P1/P2/P3 结果。",
       "color": "#ff6666",
       "rects": [
         [
           54.0,
-          319.3642272949219,
+          350.5992126464844,
           107.43937683105469,
-          329.3268127441406
+          360.5617980957031
         ],
         [
           117.4019775390625,
-          319.50079345703125,
-          292.49468994140625,
-          329.4634094238281
-        ],
-        [
-          54.0,
-          330.4598083496094,
-          292.49456787109375,
-          340.42242431640625
-        ],
-        [
-          54.0,
-          341.4187927246094,
+          350.73577880859375,
           292.4946594238281,
-          351.38140869140625
+          360.6983947753906
         ],
         [
           54.0,
-          352.3777770996094,
+          361.6947937011719,
           292.4945983886719,
-          362.34039306640625
+          371.65740966796875
         ],
         [
           54.0,
-          363.3367614746094,
+          372.6537780761719,
           292.49462890625,
-          373.29937744140625
+          382.61639404296875
         ],
         [
           54.0,
-          374.2947692871094,
-          292.49462890625,
-          384.25738525390625
+          383.6127624511719,
+          292.4946594238281,
+          393.57537841796875
         ],
         [
           54.0,
-          385.2537536621094,
-          200.5597686767578,
-          395.21636962890625
+          394.5717468261719,
+          292.4945373535156,
+          404.53436279296875
+        ],
+        [
+          54.0,
+          405.5307312011719,
+          292.4945983886719,
+          415.49334716796875
+        ],
+        [
+          54.0,
+          416.4897155761719,
+          275.17962646484375,
+          426.45233154296875
         ]
       ]
     },
     {
       "page": 3,
-      "text": "SPARK. Across 204 variants, mean reward increases from 40.66 to 42.83, a paired gain of 2.17 points, with 30 improve- ments and 32 regressions. Gains are 2.20 points on P1 and 6.34 on P3, while P2 produces a 2.43-point decline.",
-      "comment": "新增变体实验：分别报告各方法总体效果和 P1/P2/P3 结果。",
+      "text": "SPARK. Across 221 variants, mean recorded reward in- creases from 41.61 to 42.25, a mean within-variant gain of 0.65 points, with 32 improvements and 37 regressions. Gains are 2.00 points on P1 and 4.53 on P3, while P2 produces a 5.23-point decline.",
+      "comment": "新增变体实验：分别报告各方法完整记录的总体效果和 P1/P2/P3 结果。",
       "color": "#ff6666",
       "rects": [
         [
           54.0,
-          401.8891906738281,
+          433.51513671875,
           89.45690155029297,
-          411.8517761230469
+          443.47772216796875
         ],
         [
           99.41950225830078,
-          402.0257568359375,
-          292.49468994140625,
-          411.9883728027344
-        ],
-        [
-          54.0,
-          412.9847717285156,
+          433.6517028808594,
           292.49462890625,
-          422.9473876953125
+          443.61431884765625
         ],
         [
           54.0,
-          423.9437561035156,
+          444.6106872558594,
+          292.4945983886719,
+          454.57330322265625
+        ],
+        [
+          54.0,
+          455.5696716308594,
           292.49468994140625,
-          433.9063720703125
+          465.53228759765625
         ],
         [
           54.0,
-          434.9027404785156,
-          259.8770751953125,
-          444.8653564453125
+          466.5286560058594,
+          292.5045166015625,
+          476.49127197265625
+        ],
+        [
+          54.0,
+          477.4876403808594,
+          128.98846435546875,
+          487.45025634765625
         ]
       ]
     },
     {
       "page": 3,
-      "text": "CoEvoSkills. Across 204 variants, mean reward decreases from 42.13 to 39.16, a paired change of −2.98 points, with 26 improvements and 36 regressions. Changes are −2.52 points on P1, −6.87 on P2, and +0.23 on P3. The positive gains on standard tasks do not extend consistently to the changed tasks. SkillEvolver sustains double-digit gains across all three variation types. The execution traces below show how its skills preserve diagnostic steps and task constraints when inputs and requirements change.",
-      "comment": "新增变体实验：分别报告各方法总体效果和 P1/P2/P3 结果。",
+      "text": "CoEvoSkills. Across 221 variants, mean recorded reward decreases from 41.61 to 36.60, a mean within-variant change of −5.01 points, with 26 improvements and 41 regressions. Changes are −3.59 points on P1, −9.51 on P2, and −2.42 on P3. The positive gains on standard tasks do not extend to the changed tasks in this summary.",
+      "comment": "新增变体实验：分别报告各方法完整记录的总体效果和 P1/P2/P3 结果。",
       "color": "#ff6666",
       "rects": [
         [
           54.0,
-          451.5381774902344,
+          494.5140686035156,
           108.13675689697266,
-          461.5007629394531
+          504.4766540527344
         ],
         [
           118.09935760498047,
-          451.67474365234375,
+          494.650634765625,
+          292.49462890625,
+          504.6132507324219
+        ],
+        [
+          54.0,
+          505.6086730957031,
+          292.4945983886719,
+          515.5712890625
+        ],
+        [
+          54.0,
+          516.2025756835938,
+          292.504638671875,
+          526.5302734375
+        ],
+        [
+          54.0,
+          527.1615600585938,
+          292.51446533203125,
+          537.4892578125
+        ],
+        [
+          54.0,
+          538.4856567382812,
+          292.49462890625,
+          548.4482421875
+        ],
+        [
+          54.0,
+          549.4446411132812,
+          192.5199737548828,
+          559.4072265625
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "text": "Skill Reuse under Task Variation SkillEvolver’s positive gains across P1–P3 indicate that the utility of its frozen skills extends beyond the source instances. The weaker or negative variant gains of SPARK and Co- EvoSkills show that improvement on the original task and usefulness after task changes are distinct properties. This makes the content preserved during reuse central to inter- preting the results. Two complementary forms of content emerge from the in- spected skill files and execution traces: diagnostic rules for choosing and revising a procedure, and constraints for check- ing the resulting output. In the examined SkillEvolver cases,",
+      "comment": "新增技能复用分析：提炼诊断规则、适用条件和正确性约束，并衔接保持性与生命周期研究。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          54.0,
+          569.7447509765625,
+          207.92739868164062,
+          580.6538696289062
+        ],
+        [
+          54.0,
+          584.78564453125,
+          292.4946594238281,
+          594.7482299804688
+        ],
+        [
+          54.0,
+          595.74365234375,
+          292.4946594238281,
+          605.7062377929688
+        ],
+        [
+          54.0,
+          606.70263671875,
+          292.5046081542969,
+          616.6652221679688
+        ],
+        [
+          54.0,
+          617.6616821289062,
+          292.4946594238281,
+          627.624267578125
+        ],
+        [
+          54.0,
+          628.6206665039062,
           292.49468994140625,
-          461.6373596191406
+          638.583251953125
         ],
         [
           54.0,
-          462.2677001953125,
-          292.50457763671875,
-          472.5953674316406
+          639.5796508789062,
+          292.4946594238281,
+          649.542236328125
         ],
         [
           54.0,
-          473.2267150878906,
-          292.50457763671875,
-          483.55438232421875
-        ],
-        [
-          54.0,
-          484.1856994628906,
-          292.5045166015625,
-          494.51336669921875
-        ],
-        [
-          54.0,
-          495.5097351074219,
-          292.5045471191406,
-          505.47235107421875
-        ],
-        [
-          54.0,
-          506.4687194824219,
-          76.41584777832031,
-          516.4313354492188
+          650.5386352539062,
+          127.88261413574219,
+          660.501220703125
         ],
         [
           63.9630012512207,
-          517.427734375,
+          661.5726318359375,
           292.49505615234375,
-          527.3903198242188
+          671.5352172851562
         ],
         [
           54.0,
-          528.38671875,
-          292.49468994140625,
-          538.3493041992188
-        ],
-        [
-          54.0,
-          539.345703125,
+          672.5316772460938,
           292.4946594238281,
-          549.3082885742188
+          682.4942626953125
         ],
         [
           54.0,
-          550.3047485351562,
-          182.2883758544922,
-          560.267333984375
+          683.4906616210938,
+          292.4945983886719,
+          693.4532470703125
+        ],
+        [
+          54.0,
+          694.4496459960938,
+          292.5046081542969,
+          704.4122314453125
         ]
       ]
     },
     {
       "page": 3,
-      "text": "Tracing the Source of Transfer Execution traces connect the aggregate result to concrete de- cisions encoded in the skills. In exoplanet period detection, SkillEvolver separates candidate discovery from refinement and checks whether a dominant peak reflects stellar modula- tion or a transit. After the input columns are reordered in P1, the executor rejects the approximately 1.395-day modulation and recovers the accepted 5.35907-day period. When P3 re- quires two signals, the same frozen skill supports a narrower- duration search and refinement to 2.40052 and 5.35958 days. CoEvoSkills’ end-to-end period routine encounters duration- grid errors in P1 and returns the stellar-modulation period;",
-      "comment": "新增迁移归因：通过系外行星周期检测与调度案例的技能内容和执行轨迹解释结果。",
-      "color": "#ff6666",
-      "rects": [
-        [
-          54.0,
-          570.2108154296875,
-          197.0292510986328,
-          581.1199340820312
-        ],
-        [
-          54.0,
-          584.8607177734375,
-          292.4947204589844,
-          594.8233032226562
-        ],
-        [
-          54.0,
-          595.8197021484375,
-          292.49462890625,
-          605.7822875976562
-        ],
-        [
-          54.0,
-          606.7787475585938,
-          292.49468994140625,
-          616.7413330078125
-        ],
-        [
-          54.0,
-          617.7377319335938,
-          292.49468994140625,
-          627.7003173828125
-        ],
-        [
-          54.0,
-          628.6967163085938,
-          292.49468994140625,
-          638.6593017578125
-        ],
-        [
-          54.0,
-          639.6547241210938,
-          292.49456787109375,
-          649.6173095703125
-        ],
-        [
-          54.0,
-          650.6137084960938,
-          292.49456787109375,
-          660.5762939453125
-        ],
-        [
-          54.0,
-          661.5726928710938,
-          292.49462890625,
-          671.5352783203125
-        ],
-        [
-          54.0,
-          672.53173828125,
-          292.4945983886719,
-          682.4943237304688
-        ],
-        [
-          54.0,
-          683.49072265625,
-          292.4945983886719,
-          693.4533081054688
-        ],
-        [
-          54.0,
-          694.44970703125,
-          292.4946594238281,
-          704.4122924804688
-        ]
-      ]
-    },
-    {
-      "page": 3,
-      "text": "in P3 it selects approximately 1.40 days and its 0.70-day harmonic as separate signals. SkillEvolver succeeds on P1 and P3, while CoEvoSkills fails both. On the replacement- data P2 instance, both skills receive zero, giving the case a specific transfer pattern across the three changes. Scheduling locates the difference at a constraint that de- termines correctness. SkillEvolver’s artifact explicitly pre- serves baseline-relative right shifts and precedence-aware local minimality. The executor carries these rules across re- named inputs, a replacement scheduling instance, and an added machine-handoff requirement, passing all three vari- ants; SPARK also passes all three. CoEvoSkills passes P3, but its P1 output fails the local-minimality check: an opera- tion starts at 29 with an anchor of 24 and can move earlier. The other structural and policy checks pass. This trace-based attribution connects the outcome to preservation of a repair invariant. Together, the cases illustrate a transferable skill as a set of diagnostic and constraint-preserving decisions that the executor adapts to the new task.",
-      "comment": "新增迁移归因：通过系外行星周期检测与调度案例的技能内容和执行轨迹解释结果。",
+      "text": "these rules remain explicit while input handling and solu- tion construction adapt to the variant. Corresponding failure traces reveal that reusing a procedure can preserve much of the workflow while missing a decision or constraint needed for correctness. These observations suggest that reusable de- cision rules, including when they apply and how their outputs should be checked, are a useful unit of analysis for skill trans- fer. Within the lifecycle audit, variant performance character- izes the scope of observed utility. The subsequent sections, Identifying Retained Skill Effects and Attributing Observed Skill Gains, examine persistence under fresh deployment and the contributions of feedback, revision, selection, skill con- tent, and evaluation.",
+      "comment": "新增技能复用分析：提炼诊断规则、适用条件和正确性约束，并衔接保持性与生命周期研究。",
       "color": "#ff6666",
       "rects": [
         [
           319.5,
-          291.7696838378906,
-          557.994873046875,
-          301.7322998046875
-        ],
-        [
-          319.5,
-          302.7286682128906,
-          557.9946899414062,
-          312.6912841796875
-        ],
-        [
-          319.5,
-          313.6876525878906,
+          289.73760986328125,
           557.9945678710938,
-          323.6502685546875
+          299.7002258300781
         ],
         [
           319.5,
-          324.6466369628906,
+          300.6966247558594,
           557.99462890625,
-          334.6092529296875
+          310.65924072265625
         ],
         [
           319.5,
-          335.6056213378906,
-          513.9898681640625,
-          345.5682373046875
+          311.6556091308594,
+          557.9947509765625,
+          321.61822509765625
+        ],
+        [
+          319.5,
+          322.6136169433594,
+          557.9946899414062,
+          332.57623291015625
+        ],
+        [
+          319.5,
+          333.5726013183594,
+          557.9948120117188,
+          343.53521728515625
+        ],
+        [
+          319.5,
+          344.5315856933594,
+          557.9944458007812,
+          354.49420166015625
+        ],
+        [
+          319.5,
+          355.4905700683594,
+          557.9945068359375,
+          365.45318603515625
+        ],
+        [
+          319.5,
+          366.4495544433594,
+          332.2023010253906,
+          376.41217041015625
         ],
         [
           329.4630126953125,
-          346.5816345214844,
-          557.9951171875,
-          356.54425048828125
+          377.6055603027344,
+          557.9950561523438,
+          387.56817626953125
         ],
         [
           319.5,
-          357.5396423339844,
+          388.5645446777344,
+          557.9945678710938,
+          398.52716064453125
+        ],
+        [
+          319.5,
+          399.42742919921875,
           557.9945068359375,
-          367.50225830078125
+          409.48614501953125
         ],
         [
           319.5,
-          368.4986267089844,
-          557.99462890625,
-          378.46124267578125
-        ],
-        [
-          319.5,
-          379.4576110839844,
-          557.99462890625,
-          389.42022705078125
-        ],
-        [
-          319.5,
-          390.4165954589844,
-          558.0047607421875,
-          400.37921142578125
-        ],
-        [
-          319.5,
-          401.3755798339844,
+          410.38641357421875,
           557.9947509765625,
-          411.33819580078125
+          420.44512939453125
         ],
         [
           319.5,
-          412.3345642089844,
-          557.9945678710938,
-          422.29718017578125
-        ],
-        [
-          319.5,
-          423.2935485839844,
-          557.9947509765625,
-          433.25616455078125
-        ],
-        [
-          319.5,
-          434.2525329589844,
-          557.9945678710938,
-          444.21514892578125
-        ],
-        [
-          319.5,
-          445.2115173339844,
-          557.9946899414062,
-          455.17413330078125
-        ],
-        [
-          319.5,
-          456.1705017089844,
+          421.4414978027344,
           557.99462890625,
-          466.13311767578125
+          431.40411376953125
         ],
         [
           319.5,
-          467.1285095214844,
-          557.9945678710938,
-          477.09112548828125
-        ],
-        [
-          319.5,
-          478.0874938964844,
-          557.9945068359375,
-          488.05010986328125
-        ],
-        [
-          319.5,
-          489.0464782714844,
-          460.4906921386719,
-          499.00909423828125
+          432.4004821777344,
+          399.7985534667969,
+          442.36309814453125
         ]
       ]
     },
     {
       "page": 7,
-      "text": "SkillEvolver retains double-digit paired gains across changes in input representation, task-instance structure, and coupled requirements; SPARK and CoEvoSkills show smaller and less consistent gains on their variant evaluations. Execution traces connect successful cases to reusable diagnostic steps and preservation of task constraints.",
-      "comment": "结论新增：概括变体泛化结果及轨迹归因。",
+      "text": "In the recorded variant evaluations, SkillEvolver retains positive mean gains across changes in input representation, task-instance structure, and coupled requirements; SPARK shows gains on two types of change, while CoEvoSkills shows declines on all three. Execution traces connect successful cases to reusable diagnostic steps and preservation of task constraints.",
+      "comment": "结论新增：概括完整变体记录的结果及技能复用观察。",
       "color": "#ff6666",
       "rects": [
         [
-          371.7837219238281,
+          374.0352783203125,
           104.0015640258789,
-          557.9945068359375,
+          554.6770629882812,
           113.96416473388672
         ],
         [
           319.5,
           114.9605484008789,
-          554.6771850585938,
+          557.9945678710938,
           124.92314910888672
         ],
         [
           319.5,
           125.9195327758789,
-          557.9946899414062,
+          554.6771240234375,
           135.88214111328125
         ],
         [
           319.5,
           136.87852478027344,
-          554.6770629882812,
+          557.99462890625,
           146.84112548828125
         ],
         [
           319.5,
           147.83750915527344,
-          557.9947509765625,
+          557.9946899414062,
           157.80010986328125
         ],
         [
           319.5,
           158.79649353027344,
-          523.22509765625,
+          557.99462890625,
           168.75909423828125
+        ],
+        [
+          319.5,
+          169.75547790527344,
+          442.0597839355469,
+          179.71807861328125
         ]
       ]
     },
@@ -1626,27 +1650,27 @@
       "rects": [
         [
           54.0,
-          369.7377014160156,
+          380.6966247558594,
           290.0040588378906,
-          379.7003173828125
+          390.65924072265625
         ],
         [
           54.0,
-          380.6966857910156,
+          391.6546325683594,
           78.34859466552734,
-          390.6593017578125
+          401.61724853515625
         ],
         [
           95.03594970703125,
-          380.6966857910156,
+          391.6546325683594,
           290.0040588378906,
-          390.6593017578125
+          401.61724853515625
         ],
         [
           54.0,
-          391.6546936035156,
+          402.6136169433594,
           126.5775375366211,
-          401.6173095703125
+          412.57623291015625
         ]
       ]
     },
@@ -1658,27 +1682,27 @@
       "rects": [
         [
           54.0,
-          590.40966796875,
+          601.3685913085938,
           287.2343444824219,
-          600.3722534179688
+          611.3311767578125
         ],
         [
           54.0,
-          601.3687133789062,
+          612.3275756835938,
           290.0039978027344,
-          611.331298828125
+          622.2901611328125
         ],
         [
           54.0,
-          612.3276977539062,
+          623.28662109375,
           292.49468994140625,
-          622.290283203125
+          633.2492065429688
         ],
         [
           54.0,
-          623.2866821289062,
+          634.24560546875,
           177.34686279296875,
-          633.249267578125
+          644.2081909179688
         ]
       ]
     }

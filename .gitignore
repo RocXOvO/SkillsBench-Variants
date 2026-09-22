@@ -31,3 +31,6 @@
 !/output/pdf/main-revision-highlighted.pdf
 !/paper/audits/zotero-bilingual-20260921/
 !/paper/audits/full-variant-records-20260922/
+
+# Original Overleaf PDF retained as the comparison baseline.
+!/output/pdf/main-overleaf-original-20260921.pdf
