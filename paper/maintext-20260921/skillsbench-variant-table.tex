@@ -5,13 +5,21 @@
 \setlength{\tabcolsep}{7pt}
 \begin{tabular}{lrrrrrrr}
 \toprule
+\multicolumn{8}{l}{\textbf{A. Overall utility on task variants}}\\
 \textbf{Method} & \textbf{Variants} & \textbf{No skill} & \textbf{Skill} & $\boldsymbol{\Delta}$ & \textbf{Improved} & \textbf{Regressed} & \textbf{Tied} \\
 \midrule
 SkillEvolver & 222 & 41.87 & 53.81 & $+11.94$ & 47 & 20 & 155 \\
 SPARK & 221 & 41.61 & 42.25 & $+0.65$ & 32 & 37 & 152 \\
 CoEvoSkills & 221 & 41.61 & 36.60 & $-5.01$ & 26 & 41 & 154 \\
+\midrule
+\multicolumn{8}{l}{\textbf{B. Utility by type of task change}}\\
+\textbf{Method} & \multicolumn{2}{c}{\textbf{P1: Representation}} & \multicolumn{2}{c}{\textbf{P2: Instance}} & \multicolumn{3}{c}{\textbf{P3: Requirements}}\\
+ & $N$ & $\Delta$ & $N$ & $\Delta$ & $N$ & \multicolumn{2}{c}{$\Delta$}\\
+SkillEvolver & 77 & $+11.85$ & 68 & $+14.56$ & 77 & \multicolumn{2}{c}{$+9.72$}\\
+SPARK & 77 & $+2.00$ & 68 & $-5.23$ & 76 & \multicolumn{2}{c}{$+4.53$}\\
+CoEvoSkills & 77 & $-3.59$ & 68 & $-9.51$ & 76 & \multicolumn{2}{c}{$-2.42$}\\
 \bottomrule
 \end{tabular}
-\caption{Descriptive summary of historical and recovery evaluations on task variants. Each method is paired with its own same-variant no-skill baseline. Scores and within-variant differences use the scale in Table~\ref{tab:skillsbench-six-runs}.}
+\caption{Skill utility under task variation: descriptive summary of historical and recovery evaluations. Panel A reports overall outcomes; Panel B separates representation, instance, and requirement changes. Each method is paired with its own same-variant no-skill baseline. Scores and within-variant differences use the scale in Table~\ref{tab:skillsbench-six-runs}.}
 \label{tab:variant-transfer}
 \end{table*}

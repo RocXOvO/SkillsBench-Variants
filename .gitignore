@@ -34,3 +34,9 @@
 
 # Original Overleaf PDF retained as the comparison baseline.
 !/output/pdf/main-overleaf-original-20260921.pdf
+
+# Editable paper logic figures and their exported assets.
+!/paper/maintext-20260921/figures/
+!/output/pptx/
+/output/pptx/*
+!/output/pptx/skill-transfer-logic-20260922.pptx
