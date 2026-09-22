@@ -1,0 +1,130 @@
+{
+  "baseline_commit": "121a6182b",
+  "translation": {
+    "plugin": "Zotero PDF2zh 4.1.7",
+    "engine": "pdf2zh_next",
+    "service": "siliconflowfree",
+    "task_id": "64da91a5-0465-4dcd-989a-683162b35700",
+    "mode": "English left / Chinese right",
+    "result": {
+      "fileList": [
+        "main-icassp2027-final-20260922.no_watermark.zh-CN.mono.pdf",
+        "main-icassp2027-final-20260922.no_watermark.zh-CN.LR_dual.pdf"
+      ],
+      "filePaths": [
+        "/Users/duchongyang/Applications/zotero-pdf2zh/server/translated/main-icassp2027-final-20260922.no_watermark.zh-CN.mono.pdf",
+        "/Users/duchongyang/Applications/zotero-pdf2zh/server/translated/main-icassp2027-final-20260922.no_watermark.zh-CN.LR_dual.pdf"
+      ],
+      "outputDir": "/Users/duchongyang/Applications/zotero-pdf2zh/server/translated",
+      "status": "success"
+    }
+  },
+  "files": {
+    "main.pdf": {
+      "sha256": "e90b9768113ebb8a60a1884ecb9275b0963f6ce1567ae30403f85279750093d8",
+      "pages": 8,
+      "annotations": 0
+    },
+    "main-revision-highlighted.pdf": {
+      "sha256": "aa9681d07f19438cc3e8082ab264f29dfc0a2a69fffc2850f0eea098d0986e3f",
+      "pages": 8,
+      "annotations": 33
+    },
+    "main-bilingual-en-zh.pdf": {
+      "sha256": "abb2b72b4fca290f3787ae6146677d38e758853fd7b7b77b6344a0fd03fd8dc8",
+      "pages": 8,
+      "annotations": 33
+    },
+    "main-overleaf-original-20260921.pdf": {
+      "sha256": "307df402a481aaf5514e4aaf919f34cd4fc0aeb9deaa7643fcef7765f369428d",
+      "pages": 7,
+      "annotations": 0
+    }
+  },
+  "validation": {
+    "english_text_identical_to_clean": true,
+    "red_highlights": 33,
+    "english_side_only": true,
+    "clean_pages": 8,
+    "undefined_references": 0,
+    "overfull_boxes": 0,
+    "underfull_boxes": 4,
+    "visual_review": {
+      "all_pages_overview": true,
+      "detail_pages": [
+        1,
+        2,
+        3,
+        5,
+        6
+      ],
+      "translation_fallback_repairs_checked": true,
+      "zotero_reader_page_checked": 3
+    }
+  },
+  "translation_repairs": [
+    {
+      "page": 2,
+      "rect": [
+        666.3,
+        413.7,
+        908.8,
+        434.0
+      ],
+      "chinese": "下文实验依次回答这些问题。"
+    },
+    {
+      "page": 2,
+      "rect": [
+        666.3,
+        438.0,
+        908.8,
+        456.0
+      ],
+      "chinese": "3. 诊断技能效用范围"
+    },
+    {
+      "page": 1,
+      "rect": [
+        943.8,
+        471.2,
+        1171.5,
+        509.0
+      ],
+      "chinese": "• 报告规范。我们明确从选定收益到有限范围迁移的各层主张所需的演化来源、对照和支撑材料。"
+    },
+    {
+      "page": 2,
+      "rect": [
+        927.1,
+        511.5,
+        1171.5,
+        603.0
+      ],
+      "chinese": "源任务上的提升并不意味着有效泛化。三种方法在两次源任务运行中的平均奖励均有提升，但变体结果出现分化。SkillEvolver 的平均增益为 11.94 分；SPARK 接近零，为 +0.65 分；CoEvoSkills 则低于无技能基线，为 −5.01 分。SkillEvolver 改善的变体多于退化的变体（47 对 20），而 SPARK 和 CoEvoSkills 相反。因此，后两种方法在源任务上的收益并未转化为变化任务上的一致优势。"
+    },
+    {
+      "page": 3,
+      "rect": [
+        666.3,
+        348.0,
+        1171.5,
+        383.0
+      ],
+      "chinese": "表 2. 任务变化下的技能效用：历史评估与恢复评估的描述性汇总。面板 A 报告总体结果；面板 B 区分表示、实例和需求变化。每种方法均与相同变体上的无技能基线配对。得分及变体内差值采用表 1 的尺度。"
+    }
+  ],
+  "zotero": {
+    "status": "verified",
+    "import_path": "/Users/duchongyang/Documents/ICLR/tmp/pdfs/zotero-final-comparison-20260922/最新双语-ICASSP2027格式-红色对比-20260922.pdf",
+    "latest_attachment_key": "T5LV9F5L",
+    "baseline_attachment_key": "RTB7QH9K",
+    "superseded_attachment_key": "85A8V69R",
+    "superseded_attachment_moved_to_trash": true,
+    "active_pdf_attachments": 2,
+    "ui_pages": 8,
+    "ui_annotations": 33,
+    "stored_copy_hash_matches": true,
+    "baseline_hash_unchanged": true
+  }
+}

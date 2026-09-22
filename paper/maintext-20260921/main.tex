@@ -1,5 +1,6 @@
-\documentclass[letterpaper]{article}
-\usepackage[submission]{aaai2027}
+\documentclass[10pt,letterpaper]{article}
+% Official ICASSP 2027 Paper Kit style (downloaded 2026-09-22).
+\usepackage{spconf}
 \usepackage[hyphens]{url}
 \usepackage{graphicx}
 \usepackage{amsmath}
@@ -13,28 +14,34 @@
 \usetikzlibrary{arrows.meta,positioning}
 \urlstyle{rm}
 \def\UrlFont{\rm}
-\usepackage{natbib}
+\usepackage{cite}
 \frenchspacing
 \raggedbottom
 
 \pdfinfo{
-/TemplateVersion (2027.1)
+/TemplateVersion (ICASSP 2027 official spconf)
 }
 
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 
 \title{Are Self-Evolving Agent Skills Learning Skills?}
-\author{Anonymous Submission}
-\affiliations{}
+% Author names and affiliations must be supplied before non-blind submission.
+\name{Anonymous Submission}
+\address{}
 
 \begin{document}
+\ninept
 
 \maketitle
 
 \begin{abstract}
 We introduce a lifecycle audit for determining whether score gains from self-evolving agent skills represent retained skill improvement. A post-revision score alone is insufficient because optimizer variation, validation selection, execution randomness, and verifier choice can improve the endpoint without creating a durable artifact effect. We combine repeated evaluations, controlled task variations, and lifecycle interventions to examine whether improvements from skill evolution persist and transfer, and to trace their origins to feedback, revision, selection, skill content, and evaluation. The audit separates five evidential claims: selected gain, retained artifact effect, bounded transfer, evolution-pathway dependence, and measurement dependence. This claim-grounded framework lets self-evolving systems report what their experiments establish without equating a better benchmark score with reusable skill learning.
 \end{abstract}
+
+\begin{keywords}
+Agent skills, self-evolution, lifecycle audit, skill evaluation, generalization
+\end{keywords}
 
 \section{Introduction}
 
@@ -81,7 +88,8 @@ Our central contribution is a claim-grounded lifecycle audit: each reported gain
 \begin{itemize}
     \item \textbf{Identification framework.} We separate a reported gain from retention, behavioral scope, evolution-and-selection pathway, and measurement dependence.
     \item \textbf{Lifecycle audit.} We apply matched interventions across three representative skill-evolution mechanisms without turning heterogeneous studies into a method leaderboard.
-    \item \textbf{Reporting protocol.} We specify the lineage, contrasts, and artifacts required to support each claim level, from selected gain to bounded transfer.
+    \Needspace{6\baselineskip}
+\item \textbf{Reporting protocol.} We specify the lineage, contrasts, and artifacts required to support each claim level, from selected gain to bounded transfer.
 \end{itemize}
 
 
@@ -169,6 +177,7 @@ Four comparisons must remain distinct. Historical-pass to fresh-repeat compariso
 
 
 
+\Needspace{15\baselineskip}
 \subsection{Retention under Fresh Deployment}
 
 This experiment tests whether historically selected outcomes survive when the final artifact is frozen and redeployed. Holding task, skill, and condition fixed does not make execution deterministic. Across the 24-task panel, 12 tasks change success status between their two repeats in at least one condition. Aggregate fresh success is 14/48 without a skill, 16/48 with the SkillRevise final artifact, and 12/48 with the SkillHone final artifact. Both matched-lift intervals cross zero (Table~\ref{tab:retained}).
@@ -215,12 +224,13 @@ Information integrity & Artifact forensic & Artifact forensic & Wrong-metadata a
 
 These mechanism probes test whether the actual parent-to-final revision effect persists under predeclared task changes. In Invoice, the complete final skill repairs all 12 matched deployments and retains the effect on nine deployments drawn from three disjoint corpora that preserve the contract while changing the documents. This is strong evidence of a stable, same-contract revision effect, but not of broad cross-contract generalization.
 
+\Needspace{15\baselineskip}
 The Energy case provides weaker but directionally consistent evidence: the complete final artifact improves the original setting and a 5\% parameter variant in five of six deployments, compared with one of six for the parent. The sample is too small to support a prevalence or generality claim. In SkillOpt SearchQA, the final artifact improves independent held-out accuracy from 9/24 to 17/24, yet fails the predeclared stability threshold. It therefore supports local held-out benefit rather than stable transferable procedure learning.
 
 Taken together, revised skill artifacts can produce retained behavioral effects, but a selected benchmark pass alone does not identify such an effect, and the effects established so far remain narrow rather than broadly generalizable.
 
-% Keep the opening lifecycle paragraph intact below the preceding table.
-\Needspace{16\baselineskip}
+% Keep the lifecycle introduction together below the preceding wide figure.
+\Needspace{26\baselineskip}
 \section{Attributing Observed Skill Gains}
 \label{sec:attributing-skill-gains}
 
@@ -232,6 +242,7 @@ The experiments in this section intervene at different lifecycle stages. They do
 
 Figure~\ref{fig:interventions} makes the current coverage and its gaps explicit. The shared audit logic is that feedback access, candidate revision, validation acceptance, adoption into the persistent artifact, and retained behavioral improvement are distinct events.
 
+\Needspace{16\baselineskip}
 \subsection{Revision and Selection Pathways}
 
 These interventions test whether the observed endpoint depends on the feedback view, optimizer sample, or selection gate. In SkillRevise, the complete three-revision pipeline succeeds on 53/86 tasks, compared with 28/86 when diagnosis is removed. Task-level discordance is 26 gains versus one loss, and 2,326 of 3,648 revision entries explicitly use verifier evidence. This demonstrates that diagnosis changes the selected endpoint and that the revision process is strongly evaluator-facing. It does not, by itself, establish which changes are retained under fresh deployment.
@@ -268,7 +279,7 @@ This counterfactual tests whether a verdict changes when the output is fixed and
 
 Measurement dependence can also operate in the other direction. For identical Spreadsheet workbook outputs, the reported value-based evaluator scores the complete SkillOpt artifact at 10/12, whereas joint value-and-formula recalculation scores it at 8/12. Representation, cache materialization, or formula inspection can therefore change what the evaluator observes. This dual scoring is not identical in design to the Radar output-locked swap, but it reinforces the narrower point that score is a property of output plus measurement, not behavior alone.
 
-Neither result proves semantic failure, exploitation, or benchmark-wide prevalence. To identify evolution-induced verifier dependence, one would additionally need matched no-skill, parent, and final outputs under both original and calibrated verifiers, and test whether the parent-to-final verifier gap increases.
+Neither result proves semantic failure, exploitation, or bench\-mark-wide prevalence. To identify evolution-induced verifier dependence, one would additionally need matched no-skill, parent, and final outputs under both original and calibrated verifiers, and test whether the parent-to-final verifier gap increases.
 
 \subsection{Information-Integrity Boundary}
 
@@ -285,7 +296,7 @@ Observed score gains can arise at multiple lifecycle stages: feedback shapes can
 The audit is not a scalar ladder from \emph{safe} to \emph{unsafe}. Its steps answer independent questions and impose distinct claim boundaries.
 
 \begin{table}[H]
-\scriptsize
+\small
 \setlength{\tabcolsep}{3pt}
 \begin{tabularx}{\columnwidth}{L{0.20\columnwidth} Y}
 \toprule
@@ -344,6 +355,9 @@ We diagnose where the gains from self-evolving persistent skills reside and how 
 
 A higher benchmark score should therefore be reported only at the strongest level supported by matched evidence: a selected gain, a retained artifact effect, bounded controlled transfer, evolution-pathway dependence, or measurement dependence. We provide a lifecycle audit that links each claim to the required intervention and reporting evidence. Claims of transferable skill learning require frozen parent-to-final improvement that survives fresh deployment and predeclared task variation under valid measurement; weaker evidence should be reported more narrowly.
 
+{\small
+\bibliographystyle{IEEEbib}
 \bibliography{references}
+}
 
 \end{document}

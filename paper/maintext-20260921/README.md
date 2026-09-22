@@ -1,6 +1,6 @@
 # SkillsBench analysis in the manuscript
 
-Build with `make`. The active manuscript is `main.tex`; the compiled deliverable is `../../output/pdf/main.pdf`. The current revision has 8 pages, with both SkillsBench result tables on page 3.
+Build with `make`. The active manuscript is `main.tex`; the compiled deliverable is `../../output/pdf/main.pdf`. The current revision uses the official ICASSP 2027 `spconf.sty` and `IEEEbib.bst`, with the template-provided `\ninept` option, US Letter pages, and numerical citations. It has 8 pages, with both SkillsBench result tables on page 3. This is a full-content format-conversion draft: technical content continues to page 7 and does not yet meet the four-page technical-content limit (plus an optional fifth page for references/funding/ethics). The current anonymous author field is inherited from the source and must be replaced with the actual authors/affiliations for ICASSP non-blind submission.
 
 `skillsbench-experiments.tex` introduces paired standard-task evaluations (two runs each: 81 tasks for SkillEvolver, 84 for SPARK, 85 for CoEvoSkills). `skillsbench-variants.tex` reports frozen-skill utility under representation, instance, and requirement changes, then gives brief skill-reuse examples and an interpretation grounded in the SkillEvolver and CoEvoSkills method papers. It precedes the original parent-to-final retention and lifecycle intervention studies.
 
@@ -9,3 +9,5 @@ The full descriptive variant record contains 222 variants and 886 condition-leve
 The original Overleaf source is preserved in commit `121a6182b` and tag `paper-overleaf-original`. This is distinct from the separately supplied `PDF/main.pdf`. Red highlights compare all accumulated substantive changes against that original Overleaf source. Zotero retains the baseline plus the latest bilingual red comparison. Experiment workspaces are unchanged by manuscript revisions.
 
 The 2026-09-22 table-placement correction keeps variant definitions below the two wide result tables, keeps the lifecycle opening paragraph below the retention table, and anchors tables 4–5 between complete paragraphs. Table 4 uses wider result cells to avoid unnecessary wrapping; no prose, numerical content or font size changes. Float-boundary validation is recorded in `../audits/variant-maintext-20260921/table-placement-fix-20260922.json`.
+
+Official template provenance and content-preservation checks: `../audits/variant-maintext-20260921/icassp2027-format-20260922.json`. The two vendor style files are unmodified downloads from the 2027 Paper Kit. Layout-only adaptations are in the manuscript source; the prose and experiment numbers were not shortened or rewritten.
