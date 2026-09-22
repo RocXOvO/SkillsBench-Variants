@@ -40,9 +40,9 @@ Persistent agent skills offer an appealing route to continual improvement. Inste
 
 A higher score is not, by itself, an identified skill effect. The selected run may be unusually favorable; the optimizer may produce variable candidates; a validation gate may retain a narrow patch; repeated execution may eventually succeed without a durable behavioral change; and a verifier may reward only part of the intended behavior. These possibilities do not imply that self-evolution is ineffective. They imply that an endpoint score alone cannot locate where the improvement resides.
 
-We therefore ask two connected questions. When self-evolution raises the benchmark score, does the revised skill itself retain a behavioral improvement under fresh deployment and controlled task variation? Regardless of whether it does, which parts of the evolution-and-evaluation lifecycle produced the observed gain? We study these questions in SkillRevise, SkillHone, and SkillOpt, which represent trace-conditioned revision, history-based iterative honing, and validation-gated bounded editing. They form a mechanism-stratified sample of frozen-agent, feedback-driven systems with persistent external skill artifacts, rather than an exhaustive ranking of self-evolution methods.
+We therefore ask two connected questions. When self-evolution raises the benchmark score, does the revised skill itself retain a behavioral improvement under fresh deployment and controlled task variation? Regardless of whether it does, which parts of the evolution-and-evaluation lifecycle produced the observed gain?
 
-We first evaluate SkillEvolver, SPARK, and CoEvoSkills on standard tasks and controlled variants, then use artifact content and execution traces to examine how successful procedures adapt to changed inputs and requirements.
+We organize the experiments around utility, behavioral scope, and lifecycle attribution. Repeated standard-task evaluations of SkillEvolver, SPARK, and CoEvoSkills measure skill utility, and controlled task variants examine how far that utility extends. Inspection of skill content and execution traces then identifies reusable decisions expressed during deployment. Complementary mechanism studies in SkillRevise, SkillHone, and SkillOpt examine retention and the origins of observed gains. These studies represent trace-conditioned revision, history-based iterative honing, and validation-gated bounded editing in frozen-agent systems with persistent external skill artifacts.
 
 Our audit follows the lifecycle from feedback to revision, selection or adoption, frozen artifact deployment, and measurement. We separate historical success from fresh retention, final-skill utility from actual parent-to-final revision effects, and same-task retention from controlled transfer. We then intervene on feedback, optimizer sampling, gate provenance, artifact components, and verifier choice. A short information-integrity check bounds direct answer or oracle exposure as an alternative explanation; it is not the paper's organizing hypothesis.
 
@@ -121,6 +121,7 @@ The following experiments address these questions in turn.
 \input{skillsbench-experiments}
 
 \section{Identifying Retained Skill Effects}
+\label{sec:retained-skill-effects}
 
 \begin{table*}[t]
 \small
@@ -217,6 +218,7 @@ The Energy case provides weaker but directionally consistent evidence: the compl
 Taken together, revised skill artifacts can produce retained behavioral effects, but a selected benchmark pass alone does not identify such an effect, and the effects established so far remain narrow rather than broadly generalizable.
 
 \section{Attributing Observed Skill Gains}
+\label{sec:attributing-skill-gains}
 
 \subsection{Lifecycle Interventions}
 
