@@ -9,6 +9,7 @@
 \usepackage{tikz}
 \usepackage{placeins}
 \usepackage{float}
+\usepackage{needspace}
 \usetikzlibrary{arrows.meta,positioning}
 \urlstyle{rm}
 \def\UrlFont{\rm}
@@ -218,6 +219,8 @@ The Energy case provides weaker but directionally consistent evidence: the compl
 
 Taken together, revised skill artifacts can produce retained behavioral effects, but a selected benchmark pass alone does not identify such an effect, and the effects established so far remain narrow rather than broadly generalizable.
 
+% Keep the opening lifecycle paragraph intact below the preceding table.
+\Needspace{16\baselineskip}
 \section{Attributing Observed Skill Gains}
 \label{sec:attributing-skill-gains}
 
@@ -241,10 +244,10 @@ SkillOpt further separates candidate production from attribution and adoption. I
 
 This experiment tests whether a feedback-derived component, rather than unrelated edits in the full artifact, causes the behavior after adoption. Let $P$ denote the complete parent, $F$ the complete final artifact, $P+B$ the parent with component $B$, and $F-B$ the final artifact with that component removed.
 
-\begin{table}[!t]
+\begin{table}[H]
 \small
 \setlength{\tabcolsep}{3pt}
-\begin{tabularx}{\columnwidth}{L{0.16\columnwidth} L{0.26\columnwidth} Y}
+\begin{tabularx}{\columnwidth}{L{0.17\columnwidth} L{0.43\columnwidth} Y}
 \toprule
 \textbf{Case} & \textbf{Result} & \textbf{Maximum claim}\\
 \midrule
@@ -281,7 +284,7 @@ Observed score gains can arise at multiple lifecycle stages: feedback shapes can
 
 The audit is not a scalar ladder from \emph{safe} to \emph{unsafe}. Its steps answer independent questions and impose distinct claim boundaries.
 
-\begin{table}[!t]
+\begin{table}[H]
 \scriptsize
 \setlength{\tabcolsep}{3pt}
 \begin{tabularx}{\columnwidth}{L{0.20\columnwidth} Y}

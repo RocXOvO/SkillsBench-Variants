@@ -1,8 +1,14 @@
 diff --git a/paper/maintext-20260921/main.tex b/paper/maintext-20260921/main.tex
-index 599fc1a4c..68f1c794a 100644
+index 599fc1a4c..adfb025d7 100644
 --- a/paper/maintext-20260921/main.tex
 +++ b/paper/maintext-20260921/main.tex
-@@ -14,6 +14,7 @@
+@@ -9,11 +9,13 @@
+ \usepackage{tikz}
+ \usepackage{placeins}
+ \usepackage{float}
++\usepackage{needspace}
+ \usetikzlibrary{arrows.meta,positioning}
+ \urlstyle{rm}
  \def\UrlFont{\rm}
  \usepackage{natbib}
  \frenchspacing
@@ -10,7 +16,7 @@ index 599fc1a4c..68f1c794a 100644
  
  \pdfinfo{
  /TemplateVersion (2027.1)
-@@ -31,7 +32,7 @@
+@@ -31,7 +33,7 @@
  \maketitle
  
  \begin{abstract}
@@ -19,7 +25,7 @@ index 599fc1a4c..68f1c794a 100644
  \end{abstract}
  
  \section{Introduction}
-@@ -40,19 +41,14 @@ Persistent agent skills offer an appealing route to continual improvement. Inste
+@@ -40,19 +42,14 @@ Persistent agent skills offer an appealing route to continual improvement. Inste
  
  A higher score is not, by itself, an identified skill effect. The selected run may be unusually favorable; the optimizer may produce variable candidates; a validation gate may retain a narrow patch; repeated execution may eventually succeed without a durable behavioral change; and a verifier may reward only part of the intended behavior. These possibilities do not imply that self-evolution is ineffective. They imply that an endpoint score alone cannot locate where the improvement resides.
  
@@ -42,7 +48,7 @@ index 599fc1a4c..68f1c794a 100644
  \begin{figure*}[t]
  \centering
  \begin{tikzpicture}[
-@@ -74,12 +70,21 @@ Our central contribution is a claim-grounded lifecycle audit: each reported gain
+@@ -74,12 +71,21 @@ Our central contribution is a claim-grounded lifecycle audit: each reported gain
  \draw[arr] (agent) -- (output);
  \draw[arr] (output) -- (verifier);
  \draw[arr] (verifier) -- (score);
@@ -65,7 +71,7 @@ index 599fc1a4c..68f1c794a 100644
  \section{Problem Formulation}
  
  \subsection{Skill Revision and Evaluation}
-@@ -112,17 +117,12 @@ Accordingly, we separate two questions:
+@@ -112,17 +118,12 @@ Accordingly, we separate two questions:
      \item \textbf{Effect existence and scope:} Does the revised skill retain a behavioral improvement under fresh deployment, and how far does that effect extend under controlled task variation?
      \item \textbf{Effect attribution:} Which feedback, revision, selection, artifact, execution, and measurement mechanisms produced the observed score change?
  \end{enumerate}
@@ -87,7 +93,7 @@ index 599fc1a4c..68f1c794a 100644
  
  \begin{table*}[t]
  \small
-@@ -157,27 +157,22 @@ Local held-out gain, not stable general procedure learning.\\
+@@ -157,27 +158,22 @@ Local held-out gain, not stable general procedure learning.\\
  \caption{Evidence for retained skill effects. Panel A contains 24 targeted tasks, three conditions, and two fresh deployments per condition (144/144 behavior-valid runs). Different historical-retention denominators preclude horizontal method ranking. The no-skill condition calibrates execution and selection variability; final-versus-no-skill does not identify revision effects.}
  \label{tab:retained}
  \end{table*}
@@ -122,7 +128,7 @@ index 599fc1a4c..68f1c794a 100644
  
  \begin{figure*}[t]
  \centering
-@@ -214,7 +209,23 @@ Information integrity & Artifact forensic & Artifact forensic & Wrong-metadata a
+@@ -214,7 +210,25 @@ Information integrity & Artifact forensic & Artifact forensic & Wrong-metadata a
  \caption{Lifecycle attribution design and current evidence coverage. The upper panel locates each intervention; the lower panel records method coverage. Populated cells do not imply equivalent strength, and missing cells bound cross-method claims.}
  \label{fig:interventions}
  \end{figure*}
@@ -136,6 +142,8 @@ index 599fc1a4c..68f1c794a 100644
 +
 +Taken together, revised skill artifacts can produce retained behavioral effects, but a selected benchmark pass alone does not identify such an effect, and the effects established so far remain narrow rather than broadly generalizable.
 +
++% Keep the opening lifecycle paragraph intact below the preceding table.
++\Needspace{16\baselineskip}
 +\section{Attributing Observed Skill Gains}
 +\label{sec:attributing-skill-gains}
 +
@@ -147,25 +155,16 @@ index 599fc1a4c..68f1c794a 100644
  
  Figure~\ref{fig:interventions} makes the current coverage and its gaps explicit. The shared audit logic is that feedback access, candidate revision, validation acceptance, adoption into the persistent artifact, and retained behavioral improvement are distinct events.
  
-@@ -230,7 +241,7 @@ SkillOpt further separates candidate production from attribution and adoption. I
- 
- This experiment tests whether a feedback-derived component, rather than unrelated edits in the full artifact, causes the behavior after adoption. Let $P$ denote the complete parent, $F$ the complete final artifact, $P+B$ the parent with component $B$, and $F-B$ the final artifact with that component removed.
- 
--\begin{table}[H]
-+\begin{table}[!t]
+@@ -233,7 +247,7 @@ This experiment tests whether a feedback-derived component, rather than unrelate
+ \begin{table}[H]
  \small
  \setlength{\tabcolsep}{3pt}
- \begin{tabularx}{\columnwidth}{L{0.16\columnwidth} L{0.26\columnwidth} Y}
-@@ -270,7 +281,7 @@ Observed score gains can arise at multiple lifecycle stages: feedback shapes can
- 
- The audit is not a scalar ladder from \emph{safe} to \emph{unsafe}. Its steps answer independent questions and impose distinct claim boundaries.
- 
--\begin{table}[H]
-+\begin{table}[!t]
- \scriptsize
- \setlength{\tabcolsep}{3pt}
- \begin{tabularx}{\columnwidth}{L{0.20\columnwidth} Y}
-@@ -326,11 +337,10 @@ Several conclusions are also bounded by observability. Output-locked comparisons
+-\begin{tabularx}{\columnwidth}{L{0.16\columnwidth} L{0.26\columnwidth} Y}
++\begin{tabularx}{\columnwidth}{L{0.17\columnwidth} L{0.43\columnwidth} Y}
+ \toprule
+ \textbf{Case} & \textbf{Result} & \textbf{Maximum claim}\\
+ \midrule
+@@ -326,11 +340,10 @@ Several conclusions are also bounded by observability. Output-locked comparisons
  
  \section{Conclusion}
  
@@ -294,10 +293,12 @@ index 000000000..94d2519b2
 +\end{table*}
 diff --git a/paper/maintext-20260921/skillsbench-variants.tex b/paper/maintext-20260921/skillsbench-variants.tex
 new file mode 100644
-index 000000000..45e9972dc
+index 000000000..1066c497b
 --- /dev/null
 +++ b/paper/maintext-20260921/skillsbench-variants.tex
-@@ -0,0 +1,28 @@
+@@ -0,0 +1,30 @@
++% Keep the heading and probe definitions together after the wide tables.
++\Needspace{12\baselineskip}
 +\subsection{Task Changes Separate Different Scopes of Utility}
 +\label{sec:variant-transfer}
 +

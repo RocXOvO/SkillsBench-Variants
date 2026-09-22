@@ -1,0 +1,76 @@
+{
+  "baseline_commit": "121a6182b",
+  "translation": {
+    "plugin": "Zotero PDF2zh 4.1.7",
+    "engine": "pdf2zh_next",
+    "service": "siliconflowfree",
+    "task_id": "3b918226-dd9b-46aa-a492-04420223d19f",
+    "mode": "English left / Chinese right",
+    "result": {
+      "fileList": [
+        "main-table-placement-20260922.no_watermark.zh-CN.mono.pdf",
+        "main-table-placement-20260922.no_watermark.zh-CN.LR_dual.pdf"
+      ],
+      "filePaths": [
+        "/Users/duchongyang/Applications/zotero-pdf2zh/server/translated/main-table-placement-20260922.no_watermark.zh-CN.mono.pdf",
+        "/Users/duchongyang/Applications/zotero-pdf2zh/server/translated/main-table-placement-20260922.no_watermark.zh-CN.LR_dual.pdf"
+      ],
+      "outputDir": "/Users/duchongyang/Applications/zotero-pdf2zh/server/translated",
+      "status": "success"
+    }
+  },
+  "files": {
+    "main.pdf": {
+      "sha256": "35bdec7f3b4bdee6eab48c67cf7700855d2ec55832a196726ca0871c37b656ad",
+      "pages": 8,
+      "annotations": 0
+    },
+    "main-revision-highlighted.pdf": {
+      "sha256": "b0576e3815c4e97441b6b306a7dbd119043666c1ed58f181874f88b6f5798153",
+      "pages": 8,
+      "annotations": 33
+    },
+    "main-bilingual-en-zh.pdf": {
+      "sha256": "77afc81c97901ce6a6b3c2e640a1b0d69bf5615aa7dbf92e93d10997636a2f8c",
+      "pages": 8,
+      "annotations": 33
+    },
+    "main-overleaf-original-20260921.pdf": {
+      "sha256": "307df402a481aaf5514e4aaf919f34cd4fc0aeb9deaa7643fcef7765f369428d",
+      "pages": 7,
+      "annotations": 0
+    }
+  },
+  "validation": {
+    "english_text_identical_to_clean": true,
+    "red_highlights": 33,
+    "english_side_only": true,
+    "clean_pages": 8,
+    "undefined_references": 0,
+    "overfull_boxes": 0,
+    "underfull_boxes": 1,
+    "visual_review": {
+      "all_pages_overview": true,
+      "detailed_pages": [
+        3,
+        5,
+        6
+      ],
+      "table_paragraph_boundaries_passed": true,
+      "zotero_reader_checked_page": 3
+    }
+  },
+  "zotero": {
+    "status": "verified",
+    "import_path": "/Users/duchongyang/Documents/ICLR/tmp/pdfs/zotero-final-comparison-20260922/最新双语-表格位置修复-红色对比-20260922.pdf",
+    "latest_attachment_key": "85A8V69R",
+    "baseline_attachment_key": "RTB7QH9K",
+    "superseded_attachment_key": "4I6N3TIJ",
+    "superseded_attachment_moved_to_trash": true,
+    "active_pdf_attachments": 2,
+    "ui_pages": 8,
+    "ui_annotations": 33,
+    "stored_copy_hash_matches": true,
+    "baseline_hash_unchanged": true
+  }
+}

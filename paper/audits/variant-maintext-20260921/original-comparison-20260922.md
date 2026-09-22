@@ -1,7 +1,7 @@
 # 最新稿与最初 Overleaf 原版对比（2026-09-22）
 
 基线为 Git `121a6182b` 的最初 Overleaf 源码，不是另行提供的 `PDF/main.pdf`。
-本轮压缩新增实验中的数字复述与泛泛过渡，用简短案例和两篇方法原文解释技能中保留的信息。六次标准任务、886 格变体记录及两张表的数值均未改动。
+本轮仅修复表格位置：将变体定义完整放在表1–2之后，表3后从完整小节开始，并把表4–5固定在对应段落之间；调整表4列宽以减少换行。正文、所有表格文字与数值、字体大小均未改动。
 
 | 最新稿位置 | 相对原版的累计变化 |
 |---|---|
@@ -23,7 +23,7 @@
 - LaTeX 日志无未定义引用、无 Overfull；1处 Underfull 已检查显示。
 - 高亮稿与清洁稿逐页文本一致。
 - 标准任务表与变体表保持原数值；未启动或修改实验。
-- 双语翻译、英文侧一致性及 Zotero 导入核验见 `../zotero-bilingual-20260921/feedback-mechanism-rewrite-20260922.json`。
+- 双语翻译、英文侧一致性及 Zotero 导入核验见 `../zotero-bilingual-20260921/table-placement-fix-20260922.json`。
 
-本轮修改与证据边界：`feedback-mechanism-revision-20260922.json`。
-本轮英文原文：`feedback-mechanism-revision-original-text-20260922.md`。
+本轮排版与阅读顺序验证：`table-placement-fix-20260922.json`。
+上轮英文原文（本轮未修改）：`feedback-mechanism-revision-original-text-20260922.md`。
