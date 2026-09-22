@@ -1,13 +1,9 @@
-# SkillsBench experiments in the manuscript
+# SkillsBench analysis in the manuscript
 
-The manuscript includes a main-text section, `Experiments on SkillsBench`, with six evaluations: two runs each for SkillEvolver, SPARK, and CoEvoSkills. CoEvoSkills uses the same 85 tasks in both runs. The new section is in `skillsbench-experiments.tex` and is included before `Identifying Retained Skill Effects`.
+Build with `make`. The active manuscript is `main.tex`; the compiled deliverable is `../../output/pdf/main.pdf`. The current revision has 8 pages, with both SkillsBench result tables on page 3.
 
-Build with `make`. The compiled manuscript has 8 pages; both the six-run table and the variant table are on page 3. The current deliverable is `../../output/pdf/main.pdf`.
+`skillsbench-experiments.tex` introduces paired standard-task evaluations (two runs each: 81 tasks for SkillEvolver, 84 for SPARK, 85 for CoEvoSkills). `skillsbench-variants.tex` reports frozen-skill utility under representation, instance, and requirement changes, then gives brief skill-reuse examples and an interpretation grounded in the SkillEvolver and CoEvoSkills method papers. It precedes the original parent-to-final retention and lifecycle intervention studies.
 
-The original Overleaf version is preserved in commit `121a618` and tag `paper-overleaf-original`. The earlier superseded revision is preserved in commit `59f5097`. Raw experiment evidence remains local and unchanged.
+The full descriptive variant record contains 222 variants and 886 condition-level results: 222 no-skill records, 222 SkillEvolver records, and 221 each for SPARK and CoEvoSkills. The historical and recovery records include different protocols; the table remains a descriptive summary, with no new controlled causal method ranking. The selected records and statistics are in `../audits/full-variant-records-20260922/`; standard-task alignment is in `../audits/six-run-maintext-20260921/`. The case evidence is in `../audits/variant-maintext-20260921/case-evidence.json`.
 
-Derived task alignment, source hashes, all paired scores, and the aggregation script are in `../audits/six-run-maintext-20260921/`. Server-native CoEvoSkills source selection is in `../audits/coevo-server-selection-20260921/`.
-
-The variant analysis is in `skillsbench-variants.tex`: separate paired evaluations of 206 SkillEvolver variants, 204 SPARK variants, and 204 CoEvoSkills variants, followed by trace-based attribution in exoplanet period detection and scheduling. Source selection, scores, uncertainty calculations, and case evidence are in `../audits/variant-maintext-20260921/`.
-
-The current per-method variant statistics and selected source hashes are in `per-method-statistics.json` and `per-method-paired-scores.json`. Earlier shared-set analyses remain archived in the same audit directory. `skillsbench-variant-table.tex` queues the variant table immediately after the standard-task table to keep both within the experiments section.
+The original Overleaf source is preserved in commit `121a6182b` and tag `paper-overleaf-original`. This is distinct from the separately supplied `PDF/main.pdf`. Red highlights compare all accumulated substantive changes against that original Overleaf source. Zotero retains the baseline plus the latest bilingual red comparison. Experiment workspaces are unchanged by manuscript revisions.

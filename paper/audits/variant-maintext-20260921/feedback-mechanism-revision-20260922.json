@@ -1,0 +1,63 @@
+{
+  "prior_commit": "d15d5ee59a1d156d28619a165b59757f44f077be",
+  "scope": [
+    "Condense standard-task narration and variant result repetition.",
+    "Replace long trace-level exposition with two short skill-focused examples.",
+    "Explain feedback and abstraction mechanisms using the two primary papers; distinguish interpretation from observed outcomes."
+  ],
+  "annotations_addressed": {
+    "1": "Results and short examples, no new trace investigations.",
+    "2": "Skills are the persistent objects; schedules and signal estimates are outputs obtained using skills.",
+    "3": "Read SkillEvolver sections 3.1–3.2.3 and A.8, CoEvoSkills sections 3.1 and 3.3; cite mechanism discussion."
+  },
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2605.10500v1",
+      "citation": "zhang2026skillevolver",
+      "supports": [
+        "contrastive deployment feedback",
+        "targeted skill patches",
+        "audit of training-instance constants"
+      ]
+    },
+    {
+      "url": "https://arxiv.org/html/2604.01687v2",
+      "citation": "zhang2026coevoskills",
+      "supports": [
+        "surrogate-verifier detailed diagnostics",
+        "opaque ground-truth pass/fail",
+        "test escalation"
+      ]
+    }
+  ],
+  "inference_boundary": "The feedback-coverage explanation is explicitly an interpretation, not a measured causal effect of either component in these reproductions. The published scheduling case is not substituted for our own case. No assertion that CoEvoSkills has no checks or inherently hardcodes instances.",
+  "case_evidence": "case-evidence.json",
+  "standard_table_unchanged": true,
+  "variant_table_unchanged": true,
+  "experiment_changes": false,
+  "word_counts": {
+    "skillsbench-experiments.tex": {
+      "before": 589,
+      "after": 483
+    },
+    "skillsbench-variants.tex": {
+      "before": 1293,
+      "after": 716
+    }
+  },
+  "sources_sha256": {
+    "skillsbench-experiments.tex": "885e543d2bb121eb4d7549034b473deed21569013a67ebcaf7521a979ef6ddcd",
+    "skillsbench-variants.tex": "e4d6ba110eb54e8043a7513cd7ec2bffc3e1d1019abed990c715db3c7dc23081"
+  },
+  "validation": {
+    "clean_pages": 8,
+    "both_skillsbench_tables_page": 3,
+    "undefined_references": 0,
+    "overfull_boxes": 0,
+    "underfull_boxes": 1,
+    "clean_pdf_structural_preflight": "PASS",
+    "dual_pdf_structural_preflight": "PASS",
+    "pdf_highlights": 33,
+    "english_side_matches_clean": true
+  }
+}

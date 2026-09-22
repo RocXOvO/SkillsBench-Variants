@@ -1,0 +1,67 @@
+{
+  "baseline_commit": "121a6182b",
+  "translation": {
+    "plugin": "Zotero PDF2zh 4.1.7",
+    "engine": "pdf2zh_next",
+    "service": "siliconflowfree",
+    "task_id": "595cb401-390b-45fc-b133-1c23cc2e20f7",
+    "mode": "English left / Chinese right",
+    "result": {
+      "fileList": [
+        "main-feedback-mechanisms-20260922.no_watermark.zh-CN.mono.pdf",
+        "main-feedback-mechanisms-20260922.no_watermark.zh-CN.LR_dual.pdf"
+      ],
+      "filePaths": [
+        "/Users/duchongyang/Applications/zotero-pdf2zh/server/translated/main-feedback-mechanisms-20260922.no_watermark.zh-CN.mono.pdf",
+        "/Users/duchongyang/Applications/zotero-pdf2zh/server/translated/main-feedback-mechanisms-20260922.no_watermark.zh-CN.LR_dual.pdf"
+      ],
+      "outputDir": "/Users/duchongyang/Applications/zotero-pdf2zh/server/translated",
+      "status": "success"
+    }
+  },
+  "files": {
+    "main.pdf": {
+      "sha256": "3394e07878c84eccd2129f6dd7a871ab63a0de2cad1d0d2e10d40345d2d7b898",
+      "pages": 8,
+      "annotations": 0
+    },
+    "main-revision-highlighted.pdf": {
+      "sha256": "3ac49bd9cdf05be17597df0084efc9a1934a5e5509bea8cbed657459f77d8358",
+      "pages": 8,
+      "annotations": 33
+    },
+    "main-bilingual-en-zh.pdf": {
+      "sha256": "023952887f76ae641611402d50272ef9c1853de2fe002e59585f36cced0210c1",
+      "pages": 8,
+      "annotations": 33
+    },
+    "main-overleaf-original-20260921.pdf": {
+      "sha256": "307df402a481aaf5514e4aaf919f34cd4fc0aeb9deaa7643fcef7765f369428d",
+      "pages": 7,
+      "annotations": 0
+    }
+  },
+  "validation": {
+    "english_text_identical_to_clean": true,
+    "red_highlights": 33,
+    "english_side_only": true,
+    "clean_pages": 8,
+    "undefined_references": 0,
+    "overfull_boxes": 0,
+    "underfull_boxes": 1,
+    "visual_review": "Clean all-page overview; detailed clean pages 3–4; bilingual overview and page 4; Zotero page 4 and library attachment count verified."
+  },
+  "zotero": {
+    "status": "verified",
+    "import_path": "/Users/duchongyang/Documents/ICLR/tmp/pdfs/zotero-final-comparison-20260922/最新双语-反馈机制解释-红色对比-20260922.pdf",
+    "latest_attachment_key": "4I6N3TIJ",
+    "baseline_attachment_key": "RTB7QH9K",
+    "superseded_attachment_key": "UR4576W9",
+    "superseded_attachment_moved_to_trash": true,
+    "active_pdf_attachments": 2,
+    "ui_pages": 8,
+    "ui_annotations": 33,
+    "stored_copy_hash_matches": true,
+    "baseline_hash_unchanged": true
+  }
+}
