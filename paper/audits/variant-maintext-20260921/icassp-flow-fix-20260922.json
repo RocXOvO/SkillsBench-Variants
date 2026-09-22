@@ -1,0 +1,27 @@
+{
+  "previous_commit": "596262034ca842827b15672733f8d7a3ece37253",
+  "changes": [
+    "Replace drifting wide floats with balanced two-column text and anchored full-width minipages",
+    "Tables 1/2/3 follow completed source-task/variant/retention discussions on pages 2/3/4",
+    "Figure 1 follows full Introduction; figure 2 follows full controlled-variation analysis",
+    "Add six-point separation after table captions and figure 2; retain existing column-width tables 4 and 5",
+    "Reduce figure 1 feedback-arrow loop height by 0.2 cm"
+  ],
+  "source_content_preservation": {
+    "main.tex": true,
+    "skillsbench-experiments.tex": true,
+    "skillsbench-variants.tex": true,
+    "skillsbench-variant-table.tex": true
+  },
+  "validation": {
+    "pages": 8,
+    "same_canonical_character_multiset_as_previous_pdf": true,
+    "all_text_within_print_area": true,
+    "overfull_boxes": 0,
+    "underfull_boxes": 0,
+    "undefined_references": 0,
+    "visual_review": "All eight pages inspected at 1.3 scale; full-width displays at completed discussion boundaries, no clipped text",
+    "red_annotations": 35
+  },
+  "pdf_sha256": "0c13c7f1d03aa37985869542c7c835ecb57689561fdc774fca60711bb612f6e6"
+}

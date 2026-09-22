@@ -1,5 +1,3 @@
-% Keep the heading and probe definitions together after the wide tables.
-\Needspace{12\baselineskip}
 \subsection{Task Changes Separate Different Scopes of Utility}
 \label{sec:variant-transfer}
 
@@ -12,6 +10,8 @@ All three methods improve mean reward on the source tasks in both runs, but thei
 
 \noindent\textbf{Replacing the instance produces the largest divergence.}
 SkillEvolver remains positive under all three changes, with its largest gain on P2 ($+14.56$). P2 is also where SPARK and CoEvoSkills decline most ($-5.23$ and $-9.51$). SPARK retains positive averages under representation and requirement changes, but loses its advantage when the underlying instance changes. SkillEvolver's positive results across P1--P3 indicate a broader observed scope of skill utility. CoEvoSkills' negative averages across all three changes show that its source-task benefit is particularly sensitive to reuse conditions.
+
+\input{skillsbench-variant-table}
 
 \subsection{What the Evolved Skills Preserve}
 \label{sec:skill-reuse}

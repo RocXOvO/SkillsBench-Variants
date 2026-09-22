@@ -1,0 +1,12 @@
+{
+  "schema": "pdf_read_preflight/1",
+  "verdict": "PASS",
+  "file": "output/pdf/main.pdf",
+  "sha256": "0c13c7f1d03aa37985869542c7c835ecb57689561fdc774fca60711bb612f6e6",
+  "declared_page_count": 8,
+  "enumerated_page_count": 8,
+  "reader_page_count": 8,
+  "warnings": [],
+  "generated_at": "2026-09-22T12:11:52.204950+00:00",
+  "tool": "pdf_read_preflight/1.0.0"
+}

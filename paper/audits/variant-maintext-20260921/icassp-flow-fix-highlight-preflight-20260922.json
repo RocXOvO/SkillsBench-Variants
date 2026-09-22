@@ -1,0 +1,12 @@
+{
+  "schema": "pdf_read_preflight/1",
+  "verdict": "PASS",
+  "file": "output/pdf/main-revision-highlighted.pdf",
+  "sha256": "c1aa5d075f4304efe89adefb6ef196e890d87f753e13f8fe3780b68de00a7d09",
+  "declared_page_count": 8,
+  "enumerated_page_count": 8,
+  "reader_page_count": 8,
+  "warnings": [],
+  "generated_at": "2026-09-22T12:17:56.496047+00:00",
+  "tool": "pdf_read_preflight/1.0.0"
+}

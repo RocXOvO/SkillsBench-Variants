@@ -1,5 +1,5 @@
-% Queue both SkillsBench tables together so the variant table stays near its results.
-\begin{table*}[t]
+\end{multicols}
+\noindent\begin{minipage}{\textwidth}
 \centering
 \small
 \setlength{\tabcolsep}{7pt}
@@ -20,6 +20,8 @@ SPARK & 77 & $+2.00$ & 68 & $-5.23$ & 76 & \multicolumn{2}{c}{$+4.53$}\\
 CoEvoSkills & 77 & $-3.59$ & 68 & $-9.51$ & 76 & \multicolumn{2}{c}{$-2.42$}\\
 \bottomrule
 \end{tabular}
-\caption{Skill utility under task variation: descriptive summary of historical and recovery evaluations. Panel A reports overall outcomes; Panel B separates representation, instance, and requirement changes. Each method is paired with its own same-variant no-skill baseline. Scores and within-variant differences use the scale in Table~\ref{tab:skillsbench-six-runs}.}
+\captionof{table}{Skill utility under task variation: descriptive summary of historical and recovery evaluations. Panel A reports overall outcomes; Panel B separates representation, instance, and requirement changes. Each method is paired with its own same-variant no-skill baseline. Scores and within-variant differences use the scale in Table~\ref{tab:skillsbench-six-runs}.}
 \label{tab:variant-transfer}
-\end{table*}
+\end{minipage}
+\par\vspace{6pt}
+\begin{multicols}{2}

@@ -1,154 +1,145 @@
 diff --git a/paper/maintext-20260921/main.tex b/paper/maintext-20260921/main.tex
-index 599fc1a4c..cb6eb4611 100644
+index 599fc1a4c..a92ff888a 100644
 --- a/paper/maintext-20260921/main.tex
 +++ b/paper/maintext-20260921/main.tex
-@@ -1,2 +1,3 @@
+@@ -1,2 +1,10 @@
 -\documentclass[letterpaper]{article}
 -\usepackage[submission]{aaai2027}
 +\documentclass[10pt,letterpaper]{article}
 +% Official ICASSP 2027 Paper Kit style (downloaded 2026-09-22).
 +\usepackage{spconf}
-@@ -11,0 +13 @@
-+\usepackage{needspace}
-@@ -15 +17 @@
++% Keep the official geometry and typography; balance each text segment
++% around anchored full-width displays instead of floating across paragraphs.
++\onecolumn
++\usepackage{multicol}
++\usepackage{capt-of}
++\setlength{\multicolsep}{6pt}
++\raggedcolumns
+@@ -10 +17,0 @@
+-\usepackage{placeins}
+@@ -15 +22 @@
 -\usepackage{natbib}
 +\usepackage{cite}
-@@ -16,0 +19 @@
+@@ -16,0 +24 @@
 +\raggedbottom
-@@ -19 +22 @@
+@@ -19 +27 @@
 -/TemplateVersion (2027.1)
 +/TemplateVersion (ICASSP 2027 official spconf)
-@@ -26,2 +29,3 @@
+@@ -26,2 +34,3 @@
 -\author{Anonymous Submission}
 -\affiliations{}
 +% Author names and affiliations must be supplied before non-blind submission.
 +\name{Anonymous Submission}
 +\address{}
-@@ -29,0 +34 @@
+@@ -29,0 +39 @@
 +\ninept
-@@ -34 +39 @@
+@@ -31,0 +42 @@
++\begin{multicols}{2}
+@@ -34 +45 @@
 -We introduce a lifecycle audit for determining whether score gains from self-evolving agent skills represent retained skill improvement. A post-revision score alone is insufficient because optimizer variation, validation selection, execution randomness, and verifier choice can improve the endpoint without creating a durable artifact effect. Across SkillRevise, SkillHone, and SkillOpt, we combine frozen parent-to-final deployment, controlled task variation, feedback and selection interventions, artifact-component mediation, and output-locked verifier counterfactuals. The audit separates five evidential claims: selected gain, retained artifact effect, bounded transfer, evolution-pathway dependence, and measurement dependence. This claim-grounded framework lets self-evolving systems report what their experiments establish without equating a better benchmark score with reusable skill learning.
 +We introduce a lifecycle audit for determining whether score gains from self-evolving agent skills represent retained skill improvement. A post-revision score alone is insufficient because optimizer variation, validation selection, execution randomness, and verifier choice can improve the endpoint without creating a durable artifact effect. We combine repeated evaluations, controlled task variations, and lifecycle interventions to examine whether improvements from skill evolution persist and transfer, and to trace their origins to feedback, revision, selection, skill content, and evaluation. The audit separates five evidential claims: selected gain, retained artifact effect, bounded transfer, evolution-pathway dependence, and measurement dependence. This claim-grounded framework lets self-evolving systems report what their experiments establish without equating a better benchmark score with reusable skill learning.
-@@ -36,0 +42,4 @@ We introduce a lifecycle audit for determining whether score gains from self-evo
+@@ -36,0 +48,4 @@ We introduce a lifecycle audit for determining whether score gains from self-evo
 +\begin{keywords}
 +Agent skills, self-evolution, lifecycle audit, skill evaluation, generalization
 +\end{keywords}
 +
-@@ -43 +52,3 @@ A higher score is not, by itself, an identified skill effect. The selected run m
+@@ -43 +58,3 @@ A higher score is not, by itself, an identified skill effect. The selected run m
 -We therefore ask two connected questions. When self-evolution raises the benchmark score, does the revised skill itself retain a behavioral improvement under fresh deployment and controlled task variation? Regardless of whether it does, which parts of the evolution-and-evaluation lifecycle produced the observed gain? We study these questions in SkillRevise, SkillHone, and SkillOpt, which represent trace-conditioned revision, history-based iterative honing, and validation-gated bounded editing. They form a mechanism-stratified sample of frozen-agent, feedback-driven systems with persistent external skill artifacts, rather than an exhaustive ranking of self-evolution methods.
 +We therefore ask two connected questions. When self-evolution raises the benchmark score, does the revised skill itself retain a behavioral improvement under fresh deployment and controlled task variation? Regardless of whether it does, which parts of the evolution-and-evaluation lifecycle produced the observed gain?
 +
 +We organize the evidence as a diagnosis of utility, behavioral scope, and gain attribution. Standard-task evaluations of SkillEvolver, SPARK, and CoEvoSkills first establish the observed utility of completed artifacts across two runs. Controlled task changes then reveal different scopes of usefulness, and artifact and trace inspection examines the decisions preserved during reuse. This motivates the next diagnostic step: locating an improvement in the artifact's evolution history. Complementary studies of SkillRevise, SkillHone, and SkillOpt use retention tests and lifecycle interventions to examine trace-conditioned revision, history-based iterative honing, and validation-gated editing. Each study addresses a specific part of the identification question.
-@@ -49,7 +59,0 @@ The resulting picture is deliberately more qualified than either \emph{self-evol
--Our central contribution is a claim-grounded lifecycle audit: each reported gain is matched to the intervention required to support it and to the strongest conclusion that intervention permits. We make three contributions:
--\begin{itemize}
--    \item \textbf{Identification framework.} We separate a reported gain from retention, behavioral scope, evolution-and-selection pathway, and measurement dependence.
--    \item \textbf{Lifecycle audit.} We apply matched interventions across three representative skill-evolution mechanisms without turning heterogeneous studies into a method leaderboard.
--    \item \textbf{Reporting protocol.} We specify the lineage, contrasts, and artifacts required to support each claim level, from selected gain to bounded transfer.
--\end{itemize}
--
-@@ -77 +81 @@ Our central contribution is a claim-grounded lifecycle audit: each reported gain
+@@ -56 +73,2 @@ Our central contribution is a claim-grounded lifecycle audit: each reported gain
+-\begin{figure*}[t]
++\end{multicols}
++\noindent\begin{minipage}{\textwidth}
+@@ -77 +95 @@ Our central contribution is a claim-grounded lifecycle audit: each reported gain
 -\draw[arr] (score.north) to[out=75,in=105,looseness=0.82] node[above,font=\small]{next round} (evidence.north);
-+\draw[arr, rounded corners=3pt] (score.north) -- ++(0,0.65) -| node[pos=0.25,above,font=\small]{next round} (evidence.north);
-@@ -82,0 +87,10 @@ Our central contribution is a claim-grounded lifecycle audit: each reported gain
-+Our central contribution is a claim-grounded lifecycle audit: each reported gain is matched to the intervention required to support it and to the strongest conclusion that intervention permits. We make three contributions:
-+\begin{itemize}
-+    \item \textbf{Identification framework.} We separate a reported gain from retention, behavioral scope, evolution-and-selection pathway, and measurement dependence.
-+    \item \textbf{Lifecycle audit.} We apply matched interventions across three representative skill-evolution mechanisms without turning heterogeneous studies into a method leaderboard.
-+    \Needspace{6\baselineskip}
-+\item \textbf{Reporting protocol.} We specify the lineage, contrasts, and artifacts required to support each claim level, from selected gain to bounded transfer.
-+\end{itemize}
-+
-+
-+
-@@ -115 +129 @@ Accordingly, we separate two questions:
++\draw[arr, rounded corners=3pt] (score.north) -- ++(0,0.45) -| node[pos=0.25,above,font=\small]{next round} (evidence.north);
+@@ -79 +97 @@ Our central contribution is a claim-grounded lifecycle audit: each reported gain
+-\caption{Minimal self-evolution lifecycle. The update operator includes any method-native validation, selection, merge, or adoption before the revised skill is retained.}
++\captionof{figure}{Minimal self-evolution lifecycle. The update operator includes any method-native validation, selection, merge, or adoption before the revised skill is retained.}
+@@ -81 +99,2 @@ Our central contribution is a claim-grounded lifecycle audit: each reported gain
+-\end{figure*}
++\end{minipage}
++\begin{multicols}{2}
+@@ -115 +134,3 @@ Accordingly, we separate two questions:
 -The next two sections address these questions in turn.
 +The following experiments address these questions in turn.
-@@ -117,7 +131 @@ The next two sections address these questions in turn.
--\section{Identifying Retained Skill Effects}
--
--\subsection{Evaluation Design and Contrasts}
--
--We analyze three persistent-skill systems with distinct revision mechanisms. SkillRevise converts execution traces and diagnoses into bounded repair principles \cite{liu2026skillrevise}. SkillHone accumulates practice history and iteratively reflects on the persistent skill \cite{li2026skillhone}. SkillOpt produces structured bounded edits and uses a validation gate and rejected buffer before adoption \cite{yang2026skillopt}. The systems are studied as representative mechanisms, not as directly comparable leaderboard entries.
--
--At the paper level, the evidence is exploratory: individual interventions use frozen inputs and predeclared gates, but the combined studies are designed to identify candidate mechanisms rather than estimate benchmark-wide prevalence. A targeted 24-task SkillsBench panel tests whether historical outcomes survive fresh deployment. The panel is stratified to expose stability failures and method disagreements; it is not a random sample. Three controlled mechanism cases then compare complete parent and final artifacts under predeclared variations. Within each contrast, we hold the executor model, harness, task instance, budget, and verifier version fixed unless one is the named intervention; exact prompts, hashes, seeds, and stopping decisions are preserved in the artifact package. The task is the primary analysis unit, while repeated runs are deployments of the same task-condition pair.
++
 +\input{skillsbench-experiments}
-@@ -125 +133,2 @@ At the paper level, the evidence is exploratory: individual interventions use fr
--Four comparisons must remain distinct. Historical-pass to fresh-repeat comparisons test retention of a selected outcome, not advantage over a baseline. Final-to-no-skill comparisons estimate fresh utility, not the effect of revision. Only actual-parent to final comparisons identify a revision effect. Applying that comparison to controlled variants tests bounded transfer, not population-average benefit.
-+\section{Identifying Retained Skill Effects}
+@@ -117,0 +139 @@ The next two sections address these questions in turn.
 +\label{sec:retained-skill-effects}
-@@ -160,3 +168,0 @@ Local held-out gain, not stable general procedure learning.\\
+@@ -127 +149,8 @@ Four comparisons must remain distinct. Historical-pass to fresh-repeat compariso
+-\begin{table*}[t]
++\subsection{Retention under Fresh Deployment}
++
++This experiment tests whether historically selected outcomes survive when the final artifact is frozen and redeployed. Holding task, skill, and condition fixed does not make execution deterministic. Across the 24-task panel, 12 tasks change success status between their two repeats in at least one condition. Aggregate fresh success is 14/48 without a skill, 16/48 with the SkillRevise final artifact, and 12/48 with the SkillHone final artifact. Both matched-lift intervals cross zero (Table~\ref{tab:retained}).
++
++These results establish an identification failure in the common reporting practice: cached or selected success cannot be read as stable deployment capability. They do not establish that either revision method is ineffective. The panel is purposive, and it lacks each method's actual parent condition. Its proper conclusion is narrower: on this sample, neither final-versus-no-skill comparison establishes a clear average fresh-deployment advantage, and fresh repeats are necessary before a selected score is called retained.
++
++\end{multicols}
++\noindent\begin{minipage}{\textwidth}
+@@ -157 +186 @@ Local held-out gain, not stable general procedure learning.\\
+-\caption{Evidence for retained skill effects. Panel A contains 24 targeted tasks, three conditions, and two fresh deployments per condition (144/144 behavior-valid runs). Different historical-retention denominators preclude horizontal method ranking. The no-skill condition calibrates execution and selection variability; final-versus-no-skill does not identify revision effects.}
++\captionof{table}{Evidence for retained skill effects. Panel A contains 24 targeted tasks, three conditions, and two fresh deployments per condition (144/144 behavior-valid runs). Different historical-retention denominators preclude horizontal method ranking. The no-skill condition calibrates execution and selection variability; final-versus-no-skill does not identify revision effects.}
+@@ -159,8 +188,3 @@ Local held-out gain, not stable general procedure learning.\\
+-\end{table*}
 -\FloatBarrier
 -
 -\subsection{Retention under Fresh Deployment}
-@@ -164 +170 @@ Local held-out gain, not stable general procedure learning.\\
+-
 -This experiment tests whether historically selected outcomes survive when the final artifact is frozen and redeployed. Holding task, skill, and condition fixed does not make execution deterministic. Across the 24-task panel, 12 tasks change success status between their two repeats in at least one condition. Aggregate fresh success is 14/48 without a skill, 16/48 with the SkillRevise final artifact, and 12/48 with the SkillHone final artifact. Both matched-lift intervals cross zero (Table~\ref{tab:retained}).
-+\subsection{Evaluation Design and Contrasts}
-@@ -166 +172 @@ This experiment tests whether historically selected outcomes survive when the fi
+-
 -These results establish an identification failure in the common reporting practice: cached or selected success cannot be read as stable deployment capability. They do not establish that either revision method is ineffective. The panel is purposive, and it lacks each method's actual parent condition. Its proper conclusion is narrower: on this sample, neither final-versus-no-skill comparison establishes a clear average fresh-deployment advantage, and fresh repeats are necessary before a selected score is called retained.
-+We analyze three persistent-skill systems with distinct revision mechanisms. SkillRevise converts execution traces and diagnoses into bounded repair principles \cite{liu2026skillrevise}. SkillHone accumulates practice history and iteratively reflects on the persistent skill \cite{li2026skillhone}. SkillOpt produces structured bounded edits and uses a validation gate and rejected buffer before adoption \cite{yang2026skillopt}. The systems are studied as representative mechanisms, not as directly comparable leaderboard entries.
-@@ -168 +174 @@ These results establish an identification failure in the common reporting practi
--\subsection{Revision Effects under Controlled Variations}
-+At the paper level, the evidence is exploratory: individual interventions use frozen inputs and predeclared gates, but the combined studies are designed to identify candidate mechanisms rather than estimate benchmark-wide prevalence. A targeted 24-task SkillsBench panel tests whether historical outcomes survive fresh deployment. The panel is stratified to expose stability failures and method disagreements; it is not a random sample. Three controlled mechanism cases then compare complete parent and final artifacts under predeclared variations. Within each contrast, we hold the executor model, harness, task instance, budget, and verifier version fixed unless one is the named intervention; exact prompts, hashes, seeds, and stopping decisions are preserved in the artifact package. The task is the primary analysis unit, while repeated runs are deployments of the same task-condition pair.
-@@ -170 +176 @@ These results establish an identification failure in the common reporting practi
--These mechanism probes test whether the actual parent-to-final revision effect persists under predeclared task changes. In Invoice, the complete final skill repairs all 12 matched deployments and retains the effect on nine deployments drawn from three disjoint corpora that preserve the contract while changing the documents. This is strong evidence of a stable, same-contract revision effect, but not of broad cross-contract generalization.
-+Four comparisons must remain distinct. Historical-pass to fresh-repeat comparisons test retention of a selected outcome, not advantage over a baseline. Final-to-no-skill comparisons estimate fresh utility, not the effect of revision. Only actual-parent to final comparisons identify a revision effect. Applying that comparison to controlled variants tests bounded transfer, not population-average benefit.
-@@ -172 +177,0 @@ These mechanism probes test whether the actual parent-to-final revision effect p
--The Energy case provides weaker but directionally consistent evidence: the complete final artifact improves the original setting and a 5\% parameter variant in five of six deployments, compared with one of six for the parent. The sample is too small to support a prevalence or generality claim. In SkillOpt SearchQA, the final artifact improves independent held-out accuracy from 9/24 to 17/24, yet fails the predeclared stability threshold. It therefore supports local held-out benefit rather than stable transferable procedure learning.
-@@ -174 +178,0 @@ The Energy case provides weaker but directionally consistent evidence: the compl
--Taken together, revised skill artifacts can produce retained behavioral effects, but a selected benchmark pass alone does not identify such an effect, and the effects established so far remain narrow rather than broadly generalizable.
-@@ -176 +180,2 @@ Taken together, revised skill artifacts can produce retained behavioral effects,
++\end{minipage}
++\par\vspace{6pt}
++\begin{multicols}{2}
+@@ -176,7 +200,2 @@ Taken together, revised skill artifacts can produce retained behavioral effects,
 -\section{Attributing Observed Skill Gains}
-+\Needspace{15\baselineskip}
-+\subsection{Retention under Fresh Deployment}
-@@ -178 +183 @@ Taken together, revised skill artifacts can produce retained behavioral effects,
+-
 -\subsection{Lifecycle Interventions}
-+This experiment tests whether historically selected outcomes survive when the final artifact is frozen and redeployed. Holding task, skill, and condition fixed does not make execution deterministic. Across the 24-task panel, 12 tasks change success status between their two repeats in at least one condition. Aggregate fresh success is 14/48 without a skill, 16/48 with the SkillRevise final artifact, and 12/48 with the SkillHone final artifact. Both matched-lift intervals cross zero (Table~\ref{tab:retained}).
-@@ -180 +185 @@ Taken together, revised skill artifacts can produce retained behavioral effects,
+-
 -The experiments in this section intervene at different lifecycle stages. They do not estimate one common effect size. Each intervention changes one object while holding its relevant lineage fixed: feedback-view studies hold the parent and failures fixed; optimizer-repeat studies hold the input evidence fixed; gate audits preserve accepted and rejected candidates; artifact surgery holds the surrounding artifact fixed; and verifier counterfactuals hold the output fixed.
-+These results establish an identification failure in the common reporting practice: cached or selected success cannot be read as stable deployment capability. They do not establish that either revision method is ineffective. The panel is purposive, and it lacks each method's actual parent condition. Its proper conclusion is narrower: on this sample, neither final-versus-no-skill comparison establishes a clear average fresh-deployment advantage, and fresh repeats are necessary before a selected score is called retained.
-@@ -217 +222,20 @@ Information integrity & Artifact forensic & Artifact forensic & Wrong-metadata a
+-
+-\begin{figure*}[t]
++\end{multicols}
++\noindent\begin{minipage}{\textwidth}
+@@ -214 +233 @@ Information integrity & Artifact forensic & Artifact forensic & Wrong-metadata a
+-\caption{Lifecycle attribution design and current evidence coverage. The upper panel locates each intervention; the lower panel records method coverage. Populated cells do not imply equivalent strength, and missing cells bound cross-method claims.}
++\captionof{figure}{Lifecycle attribution design and current evidence coverage. The upper panel locates each intervention; the lower panel records method coverage. Populated cells do not imply equivalent strength, and missing cells bound cross-method claims.}
+@@ -216,2 +235,10 @@ Information integrity & Artifact forensic & Artifact forensic & Wrong-metadata a
+-\end{figure*}
 -\FloatBarrier
++\end{minipage}
++\par\vspace{6pt}
++\begin{multicols}{2}
 +
-+\subsection{Revision Effects under Controlled Variations}
-+
-+These mechanism probes test whether the actual parent-to-final revision effect persists under predeclared task changes. In Invoice, the complete final skill repairs all 12 matched deployments and retains the effect on nine deployments drawn from three disjoint corpora that preserve the contract while changing the documents. This is strong evidence of a stable, same-contract revision effect, but not of broad cross-contract generalization.
-+
-+\Needspace{15\baselineskip}
-+The Energy case provides weaker but directionally consistent evidence: the complete final artifact improves the original setting and a 5\% parameter variant in five of six deployments, compared with one of six for the parent. The sample is too small to support a prevalence or generality claim. In SkillOpt SearchQA, the final artifact improves independent held-out accuracy from 9/24 to 17/24, yet fails the predeclared stability threshold. It therefore supports local held-out benefit rather than stable transferable procedure learning.
-+
-+Taken together, revised skill artifacts can produce retained behavioral effects, but a selected benchmark pass alone does not identify such an effect, and the effects established so far remain narrow rather than broadly generalizable.
-+
-+% Keep the lifecycle introduction together below the preceding wide figure.
-+\Needspace{26\baselineskip}
 +\section{Attributing Observed Skill Gains}
 +\label{sec:attributing-skill-gains}
 +
 +\subsection{Lifecycle Interventions}
 +
 +The experiments in this section intervene at different lifecycle stages. They do not estimate one common effect size. Each intervention changes one object while holding its relevant lineage fixed: feedback-view studies hold the parent and failures fixed; optimizer-repeat studies hold the input evidence fixed; gate audits preserve accepted and rejected candidates; artifact surgery holds the surrounding artifact fixed; and verifier counterfactuals hold the output fixed.
-+
-+
-@@ -220,0 +245 @@ Figure~\ref{fig:interventions} makes the current coverage and its gaps explicit.
-+\Needspace{16\baselineskip}
-@@ -236 +261 @@ This experiment tests whether a feedback-derived component, rather than unrelate
+@@ -236 +263 @@ This experiment tests whether a feedback-derived component, rather than unrelate
 -\begin{tabularx}{\columnwidth}{L{0.16\columnwidth} L{0.26\columnwidth} Y}
 +\begin{tabularx}{\columnwidth}{L{0.17\columnwidth} L{0.43\columnwidth} Y}
-@@ -257 +282 @@ Measurement dependence can also operate in the other direction. For identical Sp
+@@ -257 +284 @@ Measurement dependence can also operate in the other direction. For identical Sp
 -Neither result proves semantic failure, exploitation, or benchmark-wide prevalence. To identify evolution-induced verifier dependence, one would additionally need matched no-skill, parent, and final outputs under both original and calibrated verifiers, and test whether the parent-to-final verifier gap increases.
 +Neither result proves semantic failure, exploitation, or bench\-mark-wide prevalence. To identify evolution-induced verifier dependence, one would additionally need matched no-skill, parent, and final outputs under both original and calibrated verifiers, and test whether the parent-to-final verifier gap increases.
-@@ -274 +299 @@ The audit is not a scalar ladder from \emph{safe} to \emph{unsafe}. Its steps an
+@@ -274 +301 @@ The audit is not a scalar ladder from \emph{safe} to \emph{unsafe}. Its steps an
 -\scriptsize
 +\small
-@@ -329 +354 @@ Several conclusions are also bounded by observability. Output-locked comparisons
+@@ -329 +356 @@ Several conclusions are also bounded by observability. Output-locked comparisons
 -We study whether benchmark gains from self-evolving persistent skills correspond to retained behavioral improvement and, independently, which lifecycle mechanisms produce those gains. Our audits show that revised skill artifacts can produce real behavioral changes, but selected gains can disappear under fresh deployment and the transfer established so far remains narrow. Feedback, optimizer variation, validation selection, artifact content, execution variability, and verifier choice can each shape the observed endpoint.
 +We diagnose where the gains from self-evolving persistent skills reside and how far they extend. All three methods in the standard-task evaluations have positive paired gains in both runs, but task variation separates their utility profiles. SkillEvolver remains positive across representation, instance, and requirement changes; SPARK combines gains on two probes with a decline on instance changes; CoEvoSkills declines on all three. The inspected traces identify decision criteria and correctness checks expressed during successful reuse. Complementary lifecycle interventions show that adopted artifact components can change behavior, selected outcomes can disappear under fresh deployment, and fixed outputs can receive different verdicts under different verifiers. Together, these findings distinguish useful artifacts, their behavioral scope, and the processes that produce or measure their apparent improvement.
-@@ -333 +358,2 @@ A higher benchmark score should therefore be reported only at the strongest leve
+@@ -333 +360,2 @@ A higher benchmark score should therefore be reported only at the strongest leve
 -\FloatBarrier
 +{\small
 +\bibliographystyle{IEEEbib}
-@@ -334,0 +361 @@ A higher benchmark score should therefore be reported only at the strongest leve
+@@ -334,0 +363 @@ A higher benchmark score should therefore be reported only at the strongest leve
 +}
+@@ -335,0 +365 @@ A higher benchmark score should therefore be reported only at the strongest leve
++\end{multicols}
 diff --git a/paper/maintext-20260921/references.bib b/paper/maintext-20260921/references.bib
 index 68a75b1b8..e164402ac 100644
 --- a/paper/maintext-20260921/references.bib
@@ -178,10 +169,10 @@ index 68a75b1b8..e164402ac 100644
 +}
 diff --git a/paper/maintext-20260921/skillsbench-experiments.tex b/paper/maintext-20260921/skillsbench-experiments.tex
 new file mode 100644
-index 000000000..7bce673d1
+index 000000000..6d28c31dc
 --- /dev/null
 +++ b/paper/maintext-20260921/skillsbench-experiments.tex
-@@ -0,0 +1,49 @@
+@@ -0,0 +1,48 @@
 +\section{Diagnosing the Scope of Skill Utility}
 +\label{sec:skillsbench-experiments}
 +
@@ -198,7 +189,14 @@ index 000000000..7bce673d1
 +\end{equation}
 +We also count tasks with positive, negative, and zero differences.
 +
-+\begin{table*}[t]
++\subsection{Source-Task Gains Recur across Runs}
++
++All three methods have positive mean paired gains in both runs (Table~\ref{tab:skillsbench-six-runs}). SkillEvolver gains 25.61 and 25.02 points, CoEvoSkills gains 10.24 and 9.76, and SPARK gains 1.84 and 6.45. SkillEvolver and CoEvoSkills retain similar gains despite substantial changes in their no-skill scores. Their benefit is therefore more consistent across runs than their absolute skill-condition scores suggest.
++
++The task-level results also differ. SkillEvolver has at least four times as many improvements as regressions in each run; CoEvoSkills improves 17 tasks in each run, with nine and ten regressions. SPARK's first run is nearly balanced, while its second has 13 improvements and five regressions. These results establish recurring source-task utility. We next ask whether the same frozen skills remain useful after the task changes.
++
++\end{multicols}
++\noindent\begin{minipage}{\textwidth}
 +\centering
 +\small
 +\setlength{\tabcolsep}{7pt}
@@ -216,29 +214,21 @@ index 000000000..7bce673d1
 +CoEvoSkills & 2 & 85 & 23.54 & 33.31 & $+9.76$ & 17 & 10 & 58 \\
 +\bottomrule
 +\end{tabular}
-+\caption{Two runs per method on SkillsBench. Scores are mean verifier rewards multiplied by 100; $\Delta$ is the mean paired gain in percentage points. Each method uses an identical task set across its two runs.}
++\captionof{table}{Two runs per method on SkillsBench. Scores are mean verifier rewards multiplied by 100; $\Delta$ is the mean paired gain in percentage points. Each method uses an identical task set across its two runs.}
 +\label{tab:skillsbench-six-runs}
-+\end{table*}
-+
-+\input{skillsbench-variant-table}
-+
-+% Keep the first results paragraph together after the wide tables.
-+\Needspace{13\baselineskip}
-+\subsection{Source-Task Gains Recur across Runs}
-+
-+All three methods have positive mean paired gains in both runs (Table~\ref{tab:skillsbench-six-runs}). SkillEvolver gains 25.61 and 25.02 points, CoEvoSkills gains 10.24 and 9.76, and SPARK gains 1.84 and 6.45. SkillEvolver and CoEvoSkills retain similar gains despite substantial changes in their no-skill scores. Their benefit is therefore more consistent across runs than their absolute skill-condition scores suggest.
-+
-+The task-level results also differ. SkillEvolver has at least four times as many improvements as regressions in each run; CoEvoSkills improves 17 tasks in each run, with nine and ten regressions. SPARK's first run is nearly balanced, while its second has 13 improvements and five regressions. These results establish recurring source-task utility. We next ask whether the same frozen skills remain useful after the task changes.
++\end{minipage}
++\par\vspace{6pt}
++\begin{multicols}{2}
 +
 +\input{skillsbench-variants}
 diff --git a/paper/maintext-20260921/skillsbench-variant-table.tex b/paper/maintext-20260921/skillsbench-variant-table.tex
 new file mode 100644
-index 000000000..94d2519b2
+index 000000000..3d30a52c9
 --- /dev/null
 +++ b/paper/maintext-20260921/skillsbench-variant-table.tex
-@@ -0,0 +1,25 @@
-+% Queue both SkillsBench tables together so the variant table stays near its results.
-+\begin{table*}[t]
+@@ -0,0 +1,27 @@
++\end{multicols}
++\noindent\begin{minipage}{\textwidth}
 +\centering
 +\small
 +\setlength{\tabcolsep}{7pt}
@@ -259,17 +249,17 @@ index 000000000..94d2519b2
 +CoEvoSkills & 77 & $-3.59$ & 68 & $-9.51$ & 76 & \multicolumn{2}{c}{$-2.42$}\\
 +\bottomrule
 +\end{tabular}
-+\caption{Skill utility under task variation: descriptive summary of historical and recovery evaluations. Panel A reports overall outcomes; Panel B separates representation, instance, and requirement changes. Each method is paired with its own same-variant no-skill baseline. Scores and within-variant differences use the scale in Table~\ref{tab:skillsbench-six-runs}.}
++\captionof{table}{Skill utility under task variation: descriptive summary of historical and recovery evaluations. Panel A reports overall outcomes; Panel B separates representation, instance, and requirement changes. Each method is paired with its own same-variant no-skill baseline. Scores and within-variant differences use the scale in Table~\ref{tab:skillsbench-six-runs}.}
 +\label{tab:variant-transfer}
-+\end{table*}
++\end{minipage}
++\par\vspace{6pt}
++\begin{multicols}{2}
 diff --git a/paper/maintext-20260921/skillsbench-variants.tex b/paper/maintext-20260921/skillsbench-variants.tex
 new file mode 100644
-index 000000000..32144a805
+index 000000000..0abd60943
 --- /dev/null
 +++ b/paper/maintext-20260921/skillsbench-variants.tex
 @@ -0,0 +1,30 @@
-+% Keep the heading and probe definitions together after the wide tables.
-+\Needspace{12\baselineskip}
 +\subsection{Task Changes Separate Different Scopes of Utility}
 +\label{sec:variant-transfer}
 +
@@ -282,6 +272,8 @@ index 000000000..32144a805
 +
 +\noindent\textbf{Replacing the instance produces the largest divergence.}
 +SkillEvolver remains positive under all three changes, with its largest gain on P2 ($+14.56$). P2 is also where SPARK and CoEvoSkills decline most ($-5.23$ and $-9.51$). SPARK retains positive averages under representation and requirement changes, but loses its advantage when the underlying instance changes. SkillEvolver's positive results across P1--P3 indicate a broader observed scope of skill utility. CoEvoSkills' negative averages across all three changes show that its source-task benefit is particularly sensitive to reuse conditions.
++
++\input{skillsbench-variant-table}
 +
 +\subsection{What the Evolved Skills Preserve}
 +\label{sec:skill-reuse}
