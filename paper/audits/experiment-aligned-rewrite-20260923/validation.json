@@ -1,0 +1,107 @@
+{
+  "base_commit": "644ae4916",
+  "baseline_comparison_commit": "121a6182b",
+  "standard_pairs": 500,
+  "standard_summaries_recomputed": [
+    {
+      "method": "SkillEvolver",
+      "run": "1",
+      "n": 81,
+      "baseline": 30.19753086419753,
+      "skill": 55.80864197530864,
+      "delta": 25.61111111111111
+    },
+    {
+      "method": "SkillEvolver",
+      "run": "2",
+      "n": 81,
+      "baseline": 37.32098765432099,
+      "skill": 62.34320987654321,
+      "delta": 25.022222222222226
+    },
+    {
+      "method": "SPARK",
+      "run": "1",
+      "n": 84,
+      "baseline": 17.820357142857144,
+      "skill": 19.66095238095238,
+      "delta": 1.8405952380952382
+    },
+    {
+      "method": "SPARK",
+      "run": "2",
+      "n": 84,
+      "baseline": 14.365119047619048,
+      "skill": 20.81452380952381,
+      "delta": 6.449404761904762
+    },
+    {
+      "method": "CoEvoSkills",
+      "run": "1",
+      "n": 85,
+      "baseline": 42.20882352941177,
+      "skill": 52.443999999999996,
+      "delta": 10.235176470588236
+    },
+    {
+      "method": "CoEvoSkills",
+      "run": "2",
+      "n": 85,
+      "baseline": 23.544902352941175,
+      "skill": 33.30605764705882,
+      "delta": 9.761155294117648
+    }
+  ],
+  "variant_pairs_recomputed": 664,
+  "variant_unique_cells": 886,
+  "table_numeric_cells_identical": true,
+  "tables_single_column": true,
+  "references_start_new_page": 5,
+  "checkpoint_prose_preserved": true,
+  "old_experiment_names_and_claims_removed": true,
+  "experiment_changes": false,
+  "pages": 5,
+  "visual_qa": "All five pages inspected. Table 1 follows a completed paragraph on page 2 right; Table 2 opens page 3 left after the completed discussion on page 2. No table splits a paragraph. References start page 5; page 4 whitespace follows the explicit separate-reference-page requirement.",
+  "page_text_bounds": [
+    [
+      54.42498016357422,
+      103.97014617919922,
+      558.9989624023438,
+      665.091552734375
+    ],
+    [
+      54.42498779296875,
+      74.30294799804688,
+      559.000732421875,
+      720.9315185546875
+    ],
+    [
+      54.42499923706055,
+      75.16317749023438,
+      558.99169921875,
+      712.1195678710938
+    ],
+    [
+      54.42499542236328,
+      75.16299438476562,
+      558.9915161132812,
+      305.0055236816406
+    ],
+    [
+      54.424991607666016,
+      75.08112335205078,
+      558.9966430664062,
+      331.47161865234375
+    ]
+  ],
+  "latex_warnings": 0,
+  "review": "One read-only evidence reviewer plus primary author review; same-context research assistance, not full ARS certification",
+  "sources": {
+    "main.tex": "97a7705107c09fc280e8e0ddf94413d9d5b404315e4083b7a1e0ad6afced7e38",
+    "skillsbench-experiments.tex": "af42cc2c8d632756d0a2408ac9938cfe3d3da2fe27a57afb0dc692dcaca97b40",
+    "skillsbench-variants.tex": "3622d5dc347ceaea7f32a1b2fdd5ab29fb1af6432bab2dd7c768acc0a96aa66f",
+    "skillsbench-diagnosis.tex": "45e45b2696a8691d823553acbd352caf9fcb1b1bb10efb7a539065810cd12c3b",
+    "skillsbench-variant-table.tex": "67fc824ebe378efe467312215cfc8cb76a5076624591a4d09af077b40718ca4a"
+  },
+  "pdf_sha256": "1faab2e1f258416a9c4d2ccd37fd61822b139bd66d8507a82f312064d4532b74"
+}

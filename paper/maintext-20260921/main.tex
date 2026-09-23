@@ -22,6 +22,8 @@
 \usepackage{cite}
 \frenchspacing
 \raggedbottom
+\widowpenalty=10000
+\clubpenalty=10000
 
 \pdfinfo{
 /TemplateVersion (ICASSP 2027 official spconf)
@@ -152,6 +154,9 @@ SkillsBench evaluates skill utility across diverse tasks, while SWE-Skills-Bench
 
 We examine what self-evolving agent skills preserve through repeated standard-task evaluations, task variation, and inspection of skill reuse. SkillEvolver, SPARK, and CoEvoSkills all yield positive source-task gains in both runs, but their variant results differ substantially. SkillEvolver has the broadest observed generalization profile, remaining positive under representation, instance, and requirement changes. SPARK's benefit depends on the change type, while CoEvoSkills' averages become negative. The inspected examples associate successful reuse with guidance for selecting valid results and preserving task-specific correctness rules. Together, these findings show why diagnosing skill learning requires examining how a frozen artifact guides behavior after the task changes.
 
+\end{multicols}
+\clearpage
+\begin{multicols}{2}
 {\small
 \bibliographystyle{IEEEbib}
 \bibliography{references}

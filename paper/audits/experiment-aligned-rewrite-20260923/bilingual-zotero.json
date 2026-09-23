@@ -1,0 +1,72 @@
+{
+  "baseline_commit": "121a6182b",
+  "translation": {
+    "plugin": "Zotero PDF2zh 4.1.7",
+    "engine": "pdf2zh_next",
+    "service": "siliconflowfree",
+    "task_id": "c7c49646-f210-407c-9d20-61a1ea9c7100",
+    "mode": "English left / Chinese right",
+    "result": {
+      "fileList": [
+        "main-single-column-20260923.no_watermark.zh-CN.mono.pdf",
+        "main-single-column-20260923.no_watermark.zh-CN.LR_dual.pdf"
+      ],
+      "filePaths": [
+        "/Users/duchongyang/Applications/zotero-pdf2zh/server/translated/main-single-column-20260923.no_watermark.zh-CN.mono.pdf",
+        "/Users/duchongyang/Applications/zotero-pdf2zh/server/translated/main-single-column-20260923.no_watermark.zh-CN.LR_dual.pdf"
+      ],
+      "outputDir": "/Users/duchongyang/Applications/zotero-pdf2zh/server/translated",
+      "status": "success"
+    }
+  },
+  "files": {
+    "main.pdf": {
+      "sha256": "1faab2e1f258416a9c4d2ccd37fd61822b139bd66d8507a82f312064d4532b74",
+      "pages": 5,
+      "annotations": 0
+    },
+    "main-revision-highlighted.pdf": {
+      "sha256": "e7faf20f448515b1a2ae02600be2870e63f35c93c5729abd48ea6f3a79f473fa",
+      "pages": 5,
+      "annotations": 59
+    },
+    "main-bilingual-en-zh.pdf": {
+      "sha256": "0a029cc17ba89cea7d54a7850eb8098f0357db3516351eb8b20bbdc1eea11e3e",
+      "pages": 5,
+      "annotations": 59
+    },
+    "main-overleaf-original-20260921.pdf": {
+      "sha256": "307df402a481aaf5514e4aaf919f34cd4fc0aeb9deaa7643fcef7765f369428d",
+      "pages": 7,
+      "annotations": 0
+    }
+  },
+  "validation": {
+    "english_text_identical_to_clean": true,
+    "red_highlights": 59,
+    "english_side_only": true,
+    "clean_pages": 5,
+    "undefined_references": 0,
+    "overfull_boxes": 0,
+    "underfull_boxes": 0,
+    "chinese_all_pages_visually_checked": true,
+    "chinese_repairs_record": "chinese-repairs.json"
+  },
+  "zotero": {
+    "status": "verified complete",
+    "import_path": "/Users/duchongyang/Documents/ICLR/tmp/pdfs/zotero-final-comparison-20260922/最新双语-实验主线与单栏表格-红色对比-20260923.pdf",
+    "key": "DYD9FMCX",
+    "path": "/Users/duchongyang/Zotero/storage/DYD9FMCX/最新双语-实验主线与单栏表格-红色对比-20260923.pdf",
+    "baseline_key": "RTB7QH9K",
+    "superseded_key": "4WVW6YXC",
+    "active_attachment_keys": [
+      "RTB7QH9K",
+      "DYD9FMCX"
+    ],
+    "superseded_moved_to_trash": true,
+    "trash_emptied": false,
+    "ui_verified_page": 3,
+    "ui_verified_page_count": 5,
+    "ui_verified_red_highlights": true
+  }
+}

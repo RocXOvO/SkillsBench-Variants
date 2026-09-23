@@ -20,29 +20,26 @@ All three methods have positive mean paired gains in both runs (Table~\ref{tab:s
 
 The task-level results also differ. SkillEvolver has at least four times as many improvements as regressions in each run; CoEvoSkills improves 17 tasks in each run, with nine and ten regressions. SPARK's first run is nearly balanced, while its second has 13 improvements and five regressions. These results establish recurring source-task utility. We next ask whether the same frozen skills remain useful after the task changes.
 
-\end{multicols}
-\noindent\begin{minipage}{\textwidth}
+\begin{table}[H]
 \centering
 \small
-\setlength{\tabcolsep}{7pt}
-\begin{tabular}{llrrrrrrr}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llrrrrr}
 \toprule
-\textbf{Method} & \textbf{Run} & \textbf{Tasks} & \textbf{No skill} & \textbf{Skill} & $\boldsymbol{\Delta}$ & \textbf{Improved} & \textbf{Regressed} & \textbf{Tied} \\
+\textbf{Method} & \textbf{Run} & $N$ & \textbf{No skill} & \textbf{Skill} & $\Delta$ & \textbf{I/R/T} \\
 \midrule
-SkillEvolver & 1 & 81 & 30.20 & 55.81 & $+25.61$ & 27 & 6 & 48 \\
-SkillEvolver & 2 & 81 & 37.32 & 62.34 & $+25.02$ & 26 & 3 & 52 \\
+SkillEvolver & 1 & 81 & 30.20 & 55.81 & $+25.61$ & 27/6/48 \\
+ & 2 & 81 & 37.32 & 62.34 & $+25.02$ & 26/3/52 \\
 \midrule
-SPARK & 1 & 84 & 17.82 & 19.66 & $+1.84$ & 9 & 8 & 67 \\
-SPARK & 2 & 84 & 14.37 & 20.81 & $+6.45$ & 13 & 5 & 66 \\
+SPARK & 1 & 84 & 17.82 & 19.66 & $+1.84$ & 9/8/67 \\
+ & 2 & 84 & 14.37 & 20.81 & $+6.45$ & 13/5/66 \\
 \midrule
-CoEvoSkills & 1 & 85 & 42.21 & 52.44 & $+10.24$ & 17 & 9 & 59 \\
-CoEvoSkills & 2 & 85 & 23.54 & 33.31 & $+9.76$ & 17 & 10 & 58 \\
+CoEvoSkills & 1 & 85 & 42.21 & 52.44 & $+10.24$ & 17/9/59 \\
+ & 2 & 85 & 23.54 & 33.31 & $+9.76$ & 17/10/58 \\
 \bottomrule
 \end{tabular}
-\captionof{table}{Two runs per method on SkillsBench. Scores are mean verifier rewards multiplied by 100; $\Delta$ is the mean paired gain in percentage points. Each method uses an identical task set across its two runs.}
+\caption{Two runs per method on SkillsBench. Mean verifier rewards and paired gain $\Delta$ use a 0--100 scale. I/R/T counts improved, regressed, and tied tasks.}
 \label{tab:skillsbench-six-runs}
-\end{minipage}
-\par\vspace{6pt}
-\begin{multicols}{2}
+\end{table}
 
 \input{skillsbench-variants}
