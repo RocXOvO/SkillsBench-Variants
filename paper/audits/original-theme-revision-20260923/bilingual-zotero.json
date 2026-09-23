@@ -1,0 +1,69 @@
+{
+  "baseline_commit": "121a6182b",
+  "translation": {
+    "plugin": "Zotero PDF2zh 4.1.7",
+    "engine": "pdf2zh_next",
+    "service": "siliconflowfree",
+    "task_id": "cff8037b-478e-4dd1-8727-977f67a40085",
+    "mode": "English left / Chinese right",
+    "result": {
+      "fileList": [
+        "main-original-theme-20260923.no_watermark.zh-CN.mono.pdf",
+        "main-original-theme-20260923.no_watermark.zh-CN.LR_dual.pdf"
+      ],
+      "filePaths": [
+        "/Users/duchongyang/Applications/zotero-pdf2zh/server/translated/main-original-theme-20260923.no_watermark.zh-CN.mono.pdf",
+        "/Users/duchongyang/Applications/zotero-pdf2zh/server/translated/main-original-theme-20260923.no_watermark.zh-CN.LR_dual.pdf"
+      ],
+      "outputDir": "/Users/duchongyang/Applications/zotero-pdf2zh/server/translated",
+      "status": "success"
+    }
+  },
+  "files": {
+    "main.pdf": {
+      "sha256": "bbdb1feaec5ae296d13e0238a9860b1d2aeafbeb89f5ad2d507cd8c51b95c607",
+      "pages": 5,
+      "annotations": 0
+    },
+    "main-revision-highlighted.pdf": {
+      "sha256": "ec740595a71d105f880035f05ac27442a9de061c5ed6c5f925bc416e9a273c9f",
+      "pages": 5,
+      "annotations": 55
+    },
+    "main-bilingual-en-zh.pdf": {
+      "sha256": "398307d4356f45e27ee691baad27e553cb7b62bb015e290d5bc85089f1593c12",
+      "pages": 5,
+      "annotations": 55
+    },
+    "main-overleaf-original-20260921.pdf": {
+      "sha256": "307df402a481aaf5514e4aaf919f34cd4fc0aeb9deaa7643fcef7765f369428d",
+      "pages": 7,
+      "annotations": 0
+    }
+  },
+  "validation": {
+    "english_text_identical_to_clean": true,
+    "red_highlights": 55,
+    "english_side_only": true,
+    "clean_pages": 5,
+    "undefined_references": 0,
+    "overfull_boxes": 0,
+    "underfull_boxes": 0
+  },
+  "zotero": {
+    "status": "imported and visually verified; superseded attachment moved to Zotero trash",
+    "import_path": "/Users/duchongyang/Documents/ICLR/tmp/pdfs/zotero-final-comparison-20260922/最新双语-原文诊断主线-红色对比-20260923.pdf",
+    "new_key": "LUKZUDRG",
+    "stored_path": "/Users/duchongyang/Zotero/storage/LUKZUDRG/最新双语-原文诊断主线-红色对比-20260923.pdf",
+    "sha256_matches_local": true,
+    "baseline_key": "RTB7QH9K",
+    "superseded_key": "DYD9FMCX",
+    "visual_verification": "Native Zotero reader, page 2: English red highlights, Chinese translation, aligned single-column table; page counter 2/5",
+    "remaining_attachment_keys": [
+      "RTB7QH9K",
+      "LUKZUDRG"
+    ],
+    "superseded_moved_to_trash": true,
+    "trash_emptied": false
+  }
+}

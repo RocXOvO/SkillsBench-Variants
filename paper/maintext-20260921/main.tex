@@ -44,7 +44,7 @@
 \begin{multicols}{2}
 
 \begin{abstract}
-Self-evolving agent skills turn execution experience into persistent instructions and code, but improved performance on the source task leaves open what has been learned. We study this question through repeated standard-task evaluations, controlled task variations, and inspection of the resulting skills and their use. Our diagnosis distinguishes source-task utility from usefulness under changes to input representation, task instances, and requirements. We examine SkillEvolver, SPARK, and CoEvoSkills, connecting their observed reuse patterns to the decision rules preserved in their skills and the feedback used during skill construction. The results reveal different scopes of generalization despite positive source-task gains, and motivate evaluating skills by how they guide decisions when the task changes.
+Higher post-evolution scores raise an identification question: what improvement is carried by the persistent skill, and what remains useful after the task changes? We examine this question through a diagnosis of SkillEvolver, SPARK, and CoEvoSkills, connecting their construction procedures, completed artifacts, and downstream behavior. Repeated paired evaluations establish source-task utility, controlled variations probe its scope, and skill contents and execution traces explain contrasting reuse outcomes. The evidence separates recurring benchmark gains from reusable decision guidance: positive source-task benefits coexist with sharply different responses to changed instances and requirements. Successful cases preserve criteria for selecting valid results and maintaining task constraints. This analysis connects observed gains to what the skill helps an executor decide, making behavioral persistence and attribution central to evaluating skill learning.
 
 \end{abstract}
 
@@ -54,22 +54,17 @@ Agent skills, self-evolution, diagnostic evaluation, skill reuse, generalization
 
 \section{Introduction}
 
-Persistent agent skills store instructions, scripts, and references that an executor can reuse across tasks. Skill-generation and evolution methods turn execution experience into these external artifacts without changing the executor's model parameters. SkillEvolver refines skills from their deployment outcomes, SPARK distills environment-verified trajectories, and CoEvoSkills jointly evolves skills and a surrogate verifier~\cite{zhang2026skillevolver,zhou2026spark,zhang2026coevoskills}. Their common goal is to make experience useful beyond the attempt that produced it.
+Agent skills externalize behavior into persistent instructions, scripts, and references that can be inspected and reused without changing model parameters. SkillEvolver, SPARK, and CoEvoSkills construct these artifacts from execution experience through deployment-grounded revision, verified-trajectory distillation, and co-evolutionary verification~\cite{zhang2026skillevolver,zhou2026spark,zhang2026coevoskills}. A higher score after this process raises the question in our title: what has the system learned as a skill?
 
-Success on the source task does not reveal the scope of that usefulness. A skill can help by encoding a procedure that adapts to new inputs, or by preserving choices that happen to work on one instance. Both can raise a benchmark score. The distinction becomes visible when the executor must reinterpret an input, solve a replacement instance, or satisfy an additional requirement while using the same skill. These changes test what the artifact preserves from experience and what the executor must still infer.
+The final score is produced through several steps. Construction determines which guidance enters the artifact; the executor decides how to use that guidance; and a verifier assesses the resulting output. A skill can preserve a useful decision rule, an instance-specific choice, or instructions that a later executor applies incompletely. These possibilities can yield similar source-task scores while producing different behavior when the input or requirement changes. Locating the improvement therefore requires examining the persistent artifact together with its deployment.
 
-We investigate this distinction as a diagnostic study of skill reuse. We first measure each method's gain over a same-task no-skill baseline in two standard-task runs. We then freeze the skills and examine their utility under changes to representation, instances, and requirements. Finally, we inspect contrasting examples to connect successful and unsuccessful reuse to the guidance expressed in the skills. This sequence moves from whether a skill helps to where it helps and what its contents suggest about the difference.
+We pursue two connected research objectives. First, we examine whether completed skills provide recurring utility and how far that utility extends under controlled task variation. Second, we investigate which decisions preserved in the skills help explain successful and failed reuse, and how those decisions relate to the feedback used during construction. This keeps the existence and scope of a benefit separate from the explanation of how it arises.
 
-The resulting picture differs across methods. All three show positive paired gains in both standard-task runs. Under task variation, SkillEvolver retains positive average gains across all three change types, SPARK's gains depend on the type of change, and CoEvoSkills' average gains reverse sign. Instance changes produce the clearest separation. Thus recurring source-task gains and generalization describe different properties of an evolved skill.
+Our empirical diagnosis begins with two standard-task runs per method, pairing each skill condition with a no-skill execution of the same task. We then apply frozen skills to changes in input representation, task instances, and coupled requirements. Finally, contrasting signal-detection and scheduling cases connect the observed outcomes to the guidance used by the executor. The sequence links the score, the conditions under which it persists, and the decisions carried by the artifact.
 
-The case evidence makes this distinction concrete. In signal detection, selecting a strong candidate is insufficient when the signal can be confused with background variability or a harmonic. In scheduling, a feasible output can still violate the task's repair rules. Successful reuse in these examples accompanies skills that preserve criteria for choosing and checking a result. We interpret these differences in light of the methods' feedback and skill-construction procedures.
+The central finding is a separation between recurring source-task benefit and reusable behavior. All three methods have positive paired mean gains in both standard-task runs, but this agreement breaks under task variation. SkillEvolver remains positive across all three change types; SPARK and CoEvoSkills lose utility on replacement instances. The cases reveal a corresponding distinction in skill content: finding a plausible signal differs from identifying the required signal, and constructing a feasible schedule differs from preserving the rules of an acceptable repair. Successful reuse accompanies guidance that retains these distinctions.
 
-This paper contributes a diagnosis of skill learning through three complementary forms of evidence:
-\begin{itemize}
-    \item \textbf{Repeated utility measurement.} Six standard-task runs establish the observed paired benefits of SkillEvolver, SPARK, and CoEvoSkills on their evaluated tasks.
-    \item \textbf{Task-variation analysis.} Representation, instance, and requirement changes expose different scopes of frozen-skill usefulness across the recorded variant evaluations.
-    \item \textbf{Skill-level interpretation.} Contrasting reuse examples connect outcomes to preserved decision criteria and motivate an explanation based on feedback coverage and abstraction from the source instance.
-\end{itemize}
+We contribute an empirical diagnosis of the persistence of completed-skill utility and an analysis of the decision guidance preserved in successful reuse. The repeated outcomes establish utility at deployment; controlled variations reveal its behavioral scope; and artifact and trace evidence connect that scope to reusable decision criteria. Together, these observations address what benchmark gains say about skill learning.
 
 \section{Problem Formulation}
 
@@ -114,33 +109,39 @@ y_r=V(x,o_r).
 \draw[arr] (verifier) -- (score);
 \draw[arr, rounded corners=3pt] (score.north) -- ++(0,0.45) -| node[pos=0.25,above,font=\small]{next round} (evidence.north);
 \end{tikzpicture}
-\captionof{figure}{Skill evolution and deployment. Our evaluations examine the utility of the completed skill and its reuse under task changes; skill contents and execution traces provide evidence for interpreting the observed behavior.}
+\captionof{figure}{The skill-evolution lifecycle. Construction produces a persistent artifact; deployment turns its guidance into behavior; verification assigns the observed score. We connect these stages through paired utility, frozen-skill task variation, and inspection of skill use.}
 \label{fig:lifecycle}
 \end{minipage}
 \par\vspace{6pt}
 \begin{multicols}{2}
 
-\subsection{Diagnosing What a Skill Has Learned}
+\subsection{What Does an Observed Gain Identify?}
 
-Let $s_x$ denote the completed skill for source task $x$, and let $T_k(x)$ denote a task variant. The skill remains fixed when it is used on $T_k(x)$. We compare skill-assisted and no-skill executions of the same task or variant using its verifier. A positive paired difference indicates utility in that setting. Its persistence across changes indicates the observed scope of reuse.
+The score $V(x,A(x,s,z))$ depends jointly on the skill, its execution, and the verifier. A skill-versus-no-skill comparison measures the utility of a completed artifact at deployment. A parent-to-final comparison instead measures the change associated with revising an existing artifact. Keeping these contrasts distinct specifies which part of the learning question an evaluation answers.
 
-We distinguish three questions. First, do positive source-task gains recur across runs? Second, how does the same skill perform when the representation, instance, or requirements change? Third, which guidance in the skill is associated with successful or failed reuse? The first two questions are answered by paired outcomes. The third is examined through skill contents, execution behavior, and the published construction procedures. The executor can adapt its actions on a variant, but the skill itself is not revised during this evaluation.
+Our empirical contrast is completed-skill utility. We first examine whether its paired mean is positive in each of two runs on the same task set. We then freeze the source-task skill $s_x$ and apply it to a variant $T_k(x)$, pairing its outcome with a no-skill execution on that variant. The executor can reinterpret inputs and adapt its actions; the skill itself is not revised. Persistence of utility under these changes locates the observed scope of reuse.
+
+Attribution concerns the decisions connecting the artifact to the result. We inspect what the skill tells the executor to retain, recompute, or check, and how that guidance appears in successful and failed executions. Published construction procedures supply an explanation for how such guidance may arise. This separates observed behavior and artifact content from interpretation of the evolution pathway.
 
 \input{skillsbench-experiments}
 
 \input{skillsbench-diagnosis}
 
-\section{Implications for Reusable Skill Learning}
+\section{Interpreting Gains as Evidence of Skill Learning}
 
-\subsection{Average Gain and Improvement Frequency}
+\subsection{Utility, Scope, and Attribution Answer Different Questions}
 
-SPARK illustrates a distinction between the size and frequency of benefits. Its overall variant mean is slightly positive even though regressions outnumber improvements. A near-zero aggregate therefore does not mean that the skill has no effect: beneficial and harmful changes offset one another. SkillEvolver's positive mean is accompanied by more improvements than regressions, whereas CoEvoSkills has both a negative mean and more regressions. These outcome profiles describe whether a skill's aggregate utility reflects broad benefit among changed outcomes or a balance of opposing changes.
+Positive paired gains in both runs establish recurring source-task utility of the completed skills. Task variation asks a different question: which parts of that usefulness survive when the original input or solution no longer suffices? The three methods agree on the first observation and diverge on the second. This is the diagnostic result behind the performance differences. A source-task average describes a benefit in one setting; the variation profile reveals what demands the same artifact can accommodate.
 
-\subsection{Implications for Skill Construction and Evaluation}
+Average gain and improvement frequency also reveal different behavior. SPARK's slightly positive variant mean combines more regressions than improvements, so near-zero utility masks opposing changes. SkillEvolver combines a positive mean with more improvements, whereas CoEvoSkills combines a negative mean with more regressions. Pairing these summaries with the cases makes the interpretation concrete: utility depends on whether the guidance helps the executor make the changed task's decisive choices.
 
-The cases suggest a concrete target for skill construction: preserve how to recognize a valid result, as well as how to produce a candidate. A useful skill helps the executor decide when its procedure applies, what must be adapted, and which checks must hold before accepting the output. The feedback-based account connects this target to the methods' construction procedures as an interpretation of the observed patterns.
+\subsection{What the Persistent Artifact Must Preserve}
 
-Evaluation should correspondingly report paired source-task utility, examine the same frozen artifact under distinct task changes, and inspect cases where the outcomes diverge. The three probes describe a profile of applicability: passing one change does not substitute for checking another. Reporting that profile alongside improvement and regression counts exposes behavior that a single average hides. It also makes the learning question concrete: which decisions remain useful when the source task no longer supplies the same inputs or demands the same output?
+The cases suggest that reusable skill learning preserves the relationship between a procedure and the conditions that make its result valid. In signal detection, this relationship distinguishes a target from misleading candidates. In scheduling, it connects repair actions to baseline-relative constraints. A procedure can remain executable while this relationship is lost. Conversely, a skill can guide a new solution by preserving the checks and adaptation rules that still apply.
+
+This connects the diagnosis back to the evolution lifecycle. Feedback supplies evidence about failures; the skill expresses a rule extracted from that evidence; the executor must use it in the new setting; and the verifier records the outcome. The observed cases expose whether the guidance survives this handoff. Construction, adoption, and useful deployment are separate events, even when they contribute to the same reported score.
+
+Evaluation should therefore follow the artifact from its source-task contribution to its changed-task behavior. Repeated paired outcomes show whether utility recurs, frozen variants test which decisions remain applicable, and skill/trace inspection explains where reuse succeeds or breaks. When the claim concerns the improvement produced by revision itself, the corresponding contrast is the actual parent and adopted final artifact. The research target is a persistent change in useful behavior, with the score serving as one observation of that change.
 
 \section{Related Work}
 
@@ -148,11 +149,11 @@ Evaluation should correspondingly report paired source-task utility, examine the
 SkillEvolver, SPARK, and CoEvoSkills make experience persistent through different construction loops: deployment-grounded revision, verified-trajectory distillation, and co-evolutionary verification, respectively~\cite{zhang2026skillevolver,zhou2026spark,zhang2026coevoskills}. These methods motivate our focus on the artifact delivered to a later executor. We study how that artifact's usefulness changes after its source task is varied, and interpret the resulting behavior through its retained guidance.
 
 \noindent\textbf{Evaluating skill utility and use.}
-SkillsBench evaluates skill utility across diverse tasks, while SWE-Skills-Bench studies skill use in software engineering~\cite{li2026skillsbench,han2026sweskillsbench}. SkillLearnBench evaluates continual skill generation on real-world tasks~\cite{zhong2026skilllearnbench}. From Raw Experience to Skill Consumption separates experience generation, skill extraction, and downstream consumption~\cite{huang2026rawexperience}. Our study complements these evaluations by connecting repeated source-task outcomes with controlled variations of the task and skill-level examples. The central object is the scope of usefulness of a frozen skill, rather than its score on the source task alone.
+SkillsBench evaluates skill utility across diverse tasks, while SWE-Skills-Bench studies skill use in software engineering~\cite{li2026skillsbench,han2026sweskillsbench}. SkillLearnBench evaluates continual skill generation on real-world tasks~\cite{zhong2026skilllearnbench}. From Raw Experience to Skill Consumption separates experience generation, skill extraction, and downstream consumption~\cite{huang2026rawexperience}. Our study connects these evaluation levels to the identification of skill learning: repeated outcomes characterize completed-skill utility, task changes test its persistence, and skill-level examples explain the decisions behind contrasting outcomes. The unit of interpretation is the persistent artifact in use.
 
 \section{Conclusion}
 
-We examine what self-evolving agent skills preserve through repeated standard-task evaluations, task variation, and inspection of skill reuse. SkillEvolver, SPARK, and CoEvoSkills all yield positive source-task gains in both runs, but their variant results differ substantially. SkillEvolver has the broadest observed generalization profile, remaining positive under representation, instance, and requirement changes. SPARK's benefit depends on the change type, while CoEvoSkills' averages become negative. The inspected examples associate successful reuse with guidance for selecting valid results and preserving task-specific correctness rules. Together, these findings show why diagnosing skill learning requires examining how a frozen artifact guides behavior after the task changes.
+A higher score becomes informative about skill learning when it is connected to what the persistent artifact helps an executor do. Our repeated evaluations show positive source-task utility for all three methods, while frozen task variations separate the conditions under which that utility persists. SkillEvolver retains positive gains across the three change types; SPARK and CoEvoSkills expose narrower or adverse reuse patterns. The contrasting cases connect successful reuse to criteria for identifying valid answers and preserving repair constraints. These findings distinguish useful completed artifacts, their behavioral scope, and explanations grounded in skill content. They return the learning question to persistent decision guidance: what is retained from experience, when does it remain useful, and how does it shape the next execution?
 
 \end{multicols}
 \clearpage

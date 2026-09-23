@@ -1,0 +1,12 @@
+{
+  "schema": "pdf_read_preflight/1",
+  "verdict": "PASS",
+  "file": "output/pdf/main-overleaf-original-20260921.pdf",
+  "sha256": "307df402a481aaf5514e4aaf919f34cd4fc0aeb9deaa7643fcef7765f369428d",
+  "declared_page_count": 7,
+  "enumerated_page_count": 7,
+  "reader_page_count": 7,
+  "warnings": [],
+  "generated_at": "2026-09-23T05:46:40.816269+00:00",
+  "tool": "pdf_read_preflight/1.0.0"
+}

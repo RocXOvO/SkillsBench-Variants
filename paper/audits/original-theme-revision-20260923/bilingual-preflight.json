@@ -1,0 +1,12 @@
+{
+  "schema": "pdf_read_preflight/1",
+  "verdict": "PASS",
+  "file": "output/pdf/main-bilingual-en-zh.pdf",
+  "sha256": "398307d4356f45e27ee691baad27e553cb7b62bb015e290d5bc85089f1593c12",
+  "declared_page_count": 5,
+  "enumerated_page_count": 5,
+  "reader_page_count": 5,
+  "warnings": [],
+  "generated_at": "2026-09-23T06:03:26.193128+00:00",
+  "tool": "pdf_read_preflight/1.0.0"
+}

@@ -1,0 +1,2830 @@
+{
+  "baseline_commit": "121a6182b",
+  "baseline": "Original Overleaf source; distinct from PDF/main.pdf",
+  "baseline_tex_sha256": "3d9db737004a3037b971e3019dcc3c1e6c5e9093d0d40c64397a1efa18541678",
+  "current_pdf_sha256": "bbdb1feaec5ae296d13e0238a9860b1d2aeafbeb89f5ad2d507cd8c51b95c607",
+  "annotations": [
+    {
+      "page": 1,
+      "text": "Higher post-evolution scores raise an identification question: what improvement is carried by the persistent skill, and what remains useful after the task changes? We examine this question through a diagnosis of SkillEvolver, SPARK, and CoEvoSkills, connecting their construction procedures, completed artifacts, and downstream behavior. Repeated paired evaluations establish source-task utility, controlled variations probe its scope, and skill contents and execution traces explain contrasting reuse outcomes. The evidence separates recurring benchmark gains from reusable decision guidance: positive source-task benefits coexist with sharply different responses to changed instances and requirements. Successful cases preserve criteria for selecting valid results and maintaining task constraints. This analysis connects observed gains to what the skill helps an executor decide, making behavioral persistence and attribution central to evaluating skill learning.",
+      "comment": "摘要重写：恢复原文关于收益存在、行为范围及归因的诊断目标。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          54.42498779296875,
+          193.16995239257812,
+          298.2033996582031,
+          202.1363525390625
+        ],
+        [
+          54.42498779296875,
+          203.58096313476562,
+          298.20343017578125,
+          212.54736328125
+        ],
+        [
+          54.42498779296875,
+          213.99197387695312,
+          298.20343017578125,
+          222.9583740234375
+        ],
+        [
+          54.42498779296875,
+          224.40298461914062,
+          298.2034912109375,
+          233.369384765625
+        ],
+        [
+          54.42498779296875,
+          234.81399536132812,
+          298.2034606933594,
+          243.7803955078125
+        ],
+        [
+          54.42498779296875,
+          245.22500610351562,
+          296.5445556640625,
+          254.19140625
+        ],
+        [
+          54.42498779296875,
+          255.63601684570312,
+          295.2176513671875,
+          264.6024169921875
+        ],
+        [
+          54.42498779296875,
+          266.0459899902344,
+          295.2176513671875,
+          275.01239013671875
+        ],
+        [
+          54.42498779296875,
+          276.4570007324219,
+          295.7108154296875,
+          285.42340087890625
+        ],
+        [
+          54.42498779296875,
+          286.8680114746094,
+          298.20343017578125,
+          295.83441162109375
+        ],
+        [
+          54.42498779296875,
+          297.2790222167969,
+          298.2033996582031,
+          306.24542236328125
+        ],
+        [
+          54.42498779296875,
+          307.6900329589844,
+          295.9618225097656,
+          316.65643310546875
+        ],
+        [
+          54.42498779296875,
+          318.1010437011719,
+          295.21759033203125,
+          327.06744384765625
+        ],
+        [
+          54.42498779296875,
+          328.5120544433594,
+          298.2034606933594,
+          337.47845458984375
+        ],
+        [
+          54.42498779296875,
+          338.9230651855469,
+          149.8633575439453,
+          347.88946533203125
+        ]
+      ]
+    },
+    {
+      "page": 1,
+      "text": "Agent skills, self-evolution, diagnostic evaluation, skill reuse, generalization",
+      "comment": "关键词更新：与技能复用诊断主题一致。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          129.44386291503906,
+          353.81707763671875,
+          295.2236328125,
+          362.7834777832031
+        ],
+        [
+          54.42498779296875,
+          364.22808837890625,
+          164.74757385253906,
+          373.1944885253906
+        ]
+      ]
+    },
+    {
+      "page": 1,
+      "text": "1. INTRODUCTION",
+      "comment": "引言重写：按原文的效用存在与范围、收益归因两项目标组织实际证据。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          134.531982421875,
+          388.67919921875,
+          218.09881591796875,
+          397.6455993652344
+        ]
+      ]
+    },
+    {
+      "page": 1,
+      "text": "Agent skills externalize behavior into persistent instructions, scripts, and references that can be inspected and reused with- out changing model parameters. SkillEvolver, SPARK, and Co- EvoSkills construct these artifacts from execution experience through deployment-grounded revision, verified-trajectory distilla- tion, and co-evolutionary verification [1–3]. A higher score after this process raises the question in our title: what has the system learned as a skill? The final score is produced through several steps. Construction determines which guidance enters the artifact; the executor decides how to use that guidance; and a verifier assesses the resulting out- put. A skill can preserve a useful decision rule, an instance-specific choice, or instructions that a later executor applies incompletely. These possibilities can yield similar source-task scores while pro- ducing different behavior when the input or requirement changes. Locating the improvement therefore requires examining the persis- tent artifact together with its deployment. We pursue two connected research objectives. First, we examine whether completed skills provide recurring utility and how far that utility extends under controlled task variation. Second, we investi- gate which decisions preserved in the skills help explain successful and failed reuse, and how those decisions relate to the feedback used during construction. This keeps the existence and scope of a benefit separate from the explanation of how it arises.",
+      "comment": "引言重写：按原文的效用存在与范围、收益归因两项目标组织实际证据。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          54.42498016357422,
+          408.45208740234375,
+          298.2033996582031,
+          417.4184875488281
+        ],
+        [
+          54.42498016357422,
+          418.86309814453125,
+          298.2033996582031,
+          427.8294982910156
+        ],
+        [
+          54.42498016357422,
+          429.27410888671875,
+          298.2035217285156,
+          438.2405090332031
+        ],
+        [
+          54.42498016357422,
+          439.68511962890625,
+          298.2034912109375,
+          448.6515197753906
+        ],
+        [
+          54.42498016357422,
+          450.09613037109375,
+          298.20330810546875,
+          459.0625305175781
+        ],
+        [
+          54.42498016357422,
+          460.50714111328125,
+          298.2033996582031,
+          469.4735412597656
+        ],
+        [
+          54.42498016357422,
+          470.91815185546875,
+          298.20343017578125,
+          479.8845520019531
+        ],
+        [
+          54.42498016357422,
+          481.32916259765625,
+          89.78846740722656,
+          490.2955627441406
+        ],
+        [
+          69.36898040771484,
+          491.74017333984375,
+          298.20941162109375,
+          500.7065734863281
+        ],
+        [
+          54.42498016357422,
+          502.1501770019531,
+          298.203369140625,
+          511.1165771484375
+        ],
+        [
+          54.42498016357422,
+          512.5611572265625,
+          298.20343017578125,
+          521.527587890625
+        ],
+        [
+          54.42498016357422,
+          522.97216796875,
+          298.203369140625,
+          531.9385986328125
+        ],
+        [
+          54.42498016357422,
+          533.3831787109375,
+          298.2033996582031,
+          542.349609375
+        ],
+        [
+          54.42498016357422,
+          543.794189453125,
+          298.2033386230469,
+          552.7606201171875
+        ],
+        [
+          54.42498016357422,
+          554.2051391601562,
+          298.2034606933594,
+          563.1715698242188
+        ],
+        [
+          54.42498016357422,
+          564.6161499023438,
+          298.2033386230469,
+          573.5825805664062
+        ],
+        [
+          54.42498016357422,
+          575.0271606445312,
+          202.67547607421875,
+          583.9935913085938
+        ],
+        [
+          69.36898040771484,
+          585.4381103515625,
+          298.20941162109375,
+          594.404541015625
+        ],
+        [
+          54.42498016357422,
+          595.84912109375,
+          298.2034606933594,
+          604.8155517578125
+        ],
+        [
+          54.42498016357422,
+          606.2601318359375,
+          298.2034912109375,
+          615.2265625
+        ],
+        [
+          54.42498016357422,
+          616.671142578125,
+          298.2033386230469,
+          625.6375732421875
+        ],
+        [
+          54.42498016357422,
+          627.0821533203125,
+          298.2034912109375,
+          636.048583984375
+        ],
+        [
+          54.42498016357422,
+          637.4931030273438,
+          298.20343017578125,
+          646.4595336914062
+        ],
+        [
+          54.42498016357422,
+          647.9031372070312,
+          219.90887451171875,
+          656.8695678710938
+        ]
+      ]
+    },
+    {
+      "page": 1,
+      "text": "Our empirical diagnosis begins with two standard-task runs per method, pairing each skill condition with a no-skill execution of the same task. We then apply frozen skills to changes in input represen- tation, task instances, and coupled requirements. Finally, contrast- ing signal-detection and scheduling cases connect the observed out- comes to the guidance used by the executor. The sequence links the score, the conditions under which it persists, and the decisions car- ried by the artifact. The central finding is a separation between recurring source-task benefit and reusable behavior. All three methods have positive paired mean gains in both standard-task runs, but this agreement breaks under task variation. SkillEvolver remains positive across all three change types; SPARK and CoEvoSkills lose utility on replacement instances. The cases reveal a corresponding distinction in skill con- tent: finding a plausible signal differs from identifying the required signal, and constructing a feasible schedule differs from preserving the rules of an acceptable repair. Successful reuse accompanies guid- ance that retains these distinctions. We contribute an empirical diagnosis of the persistence of completed-skill utility and an analysis of the decision guidance pre- served in successful reuse. The repeated outcomes establish utility at deployment; controlled variations reveal its behavioral scope; and artifact and trace evidence connect that scope to reusable decision criteria. Together, these observations address what benchmark gains say about skill learning.",
+      "comment": "引言重写：按原文的效用存在与范围、收益归因两项目标组织实际证据。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          330.156982421875,
+          177.28018188476562,
+          558.988525390625,
+          186.24658203125
+        ],
+        [
+          315.2129821777344,
+          187.69119262695312,
+          558.991455078125,
+          196.6575927734375
+        ],
+        [
+          315.2129821777344,
+          198.10220336914062,
+          558.9915161132812,
+          207.068603515625
+        ],
+        [
+          315.2129821777344,
+          208.51321411132812,
+          558.9915161132812,
+          217.4796142578125
+        ],
+        [
+          315.2129821777344,
+          218.92422485351562,
+          558.991455078125,
+          227.890625
+        ],
+        [
+          315.2129821777344,
+          229.33419799804688,
+          558.9913940429688,
+          238.30059814453125
+        ],
+        [
+          315.2129821777344,
+          239.74520874023438,
+          558.9912719726562,
+          248.71160888671875
+        ],
+        [
+          315.2129821777344,
+          250.15621948242188,
+          383.3486022949219,
+          259.12261962890625
+        ],
+        [
+          330.156982421875,
+          260.5672302246094,
+          558.9883422851562,
+          269.53363037109375
+        ],
+        [
+          315.2129821777344,
+          270.9782409667969,
+          558.9915771484375,
+          279.94464111328125
+        ],
+        [
+          315.2129821777344,
+          281.3892517089844,
+          558.991455078125,
+          290.35565185546875
+        ],
+        [
+          315.2129821777344,
+          291.8002624511719,
+          558.991455078125,
+          300.76666259765625
+        ],
+        [
+          315.2129821777344,
+          302.2112731933594,
+          558.9915161132812,
+          311.17767333984375
+        ],
+        [
+          315.2129821777344,
+          312.6222839355469,
+          558.991455078125,
+          321.58868408203125
+        ],
+        [
+          315.2129821777344,
+          323.0332946777344,
+          558.9913330078125,
+          331.99969482421875
+        ],
+        [
+          315.2129821777344,
+          333.4443054199219,
+          558.9913940429688,
+          342.41070556640625
+        ],
+        [
+          315.2129821777344,
+          343.8553161621094,
+          558.9912719726562,
+          352.82171630859375
+        ],
+        [
+          315.2129821777344,
+          354.2663269042969,
+          439.9802551269531,
+          363.23272705078125
+        ],
+        [
+          330.156982421875,
+          364.6773376464844,
+          558.9884033203125,
+          373.64373779296875
+        ],
+        [
+          315.2129821777344,
+          375.0883483886719,
+          558.9912109375,
+          384.05474853515625
+        ],
+        [
+          315.2129821777344,
+          385.49835205078125,
+          558.991455078125,
+          394.4647521972656
+        ],
+        [
+          315.2129821777344,
+          395.90936279296875,
+          558.9915161132812,
+          404.8757629394531
+        ],
+        [
+          315.2129821777344,
+          406.32037353515625,
+          558.9913330078125,
+          415.2867736816406
+        ],
+        [
+          315.2129821777344,
+          416.73138427734375,
+          558.9913940429688,
+          425.6977844238281
+        ],
+        [
+          315.2129821777344,
+          427.14239501953125,
+          400.8868713378906,
+          436.1087951660156
+        ]
+      ]
+    },
+    {
+      "page": 1,
+      "text": "where sr is the current skill, τr is an execution trace, and fr is feed- back from execution and evaluation. The operator O denotes the method’s complete update pathway, including its native merge, vali- dation, selection, or adoption mechanism. A generated candidate that is rejected or never adopted is not sr+1. The agent then executes task x with the frozen skill:",
+      "comment": "问题定义调整：移除与本研究无关的答案反馈表述。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          315.2129821777344,
+          522.5679321289062,
+          558.991455078125,
+          532.73779296875
+        ],
+        [
+          315.2129821777344,
+          532.9789428710938,
+          558.9916381835938,
+          542.15283203125
+        ],
+        [
+          315.2129821777344,
+          543.597412109375,
+          558.991455078125,
+          552.5638427734375
+        ],
+        [
+          315.2129821777344,
+          554.0083618164062,
+          558.9915771484375,
+          562.9747924804688
+        ],
+        [
+          315.2129821777344,
+          564.2119140625,
+          458.048583984375,
+          573.5213623046875
+        ],
+        [
+          330.156982421875,
+          574.6229248046875,
+          517.1511840820312,
+          583.7968139648438
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "Fig. 1. The skill-evolution lifecycle. Construction produces a persistent artifact; deployment turns its guidance into behavior; verification assigns the observed score. We connect these stages through paired utility, frozen-skill task variation, and inspection of skill use.",
+      "comment": "图1说明：联系构建、技能、部署行为和评分，并标明实际诊断证据。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          54.42499923706055,
+          149.15211486816406,
+          558.9910888671875,
+          158.20037841796875
+        ],
+        [
+          54.42499923706055,
+          159.64395141601562,
+          514.95703125,
+          168.6103515625
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "2.2. What Does an Observed Gain Identify?",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          54.42499923706055,
+          179.5620880126953,
+          224.26657104492188,
+          188.5284881591797
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "The score V (x, A(x, s, z)) depends jointly on the skill, its execu- tion, and the verifier. A skill-versus-no-skill comparison measures the utility of a completed artifact at deployment. A parent-to-final comparison instead measures the change associated with revising an existing artifact. Keeping these contrasts distinct specifies which part of the learning question an evaluation answers. Our empirical contrast is completed-skill utility. We first exam- ine whether its paired mean is positive in each of two runs on the same task set. We then freeze the source-task skill sx and apply it to a variant Tk(x), pairing its outcome with a no-skill execution on that variant. The executor can reinterpret inputs and adapt its actions; the skill itself is not revised. Persistence of utility under these changes locates the observed scope of reuse. Attribution concerns the decisions connecting the artifact to the result. We inspect what the skill tells the executor to retain, recom- pute, or check, and how that guidance appears in successful and failed executions. Published construction procedures supply an ex- planation for how such guidance may arise. This separates observed behavior and artifact content from interpretation of the evolution pathway.",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          54.42499923706055,
+          195.8994598388672,
+          298.2392883300781,
+          205.0733642578125
+        ],
+        [
+          54.42499923706055,
+          206.51797485351562,
+          298.2034606933594,
+          215.484375
+        ],
+        [
+          54.42499923706055,
+          216.92898559570312,
+          298.2034606933594,
+          225.8953857421875
+        ],
+        [
+          54.42499923706055,
+          227.33999633789062,
+          298.2034912109375,
+          236.306396484375
+        ],
+        [
+          54.42499923706055,
+          237.75100708007812,
+          298.20343017578125,
+          246.7174072265625
+        ],
+        [
+          54.42499923706055,
+          248.16201782226562,
+          222.56292724609375,
+          257.12841796875
+        ],
+        [
+          69.36900329589844,
+          258.5730285644531,
+          298.20947265625,
+          267.5394287109375
+        ],
+        [
+          54.42500305175781,
+          268.9840393066406,
+          298.20343017578125,
+          277.950439453125
+        ],
+        [
+          54.42500305175781,
+          279.1875305175781,
+          298.2022705078125,
+          289.3574523925781
+        ],
+        [
+          54.425018310546875,
+          289.5985412597656,
+          298.2177429199219,
+          298.9739990234375
+        ],
+        [
+          54.42501449584961,
+          300.2170715332031,
+          298.20343017578125,
+          309.1834716796875
+        ],
+        [
+          54.42501449584961,
+          310.6280822753906,
+          298.2034912109375,
+          319.594482421875
+        ],
+        [
+          54.42501449584961,
+          321.0390930175781,
+          182.77005004882812,
+          330.0054931640625
+        ],
+        [
+          69.3690185546875,
+          331.4490966796875,
+          298.20947265625,
+          340.4154968261719
+        ],
+        [
+          54.425018310546875,
+          341.860107421875,
+          298.20343017578125,
+          350.8265075683594
+        ],
+        [
+          54.425018310546875,
+          352.2711181640625,
+          298.20343017578125,
+          361.2375183105469
+        ],
+        [
+          54.425018310546875,
+          362.68212890625,
+          298.2035217285156,
+          371.6485290527344
+        ],
+        [
+          54.425018310546875,
+          373.0931396484375,
+          298.20343017578125,
+          382.0595397949219
+        ],
+        [
+          54.425018310546875,
+          383.504150390625,
+          298.20343017578125,
+          392.4705505371094
+        ],
+        [
+          54.425018310546875,
+          393.9151611328125,
+          86.37229919433594,
+          402.8815612792969
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "3. DOES SKILL UTILITY PERSIST BEYOND THE SOURCE TASK?",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          72.63801574707031,
+          418.36627197265625,
+          279.99505615234375,
+          427.3326721191406
+        ],
+        [
+          142.46701049804688,
+          428.77728271484375,
+          210.16334533691406,
+          437.7436828613281
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "We address the existence and scope of completed-skill utility through two contrasts: paired standard-task outcomes across runs, and paired outcomes after changing the task while keeping its source skill frozen.",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          54.425010681152344,
+          448.5501708984375,
+          298.203369140625,
+          457.5165710449219
+        ],
+        [
+          54.425010681152344,
+          458.961181640625,
+          298.2034606933594,
+          467.9275817871094
+        ],
+        [
+          54.425010681152344,
+          469.3721923828125,
+          298.2034606933594,
+          478.3385925292969
+        ],
+        [
+          54.425010681152344,
+          479.783203125,
+          97.25749969482422,
+          488.7496032714844
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "3.1. Experimental Setup",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          54.425010681152344,
+          503.2253112792969,
+          149.71990966796875,
+          512.1917114257812
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "We evaluate SkillEvolver [1], SPARK [2], and CoEvoSkills [3] on SkillsBench [4], with two runs per method. Each run pairs the method’s skill condition with a no-skill execution of the same task. Both runs of each method use the same task set: 81 tasks for SkillE- volver, 84 for SPARK, and 85 for CoEvoSkills. We report mean verifier reward on a 0–100 scale and the mean within-task difference between the skill and no-skill conditions. For a run with N tasks, the paired gain is",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          54.425010681152344,
+          519.7701416015625,
+          298.2034912109375,
+          528.736572265625
+        ],
+        [
+          54.425010681152344,
+          530.18115234375,
+          298.20343017578125,
+          539.1475830078125
+        ],
+        [
+          54.425010681152344,
+          540.5921630859375,
+          298.2034606933594,
+          549.55859375
+        ],
+        [
+          54.425010681152344,
+          551.003173828125,
+          298.2034606933594,
+          559.9696044921875
+        ],
+        [
+          54.425010681152344,
+          561.4141845703125,
+          224.105224609375,
+          570.380615234375
+        ],
+        [
+          69.36901092529297,
+          571.8251342773438,
+          298.20941162109375,
+          580.7915649414062
+        ],
+        [
+          54.425010681152344,
+          582.2361450195312,
+          298.2034606933594,
+          591.2025756835938
+        ],
+        [
+          54.425010681152344,
+          592.439697265625,
+          187.4864044189453,
+          601.6135864257812
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "∆= 100",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          114.02301025390625,
+          614.3346557617188,
+          149.01121520996094,
+          629.1000366210938
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "N",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          137.9290008544922,
+          626.2144775390625,
+          145.29937744140625,
+          635.1808471679688
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "N X",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          155.1820068359375,
+          611.2612915039062,
+          160.96234130859375,
+          617.2388916015625
+        ],
+        [
+          151.74000549316406,
+          618.036376953125,
+          165.05511474609375,
+          627.0028076171875
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "i=1",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          152.44200134277344,
+          632.8563232421875,
+          164.34938049316406,
+          638.8339233398438
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "\u0010 rskill i −rno-skill i \u0011 . (4)",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          166.58700561523438,
+          616.6213989257812,
+          172.09237670898438,
+          625.5878295898438
+        ],
+        [
+          172.0900115966797,
+          618.1622924804688,
+          189.58299255371094,
+          629.099853515625
+        ],
+        [
+          176.24801635742188,
+          624.0473022460938,
+          178.91403198242188,
+          630.02490234375
+        ],
+        [
+          192.12301635742188,
+          618.1622924804688,
+          228.51571655273438,
+          629.099853515625
+        ],
+        [
+          205.4970245361328,
+          624.0473022460938,
+          208.1630401611328,
+          630.02490234375
+        ],
+        [
+          229.00802612304688,
+          616.6213989257812,
+          234.51339721679688,
+          625.5878295898438
+        ],
+        [
+          236.04702758789062,
+          620.1334838867188,
+          238.61141967773438,
+          629.099853515625
+        ],
+        [
+          287.7562561035156,
+          620.3409423828125,
+          298.2110900878906,
+          629.307373046875
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "We also count tasks with positive, negative, and zero differences.",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          54.42503356933594,
+          647.3029174804688,
+          287.1569519042969,
+          656.2693481445312
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "3.2. Repeated Runs Establish Source-Task Utility",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          54.42503356933594,
+          670.7450561523438,
+          245.1314239501953,
+          679.7114868164062
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "All three methods have positive mean paired gains in both runs (Ta- ble 1). SkillEvolver gains 25.61 and 25.02 points, CoEvoSkills gains 10.24 and 9.76, and SPARK gains 1.84 and 6.45. SkillEvolver and",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          54.42503356933594,
+          687.2909545898438,
+          298.2035217285156,
+          696.2573852539062
+        ],
+        [
+          54.42503356933594,
+          697.7019653320312,
+          298.2034912109375,
+          706.6683959960938
+        ],
+        [
+          54.42503356933594,
+          708.1119384765625,
+          298.20355224609375,
+          717.078369140625
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "CoEvoSkills retain similar gains despite substantial changes in their no-skill scores. The paired comparison reveals recurring utility that absolute skill-condition scores alone would obscure. The task-level results also differ. SkillEvolver has at least four times as many improvements as regressions in each run; CoEvoSkills improves 17 tasks in each run, with nine and ten regressions. SPARK’s first run is nearly balanced, while its second has 13 im- provements and five regressions. These results establish recurring source-task utility. We next ask whether the same frozen skills re- main useful after the task changes.",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          315.2130126953125,
+          179.64395141601562,
+          558.991455078125,
+          188.6103515625
+        ],
+        [
+          315.2130126953125,
+          190.05496215820312,
+          558.9915161132812,
+          199.0213623046875
+        ],
+        [
+          315.2130126953125,
+          200.46597290039062,
+          502.8975830078125,
+          209.432373046875
+        ],
+        [
+          330.1570129394531,
+          210.87698364257812,
+          558.98828125,
+          219.8433837890625
+        ],
+        [
+          315.2130126953125,
+          221.28799438476562,
+          558.9913940429688,
+          230.25439453125
+        ],
+        [
+          315.2130126953125,
+          231.69900512695312,
+          558.9913940429688,
+          240.6654052734375
+        ],
+        [
+          315.2130126953125,
+          242.11001586914062,
+          558.9913940429688,
+          251.076416015625
+        ],
+        [
+          315.2130126953125,
+          252.52102661132812,
+          558.9915771484375,
+          261.4874267578125
+        ],
+        [
+          315.2130126953125,
+          262.9320373535156,
+          558.9912719726562,
+          271.8984375
+        ],
+        [
+          315.2130126953125,
+          273.3430480957031,
+          439.2182312011719,
+          282.3094482421875
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "Method Run N No skill Skill ∆ I/R/T",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          329.20001220703125,
+          299.0260925292969,
+          359.0850524902344,
+          307.99249267578125
+        ],
+        [
+          380.3443908691406,
+          298.90045166015625,
+          446.8571472167969,
+          307.99249267578125
+        ],
+        [
+          455.56353759765625,
+          299.0260925292969,
+          473.0121154785156,
+          307.99249267578125
+        ],
+        [
+          499.4719543457031,
+          298.90045166015625,
+          507.1561584472656,
+          307.8668518066406
+        ],
+        [
+          524.084716796875,
+          299.0260925292969,
+          545.0123291015625,
+          307.99249267578125
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "SkillEvolver 1 81 30.20 55.81 +25.61 27/6/48 2 81 37.32 62.34 +25.02 26/3/52",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          329.20001220703125,
+          314.52099609375,
+          384.8275146484375,
+          323.4873962402344
+        ],
+        [
+          402.76031494140625,
+          314.52099609375,
+          411.72674560546875,
+          323.4873962402344
+        ],
+        [
+          426.6827087402344,
+          314.3134765625,
+          507.1472473144531,
+          323.4873962402344
+        ],
+        [
+          517.6110229492188,
+          314.52099609375,
+          545.012451171875,
+          323.4873962402344
+        ],
+        [
+          380.34100341796875,
+          324.9320068359375,
+          384.82421875,
+          333.8984069824219
+        ],
+        [
+          402.7659912109375,
+          324.9320068359375,
+          411.732421875,
+          333.8984069824219
+        ],
+        [
+          426.6794128417969,
+          324.7244873046875,
+          507.1439514160156,
+          333.8984069824219
+        ],
+        [
+          517.6077270507812,
+          324.9320068359375,
+          545.0091552734375,
+          333.8984069824219
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "SPARK 1 84 17.82 19.66 +1.84 9/8/67 2 84 14.37 20.81 +6.45 13/5/66",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          329.20001220703125,
+          340.344970703125,
+          357.2738342285156,
+          349.3113708496094
+        ],
+        [
+          380.3443908691406,
+          340.344970703125,
+          384.82757568359375,
+          349.3113708496094
+        ],
+        [
+          402.7603759765625,
+          340.344970703125,
+          411.726806640625,
+          349.3113708496094
+        ],
+        [
+          426.6827697753906,
+          340.344970703125,
+          473.01220703125,
+          349.3113708496094
+        ],
+        [
+          483.5925598144531,
+          340.137451171875,
+          507.1473083496094,
+          349.1038513183594
+        ],
+        [
+          522.0942993164062,
+          340.344970703125,
+          545.0125122070312,
+          349.3113708496094
+        ],
+        [
+          380.34100341796875,
+          350.7559814453125,
+          384.82421875,
+          359.7223815917969
+        ],
+        [
+          402.7659912109375,
+          350.7559814453125,
+          411.732421875,
+          359.7223815917969
+        ],
+        [
+          426.6794128417969,
+          350.7559814453125,
+          473.00885009765625,
+          359.7223815917969
+        ],
+        [
+          483.5892028808594,
+          350.5484619140625,
+          507.1439514160156,
+          359.5148620605469
+        ],
+        [
+          517.6077270507812,
+          350.7559814453125,
+          545.0091552734375,
+          359.7223815917969
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "CoEvoSkills 1 85 42.21 52.44 +10.24 17/9/59 2 85 23.54 33.31 +9.76 17/10/58",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          329.20001220703125,
+          366.16796875,
+          384.8275146484375,
+          375.1343688964844
+        ],
+        [
+          402.76031494140625,
+          366.16796875,
+          411.72674560546875,
+          375.1343688964844
+        ],
+        [
+          426.6827087402344,
+          365.96044921875,
+          507.1472473144531,
+          375.1343688964844
+        ],
+        [
+          517.6110229492188,
+          366.16796875,
+          545.012451171875,
+          375.1343688964844
+        ],
+        [
+          380.34100341796875,
+          376.5789794921875,
+          384.82421875,
+          385.5453796386719
+        ],
+        [
+          402.7659912109375,
+          376.5789794921875,
+          411.732421875,
+          385.5453796386719
+        ],
+        [
+          426.6794128417969,
+          376.5789794921875,
+          473.00885009765625,
+          385.5453796386719
+        ],
+        [
+          483.5892028808594,
+          376.3714599609375,
+          545.0091552734375,
+          385.5453796386719
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "Table 1. Two runs per method on SkillsBench. Mean verifier re- wards and paired gain ∆use a 0–100 scale. I/R/T counts improved, regressed, and tied tasks.",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          315.2130126953125,
+          399.2701110839844,
+          558.9913940429688,
+          408.3183898925781
+        ],
+        [
+          315.2130126953125,
+          409.55548095703125,
+          559.000732421875,
+          418.7294006347656
+        ],
+        [
+          315.2130126953125,
+          420.17401123046875,
+          404.4734802246094,
+          429.1404113769531
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "3.3. Task Variation Tests What Remains Useful",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          315.2130126953125,
+          445.55712890625,
+          497.69708251953125,
+          454.5235290527344
+        ]
+      ]
+    },
+    {
+      "page": 2,
+      "text": "We apply each source-task skill to controlled variants without further evolution. Input-representation changes (P1) alter names, column ar- rangements, or schemas; task-instance changes (P2) replace the data or instance structure; coupled-requirement changes (P3) alter or add requirements that must be satisfied together. The corresponding de- cision demands are to remap the input, recompute a solution for a replacement instance, and accommodate changed correctness re- quirements. A frozen skill must support these adaptations through guidance already present in the artifact. The complete record contains 222 variants and 886 condition- level results across no skill and the three methods. Table 2 summa- rizes historical and recovery evaluations for 222 SkillEvolver vari- ants and 221 each for SPARK and CoEvoSkills, pairing each skill condition with the no-skill result on the same variant. Source-task improvement does not imply useful generalization. All three methods improve mean reward on the source tasks in both runs, but their variant results diverge. SkillEvolver retains a positive mean gain of 11.94 points, SPARK is close to neutral at +0.65, and CoEvoSkills falls below the no-skill baseline at −5.01. SkillEvolver also improves more variants than it regresses (47 versus 20), whereas SPARK and CoEvoSkills show the reverse. Thus, agreement on posi- tive source-task utility conceals different responses to changed tasks. Repeated source-task benefit and persistence under variation are dis- tinct observations.",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          315.2130126953125,
+          462.1029968261719,
+          558.9915161132812,
+          471.06939697265625
+        ],
+        [
+          315.2130126953125,
+          472.5140075683594,
+          558.9915161132812,
+          481.48040771484375
+        ],
+        [
+          315.2130126953125,
+          482.92401123046875,
+          558.9913330078125,
+          491.8904113769531
+        ],
+        [
+          315.2130126953125,
+          493.33502197265625,
+          558.9915161132812,
+          502.3014221191406
+        ],
+        [
+          315.2130126953125,
+          503.74603271484375,
+          558.9913330078125,
+          512.71240234375
+        ],
+        [
+          315.2130126953125,
+          514.156982421875,
+          558.9915771484375,
+          523.1234130859375
+        ],
+        [
+          315.2130126953125,
+          524.5679931640625,
+          558.9916381835938,
+          533.534423828125
+        ],
+        [
+          315.2130126953125,
+          534.97900390625,
+          558.9915161132812,
+          543.9454345703125
+        ],
+        [
+          315.2130126953125,
+          545.3900146484375,
+          456.5502624511719,
+          554.3564453125
+        ],
+        [
+          330.1570129394531,
+          555.801025390625,
+          558.9887084960938,
+          564.7674560546875
+        ],
+        [
+          315.2130126953125,
+          566.2120361328125,
+          558.9913330078125,
+          575.178466796875
+        ],
+        [
+          315.2130126953125,
+          576.6229858398438,
+          558.9913940429688,
+          585.5894165039062
+        ],
+        [
+          315.2130126953125,
+          587.0339965820312,
+          558.9916381835938,
+          596.0004272460938
+        ],
+        [
+          315.2130126953125,
+          597.4450073242188,
+          506.510986328125,
+          606.4114379882812
+        ],
+        [
+          315.2130126953125,
+          607.7741088867188,
+          558.9915771484375,
+          616.7405395507812
+        ],
+        [
+          315.2130126953125,
+          618.2669677734375,
+          558.9915771484375,
+          627.2333984375
+        ],
+        [
+          315.2130126953125,
+          628.677001953125,
+          558.9912109375,
+          637.6434326171875
+        ],
+        [
+          315.2130126953125,
+          638.8805541992188,
+          559.0003051757812,
+          648.054443359375
+        ],
+        [
+          315.2130126953125,
+          649.17529296875,
+          559.0003662109375,
+          658.4653930664062
+        ],
+        [
+          315.2130126953125,
+          659.9099731445312,
+          558.9915161132812,
+          668.8764038085938
+        ],
+        [
+          315.2130126953125,
+          670.3209838867188,
+          558.9916381835938,
+          679.2874145507812
+        ],
+        [
+          315.2130126953125,
+          680.7319946289062,
+          558.9912719726562,
+          689.6984252929688
+        ],
+        [
+          315.2130126953125,
+          691.1430053710938,
+          558.9915771484375,
+          700.1094360351562
+        ],
+        [
+          315.2130126953125,
+          701.5540161132812,
+          380.7394104003906,
+          710.5204467773438
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "text": "Replacing the instance produces the largest divergence. SkillE- volver remains positive under all three changes, with its largest gain on P2 (+14.56). P2 is also where SPARK and CoEvoSkills de- cline most (−5.23 and −9.51). SPARK retains positive averages under representation and requirement changes, but loses its advan- tage when the underlying instance changes. This separates remap- ping inputs and adjusting requirements from recomputing choices for a new instance. SkillEvolver’s positive gains across P1–P3 show the broadest observed persistence of utility, while CoEvoSkills’ neg- ative means show that source-task guidance can become counterpro- ductive after the task changes.",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          54.42499923706055,
+          75.08112335205078,
+          298.2034606933594,
+          84.12939453125
+        ],
+        [
+          54.42499923706055,
+          85.57400512695312,
+          298.203369140625,
+          94.5404052734375
+        ],
+        [
+          54.42499923706055,
+          95.77751159667969,
+          298.2123718261719,
+          104.951416015625
+        ],
+        [
+          54.42499923706055,
+          106.07128143310547,
+          298.21246337890625,
+          115.36138916015625
+        ],
+        [
+          54.42499923706055,
+          116.80599975585938,
+          298.2033996582031,
+          125.77239990234375
+        ],
+        [
+          54.42499923706055,
+          127.21701049804688,
+          298.2034606933594,
+          136.18341064453125
+        ],
+        [
+          54.42499923706055,
+          137.62802124023438,
+          298.2034606933594,
+          146.59442138671875
+        ],
+        [
+          54.42499923706055,
+          148.03903198242188,
+          298.2035217285156,
+          157.00543212890625
+        ],
+        [
+          54.42499923706055,
+          158.45004272460938,
+          298.2033996582031,
+          167.41644287109375
+        ],
+        [
+          54.42499923706055,
+          168.86105346679688,
+          298.2034606933594,
+          177.82745361328125
+        ],
+        [
+          54.42499923706055,
+          179.27206420898438,
+          162.38046264648438,
+          188.23846435546875
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "text": "A. Overall utility on task variants Method N No skill Skill ∆ I/R/T",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          75.13999938964844,
+          204.95509338378906,
+          203.48507690429688,
+          213.92149353027344
+        ],
+        [
+          75.13999938964844,
+          215.36610412597656,
+          105.02500915527344,
+          224.33250427246094
+        ],
+        [
+          131.3951873779297,
+          215.24046325683594,
+          174.8643035888672,
+          224.33250427246094
+        ],
+        [
+          183.56170654296875,
+          215.36610412597656,
+          201.0103302001953,
+          224.33250427246094
+        ],
+        [
+          227.47018432617188,
+          215.24046325683594,
+          235.15438842773438,
+          224.2068634033203
+        ],
+        [
+          256.57513427734375,
+          215.36610412597656,
+          277.502685546875,
+          224.33250427246094
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "text": "SkillEvolver 222 41.87 53.81 +11.94 47/20/155 SPARK 221 41.61 42.25 +0.65 32/37/152 CoEvoSkills 221 41.61 36.60 −5.01 26/41/154",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          75.13999938964844,
+          230.86099243164062,
+          139.73394775390625,
+          239.827392578125
+        ],
+        [
+          154.68093872070312,
+          230.6534881591797,
+          277.4937744140625,
+          239.827392578125
+        ],
+        [
+          75.13999938964844,
+          241.27200317382812,
+          103.21380615234375,
+          250.2384033203125
+        ],
+        [
+          126.28435516357422,
+          241.27200317382812,
+          139.73394775390625,
+          250.2384033203125
+        ],
+        [
+          154.68093872070312,
+          241.27200317382812,
+          201.01034545898438,
+          250.2384033203125
+        ],
+        [
+          211.5906982421875,
+          241.0644989013672,
+          277.4937744140625,
+          250.2384033203125
+        ],
+        [
+          75.13999938964844,
+          251.68301391601562,
+          139.73394775390625,
+          260.6494140625
+        ],
+        [
+          154.68093872070312,
+          251.68301391601562,
+          201.01034545898438,
+          260.6494140625
+        ],
+        [
+          211.5906982421875,
+          251.3592987060547,
+          277.4937744140625,
+          260.6494140625
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "text": "B. Utility by task change: (N) ∆ Method P1 P2 P3",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          76.89700317382812,
+          271.9694519042969,
+          201.46722412109375,
+          281.0614929199219
+        ],
+        [
+          76.89700317382812,
+          282.506103515625,
+          106.78201293945312,
+          291.4725036621094
+        ],
+        [
+          164.85739135742188,
+          282.506103515625,
+          174.81906127929688,
+          291.4725036621094
+        ],
+        [
+          217.61569213867188,
+          282.506103515625,
+          227.57736206054688,
+          291.4725036621094
+        ],
+        [
+          265.77423095703125,
+          282.506103515625,
+          275.73590087890625,
+          291.4725036621094
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "text": "SkillEvolver (77) +11.85 (68) +14.56 (77) +9.72 SPARK (77) +2.00 (68) −5.23 (76) +4.53 CoEvoSkills (77) −3.59 (68) −9.51 (76) −2.42",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          76.89700317382812,
+          297.79345703125,
+          275.7718811035156,
+          306.9673767089844
+        ],
+        [
+          76.89700317382812,
+          308.4119873046875,
+          104.97080993652344,
+          317.3783874511719
+        ],
+        [
+          132.64111328125,
+          308.2044677734375,
+          174.82806396484375,
+          317.1708679199219
+        ],
+        [
+          185.41738891601562,
+          308.0882873535156,
+          275.7629089355469,
+          317.1708679199219
+        ],
+        [
+          76.89700317382812,
+          318.8219909667969,
+          122.0607681274414,
+          327.78839111328125
+        ],
+        [
+          132.64111328125,
+          318.498291015625,
+          174.82806396484375,
+          327.58087158203125
+        ],
+        [
+          185.41738891601562,
+          318.498291015625,
+          275.7629089355469,
+          327.58087158203125
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "text": "Table 2. Skill utility under task variation: descriptive summary of historical and recovery evaluations. Each method is paired with its same-variant no-skill baseline. P1/P2/P3 denote representation, in- stance, and requirement changes. Panel B gives variant count N and paired gain ∆; scores and I/R/T follow Table 1.",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          54.42499923706055,
+          341.5130920410156,
+          298.2033996582031,
+          350.5613708496094
+        ],
+        [
+          54.42499923706055,
+          352.0059814453125,
+          298.2033996582031,
+          360.9723815917969
+        ],
+        [
+          54.42499923706055,
+          362.4169921875,
+          298.2034606933594,
+          371.3833923339844
+        ],
+        [
+          54.42499923706055,
+          372.6204833984375,
+          298.21246337890625,
+          381.7944030761719
+        ],
+        [
+          54.42499923706055,
+          383.031494140625,
+          224.73281860351562,
+          392.2054138183594
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "text": "4. WHAT IN THE SKILL EXPLAINS ITS BEHAVIOR?",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          65.71600341796875,
+          409.6311340332031,
+          286.91717529296875,
+          418.5975341796875
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "text": "The second research objective is to connect the observed outcome to the persistent guidance used during execution. Signal detection and scheduling expose two distinct decisions: selecting the valid candi- date and preserving the conditions of a correct repair. We inspect both the rules written into the skills and the behavior observed when they are reused.",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          54.42500305175781,
+          429.4040222167969,
+          298.20343017578125,
+          438.37042236328125
+        ],
+        [
+          54.42500305175781,
+          439.8150329589844,
+          298.2034912109375,
+          448.78143310546875
+        ],
+        [
+          54.42500305175781,
+          450.2260437011719,
+          298.20343017578125,
+          459.19244384765625
+        ],
+        [
+          54.42500305175781,
+          460.6370544433594,
+          298.2033996582031,
+          469.60345458984375
+        ],
+        [
+          54.42500305175781,
+          471.0480651855469,
+          298.2034912109375,
+          480.01446533203125
+        ],
+        [
+          54.42500305175781,
+          481.4590759277344,
+          110.80570983886719,
+          490.42547607421875
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "text": "4.1. Distinguishing a Candidate from a Valid Answer",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          54.42500305175781,
+          504.90118408203125,
+          259.0831604003906,
+          513.8676147460938
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "text": "In exoplanet detection, the SkillEvolver skill supports successful de- tection after input columns are rearranged (P1) and after the task requires two signals (P3). The CoEvoSkills skill fails both variants: its use leads to stellar modulation being reported as the target signal, and a signal and its harmonic being treated as two separate signals. Both skills fail the replacement-instance P2 variant. The difference is visible in what the skills ask the executor to check. SkillEvolver separates candidate discovery, signal diagnosis, and refinement. Its guidance addresses misleading peaks, transit-like durations, and harmonic relationships. CoEvoSkills also includes validation, including phase-fold, odd/even, and residual checks, but its use in these variants does not resolve the misleading candidates. The presence of a checking routine is therefore less informative than whether its criteria distinguish the alternatives that matter on the changed task. SkillEvolver’s P1 and P3 successes show this guidance being useful under changed inputs and requirements. Its P2 failure locates a different boundary within the same task family: the retained criteria do not resolve that replacement instance, despite a positive P2 average across the broader evaluation.",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          54.42500305175781,
+          521.446044921875,
+          298.2034606933594,
+          530.4124755859375
+        ],
+        [
+          54.42500305175781,
+          531.8570556640625,
+          298.20343017578125,
+          540.823486328125
+        ],
+        [
+          54.42500305175781,
+          542.26806640625,
+          298.20343017578125,
+          551.2344970703125
+        ],
+        [
+          54.42500305175781,
+          552.6790161132812,
+          298.2034912109375,
+          561.6454467773438
+        ],
+        [
+          54.42500305175781,
+          563.0900268554688,
+          298.20343017578125,
+          572.0564575195312
+        ],
+        [
+          54.42500305175781,
+          573.5010375976562,
+          239.6439208984375,
+          582.4674682617188
+        ],
+        [
+          69.36900329589844,
+          583.9119873046875,
+          298.20941162109375,
+          592.87841796875
+        ],
+        [
+          54.42500305175781,
+          594.322998046875,
+          298.20343017578125,
+          603.2894287109375
+        ],
+        [
+          54.42500305175781,
+          604.7340087890625,
+          298.203369140625,
+          613.700439453125
+        ],
+        [
+          54.42500305175781,
+          615.14501953125,
+          298.20343017578125,
+          624.1114501953125
+        ],
+        [
+          54.42500305175781,
+          625.5560302734375,
+          298.2034606933594,
+          634.5224609375
+        ],
+        [
+          54.42500305175781,
+          635.9660034179688,
+          298.2034912109375,
+          644.9324340820312
+        ],
+        [
+          54.42500305175781,
+          646.3770141601562,
+          298.20343017578125,
+          655.3434448242188
+        ],
+        [
+          54.42500305175781,
+          656.7879638671875,
+          298.2034912109375,
+          665.75439453125
+        ],
+        [
+          54.42500305175781,
+          667.198974609375,
+          298.2034912109375,
+          676.1654052734375
+        ],
+        [
+          54.42500305175781,
+          677.6099853515625,
+          298.2033996582031,
+          686.576416015625
+        ],
+        [
+          54.42500305175781,
+          688.02099609375,
+          298.20343017578125,
+          696.9874267578125
+        ],
+        [
+          54.42500305175781,
+          698.4320068359375,
+          298.2034606933594,
+          707.3984375
+        ],
+        [
+          54.42500305175781,
+          708.843017578125,
+          202.55886840820312,
+          717.8094482421875
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "text": "4.2. Preserving the Rules That Define a Correct Repair",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          315.2130126953125,
+          75.08118438720703,
+          527.6181640625,
+          84.0475845336914
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "text": "In scheduling, the SkillEvolver and SPARK skills succeed on all three variants; the CoEvoSkills skill succeeds only on P3. In P1, us- ing CoEvoSkills yields an otherwise feasible schedule that fails a required local-minimality check on the baseline-relative repair. Fea- sibility checks alone do not capture this local-minimality require- ment. The SkillEvolver skill explicitly retains local minimality and baseline-relative repair rules. These rules specify how an acceptable repair differs from an arbitrary feasible schedule, and remain rele- vant after the input names or scheduling instance change. The Co- EvoSkills skill covers several structural and feasibility checks, yet the failed deployment misses the decisive repair condition. The con- trast concerns whether the decisive repair condition is preserved in guidance and enforced during its use. SPARK’s success across the same three variants also shows that this form of successful reuse is not exclusive to one method.",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          315.2130126953125,
+          91.62606811523438,
+          558.991455078125,
+          100.59246826171875
+        ],
+        [
+          315.2130126953125,
+          102.03707885742188,
+          558.9912109375,
+          111.00347900390625
+        ],
+        [
+          315.2130126953125,
+          112.44808959960938,
+          558.9913330078125,
+          121.41448974609375
+        ],
+        [
+          315.2130126953125,
+          122.85910034179688,
+          558.9913330078125,
+          131.82550048828125
+        ],
+        [
+          315.2130126953125,
+          133.27011108398438,
+          558.9915161132812,
+          142.23651123046875
+        ],
+        [
+          315.2130126953125,
+          143.68112182617188,
+          335.38739013671875,
+          152.64752197265625
+        ],
+        [
+          330.1570129394531,
+          154.09213256835938,
+          558.9884643554688,
+          163.05853271484375
+        ],
+        [
+          315.2130126953125,
+          164.50314331054688,
+          558.9913940429688,
+          173.46954345703125
+        ],
+        [
+          315.2130126953125,
+          174.91311645507812,
+          558.9913940429688,
+          183.8795166015625
+        ],
+        [
+          315.2130126953125,
+          185.32412719726562,
+          558.9915161132812,
+          194.29052734375
+        ],
+        [
+          315.2130126953125,
+          195.73513793945312,
+          558.9912109375,
+          204.7015380859375
+        ],
+        [
+          315.2130126953125,
+          206.14614868164062,
+          558.9912719726562,
+          215.112548828125
+        ],
+        [
+          315.2130126953125,
+          216.55715942382812,
+          558.9913330078125,
+          225.5235595703125
+        ],
+        [
+          315.2130126953125,
+          226.96817016601562,
+          558.9913330078125,
+          235.9345703125
+        ],
+        [
+          315.2130126953125,
+          237.37918090820312,
+          558.9912109375,
+          246.3455810546875
+        ],
+        [
+          315.2130126953125,
+          247.79019165039062,
+          418.0755310058594,
+          256.756591796875
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "text": "4.3. Construction Feedback and Skill Content",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          315.2130126953125,
+          271.2322998046875,
+          492.73883056640625,
+          280.1986999511719
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "text": "The construction procedures help interpret how these decision crite- ria enter a skill. SkillEvolver compares successful and failed deploy- ments of a candidate skill and patches missing or misleading guid- ance. Its independent audit also checks reliance on training-instance constants [1]. This exposes failures in using the skill and encourages rules that a later executor can apply to a different input. The schedul- ing and signal-detection skills reflect that emphasis by retaining cri- teria for checking a repair or discriminating between candidate sig- nals. SPARK grounds skill distillation in environment-verified trajec- tories, preserving execution evidence, checks, and lessons [2]. Its scheduling result shows that such evidence can support successful reuse. Its mixed aggregate profile raises a separate question about ab- straction: a verified execution supplies evidence for what worked on the source task, while changed instances require determining which choices should be retained and which should be recomputed. The observed decline on P2 makes that distinction especially relevant to interpreting its results. CoEvoSkills obtains detailed revision feedback from a co- evolving surrogate verifier, while the ground-truth oracle returns an opaque pass/fail signal [3]. This makes the surrogate’s coverage of correctness conditions relevant to the guidance retained in the skill. This provides a plausible account of the scheduling failure: the skill preserves many checks, but successful reuse still depends on a con- dition those checks did not enforce in that deployment. Across the cases, feedback coverage and abstraction from the source instance are candidate explanations for the different scopes of utility.",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          315.2130126953125,
+          287.7771911621094,
+          558.9915161132812,
+          296.74359130859375
+        ],
+        [
+          315.2130126953125,
+          298.1882019042969,
+          558.991455078125,
+          307.15460205078125
+        ],
+        [
+          315.2130126953125,
+          308.5992126464844,
+          558.9913940429688,
+          317.56561279296875
+        ],
+        [
+          315.2130126953125,
+          319.0102233886719,
+          558.9916381835938,
+          327.97662353515625
+        ],
+        [
+          315.2130126953125,
+          329.4212341308594,
+          558.991455078125,
+          338.38763427734375
+        ],
+        [
+          315.2130126953125,
+          339.8322448730469,
+          558.9913330078125,
+          348.79864501953125
+        ],
+        [
+          315.2130126953125,
+          350.2432556152344,
+          558.9915771484375,
+          359.20965576171875
+        ],
+        [
+          315.2130126953125,
+          360.6542663574219,
+          558.9915161132812,
+          369.62066650390625
+        ],
+        [
+          315.2130126953125,
+          371.0652770996094,
+          331.89947509765625,
+          380.03167724609375
+        ],
+        [
+          330.1570129394531,
+          381.4762878417969,
+          558.9884643554688,
+          390.44268798828125
+        ],
+        [
+          315.2130126953125,
+          391.8872985839844,
+          558.991455078125,
+          400.85369873046875
+        ],
+        [
+          315.2130126953125,
+          402.2983093261719,
+          558.9915771484375,
+          411.26470947265625
+        ],
+        [
+          315.2130126953125,
+          412.7093200683594,
+          558.991455078125,
+          421.67572021484375
+        ],
+        [
+          315.2130126953125,
+          423.11932373046875,
+          558.9915771484375,
+          432.0857238769531
+        ],
+        [
+          315.2130126953125,
+          433.53033447265625,
+          558.991455078125,
+          442.4967346191406
+        ],
+        [
+          315.2130126953125,
+          443.94134521484375,
+          558.991455078125,
+          452.9077453613281
+        ],
+        [
+          315.2130126953125,
+          454.35235595703125,
+          558.9913940429688,
+          463.3187561035156
+        ],
+        [
+          315.2130126953125,
+          464.76336669921875,
+          395.6593933105469,
+          473.7297668457031
+        ],
+        [
+          330.1570129394531,
+          475.17437744140625,
+          558.988525390625,
+          484.1407775878906
+        ],
+        [
+          315.2130126953125,
+          485.58538818359375,
+          558.9915161132812,
+          494.5517883300781
+        ],
+        [
+          315.2130126953125,
+          495.99639892578125,
+          558.991455078125,
+          504.9627990722656
+        ],
+        [
+          315.2130126953125,
+          506.4073791503906,
+          558.991455078125,
+          515.373779296875
+        ],
+        [
+          315.2130126953125,
+          516.818359375,
+          558.991455078125,
+          525.7847900390625
+        ],
+        [
+          315.2130126953125,
+          527.2293701171875,
+          558.9915771484375,
+          536.19580078125
+        ],
+        [
+          315.2130126953125,
+          537.640380859375,
+          558.9913330078125,
+          546.6068115234375
+        ],
+        [
+          315.2130126953125,
+          548.0513916015625,
+          558.9913940429688,
+          557.017822265625
+        ],
+        [
+          315.2130126953125,
+          558.46240234375,
+          530.1644897460938,
+          567.4288330078125
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "text": "5. INTERPRETING GAINS AS EVIDENCE OF SKILL LEARNING",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          327.301025390625,
+          582.9135131835938,
+          546.9061889648438,
+          591.8799438476562
+        ],
+        [
+          412.9430236816406,
+          593.3235473632812,
+          461.26300048828125,
+          602.2899780273438
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "text": "5.1. Utility, Scope, and Attribution Answer Different Questions",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          315.2130126953125,
+          613.0155639648438,
+          558.3547973632812,
+          621.9819946289062
+        ]
+      ]
+    },
+    {
+      "page": 3,
+      "text": "Positive paired gains in both runs establish recurring source-task util- ity of the completed skills. Task variation asks a different question: which parts of that usefulness survive when the original input or so- lution no longer suffices? The three methods agree on the first obser- vation and diverge on the second. This is the diagnostic result behind the performance differences. A source-task average describes a ben- efit in one setting; the variation profile reveals what demands the same artifact can accommodate.",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          315.2130126953125,
+          629.5604248046875,
+          558.9915771484375,
+          638.52685546875
+        ],
+        [
+          315.2130126953125,
+          639.9713745117188,
+          558.9913330078125,
+          648.9378051757812
+        ],
+        [
+          315.2130126953125,
+          650.3823852539062,
+          558.991455078125,
+          659.3488159179688
+        ],
+        [
+          315.2130126953125,
+          660.7933959960938,
+          558.9915771484375,
+          669.7598266601562
+        ],
+        [
+          315.2130126953125,
+          671.2044067382812,
+          558.9915771484375,
+          680.1708374023438
+        ],
+        [
+          315.2130126953125,
+          681.6143798828125,
+          558.9915771484375,
+          690.580810546875
+        ],
+        [
+          315.2130126953125,
+          692.025390625,
+          558.9912719726562,
+          700.9918212890625
+        ],
+        [
+          315.2130126953125,
+          702.4364013671875,
+          430.15325927734375,
+          711.40283203125
+        ]
+      ]
+    },
+    {
+      "page": 4,
+      "text": "Average gain and improvement frequency also reveal different behavior. SPARK’s slightly positive variant mean combines more regressions than improvements, so near-zero utility masks opposing changes. SkillEvolver combines a positive mean with more improve- ments, whereas CoEvoSkills combines a negative mean with more regressions. Pairing these summaries with the cases makes the inter- pretation concrete: utility depends on whether the guidance helps the executor make the changed task’s decisive choices.",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          69.36900329589844,
+          75.16299438476562,
+          298.2093811035156,
+          84.12939453125
+        ],
+        [
+          54.42500305175781,
+          85.57400512695312,
+          298.2034606933594,
+          94.5404052734375
+        ],
+        [
+          54.42500305175781,
+          95.98501586914062,
+          298.2034912109375,
+          104.951416015625
+        ],
+        [
+          54.42500305175781,
+          106.39498901367188,
+          298.2034912109375,
+          115.36138916015625
+        ],
+        [
+          54.42500305175781,
+          116.80599975585938,
+          298.2035217285156,
+          125.77239990234375
+        ],
+        [
+          54.42500305175781,
+          127.21701049804688,
+          298.2033996582031,
+          136.18341064453125
+        ],
+        [
+          54.42500305175781,
+          137.62802124023438,
+          298.203369140625,
+          146.59442138671875
+        ],
+        [
+          54.42500305175781,
+          148.03903198242188,
+          237.2230224609375,
+          157.00543212890625
+        ]
+      ]
+    },
+    {
+      "page": 4,
+      "text": "5.2. What the Persistent Artifact Must Preserve",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          54.42500305175781,
+          171.4811553955078,
+          238.81004333496094,
+          180.4475555419922
+        ]
+      ]
+    },
+    {
+      "page": 4,
+      "text": "The cases suggest that reusable skill learning preserves the rela- tionship between a procedure and the conditions that make its re- sult valid. In signal detection, this relationship distinguishes a target from misleading candidates. In scheduling, it connects repair actions to baseline-relative constraints. A procedure can remain executable while this relationship is lost. Conversely, a skill can guide a new so- lution by preserving the checks and adaptation rules that still apply. This connects the diagnosis back to the evolution lifecycle. Feedback supplies evidence about failures; the skill expresses a rule extracted from that evidence; the executor must use it in the new setting; and the verifier records the outcome. The observed cases expose whether the guidance survives this handoff. Construction, adoption, and useful deployment are separate events, even when they contribute to the same reported score. Evaluation should therefore follow the artifact from its source- task contribution to its changed-task behavior. Repeated paired out- comes show whether utility recurs, frozen variants test which de- cisions remain applicable, and skill/trace inspection explains where reuse succeeds or breaks. When the claim concerns the improvement produced by revision itself, the corresponding contrast is the actual parent and adopted final artifact. The research target is a persistent change in useful behavior, with the score serving as one observation of that change.",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          54.42500305175781,
+          188.02700805664062,
+          298.20343017578125,
+          196.993408203125
+        ],
+        [
+          54.42500305175781,
+          198.43698120117188,
+          298.203369140625,
+          207.40338134765625
+        ],
+        [
+          54.42500305175781,
+          208.84799194335938,
+          298.2033996582031,
+          217.81439208984375
+        ],
+        [
+          54.42500305175781,
+          219.25900268554688,
+          298.20343017578125,
+          228.22540283203125
+        ],
+        [
+          54.42500305175781,
+          229.67001342773438,
+          298.2033996582031,
+          238.63641357421875
+        ],
+        [
+          54.42500305175781,
+          240.08102416992188,
+          298.2034606933594,
+          249.04742431640625
+        ],
+        [
+          54.42500305175781,
+          250.49203491210938,
+          296.1590881347656,
+          259.45843505859375
+        ],
+        [
+          69.36900329589844,
+          260.9030456542969,
+          298.20941162109375,
+          269.86944580078125
+        ],
+        [
+          54.42500305175781,
+          271.3140563964844,
+          298.2034606933594,
+          280.28045654296875
+        ],
+        [
+          54.42500305175781,
+          281.7250671386719,
+          298.2033996582031,
+          290.69146728515625
+        ],
+        [
+          54.42500305175781,
+          292.1360778808594,
+          298.2033996582031,
+          301.10247802734375
+        ],
+        [
+          54.42500305175781,
+          302.5470886230469,
+          298.2034606933594,
+          311.51348876953125
+        ],
+        [
+          54.42500305175781,
+          312.9580993652344,
+          298.20343017578125,
+          321.92449951171875
+        ],
+        [
+          54.42500305175781,
+          323.3691101074219,
+          189.20791625976562,
+          332.33551025390625
+        ],
+        [
+          69.36900329589844,
+          333.7801208496094,
+          298.2093505859375,
+          342.74652099609375
+        ],
+        [
+          54.42500305175781,
+          344.1911315917969,
+          298.2034912109375,
+          353.15753173828125
+        ],
+        [
+          54.42500305175781,
+          354.60113525390625,
+          298.2034606933594,
+          363.5675354003906
+        ],
+        [
+          54.42500305175781,
+          365.01214599609375,
+          298.2034606933594,
+          373.9785461425781
+        ],
+        [
+          54.42500305175781,
+          375.42315673828125,
+          298.2033996582031,
+          384.3895568847656
+        ],
+        [
+          54.42500305175781,
+          385.83416748046875,
+          298.2033996582031,
+          394.8005676269531
+        ],
+        [
+          54.42500305175781,
+          396.24517822265625,
+          298.2033996582031,
+          405.2115783691406
+        ],
+        [
+          54.42500305175781,
+          406.65618896484375,
+          298.20343017578125,
+          415.6225891113281
+        ],
+        [
+          54.42500305175781,
+          417.06719970703125,
+          107.46125030517578,
+          426.0335998535156
+        ]
+      ]
+    },
+    {
+      "page": 4,
+      "text": "6. RELATED WORK",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          394.03302001953125,
+          75.08136749267578,
+          480.17333984375,
+          84.04776763916016
+        ]
+      ]
+    },
+    {
+      "page": 4,
+      "text": "Learning persistent skills from experience. SkillEvolver, SPARK, and CoEvoSkills make experience persistent through different con- struction loops: deployment-grounded revision, verified-trajectory distillation, and co-evolutionary verification, respectively [1–3]. These methods motivate our focus on the artifact delivered to a later executor. We study how that artifact’s usefulness changes after its source task is varied, and interpret the resulting behavior through its retained guidance. Evaluating skill utility and use. SkillsBench evaluates skill util- ity across diverse tasks, while SWE-Skills-Bench studies skill use in software engineering [4, 5]. SkillLearnBench evaluates continual skill generation on real-world tasks [6]. From Raw Experience to Skill Consumption separates experience generation, skill extraction, and downstream consumption [7]. Our study connects these evalua- tion levels to the identification of skill learning: repeated outcomes characterize completed-skill utility, task changes test its persistence, and skill-level examples explain the decisions behind contrasting outcomes. The unit of interpretation is the persistent artifact in use.",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          315.2130126953125,
+          94.77234649658203,
+          558.9913940429688,
+          103.82061767578125
+        ],
+        [
+          315.2130126953125,
+          105.26522827148438,
+          558.991455078125,
+          114.23162841796875
+        ],
+        [
+          315.2130126953125,
+          115.67623901367188,
+          558.9915771484375,
+          124.64263916015625
+        ],
+        [
+          315.2130126953125,
+          126.08724975585938,
+          558.991455078125,
+          135.05364990234375
+        ],
+        [
+          315.2130126953125,
+          136.49826049804688,
+          558.9913940429688,
+          145.46466064453125
+        ],
+        [
+          315.2130126953125,
+          146.90927124023438,
+          558.9915161132812,
+          155.87567138671875
+        ],
+        [
+          315.2130126953125,
+          157.31924438476562,
+          558.9915161132812,
+          166.28564453125
+        ],
+        [
+          315.2130126953125,
+          167.73025512695312,
+          380.9456481933594,
+          176.6966552734375
+        ],
+        [
+          315.2130126953125,
+          178.0594024658203,
+          558.9915161132812,
+          187.107666015625
+        ],
+        [
+          315.2130126953125,
+          188.55227661132812,
+          558.9913330078125,
+          197.5186767578125
+        ],
+        [
+          315.2130126953125,
+          198.96328735351562,
+          558.991455078125,
+          207.9296875
+        ],
+        [
+          315.2130126953125,
+          209.37429809570312,
+          558.9913940429688,
+          218.3406982421875
+        ],
+        [
+          315.2130126953125,
+          219.78530883789062,
+          558.9915161132812,
+          228.751708984375
+        ],
+        [
+          315.2130126953125,
+          230.19631958007812,
+          558.9916381835938,
+          239.1627197265625
+        ],
+        [
+          315.2130126953125,
+          240.60733032226562,
+          558.9913940429688,
+          249.57373046875
+        ],
+        [
+          315.2130126953125,
+          251.01834106445312,
+          558.9912109375,
+          259.9847412109375
+        ],
+        [
+          315.2130126953125,
+          261.4293518066406,
+          558.9913940429688,
+          270.395751953125
+        ],
+        [
+          315.2130126953125,
+          271.8403625488281,
+          555.6917114257812,
+          280.8067626953125
+        ]
+      ]
+    },
+    {
+      "page": 4,
+      "text": "7. CONCLUSION",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          400.66302490234375,
+          296.156494140625,
+          473.5420227050781,
+          305.1228942871094
+        ]
+      ]
+    },
+    {
+      "page": 4,
+      "text": "A higher score becomes informative about skill learning when it is connected to what the persistent artifact helps an executor do. Our repeated evaluations show positive source-task utility for all three methods, while frozen task variations separate the conditions under which that utility persists. SkillEvolver retains positive gains across the three change types; SPARK and CoEvoSkills expose narrower or adverse reuse patterns. The contrasting cases connect successful reuse to criteria for identifying valid answers and preserving repair constraints. These findings distinguish useful completed artifacts, their behavioral scope, and explanations grounded in skill content. They return the learning question to persistent decision guidance: what is retained from experience, when does it remain useful, and how does it shape the next execution?",
+      "comment": "相对最初原版新增或重写：真实实验结果、技能案例、诊断解释、讨论、相关工作与结论。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          315.2130126953125,
+          315.93035888671875,
+          558.9913330078125,
+          324.8967590332031
+        ],
+        [
+          315.2130126953125,
+          326.3403625488281,
+          558.9913940429688,
+          335.3067626953125
+        ],
+        [
+          315.2130126953125,
+          336.7513732910156,
+          558.9915161132812,
+          345.7177734375
+        ],
+        [
+          315.2130126953125,
+          347.1623840332031,
+          558.9916381835938,
+          356.1287841796875
+        ],
+        [
+          315.2130126953125,
+          357.5733947753906,
+          558.9911499023438,
+          366.539794921875
+        ],
+        [
+          315.2130126953125,
+          367.9844055175781,
+          558.9915161132812,
+          376.9508056640625
+        ],
+        [
+          315.2130126953125,
+          378.3954162597656,
+          558.9915161132812,
+          387.36181640625
+        ],
+        [
+          315.2130126953125,
+          388.8064270019531,
+          558.991455078125,
+          397.7728271484375
+        ],
+        [
+          315.2130126953125,
+          399.2174377441406,
+          558.9913330078125,
+          408.183837890625
+        ],
+        [
+          315.2130126953125,
+          409.6284484863281,
+          558.9915771484375,
+          418.5948486328125
+        ],
+        [
+          315.2130126953125,
+          420.0394592285156,
+          558.9913330078125,
+          429.005859375
+        ],
+        [
+          315.2130126953125,
+          430.4504699707031,
+          558.991455078125,
+          439.4168701171875
+        ],
+        [
+          315.2130126953125,
+          440.8614807128906,
+          450.5518798828125,
+          449.827880859375
+        ]
+      ]
+    },
+    {
+      "page": 5,
+      "text": "[1] Genrui Zhang, Erle Zhu, Jinfeng Zhou, Caiyan Jia, and Hongn-\ning Wang, “SkillEvolver: Skill Learning as a Meta-Skill,” 2026.",
+      "comment": "新增参考文献：SkillEvolver。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          57.410804748535156,
+          94.85397338867188,
+          295.21771240234375,
+          103.82037353515625
+        ],
+        [
+          69.86099243164062,
+          105.26498413085938,
+          295.9666748046875,
+          114.23138427734375
+        ]
+      ]
+    },
+    {
+      "page": 5,
+      "text": "[2] Yang Zhou, Zihan Dong, Zhenting Wang, Can Jin, Shiyu Zhao,\nBangwei Guo, Difei Gu, Linjun Zhang, Mu Zhou, and Dim-\nitris N. Metaxas, “Evidence Over Plans: Online Trajectory Ver-\nification for Skill Distillation,” 2026.",
+      "comment": "新增参考文献：SPARK。",
+      "color": "#ff6666",
+      "rects": [
+        [
+          57.410804748535156,
+          118.68301391601562,
+          295.96185302734375,
+          127.6494140625
+        ],
+        [
+          69.86099243164062,
+          129.09402465820312,
+          295.2225341796875,
+          138.0604248046875
+        ],
+        [
+          69.86099243164062,
+          139.50503540039062,
+          295.40179443359375,
+          148.471435546875
+        ],
+        [
+          69.86099243164062,
+          149.91604614257812,
+          199.50619506835938,
+          158.8824462890625
+        ]
+      ]
+    }
+  ],
+  "deleted_from_baseline": [
+    "SkillRevise/SkillHone/SkillOpt experiments and their dependent text",
+    "Original tables 1/2/3 and lifecycle-intervention figure",
+    "Original lifecycle reporting protocol and limitations about unrelated experiments"
+  ],
+  "highlight_policy": "Mark rewritten paragraphs/headings and inserted experiments relative to original Overleaf. Do not mark unchanged title, generic equations, or citation renumbering; deleted material is listed in the change record."
+}

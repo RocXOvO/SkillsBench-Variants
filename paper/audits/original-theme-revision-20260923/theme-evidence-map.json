@@ -1,0 +1,30 @@
+{
+  "original_sources": [
+    {
+      "path": "/Users/duchongyang/Documents/ICLR/PDF/main.pdf",
+      "sha256": "c0d639a7a1ba983217a7ef609b7980c22eaa43bd7685e5e4247b369f34aa8ccd"
+    },
+    {
+      "path": "/Users/duchongyang/Documents/ICLR/paper/overleaf-original-20260921/main.tex",
+      "sha256": "3d9db737004a3037b971e3019dcc3c1e6c5e9093d0d40c64397a1efa18541678"
+    },
+    {
+      "path": "/Users/duchongyang/Documents/ICLR/output/pdf/main-overleaf-original-20260921.pdf",
+      "sha256": "307df402a481aaf5514e4aaf919f34cd4fc0aeb9deaa7643fcef7765f369428d"
+    }
+  ],
+  "pre_revision_commit": "493ffe20f",
+  "original_comparison_commit": "121a6182b",
+  "read_coverage": "Complete text of initial 8-page PDF and complete Overleaf manuscript source; original title/abstract page visually inspected. No human-read attestation.",
+  "central_objectives": [
+    "Existence and scope of behavior carried by a persistent skill",
+    "Attribution of observed gains across artifact, construction, deployment and measurement"
+  ],
+  "current_evidence": [
+    "500 paired standard-task outcomes across six runs",
+    "664 variant pairs from 886 condition records over 222 variants",
+    "Preserved skills and execution traces for signal detection and scheduling"
+  ],
+  "scope_decision": "Restore the identification question and lifecycle interpretation. Completed-skill/no-skill utility is not relabeled as parent-final revision. Method construction papers contextualize observed content; no intervention result is invented.",
+  "review": "A separate native read-only reviewer compared original and revised text, sharing the same model family; it suggested replacing arise across runs with recurring source-task utility. Adopted. Not full ARS certification."
+}
