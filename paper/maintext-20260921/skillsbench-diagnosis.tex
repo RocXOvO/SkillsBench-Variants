@@ -1,5 +1,5 @@
-\section{What Produces the Net Skill Gain?}
-\label{sec:skill-reuse}
+\section{Analysis}
+\label{sec:analysis}
 
 We distinguish three contributors to mean utility: agreement on which tasks improve across runs, the balance between positive and negative changes, and whether the skill helps or harms execution at different no-skill reward levels.
 
@@ -31,3 +31,17 @@ Conditioning on the no-skill reward gives the changes a concrete interpretation.
 The other endpoint measures losses on variants with a full-reward no-skill execution. Among SkillEvolver's 86 full-reward no-skill variants, 16 fall below full reward, including 15 that fall to zero. SPARK lowers 29 of 85, including 27 to zero; CoEvoSkills lowers 32 of 85, all to zero. The rates of losing full reward are 18.6\%, 34.1\%, and 37.6\%. Each method also has ten intermediate-baseline variants, which remain included in the aggregate results but are outside these endpoint counts.
 
 These two directions explain why counting newly successful tasks alone is insufficient. SPARK and CoEvoSkills both turn many zero-reward cases into full-reward outcomes, yet lose full reward on almost as many or more baseline successes. SkillEvolver combines the highest rate of gains from zero with the lowest rate of losses from full reward. Its broader utility is expressed in both acquiring a benefit and preserving outcomes that the executor already achieves.
+
+\subsection{Useful Guidance Must Survive a Change in Demand}
+
+Source-task utility establishes whether a completed skill helps on the task from which it was constructed. Frozen-skill variants test whether its guidance remains useful when original details no longer apply. Their three demands---remapping inputs, recomputing instance-dependent choices, and accommodating coupled requirements---probe different scopes of useful behavior.
+
+This distinction is central to the observed method profiles. SPARK retains positive means under P1 and P3 but becomes negative under P2. Its source-task benefit therefore does not extend uniformly to replacement instances. CoEvoSkills has positive source-task means but negative means under every variant type. SkillEvolver combines positive means with more improvements than regressions in each type. The latter profile is the broadest evidence of useful generalization in these evaluations: the frozen guidance remains beneficial across different demands on the executor.
+
+The published construction procedures suggest where these demands enter skill learning. SkillEvolver contrasts successful and failed deployments and audits reliance on training-instance constants~\cite{zhang2026skillevolver}; SPARK distills environment-verified execution trajectories~\cite{zhou2026spark}; CoEvoSkills uses a co-evolving surrogate verifier to supply detailed revision feedback~\cite{zhang2026coevoskills}. These mechanisms draw on different evidence when retaining guidance. Our behavioral results make abstraction from the source instance a concrete target for explaining their differences, especially the divergence under P2. Testing that explanation would require changing the construction feedback while holding the evaluation fixed.
+
+\subsection{Learning a Useful Skill Includes Avoiding Interference}
+
+The endpoint analysis adds a second requirement to generalization: a skill should help when the executor struggles without displacing decisions it already makes correctly. The no-skill condition makes both directions observable. Moving from zero to positive reward indicates additional useful behavior in the recorded execution. Falling from full reward identifies a lower-scoring skill execution paired with a full-reward no-skill execution. Reporting only the former would conceal a substantial part of the effect.
+
+The SPARK and CoEvoSkills results show why this distinction changes the interpretation of learning. Both produce many large improvements, so their weak or negative variant means cannot be explained by an absence of helpful skills. Instead, their gains are offset by losses elsewhere. SkillEvolver's stronger net utility combines more gains from zero with fewer disruptions of full-reward outcomes. The diagnostic target is therefore the distribution of useful guidance: where it adds value, where it remains unnecessary, and where it interferes with execution.

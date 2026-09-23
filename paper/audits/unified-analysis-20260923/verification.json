@@ -1,0 +1,12 @@
+{
+  "main.pdf": {
+    "pages": 5,
+    "sha256": "9f178b71c83bf372526c4e57bbf68294326023b08d94560191d1f977ed0af505",
+    "annotations": 0
+  },
+  "main-bilingual-en-zh.pdf": {
+    "pages": 5,
+    "sha256": "c9247fb747d54830d809a80b29bc7db782e89d232843278733979053c1f1558a",
+    "annotations": 0
+  }
+}
