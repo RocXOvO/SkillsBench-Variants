@@ -1,7 +1,7 @@
 \section{Does Skill Utility Persist beyond the Source Task?}
 \label{sec:skillsbench-experiments}
 
-We address the existence and scope of completed-skill utility through two contrasts: paired standard-task outcomes across runs, and paired outcomes after changing the task while keeping its source skill frozen.
+We first test whether completed skills provide a recurring benefit on their source tasks. We then change the task while keeping its skill frozen to determine which demands that benefit survives. The paired no-skill execution provides the reference for both comparisons.
 
 \subsection{Experimental Setup}
 
@@ -14,11 +14,11 @@ We report mean verifier reward on a 0--100 scale and the mean within-task differ
 \end{equation}
 We also count tasks with positive, negative, and zero differences.
 
-\subsection{Repeated Runs Establish Source-Task Utility}
+\subsection{Positive Source-Task Utility in Both Runs}
 
 All three methods have positive mean paired gains in both runs (Table~\ref{tab:skillsbench-six-runs}). SkillEvolver gains 25.61 and 25.02 points, CoEvoSkills gains 10.24 and 9.76, and SPARK gains 1.84 and 6.45. SkillEvolver and CoEvoSkills retain similar gains despite substantial changes in their no-skill scores. The paired comparison reveals recurring utility that absolute skill-condition scores alone would obscure.
 
-The task-level results also differ. SkillEvolver has at least four times as many improvements as regressions in each run; CoEvoSkills improves 17 tasks in each run, with nine and ten regressions. SPARK's first run is nearly balanced, while its second has 13 improvements and five regressions. These results establish recurring source-task utility. We next ask whether the same frozen skills remain useful after the task changes.
+The task-level results also differ. SkillEvolver has at least four times as many improvements as regressions in each run; CoEvoSkills improves 17 tasks in each run, with nine and ten regressions. SPARK's first run is nearly balanced, while its second has 13 improvements and five regressions. The gain therefore reflects both the size and frequency of task-level changes. The frozen-skill variants test whether the useful guidance behind these source-task outcomes survives a different task demand.
 
 \begin{table}[H]
 \centering
