@@ -1,29 +1,42 @@
-\begin{table}[H]
+\end{multicols}
+\noindent\begin{minipage}{\textwidth}
 \centering
 \small
-\setlength{\tabcolsep}{3pt}
-\begin{tabular}{lrrrrr}
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{llrrrrrrrrr}
 \toprule
-\multicolumn{6}{l}{\textbf{A. Overall utility on task variants}}\\
-\textbf{Method} & $N$ & \textbf{No skill} & \textbf{Skill} & $\Delta$ & \textbf{I/R/T}\\
+\textbf{Method} & \textbf{Evaluation} & $N$ & \textbf{No skill} & \textbf{Skill} & $\Delta$ & \textbf{I} & \textbf{R} & \textbf{T} & $G$ & $L$ \\
 \midrule
-SkillEvolver & 222 & 41.87 & 53.81 & $+11.94$ & 47/20/155\\
-SPARK & 221 & 41.61 & 42.25 & $+0.65$ & 32/37/152\\
-CoEvoSkills & 221 & 41.61 & 36.60 & $-5.01$ & 26/41/154\\
+SkillEvolver & Source run 1 & 81 & 30.20 & 55.81 & $+25.61$ & 27 & 6 & 48 & 30.91 & 5.30 \\
+ & Source run 2 & 81 & 37.32 & 62.34 & $+25.02$ & 26 & 3 & 52 & 28.32 & 3.30 \\
+ & Variants: P1 & 77 & 42.04 & 53.89 & $+11.85$ & 15 & 7 & 55 & 17.26 & 5.41 \\
+ & Variants: P2 & 68 & 45.00 & 59.56 & $+14.56$ & 15 & 6 & 47 & 22.06 & 7.50 \\
+ & Variants: P3 & 77 & 38.94 & 48.65 & $+9.72$ & 17 & 7 & 53 & 17.73 & 8.01 \\
+\midrule
+SPARK & Source run 1 & 84 & 17.82 & 19.66 & $+1.84$ & 9 & 8 & 67 & 9.38 & 7.54 \\
+ & Source run 2 & 84 & 14.37 & 20.81 & $+6.45$ & 13 & 5 & 66 & 12.40 & 5.95 \\
+ & Variants: P1 & 77 & 42.04 & 44.05 & $+2.00$ & 12 & 11 & 54 & 13.43 & 11.43 \\
+ & Variants: P2 & 68 & 45.00 & 39.77 & $-5.23$ & 8 & 14 & 46 & 11.76 & 16.99 \\
+ & Variants: P3 & 76 & 38.13 & 42.66 & $+4.53$ & 12 & 12 & 52 & 15.79 & 11.26 \\
+\midrule
+CoEvoSkills & Source run 1 & 85 & 42.21 & 52.44 & $+10.24$ & 17 & 9 & 59 & 17.14 & 6.90 \\
+ & Source run 2 & 85 & 23.54 & 33.31 & $+9.76$ & 17 & 10 & 58 & 18.26 & 8.50 \\
+ & Variants: P1 & 77 & 42.04 & 38.46 & $-3.59$ & 9 & 14 & 54 & 11.04 & 14.63 \\
+ & Variants: P2 & 68 & 45.00 & 35.49 & $-9.51$ & 6 & 13 & 49 & 8.09 & 17.60 \\
+ & Variants: P3 & 76 & 38.13 & 35.71 & $-2.42$ & 11 & 14 & 51 & 13.50 & 15.92 \\
+\midrule
+\multicolumn{11}{l}{\textbf{Baseline-conditioned variant outcomes}}\\
+\textbf{Method} & \multicolumn{2}{c}{\textbf{Baseline zero}} & \multicolumn{2}{c}{\textbf{Zero to positive}} & \multicolumn{2}{c}{\textbf{Zero to full}} & \multicolumn{2}{c}{\textbf{Baseline full}} & \multicolumn{2}{c}{\textbf{Full to lower}}\\
+\midrule
+SkillEvolver & \multicolumn{2}{c}{126} & \multicolumn{2}{c}{42} & \multicolumn{2}{c}{40} & \multicolumn{2}{c}{86} & \multicolumn{2}{c}{16}\\
+SPARK & \multicolumn{2}{c}{126} & \multicolumn{2}{c}{30} & \multicolumn{2}{c}{30} & \multicolumn{2}{c}{85} & \multicolumn{2}{c}{29}\\
+CoEvoSkills & \multicolumn{2}{c}{126} & \multicolumn{2}{c}{25} & \multicolumn{2}{c}{23} & \multicolumn{2}{c}{85} & \multicolumn{2}{c}{32}\\
 \bottomrule
 \end{tabular}
-
-\vspace{3pt}
-\begin{tabular}{lrrr}
-\toprule
-\multicolumn{4}{l}{\textbf{B. Utility by task change: $(N)$ $\Delta$}}\\
-\textbf{Method} & \textbf{P1} & \textbf{P2} & \textbf{P3}\\
-\midrule
-SkillEvolver & $(77)$ $+11.85$ & $(68)$ $+14.56$ & $(77)$ $+9.72$\\
-SPARK & $(77)$ $+2.00$ & $(68)$ $-5.23$ & $(76)$ $+4.53$\\
-CoEvoSkills & $(77)$ $-3.59$ & $(68)$ $-9.51$ & $(76)$ $-2.42$\\
-\bottomrule
-\end{tabular}
-\caption{Skill utility under task variation: descriptive summary of historical and recovery evaluations. Each method is paired with its same-variant no-skill baseline. P1/P2/P3 denote representation, instance, and requirement changes. Panel B gives variant count $N$ and paired gain $\Delta$; scores and I/R/T follow Table~\ref{tab:skillsbench-six-runs}.}
+\captionof{table}{Completed-skill utility on source tasks and controlled variants. Rewards, paired gains $\Delta$, positive contributions $G$, and negative contributions $L$ use a 0--100 scale, with $\Delta=G-L$ before rounding. I/R/T counts improved, regressed, and tied tasks. P1: input representation; P2: task instance; P3: coupled requirements. Variant rows describe the complete historical and recovery record, pairing each skill result with its same-variant no-skill baseline. The lower panel counts transitions from zero or full baseline reward; each method also has ten intermediate-baseline variants.}
+\label{tab:skillsbench-six-runs}
 \label{tab:variant-transfer}
-\end{table}
+\end{minipage}
+\par\vspace{6pt}
+\begin{multicols}{2}

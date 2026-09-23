@@ -20,26 +20,4 @@ All three methods have positive mean paired gains in both runs (Table~\ref{tab:s
 
 The task-level results also differ. SkillEvolver has at least four times as many improvements as regressions in each run; CoEvoSkills improves 17 tasks in each run, with nine and ten regressions. SPARK's first run is nearly balanced, while its second has 13 improvements and five regressions. The gain therefore reflects both the size and frequency of task-level changes. The frozen-skill variants test whether the useful guidance behind these source-task outcomes survives a different task demand.
 
-\begin{table}[H]
-\centering
-\small
-\setlength{\tabcolsep}{3pt}
-\begin{tabular}{llrrrrr}
-\toprule
-\textbf{Method} & \textbf{Run} & $N$ & \textbf{No skill} & \textbf{Skill} & $\Delta$ & \textbf{I/R/T} \\
-\midrule
-SkillEvolver & 1 & 81 & 30.20 & 55.81 & $+25.61$ & 27/6/48 \\
- & 2 & 81 & 37.32 & 62.34 & $+25.02$ & 26/3/52 \\
-\midrule
-SPARK & 1 & 84 & 17.82 & 19.66 & $+1.84$ & 9/8/67 \\
- & 2 & 84 & 14.37 & 20.81 & $+6.45$ & 13/5/66 \\
-\midrule
-CoEvoSkills & 1 & 85 & 42.21 & 52.44 & $+10.24$ & 17/9/59 \\
- & 2 & 85 & 23.54 & 33.31 & $+9.76$ & 17/10/58 \\
-\bottomrule
-\end{tabular}
-\caption{Two runs per method on SkillsBench. Mean verifier rewards and paired gain $\Delta$ use a 0--100 scale. I/R/T counts improved, regressed, and tied tasks.}
-\label{tab:skillsbench-six-runs}
-\end{table}
-
 \input{skillsbench-variants}

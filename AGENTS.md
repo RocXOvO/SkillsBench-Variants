@@ -12,3 +12,5 @@
 - Table-placement regression recorded on 2026-09-22: inspect the reading order before and after every table, not only TeX warnings. Keep a table from separating fragments of the same paragraph; keep headings with their opening text and avoid fixing float placement by creating large blank areas.
 
 - Current target format (2026-09-22): ICASSP 2027 official `spconf.sty` and `IEEEbib.bst`. This is presently a full-content format-conversion draft, not a page-limit-compliant submission. Preserve content until the user authorizes shortening; ICASSP allows four technical pages plus an optional fifth references/funding/ethics page and requires actual author names/affiliations.
+
+- Table exception (2026-09-23): the user explicitly authorized the expanded main results table to span both columns. Omit the three “Variants: all” aggregate rows at their follow-up request; retain the source runs and P1/P2/P3 breakdown. Preserve complete paragraphs around the cross-column table.
