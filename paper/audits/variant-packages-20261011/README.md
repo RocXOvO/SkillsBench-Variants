@@ -9,7 +9,7 @@ The 233-variant batch used by Generic, SkillLearn, Trace, and SkillRevise and th
 
 Every logical task file in each archive was checked against the manifest's SHA256, size, and mode. The complete compressed archive hashes match the server receipts. Credential filename and high-confidence credential-pattern checks returned no matches.
 
-The private repository's [dataset release](https://github.com/RocXOvO/ICLR-paper/releases/tag/variant-datasets-20261011) holds 46 and 41 binary volumes, respectively and their manifests, SHA256 checksums, validation reports, and Chinese download/extraction instructions. Each volume is at most 128 MiB. Binary archives and raw experiment workspaces remain outside Git history; this directory holds derived provenance records only.
+The private repository's [dataset release](https://github.com/RocXOvO/ICLR-paper/releases/tag/variant-datasets-20261011) holds 46 and 41 binary volumes, respectively and their manifests, SHA256 checksums, validation reports, and Chinese download/extraction instructions (`README-download-extract.txt`). Each volume is at most 128 MiB. Binary archives and raw experiment workspaces remain outside Git history; this directory holds derived provenance records only.
 
 The complete local archives are under `output/variant-packages-20261011/`. To reconstruct downloaded release volumes:
 

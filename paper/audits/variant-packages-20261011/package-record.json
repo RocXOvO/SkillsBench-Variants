@@ -933,14 +933,14 @@
       "bytes": 3357
     },
     {
-      "name": "README-下载解压.txt",
+      "name": "README-download-extract.txt",
       "sha256": "e27330c322bdb01c888c932fdd77fb362bd692d7757b91979c421ae652d2743c",
       "bytes": 2142
     },
     {
       "name": "SHA256SUMS",
-      "sha256": "27f77703e0e289c77a7047bb951b1b3e8a731db2453498404a1fe40f3cb82e13",
-      "bytes": 10445
+      "sha256": "cdae8f75a9428c42a285cdbe63a9f6cc32237206a55196b9795daf1cc21f3102",
+      "bytes": 10449
     }
   ],
   "model_calls": 0,
