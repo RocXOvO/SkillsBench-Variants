@@ -1,18 +1,36 @@
-# Paper manuscript
+# SkillsBench Variants
 
-The editable LaTeX project is in `paper/maintext-20260921/`.
+两批 SkillsBench 实验变体源文件，合计 455 个变体包。
 
-```bash
-cd paper/maintext-20260921
-make
+| 批次 | 使用方法 | 变体数 | 原任务数 | P1 / P2 / P3 | 完整压缩包大小 |
+|---|---|---:|---:|---|---:|
+| 四方法批次 | Generic、SkillLearn、Trace、SkillRevise | 233 | 81 | 81 / 71 / 81 | 6.06 GB |
+| 三方法历史批次 | CoEvoSkills、SPARK、SkillEvolver | 222 | 77 | 77 / 68 / 77 | 5.49 GB |
+
+[下载两批变体及文件清单](https://github.com/RocXOvO/SkillsBench-Variants/releases/tag/variant-datasets-20261011)。233 批为 46 卷，222 批为 41 卷，每卷最多 128 MiB。
+
+归档包含任务输入、环境与构建资产、评分器和可用的源测试、solution。对应 Release 中的 `MANIFEST-233.json`、`MANIFEST-222.json` 记录逐文件来源、权限与 SHA256。
+
+## 下载与解压
+
+```sh
+gh release download variant-datasets-20261011 --repo RocXOvO/SkillsBench-Variants --dir variant-datasets-20261011
+cd variant-datasets-20261011
+cat variant-tasks-233-20261010.tar.gz.chunk-* > variant-tasks-233-20261010.tar.gz
+cat variant-tasks-222-20261011.tar.gz.chunk-* > variant-tasks-222-20261011.tar.gz
+shasum -a 256 -c SHA256SUMS
+tar -xzf variant-tasks-233-20261010.tar.gz
+tar -xzf variant-tasks-222-20261011.tar.gz
 ```
 
-The current compiled paper is `output/pdf/main.pdf`.
+先合并同一批的全部分卷，再校验和解压。Linux 可使用 `sha256sum -c SHA256SUMS`。详细说明见 [README-download-extract.txt](variants/README-download-extract.txt)。
 
-The PDFs were regenerated at the author's request on 2026-09-22, incorporating the complete variant records and an expanded diagnostic narrative about utility, behavioral scope, and lifecycle attribution. The clean and bilingual manuscripts both have nine pages. Full variant-record statistics and source choices are documented in `paper/audits/full-variant-records-20260922/`.
+## 校验与来源
 
-`output/pdf/main-revision-highlighted.pdf` marks substantive additions and replacements relative to the original Overleaf baseline (`121a6182b`) in red, with Chinese annotation comments. The nine-page English/Chinese reading copy is `output/pdf/main-bilingual-en-zh.pdf`; its English side carries the same 37 highlights. The comparison includes the abstract, introduction, new experiments and tables, skill-reuse analysis, conclusion, and two added references. Layout-only moves and automatic numbering changes are documented separately in the comparison audit. Zotero retains the original Overleaf baseline (`output/pdf/main-overleaf-original-20260921.pdf`, seven pages) and the latest bilingual red-highlighted comparison. Superseded revision attachments are moved to its trash; local files and Git history preserve prior versions.
+两份完整包的 25,174 个任务文件均已核对 SHA256、大小和权限；Release 中 87 个分卷与配套清单也完成了 SHA256 校验。
 
-Git history preserves each completed revision. Experiment directories and credentials are excluded from version control. Use a new restore or revert commit to return to an earlier version without deleting subsequent history.
+- [两批组成与 ID 差异](variants/batches.json)：共有 213 个 ID，分别独有 20 和 9 个；相同 ID 不自动代表相同文件版本。
+- [压缩包及附件记录](variants/package-record.json)与 [SHA256SUMS](variants/SHA256SUMS)。
+- [233 批校验报告](variants/validation-233.json)与 [222 批校验报告](variants/validation-222.json)。
 
-The latest diagnostic rewrite is documented in `paper/audits/variant-maintext-20260921/diagnostic-theme-revision-20260922.md`, with the exact English prose in `diagnostic-rewrite-original-text-20260922.md`. The two provisional flow figures were withdrawn from the manuscript; their source files are retained as rejected drafts only.
+222 批保留历史构造包及当时定位到的 public/grader 阶段。SPARK 和 CoEvoSkills 的历史结果各为 221 项，音频 P3 是历史排除项，但该任务仍包含在 222 个源文件包中。该归档记录源文件来源，本次没有新增模型调用或评测。

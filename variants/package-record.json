@@ -1,8 +1,8 @@
 {
   "schema": "two-variant-batches-private-release-package-v1",
   "release_tag": "variant-datasets-20261011",
-  "release_url": "https://github.com/RocXOvO/ICLR-paper/releases/tag/variant-datasets-20261011",
-  "repository": "RocXOvO/ICLR-paper",
+  "release_url": "https://github.com/RocXOvO/SkillsBench-Variants/releases/tag/variant-datasets-20261011",
+  "repository": "RocXOvO/SkillsBench-Variants",
   "repository_private": true,
   "part_max_bytes": 134217728,
   "archives": [
@@ -934,12 +934,12 @@
     },
     {
       "name": "README-download-extract.txt",
-      "sha256": "e27330c322bdb01c888c932fdd77fb362bd692d7757b91979c421ae652d2743c",
-      "bytes": 2142
+      "sha256": "1ca6dfd832f842b2e9308e633aa94d746b10550ebdc1a329692798e80423e67d",
+      "bytes": 2152
     },
     {
       "name": "SHA256SUMS",
-      "sha256": "cdae8f75a9428c42a285cdbe63a9f6cc32237206a55196b9795daf1cc21f3102",
+      "sha256": "dfab921b0eb78233612ae10a8ba14c567644f5e8ab06e228a7cd32fa2777f478",
       "bytes": 10449
     }
   ],
