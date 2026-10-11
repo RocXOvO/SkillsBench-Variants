@@ -1,0 +1,15 @@
+{
+  "variant_id": "parallel-tfidf-search--p2--dev-401",
+  "status": "completed",
+  "reward": 1,
+  "whole_verifier_elapsed_seconds": 384.67086443677545,
+  "whole_verifier_budget_seconds": 900,
+  "original_api_calls": 16,
+  "timed_calls": 12,
+  "nonce_challenge_calls": 4,
+  "stopped_snapshot_parent_verified": true,
+  "entry_tool": "tools/run_tfidf.py",
+  "entry_tool_sha256": "ce12d4b56dac8c4958f1cde00bb2d2294553de3e5c3a7e78494d97aa73d0cc7b",
+  "test_scan_input": "random non-account marker, no provider request",
+  "model_calls": 0
+}

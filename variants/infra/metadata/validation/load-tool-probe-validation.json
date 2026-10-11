@@ -1,0 +1,18 @@
+{
+  "schema": "skillsbench-variants-image-load.v1",
+  "docker_version": "29.5.0",
+  "loaded_archives": [
+    "oci-format-probe.tar.zst"
+  ],
+  "verified_image_ids": [
+    "sha256:0071c26d7f3811f8e04c93fccac9797f3ee29fac0bab8a663f269793c7d07568"
+  ],
+  "aliases_restored": 0,
+  "model_calls": 0,
+  "grader_calls": 0,
+  "status": "VERIFIED",
+  "entry_tool": "tools/load_images.py",
+  "entry_tool_sha256": "3824335b6bb69c882f55330fde776d4734c0d5ecb139f5fb3aad553cd1e5bcd8",
+  "tested_host_zstd_long_window": true,
+  "tested_explicit_platform": "linux/amd64"
+}

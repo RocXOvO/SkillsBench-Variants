@@ -1,0 +1,30 @@
+{
+  "status": "BUILT_FROM_RECOVERED_HISTORICAL_CONTEXT",
+  "tag": "skillsbench-variants/gw-p2:recovered-20261012-r1",
+  "image_id": "sha256:3b50e63f024f63379f64ae274c4441931c3e452b998f7ac9774dbcaacf3606eb",
+  "original_missing_image_id": "sha256:20bcd779be042a3545c88357ee66fe9e38dc85d1d30f3f8e8821d177c1e7fa67",
+  "exact_original_id_restored": false,
+  "base_image_id": "sha256:85ce1ec62407216eabb7f32c84621674e4f4374d5179eaee7da304c49304de6a",
+  "dockerfile_sha256": "c0791a4c2f3a512217a350116b03c2cafcc456c00489dd0638492076516c0f57",
+  "public_asset_sha256": "813ab02b847c1cdadd91f2ba79d7973bac45368b1b00669a982103326a534661",
+  "rootfs_layers": [
+    "sha256:411a86676185cb54d695a805b238194a64e9b77e0c723f3802fbb87d333ea0b3",
+    "sha256:3070bb8623db07ca38569112f9b296043371a00bfb3ee4d9f8f63ddfd2f2efca",
+    "sha256:3d664d274420a79749a26f9e5115b2120d46037264011773ca4c52e22780b2ca",
+    "sha256:24257af4ce5bde01d3c7ebd6d366ec4a298ed27c794bbd6832ef5ce934a66170",
+    "sha256:13bb40c5fe22e68013c876c4811a5ca1f5771e4cfb1f942ca4c9c98474881cac",
+    "sha256:c8766e0187e8c404fa46d3a70222c7c42584ce0e6d9157271be5715536e2f4a3",
+    "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+    "sha256:8f97dba64d040518a8fbada099700579eea8808810c338367355eaddfbcc57ee",
+    "sha256:920e18f2b3777b9319e6acff8fd984f5b43f66d298c3dabf6fce56ea108e0458",
+    "sha256:372ee76d545bdcb14b8bc7d2b83d35cd9c9e6adfe3e5c4a50c1142eef8f422fa",
+    "sha256:55506feba84dabcae6154eaec58788a3e83377e6aa50a4e06181a13dfb5141c0",
+    "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+  ],
+  "architecture": "amd64",
+  "os": "linux",
+  "size_bytes": 508689170,
+  "new_builds": 1,
+  "new_agent_calls": 0,
+  "elapsed_sec": 23.878751277923584
+}

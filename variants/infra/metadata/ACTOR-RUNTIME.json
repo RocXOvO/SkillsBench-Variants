@@ -1,0 +1,63 @@
+{
+  "schema": "existing-actor-runtime-export-v1",
+  "original_runtime_root": "/data/amax/spark-repro/transfer-frozen-sources-V6dLhH/runtime-r1/package/vendor/x86_64-unknown-linux-musl",
+  "cli_sha256": "cb0a15567e9a60a5820d54b0f6ae86d504dc3805c1eab21a47f70e3eb7b73a40",
+  "cli_version": "codex-cli 0.147.0",
+  "files": [
+    {
+      "path": "bin/codex",
+      "server_source": "/data/amax/spark-repro/transfer-frozen-sources-V6dLhH/runtime-r1/package/vendor/x86_64-unknown-linux-musl/bin/codex",
+      "sha256": "cb0a15567e9a60a5820d54b0f6ae86d504dc3805c1eab21a47f70e3eb7b73a40",
+      "size": 258278208,
+      "mode": "0o755",
+      "relative_path": "bin/codex",
+      "source": "/data/amax/spark-repro/transfer-frozen-sources-V6dLhH/runtime-r1/package/vendor/x86_64-unknown-linux-musl/bin/codex"
+    },
+    {
+      "path": "bin/codex-code-mode-host",
+      "server_source": "/data/amax/spark-repro/transfer-frozen-sources-V6dLhH/runtime-r1/package/vendor/x86_64-unknown-linux-musl/bin/codex-code-mode-host",
+      "sha256": "00ecf5d040865b97884c488883abd342581c2a432debe7a54e4646bceee3d2d6",
+      "size": 49682360,
+      "mode": "0o755",
+      "relative_path": "bin/codex-code-mode-host",
+      "source": "/data/amax/spark-repro/transfer-frozen-sources-V6dLhH/runtime-r1/package/vendor/x86_64-unknown-linux-musl/bin/codex-code-mode-host"
+    },
+    {
+      "path": "codex-package.json",
+      "server_source": "/data/amax/spark-repro/transfer-frozen-sources-V6dLhH/runtime-r1/package/vendor/x86_64-unknown-linux-musl/codex-package.json",
+      "sha256": "00f66f11cc7d5c4133d500b4aae6ed4975608d6b040eefd56dc1ff343566e8cf",
+      "size": 205,
+      "mode": "0o644",
+      "relative_path": "codex-package.json",
+      "source": "/data/amax/spark-repro/transfer-frozen-sources-V6dLhH/runtime-r1/package/vendor/x86_64-unknown-linux-musl/codex-package.json"
+    },
+    {
+      "path": "codex-path/rg",
+      "server_source": "/data/amax/spark-repro/transfer-frozen-sources-V6dLhH/runtime-r1/package/vendor/x86_64-unknown-linux-musl/codex-path/rg",
+      "sha256": "e62198eb19b136b88c330af83647b5a962cb99b6b1f066758568f12de1974849",
+      "size": 5408904,
+      "mode": "0o755",
+      "relative_path": "codex-path/rg",
+      "source": "/data/amax/spark-repro/transfer-frozen-sources-V6dLhH/runtime-r1/package/vendor/x86_64-unknown-linux-musl/codex-path/rg"
+    },
+    {
+      "path": "codex-resources/bwrap",
+      "server_source": "/data/amax/spark-repro/transfer-frozen-sources-V6dLhH/runtime-r1/package/vendor/x86_64-unknown-linux-musl/codex-resources/bwrap",
+      "sha256": "77360cb751ccedc5971391444ac86a8a33c15b04d6b4a6fe45f5d25496e62c4c",
+      "size": 529776,
+      "mode": "0o755",
+      "relative_path": "codex-resources/bwrap",
+      "source": "/data/amax/spark-repro/transfer-frozen-sources-V6dLhH/runtime-r1/package/vendor/x86_64-unknown-linux-musl/codex-resources/bwrap"
+    },
+    {
+      "path": "codex-resources/zsh/bin/zsh",
+      "server_source": "/data/amax/spark-repro/transfer-frozen-sources-V6dLhH/runtime-r1/package/vendor/x86_64-unknown-linux-musl/codex-resources/zsh/bin/zsh",
+      "sha256": "67faaaa89242c4a332e16e508a1977cffc24bf7fca31d4411cdfd101f3831ef3",
+      "size": 898480,
+      "mode": "0o755",
+      "relative_path": "codex-resources/zsh/bin/zsh",
+      "source": "/data/amax/spark-repro/transfer-frozen-sources-V6dLhH/runtime-r1/package/vendor/x86_64-unknown-linux-musl/codex-resources/zsh/bin/zsh"
+    }
+  ],
+  "new_model_calls": 0
+}

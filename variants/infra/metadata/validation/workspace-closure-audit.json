@@ -1,0 +1,13 @@
+{
+  "status": "VERIFIED",
+  "task_count": 233,
+  "indexed_source_files": 6377,
+  "unique_original_paths": 18734,
+  "dependency_aliases": 5849,
+  "conflicting_paths": [],
+  "missing_content": {},
+  "alias_drift": {},
+  "supplement_source_hashes_verified": true,
+  "all_source_file_modes_verified": true,
+  "expected_total_restored_files": 19373
+}

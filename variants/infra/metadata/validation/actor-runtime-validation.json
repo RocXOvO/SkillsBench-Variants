@@ -1,0 +1,9 @@
+{
+  "status": "VERIFIED_EXISTING_ACTOR_RUNTIME",
+  "archive": "variant-actor-runtime-20261012.tar.gz",
+  "bytes": 119166508,
+  "sha256": "31e48cb057764374903f4016861f3926722fcfe7056d2cf76a6d9ed48459cbcb",
+  "cli_version": "codex-cli 0.147.0",
+  "files_verified": 6,
+  "new_model_calls": 0
+}

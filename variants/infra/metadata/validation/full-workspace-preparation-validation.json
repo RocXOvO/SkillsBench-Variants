@@ -1,0 +1,15 @@
+{
+  "schema": "skillsbench-variants-workspace.v1",
+  "task_count": 233,
+  "files_restored": 19373,
+  "input_manifest_sha256": "f335146a645097e3f8d2cddbb855bab0026eddc25f51dfb97e615ce2e147e8be",
+  "workspace": "/home/amax/skillsbench-variants-workspace-check-20261012-r2/workspace",
+  "source_hashes_verified": true,
+  "model_calls": 0,
+  "grader_calls": 0,
+  "all_233_task_files_installed": true,
+  "full_extracted_archive_used": true,
+  "source_images_loaded_by_this_check": 0,
+  "tested_final_materials_archive_sha256": "82977108f5e196fb2dd5566d454be99660d6f3cbbca1337af40dc3b2771655fc",
+  "final_indexed_source_files": 6377
+}

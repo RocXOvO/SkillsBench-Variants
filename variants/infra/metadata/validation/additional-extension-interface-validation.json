@@ -1,0 +1,200 @@
+{
+  "status": "VERIFIED",
+  "actual_source_manifests": 10,
+  "additional_exact_runner_versions": 2,
+  "source_files_after_extension_recovery": 6377,
+  "original_cell_fields_verified": 12,
+  "model_calls": 0,
+  "results": [
+    {
+      "variant_id": "bike-rebalance--p1--sr-ext-401",
+      "manifest_sha256": "8b1c35390242268fb219e2d21de3463eb58d2e62470012a53d07594e03042a63",
+      "runner_sha256": "7e47d40165910eb2f357efc1b90ceb6ee3e26efaf3c908fdf53efc8190b26d13",
+      "cell_fields_equal": [
+        "public_path",
+        "public_files",
+        "grader_path",
+        "grader_files",
+        "solver_image",
+        "grader_image",
+        "cpus",
+        "memory_mb",
+        "workdir",
+        "output_roots",
+        "output_files",
+        "grader_kind"
+      ]
+    },
+    {
+      "variant_id": "bike-rebalance--p2--sr-ext-401",
+      "manifest_sha256": "da423ff457ee58c1f076664dfc9e8af9f29224ee7428803506bcdf89d0fd5955",
+      "runner_sha256": "7e47d40165910eb2f357efc1b90ceb6ee3e26efaf3c908fdf53efc8190b26d13",
+      "cell_fields_equal": [
+        "public_path",
+        "public_files",
+        "grader_path",
+        "grader_files",
+        "solver_image",
+        "grader_image",
+        "cpus",
+        "memory_mb",
+        "workdir",
+        "output_roots",
+        "output_files",
+        "grader_kind"
+      ]
+    },
+    {
+      "variant_id": "bike-rebalance--p3--sr-ext-401",
+      "manifest_sha256": "1e60f2708d68bcaff5c0a95b4a22e475f0a73985587c8576343d67527a8b7e07",
+      "runner_sha256": "34ad92a5adc8e1db42708f2b26efa1c0c7bffa7496fbd493ad2b0c85f3771c81",
+      "cell_fields_equal": [
+        "public_path",
+        "public_files",
+        "grader_path",
+        "grader_files",
+        "solver_image",
+        "grader_image",
+        "cpus",
+        "memory_mb",
+        "workdir",
+        "output_roots",
+        "output_files",
+        "grader_kind"
+      ]
+    },
+    {
+      "variant_id": "edit-pdf--p1--sr-ext-401",
+      "manifest_sha256": "7075102d0061c04e03d295214049a67981844ae92b85588fa8b1483a83a4ca84",
+      "runner_sha256": "b16b476427a40f299e3446f979251e5bf7cd3ff345cb64293d8bc4a6e5a0f296",
+      "cell_fields_equal": [
+        "public_path",
+        "public_files",
+        "grader_path",
+        "grader_files",
+        "solver_image",
+        "grader_image",
+        "cpus",
+        "memory_mb",
+        "workdir",
+        "output_roots",
+        "output_files",
+        "grader_kind"
+      ]
+    },
+    {
+      "variant_id": "edit-pdf--p2--sr-ext-401",
+      "manifest_sha256": "1170e7d7055099840186c5a59ad627983942b6eb6af19b189ec1d2730baae2d0",
+      "runner_sha256": "b16b476427a40f299e3446f979251e5bf7cd3ff345cb64293d8bc4a6e5a0f296",
+      "cell_fields_equal": [
+        "public_path",
+        "public_files",
+        "grader_path",
+        "grader_files",
+        "solver_image",
+        "grader_image",
+        "cpus",
+        "memory_mb",
+        "workdir",
+        "output_roots",
+        "output_files",
+        "grader_kind"
+      ]
+    },
+    {
+      "variant_id": "edit-pdf--p3--sr-ext-401",
+      "manifest_sha256": "8897859e822c988c29c467e67110beaf936a3d27544293a85b0c23240a44a23d",
+      "runner_sha256": "b16b476427a40f299e3446f979251e5bf7cd3ff345cb64293d8bc4a6e5a0f296",
+      "cell_fields_equal": [
+        "public_path",
+        "public_files",
+        "grader_path",
+        "grader_files",
+        "solver_image",
+        "grader_image",
+        "cpus",
+        "memory_mb",
+        "workdir",
+        "output_roots",
+        "output_files",
+        "grader_kind"
+      ]
+    },
+    {
+      "variant_id": "energy-unit-commitment--p3--sr-ext-401",
+      "manifest_sha256": "031115379009be1e456a1caa784f8ee294382fcf38208378234b840cc3556d4a",
+      "runner_sha256": "b16b476427a40f299e3446f979251e5bf7cd3ff345cb64293d8bc4a6e5a0f296",
+      "cell_fields_equal": [
+        "public_path",
+        "public_files",
+        "grader_path",
+        "grader_files",
+        "solver_image",
+        "grader_image",
+        "cpus",
+        "memory_mb",
+        "workdir",
+        "output_roots",
+        "output_files",
+        "grader_kind"
+      ]
+    },
+    {
+      "variant_id": "paratransit-routing--p1--sr-ext-401",
+      "manifest_sha256": "994fd2c7f54a9481717834260fce6bca1a457f59974ea206b0416738e9ad7d9d",
+      "runner_sha256": "b16b476427a40f299e3446f979251e5bf7cd3ff345cb64293d8bc4a6e5a0f296",
+      "cell_fields_equal": [
+        "public_path",
+        "public_files",
+        "grader_path",
+        "grader_files",
+        "solver_image",
+        "grader_image",
+        "cpus",
+        "memory_mb",
+        "workdir",
+        "output_roots",
+        "output_files",
+        "grader_kind"
+      ]
+    },
+    {
+      "variant_id": "paratransit-routing--p2--sr-ext-401",
+      "manifest_sha256": "9a34b22cd164dffcdc55d38fdf60f64111827112492b6829a49a170cc2796f35",
+      "runner_sha256": "b16b476427a40f299e3446f979251e5bf7cd3ff345cb64293d8bc4a6e5a0f296",
+      "cell_fields_equal": [
+        "public_path",
+        "public_files",
+        "grader_path",
+        "grader_files",
+        "solver_image",
+        "grader_image",
+        "cpus",
+        "memory_mb",
+        "workdir",
+        "output_roots",
+        "output_files",
+        "grader_kind"
+      ]
+    },
+    {
+      "variant_id": "paratransit-routing--p3--sr-ext-401",
+      "manifest_sha256": "f77bfe37bbb899d12721274907a2e5e5b527cd978d8d6e767abfef88abc1c713",
+      "runner_sha256": "b16b476427a40f299e3446f979251e5bf7cd3ff345cb64293d8bc4a6e5a0f296",
+      "cell_fields_equal": [
+        "public_path",
+        "public_files",
+        "grader_path",
+        "grader_files",
+        "solver_image",
+        "grader_image",
+        "cpus",
+        "memory_mb",
+        "workdir",
+        "output_roots",
+        "output_files",
+        "grader_kind"
+      ]
+    }
+  ]
+}

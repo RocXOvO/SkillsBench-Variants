@@ -1,0 +1,12 @@
+{
+  "status": "VERIFIED_METADATA_IMPORT",
+  "archive": "variant-runtime-images-20261012.tar.gz",
+  "bytes": 12010770609,
+  "sha256": "1a93790e45e52e2a28000a69d19873627c731cac50dc3aefab6bab903bdb8875",
+  "expected_images": 13,
+  "platform": "linux/amd64",
+  "import_unpacked_rootfs": false,
+  "elapsed_seconds": 746.2830383749679,
+  "model_calls": 0,
+  "grader_calls": 0
+}

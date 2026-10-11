@@ -1,0 +1,36 @@
+{
+  "results": [
+    {
+      "variant_id": "gravitational-wave-detection--p2--dev-401",
+      "control": "trusted_positive",
+      "status": "completed",
+      "reward": 1,
+      "predicates_completed": 9,
+      "elapsed_seconds": 10.178625892847776,
+      "whole_verifier_budget_seconds": 240,
+      "entry_tool": "tools/grade_gw_p2.py",
+      "entry_tool_sha256": "e29050ef16acde3a7e04f26440103144a9fda5400b78da61f2d5fbb4c5432f0c",
+      "solver_original_image_verified": true,
+      "stopped_solver_to_read_only_capture": true,
+      "private_data_not_mounted_into_solver": true,
+      "model_calls": 0
+    },
+    {
+      "variant_id": "gravitational-wave-detection--p2--dev-401",
+      "control": "missing_output_negative",
+      "status": "completed",
+      "reward": 0,
+      "predicates_completed": 0,
+      "elapsed_seconds": 7.063598811626434,
+      "whole_verifier_budget_seconds": 240,
+      "entry_tool": "tools/grade_gw_p2.py",
+      "entry_tool_sha256": "e29050ef16acde3a7e04f26440103144a9fda5400b78da61f2d5fbb4c5432f0c",
+      "solver_original_image_verified": true,
+      "stopped_solver_to_read_only_capture": true,
+      "private_data_not_mounted_into_solver": true,
+      "model_calls": 0
+    }
+  ],
+  "model_calls": 0,
+  "benchmark_agent_runs": 0
+}

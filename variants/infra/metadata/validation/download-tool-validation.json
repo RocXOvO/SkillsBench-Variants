@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "resume_incomplete_part_truncated_to_verified_boundary": true,
+  "complete_archive_sha256_verified": true,
+  "already_downloaded_archive_sha256_verified": true,
+  "corrupt_resume_prefix_rejected": true,
+  "tool_sha256": "a8a2b48313e69e81add8334894a984dba4bc8bcf90ed793c3b72eaba5fe1a790",
+  "fixture": "local HTTP server with 3 non-executable data parts"
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "skillsbench-variants-cold-grader-checks.v1",
+  "fresh_engine": "Docker 29.5.0/containerd",
+  "model_calls": 0,
+  "benchmark_agent_runs": 0,
+  "grader_fixture_calls": 4,
+  "results": [
+    {
+      "variant_id": "exoplanet-detection-period--p3--dev-401",
+      "control": "trusted_positive",
+      "status": "valid",
+      "reward": 1,
+      "predicates_completed": 4,
+      "cli_version": "codex-cli 0.147.0",
+      "private_data_not_mounted_into_solver": true,
+      "original_image_id_preserved": true
+    },
+    {
+      "variant_id": "exoplanet-detection-period--p3--dev-401",
+      "control": "missing_output_negative",
+      "status": "valid",
+      "reward": 0,
+      "predicates_completed": 4,
+      "cli_version": "codex-cli 0.147.0",
+      "private_data_not_mounted_into_solver": true,
+      "original_image_id_preserved": true
+    },
+    {
+      "variant_id": "gravitational-wave-detection--p2--dev-401",
+      "control": "trusted_positive",
+      "status": "completed",
+      "reward": 1,
+      "predicates_completed": 9,
+      "rebuilt_image_id": "sha256:3b50e63f024f63379f64ae274c4441931c3e452b998f7ac9774dbcaacf3606eb",
+      "private_data_not_mounted_into_solver": true
+    },
+    {
+      "variant_id": "gravitational-wave-detection--p2--dev-401",
+      "control": "missing_output_negative",
+      "status": "completed",
+      "reward": 0,
+      "predicates_completed": 0,
+      "rebuilt_image_id": "sha256:3b50e63f024f63379f64ae274c4441931c3e452b998f7ac9774dbcaacf3606eb",
+      "private_data_not_mounted_into_solver": true
+    }
+  ]
+}

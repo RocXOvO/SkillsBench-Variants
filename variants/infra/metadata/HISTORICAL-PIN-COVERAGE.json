@@ -1,0 +1,363 @@
+{
+  "runner_versions": {
+    "4e12d8774822fb3176c095282d57e9312cc78f5330ce90a28aaa9200a668c86f": [
+      "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/trace_batch_runner_bridge_r4.py"
+    ],
+    "12d69aaa499f55477cfc7441d393adc1670faf59e7bcd25a062234c7ff76d086": [
+      "runtime/original/data/amax/spark-repro/transfer-frozen-sources-V6dLhH/run_reviewed_transfer.py",
+      "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/12d69aaa499f55477cfc7441d393adc1670faf59e7bcd25a062234c7ff76d086/run_reviewed_transfer.py"
+    ],
+    "ccc0964bc24c7cb9df0a92afdd6cafd31561be8ba3fc6fc1a6dc5ac25342cc59": [
+      "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/ccc0964bc24c7cb9df0a92afdd6cafd31561be8ba3fc6fc1a6dc5ac25342cc59/run_reviewed_transfer.py"
+    ],
+    "737f19ed7c8270e540094c7d501cf8c453fe34cbe021776f7eafa553c72c27e1": [
+      "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/737f19ed7c8270e540094c7d501cf8c453fe34cbe021776f7eafa553c72c27e1/run_reviewed_transfer.py"
+    ],
+    "327973bef20ac8eada8562e6c030c03982fa32d4e75e66cb5e0b0c367bd00cc0": [
+      "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/327973bef20ac8eada8562e6c030c03982fa32d4e75e66cb5e0b0c367bd00cc0/run_reviewed_transfer.py"
+    ],
+    "dfc92bfb17344ab76f84fc3fe7fa4f301e141640cdbe4ac9df30588646d079c2": [
+      "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/dfc92bfb17344ab76f84fc3fe7fa4f301e141640cdbe4ac9df30588646d079c2/run_reviewed_transfer.py"
+    ],
+    "23306df050c036a06bbe1d757a1545c8eb3b4e0881215ee80be38672914d38c8": [
+      "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/23306df050c036a06bbe1d757a1545c8eb3b4e0881215ee80be38672914d38c8/run_reviewed_transfer.py"
+    ],
+    "a5fd71da29b34960f7e18374f7fbb3b4dd7e398515d6a3dbba9354c79f738370": [
+      "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/a5fd71da29b34960f7e18374f7fbb3b4dd7e398515d6a3dbba9354c79f738370/run_reviewed_transfer.py"
+    ],
+    "ce892882afc6f4da986799f5fa50705523e6fdbe8462e55a9508023f14695f7d": [
+      "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/ce892882afc6f4da986799f5fa50705523e6fdbe8462e55a9508023f14695f7d/run_reviewed_transfer.py"
+    ],
+    "d2ff1367515632a1e5d74e70b7e0d0f1a818b72f60e483cb251584c7e7f54327": [
+      "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/d2ff1367515632a1e5d74e70b7e0d0f1a818b72f60e483cb251584c7e7f54327/run_reviewed_transfer.py"
+    ],
+    "fe1758531e7774a18938f6985b363fb245f2be139ce9815af54b3ded95eb07f8": [
+      "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/fe1758531e7774a18938f6985b363fb245f2be139ce9815af54b3ded95eb07f8/run_reviewed_transfer.py"
+    ],
+    "a9b0cc5dddc581a9d68c45db62ecc38567aaaaae114f8d548ba462412f87c32f": [
+      "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/a9b0cc5dddc581a9d68c45db62ecc38567aaaaae114f8d548ba462412f87c32f/run_reviewed_transfer.py"
+    ],
+    "288d3c2835711d163d8cf03fc02d25b7c45ee7bd3fc8267ffecb65a9cb48e66d": [
+      "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/288d3c2835711d163d8cf03fc02d25b7c45ee7bd3fc8267ffecb65a9cb48e66d/run_reviewed_transfer.py"
+    ],
+    "c824ffa6804d5c1c7bacda6bda9cb9a56e9babc4827b376e575cf64f4cefbaed": [
+      "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/c824ffa6804d5c1c7bacda6bda9cb9a56e9babc4827b376e575cf64f4cefbaed/run_reviewed_transfer.py"
+    ],
+    "a371103cdaae2bffec633bf198e0ff08a4eacbcf29da8881c252fcbd0cd84fbc": [
+      "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/a371103cdaae2bffec633bf198e0ff08a4eacbcf29da8881c252fcbd0cd84fbc/run_reviewed_transfer.py"
+    ],
+    "86cdccdfa45e1be9f04a126ffda65cb391ac0168edb784aeb4d44cbdfbc094c0": [
+      "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/86cdccdfa45e1be9f04a126ffda65cb391ac0168edb784aeb4d44cbdfbc094c0/run_reviewed_transfer.py"
+    ],
+    "5f177300018f78401e62759f8e4b09a39d1b0d21650ed363a30e1581a935bec3": [
+      "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/5f177300018f78401e62759f8e4b09a39d1b0d21650ed363a30e1581a935bec3/run_reviewed_transfer.py"
+    ]
+  },
+  "helper_versions": {
+    "9c799ff7ab087c50012ebc8cc50a066a9d89cfee0f727bb8f97d8c468a7f9733": {
+      "name": "transfer_acc_grade.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/ccc0964bc24c7cb9df0a92afdd6cafd31561be8ba3fc6fc1a6dc5ac25342cc59/transfer_acc_grade.py"
+      ]
+    },
+    "89c418808a90e5ee65e30680142a470315ba258090beb148576df6b557307f76": {
+      "name": "transfer_acc_snapshot.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/737f19ed7c8270e540094c7d501cf8c453fe34cbe021776f7eafa553c72c27e1/transfer_acc_snapshot.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/ccc0964bc24c7cb9df0a92afdd6cafd31561be8ba3fc6fc1a6dc5ac25342cc59/transfer_acc_snapshot.py"
+      ]
+    },
+    "4903c862188637a1a00e15c00fa90ffd97093ba95558daf5b93e57b134742b5d": {
+      "name": "transfer_acc_step.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/ccc0964bc24c7cb9df0a92afdd6cafd31561be8ba3fc6fc1a6dc5ac25342cc59/transfer_acc_step.py"
+      ]
+    },
+    "556bc217f8eb52deb28543d7f38f36faa8a09c4a860fd81feebfa579121380c5": {
+      "name": "transfer_runtime_snapshot.py",
+      "paths": [
+        "runtime/original/data/amax/spark-repro/transfer-frozen-sources-V6dLhH/transfer_runtime_snapshot.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/737f19ed7c8270e540094c7d501cf8c453fe34cbe021776f7eafa553c72c27e1/transfer_runtime_snapshot.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/ccc0964bc24c7cb9df0a92afdd6cafd31561be8ba3fc6fc1a6dc5ac25342cc59/transfer_runtime_snapshot.py"
+      ]
+    },
+    "5fc992738efe8e60514a0c7f38e4e145ec7e235b982ef445c839e232467433eb": {
+      "name": "transfer_acc_fresh_output.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/737f19ed7c8270e540094c7d501cf8c453fe34cbe021776f7eafa553c72c27e1/transfer_acc_fresh_output.py"
+      ]
+    },
+    "6aa8e80a5dcd2f137126379f1d106b759ad8a3a06a4b7f5ba72ed9bd061f22f4": {
+      "name": "transfer_acc_grade.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/737f19ed7c8270e540094c7d501cf8c453fe34cbe021776f7eafa553c72c27e1/transfer_acc_grade.py"
+      ]
+    },
+    "d47421d928f49e764673fd7fe6a4f8eb500670876d2e1f1732cb6387150f64cd": {
+      "name": "transfer_acc_step.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/737f19ed7c8270e540094c7d501cf8c453fe34cbe021776f7eafa553c72c27e1/transfer_acc_step.py"
+      ]
+    },
+    "53c75dd39e39f7f6572d08e3d51619cbae053b609aee2ce6dd0bf62a7974c6f2": {
+      "name": "data_only_helper_sha256",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/327973bef20ac8eada8562e6c030c03982fa32d4e75e66cb5e0b0c367bd00cc0/transfer_data_only_grade.py"
+      ]
+    },
+    "1f0b3b5bd4ee6b260184154831d18accfa41aa9384cb08677713c68b7eae69eb": {
+      "name": "transfer_enterprise_grade.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/transfer_enterprise_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/dfc92bfb17344ab76f84fc3fe7fa4f301e141640cdbe4ac9df30588646d079c2/transfer_enterprise_grade.py"
+      ]
+    },
+    "b2ceebe82cdad16ff0e9193e66d477b5e785c33894b87abcf9ab050e5812ce6a": {
+      "name": "transfer_quantum_capture.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/5f177300018f78401e62759f8e4b09a39d1b0d21650ed363a30e1581a935bec3/transfer_quantum_capture.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/659c3beb30a6e2b22d493618b987ff22b8bec28bd63f4d1f870edb47932a3cde/transfer_quantum_capture.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/2382d141a5377e887ccac448d39502ecb739e96a0122d24bee13c2ef0d3ede53/transfer_quantum_capture.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/dfc92bfb17344ab76f84fc3fe7fa4f301e141640cdbe4ac9df30588646d079c2/transfer_quantum_capture.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/04d8ecdebe2894bfc08dc4e5f534827bff73ab68ff7dfd2272df917f4e3d7cb1/transfer_quantum_capture.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/c824ffa6804d5c1c7bacda6bda9cb9a56e9babc4827b376e575cf64f4cefbaed/transfer_quantum_capture.py"
+      ]
+    },
+    "c629345a091b29c3f6f32e4ffce731c1adc986a0d1fdb70ae6ee840d7b39b505": {
+      "name": "transfer_flink_grade.py",
+      "paths": [
+        "runtime/original/data/amax/spark-repro/transfer-frozen-sources-V6dLhH/transfer_flink_grade.py",
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/transfer_flink_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/288d3c2835711d163d8cf03fc02d25b7c45ee7bd3fc8267ffecb65a9cb48e66d/transfer_flink_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/4326aa7c292bac6f983056a39c45baf68865fefdd7fb0fcfb3badfc73028fcfe/transfer_flink_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/6c66c0dbfa85716e5206bc115f09cab3899d45f0411adb4402a598ddd3c3aa23/transfer_flink_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/4618e12b5d45f16cd395e89bea34e15e7cd6ef301226415d959d92565c332eee/transfer_flink_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/a9b0cc5dddc581a9d68c45db62ecc38567aaaaae114f8d548ba462412f87c32f/transfer_flink_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/23306df050c036a06bbe1d757a1545c8eb3b4e0881215ee80be38672914d38c8/transfer_flink_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/bf12dae2a6327408107305c4b405deea3ae409d510862ab70ca0a517e7fe940f/transfer_flink_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/d2ff1367515632a1e5d74e70b7e0d0f1a818b72f60e483cb251584c7e7f54327/transfer_flink_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/b16b476427a40f299e3446f979251e5bf7cd3ff345cb64293d8bc4a6e5a0f296/transfer_flink_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/2c053ead242e73748c7c0ae00b1ffc3ab6b0dc448e9c425b3b3b42d99b32f545/transfer_flink_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/86cdccdfa45e1be9f04a126ffda65cb391ac0168edb784aeb4d44cbdfbc094c0/transfer_flink_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/6cf238176fbf6e23ceeb3c49c96d631052d995d5c3650fb925f45a9333e75753/transfer_flink_grade.py"
+      ]
+    },
+    "67dc34cb60bbff199b56f8aa6f9b17cebaddf8a3e51d25eda48d7be7eceec63e": {
+      "name": "transfer_runtime_snapshot.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/transfer_runtime_snapshot.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/288d3c2835711d163d8cf03fc02d25b7c45ee7bd3fc8267ffecb65a9cb48e66d/transfer_runtime_snapshot.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/4326aa7c292bac6f983056a39c45baf68865fefdd7fb0fcfb3badfc73028fcfe/transfer_runtime_snapshot.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/6522bb9f9e3eef5bcc268055ea302201a8329ac7101c654b278231584772b111/transfer_runtime_snapshot.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/6c66c0dbfa85716e5206bc115f09cab3899d45f0411adb4402a598ddd3c3aa23/transfer_runtime_snapshot.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/4618e12b5d45f16cd395e89bea34e15e7cd6ef301226415d959d92565c332eee/transfer_runtime_snapshot.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/a9b0cc5dddc581a9d68c45db62ecc38567aaaaae114f8d548ba462412f87c32f/transfer_runtime_snapshot.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/23306df050c036a06bbe1d757a1545c8eb3b4e0881215ee80be38672914d38c8/transfer_runtime_snapshot.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/bf12dae2a6327408107305c4b405deea3ae409d510862ab70ca0a517e7fe940f/transfer_runtime_snapshot.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/c868e231017d0e91bfda92aec82cced03995bcf1a6914403c93f2c4f5332bd7b/transfer_runtime_snapshot.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/d2ff1367515632a1e5d74e70b7e0d0f1a818b72f60e483cb251584c7e7f54327/transfer_runtime_snapshot.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/b16b476427a40f299e3446f979251e5bf7cd3ff345cb64293d8bc4a6e5a0f296/transfer_runtime_snapshot.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/4462c231f741d463b997c19a48208e90b6ec45dc853278e883dcd5a5a6ad490c/transfer_runtime_snapshot.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/2c053ead242e73748c7c0ae00b1ffc3ab6b0dc448e9c425b3b3b42d99b32f545/transfer_runtime_snapshot.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/86cdccdfa45e1be9f04a126ffda65cb391ac0168edb784aeb4d44cbdfbc094c0/transfer_runtime_snapshot.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/6cf238176fbf6e23ceeb3c49c96d631052d995d5c3650fb925f45a9333e75753/transfer_runtime_snapshot.py"
+      ]
+    },
+    "54f256d89c7728e308acb956ddb6d5cf0c0eb02fb3f8e11a882fd59d05e8e95d": {
+      "name": "transfer_exoplanet_pipeline.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/transfer_exoplanet_pipeline.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/a5fd71da29b34960f7e18374f7fbb3b4dd7e398515d6a3dbba9354c79f738370/transfer_exoplanet_pipeline.py"
+      ]
+    },
+    "f16c7b8039f3dd3cf4334a622abea2f508a849da5b5220b0c39bc3ff24e46718": {
+      "name": "transfer_quantum_capture.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/09791559485ccf93839da02e90e35df1556b2d804f95a9208885a32a11eba908/transfer_quantum_capture.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/cb422f425a7d502a323d1ded4bb361a3ac461567c839c1f2586f0a0f81d788e7/transfer_quantum_capture.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/a5fd71da29b34960f7e18374f7fbb3b4dd7e398515d6a3dbba9354c79f738370/transfer_quantum_capture.py"
+      ]
+    },
+    "86ab6c494c6a66372e2d79ba910b750989169975b24fcbf8720da8d6e6d54ca5": {
+      "name": "transfer_quantum_grade.py",
+      "paths": [
+        "runtime/original/data/amax/spark-repro/transfer-frozen-sources-V6dLhH/transfer_quantum_grade.py",
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/transfer_quantum_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/09791559485ccf93839da02e90e35df1556b2d804f95a9208885a32a11eba908/transfer_quantum_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/cb422f425a7d502a323d1ded4bb361a3ac461567c839c1f2586f0a0f81d788e7/transfer_quantum_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/04d8ecdebe2894bfc08dc4e5f534827bff73ab68ff7dfd2272df917f4e3d7cb1/transfer_quantum_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/01c266d023b87bf4b75a553474a757c0e56fae27e8fecbf38b6578d1be882374/transfer_quantum_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/a5fd71da29b34960f7e18374f7fbb3b4dd7e398515d6a3dbba9354c79f738370/transfer_quantum_grade.py"
+      ]
+    },
+    "c52d9a146a25a19910e7d871eb52882380e1532868fb075e07dbc2a3366e34c6": {
+      "name": "transfer_hvac_grade.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/ce892882afc6f4da986799f5fa50705523e6fdbe8462e55a9508023f14695f7d/transfer_hvac_grade.py"
+      ]
+    },
+    "0afcc265024e1853851e5a750f1a92dc150d8f8bf52e4ed88bdba464a06c2451": {
+      "name": "transfer_hvac_service.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/ce892882afc6f4da986799f5fa50705523e6fdbe8462e55a9508023f14695f7d/transfer_hvac_service.py"
+      ]
+    },
+    "1758c99efc5a971082a465da64b61528511be5493087e6e39274d292a1068149": {
+      "name": "transfer_filler_grade.py",
+      "paths": [
+        "runtime/original/data/amax/spark-repro/transfer-frozen-sources-V6dLhH/transfer_filler_grade.py",
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/transfer_filler_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/5f177300018f78401e62759f8e4b09a39d1b0d21650ed363a30e1581a935bec3/transfer_filler_grade.py"
+      ]
+    },
+    "8a5140742ae802f17c8c6d4289d283a1724f69edd47808cd375f63a84439b796": {
+      "name": "transfer_quantum_capture.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/transfer_quantum_capture.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/01c266d023b87bf4b75a553474a757c0e56fae27e8fecbf38b6578d1be882374/transfer_quantum_capture.py"
+      ]
+    },
+    "2e147c1d02d4e33b6e6a0a4f8124fc0ca20432f8e5cc76770d4834f88976930d": {
+      "name": "transfer_glm_grade.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/transfer_glm_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/c868e231017d0e91bfda92aec82cced03995bcf1a6914403c93f2c4f5332bd7b/transfer_glm_grade.py"
+      ]
+    },
+    "f0d50d103dd0d3bffbff70aef1c9f6ff5dd16b251a6bf7317a4d11f315c8218a": {
+      "name": "data_only_helper_sha256",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/23306df050c036a06bbe1d757a1545c8eb3b4e0881215ee80be38672914d38c8/transfer_data_only_grade.py"
+      ]
+    },
+    "2c50dca33bbd7b305158d828ea93076f91d9ecfe612666901f114ef7858385e2": {
+      "name": "transfer_fjsp_grade.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/transfer_fjsp_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/d2ff1367515632a1e5d74e70b7e0d0f1a818b72f60e483cb251584c7e7f54327/transfer_fjsp_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/86cdccdfa45e1be9f04a126ffda65cb391ac0168edb784aeb4d44cbdfbc094c0/transfer_fjsp_grade.py"
+      ]
+    },
+    "5b42f1b4ebac9178de73710fddf39c4c92dcb182106608ad3989dce11e8f432b": {
+      "name": "mario_helper_sha256",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/fe1758531e7774a18938f6985b363fb245f2be139ce9815af54b3ded95eb07f8/transfer_mario_grade.py"
+      ]
+    },
+    "34d031261300fbe15aa809f5842cd1b899f8fd3c759a37b8a623f40a29ee8f3e": {
+      "name": "transfer_mars_capture.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/transfer_mars_capture.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/a9b0cc5dddc581a9d68c45db62ecc38567aaaaae114f8d548ba462412f87c32f/transfer_mars_capture.py"
+      ]
+    },
+    "f3e9f186975e799c873c92c6f7633b3a57530119e2bf373d7ab26f3b279aee86": {
+      "name": "transfer_mars_grade.py",
+      "paths": [
+        "runtime/original/data/amax/spark-repro/transfer-frozen-sources-V6dLhH/transfer_mars_grade.py",
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/transfer_mars_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/a9b0cc5dddc581a9d68c45db62ecc38567aaaaae114f8d548ba462412f87c32f/transfer_mars_grade.py"
+      ]
+    },
+    "5502f5e325b9f82664c835d744295022b2d7e45cf1ea85a84c931c19ef4b27e0": {
+      "name": "transfer_organize_grade.py",
+      "paths": [
+        "runtime/original/data/amax/spark-repro/transfer-frozen-sources-V6dLhH/transfer_organize_grade.py",
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/transfer_organize_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/288d3c2835711d163d8cf03fc02d25b7c45ee7bd3fc8267ffecb65a9cb48e66d/transfer_organize_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/a9b0cc5dddc581a9d68c45db62ecc38567aaaaae114f8d548ba462412f87c32f/transfer_organize_grade.py"
+      ]
+    },
+    "dcee20d593f1c8ebf130ab4c7a2dcd72b663ca0a138bb0207996de980fa6f993": {
+      "name": "transfer_organize_capture.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/transfer_organize_capture.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/288d3c2835711d163d8cf03fc02d25b7c45ee7bd3fc8267ffecb65a9cb48e66d/transfer_organize_capture.py"
+      ]
+    },
+    "a0c12bd23324756a27fc2aaeeabc1e0fe32c07f06f48f9ca11af7ef6cab7b235": {
+      "name": "paperanon_typed_grader_repair.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/paperanon_typed_grader_repair.py"
+      ]
+    },
+    "c9fb3faea9afb37bcfa2a61b68c4ad34125dd6f523e25b8fbbd9ff8fed891f06": {
+      "name": "transfer_paperanon_capture.py",
+      "paths": [
+        "runtime/original/data/amax/spark-repro/transfer-frozen-sources-V6dLhH/transfer_paperanon_capture.py",
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/transfer_paperanon_capture.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/c824ffa6804d5c1c7bacda6bda9cb9a56e9babc4827b376e575cf64f4cefbaed/transfer_paperanon_capture.py"
+      ]
+    },
+    "6637486cdf5d0e8cfcda563cce411f435c2ba57aae063e013de652e8f16a49ef": {
+      "name": "transfer_paperanon_grade.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/transfer_paperanon_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/c824ffa6804d5c1c7bacda6bda9cb9a56e9babc4827b376e575cf64f4cefbaed/transfer_paperanon_grade.py"
+      ]
+    },
+    "e40af535c7f5a1ff2cfa380d981a4bbe79b2487296582cecd25f86449aa779ed": {
+      "name": "transfer_r2r_grade.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/transfer_r2r_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/dfc92bfb17344ab76f84fc3fe7fa4f301e141640cdbe4ac9df30588646d079c2/transfer_r2r_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/12d69aaa499f55477cfc7441d393adc1670faf59e7bcd25a062234c7ff76d086/transfer_r2r_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/a371103cdaae2bffec633bf198e0ff08a4eacbcf29da8881c252fcbd0cd84fbc/transfer_r2r_grade.py"
+      ]
+    },
+    "c1da30d404ea05cb231f18e5ef6da6781b4ca3f3ae309170180b4f20d8b68721": {
+      "name": "transfer_r2r_service.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/transfer_r2r_service.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/dfc92bfb17344ab76f84fc3fe7fa4f301e141640cdbe4ac9df30588646d079c2/transfer_r2r_service.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/12d69aaa499f55477cfc7441d393adc1670faf59e7bcd25a062234c7ff76d086/transfer_r2r_service.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/a371103cdaae2bffec633bf198e0ff08a4eacbcf29da8881c252fcbd0cd84fbc/transfer_r2r_service.py"
+      ]
+    },
+    "f685d9964bf4071566f623d7e2056f1bd02da9a9ea0dc22ec73b513ee3279944": {
+      "name": "transfer_r2r_actor_stop.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/transfer_r2r_actor_stop.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/dfc92bfb17344ab76f84fc3fe7fa4f301e141640cdbe4ac9df30588646d079c2/transfer_r2r_actor_stop.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/a371103cdaae2bffec633bf198e0ff08a4eacbcf29da8881c252fcbd0cd84fbc/transfer_r2r_actor_stop.py"
+      ]
+    },
+    "36d809cb2d7d598da348157cfd59c395fc1f699c833c203995695ad4fbe65311": {
+      "name": "transfer_r2r_capture_v2.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/transfer_r2r_capture_v2.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/dfc92bfb17344ab76f84fc3fe7fa4f301e141640cdbe4ac9df30588646d079c2/transfer_r2r_capture_v2.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/a371103cdaae2bffec633bf198e0ff08a4eacbcf29da8881c252fcbd0cd84fbc/transfer_r2r_capture_v2.py"
+      ]
+    },
+    "d233fb64c4b0575b112b2b348ba7069fb6db7ca6497748ff6653939f5370b8d2": {
+      "name": "transfer_rar_capture.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/transfer_rar_capture.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/86cdccdfa45e1be9f04a126ffda65cb391ac0168edb784aeb4d44cbdfbc094c0/transfer_rar_capture.py"
+      ]
+    },
+    "c761094d89843e430a761ea5316c2a72cbc6a1ce18d1d55701cb7783a92e4b0a": {
+      "name": "transfer_rar_grade.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/transfer_rar_grade.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/86cdccdfa45e1be9f04a126ffda65cb391ac0168edb784aeb4d44cbdfbc094c0/transfer_rar_grade.py"
+      ]
+    },
+    "ad5d4c0079dc1894af75e7034e37edd128bda7f86088a7ab8339449302a540b0": {
+      "name": "transfer_rar_native.py",
+      "paths": [
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/transfer_rar_native.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/86cdccdfa45e1be9f04a126ffda65cb391ac0168edb784aeb4d44cbdfbc094c0/transfer_rar_native.py"
+      ]
+    }
+  },
+  "all_recovered": true,
+  "additional_actual_extension_source_manifests": 10,
+  "additional_actual_extension_runner_sha256s": [
+    "7e47d40165910eb2f357efc1b90ceb6ee3e26efaf3c908fdf53efc8190b26d13",
+    "34ad92a5adc8e1db42708f2b26efa1c0c7bffa7496fbd493ad2b0c85f3771c81"
+  ],
+  "additional_actual_extension_runner_sha256s_recovered": true,
+  "additional_validation": "additional-extension-interface-validation.json"
+}

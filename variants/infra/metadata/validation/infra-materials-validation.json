@@ -1,0 +1,15 @@
+{
+  "status": "VERIFIED",
+  "archive": "variant-infra-materials-20261012.tar.gz",
+  "bytes": 269124148,
+  "sha256": "82977108f5e196fb2dd5566d454be99660d6f3cbbca1337af40dc3b2771655fc",
+  "archive_files": 6417,
+  "indexed_original_source_files": 6377,
+  "native_dependency_files": 5154,
+  "new_tools": 8,
+  "all_file_hashes_and_modes_verified": true,
+  "credential_pattern_matches": [],
+  "model_calls": 0,
+  "grader_calls": 0,
+  "full_image_validation_and_aggregate_receipts": "Separate Git metadata and Release JSON; not circularly embedded in this archive"
+}

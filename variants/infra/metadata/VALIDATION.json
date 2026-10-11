@@ -1,0 +1,149 @@
+{
+  "schema": "skillsbench-variants-deployment-acceptance.v1",
+  "status": "VERIFIED",
+  "task_batches": {
+    "233": 233,
+    "222": 222
+  },
+  "frozen_logical_task_files_verified": 25174,
+  "deployment_scope": "Complete 233 parent batch of the reported 205 subset",
+  "recipient_prepared_plan_verified": false,
+  "named_report_variants": 57,
+  "report_category_counts": {
+    "independent_grader_environment": 48,
+    "host_grader_environment": 2,
+    "external_grader_entry": 1,
+    "existing_grader_recipe": 6
+  },
+  "indexed_original_source_files": 6377,
+  "native_dependency_files": 5154,
+  "final_archive_files": 6417,
+  "actual_workspace_files_restored": 19373,
+  "final_workspace_receipt": "validation/full-workspace-preparation-validation.json",
+  "delivery_image_count": 282,
+  "full_image_execution_graphs_and_blob_hashes_verified": true,
+  "cold_imported_image_metadata_count": 282,
+  "all_rootfs_unpacked_in_cold_import": false,
+  "available_original_plan_image_refs_preserved": 267,
+  "unavailable_original_plan_image_refs": [
+    "sha256:20bcd779be042a3545c88357ee66fe9e38dc85d1d30f3f8e8821d177c1e7fa67"
+  ],
+  "historical_id_recovery_limitations": "GW P2 is rebuilt with a new ID; Court uses original qualified native cache overrides. See IMAGES.json.",
+  "transport_sha256": {
+    "variant-environments-20261012.tar.zst": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+    "variant-runtime-images-20261012.tar.gz": "1a93790e45e52e2a28000a69d19873627c731cac50dc3aefab6bab903bdb8875",
+    "variant-infra-materials-20261012.tar.gz": "82977108f5e196fb2dd5566d454be99660d6f3cbbca1337af40dc3b2771655fc",
+    "variant-actor-runtime-20261012.tar.gz": "31e48cb057764374903f4016861f3926722fcfe7056d2cf76a6d9ed48459cbcb"
+  },
+  "special_entry_real_execution_controls": {
+    "tfidf_p1": {
+      "variant_id": "parallel-tfidf-search--p1--dev-401",
+      "status": "completed",
+      "reward": 1,
+      "whole_verifier_elapsed_seconds": 283.50332126021385,
+      "whole_verifier_budget_seconds": 900,
+      "original_api_calls": 16,
+      "timed_calls": 12,
+      "nonce_challenge_calls": 4,
+      "stopped_snapshot_parent_verified": true,
+      "entry_tool": "tools/run_tfidf.py",
+      "entry_tool_sha256": "ce12d4b56dac8c4958f1cde00bb2d2294553de3e5c3a7e78494d97aa73d0cc7b",
+      "test_scan_input": "random non-account marker, no provider request",
+      "model_calls": 0
+    },
+    "tfidf_p2": {
+      "variant_id": "parallel-tfidf-search--p2--dev-401",
+      "status": "completed",
+      "reward": 1,
+      "whole_verifier_elapsed_seconds": 384.67086443677545,
+      "whole_verifier_budget_seconds": 900,
+      "original_api_calls": 16,
+      "timed_calls": 12,
+      "nonce_challenge_calls": 4,
+      "stopped_snapshot_parent_verified": true,
+      "entry_tool": "tools/run_tfidf.py",
+      "entry_tool_sha256": "ce12d4b56dac8c4958f1cde00bb2d2294553de3e5c3a7e78494d97aa73d0cc7b",
+      "test_scan_input": "random non-account marker, no provider request",
+      "model_calls": 0
+    },
+    "gw_p2": {
+      "results": [
+        {
+          "variant_id": "gravitational-wave-detection--p2--dev-401",
+          "control": "trusted_positive",
+          "status": "completed",
+          "reward": 1,
+          "predicates_completed": 9,
+          "elapsed_seconds": 10.178625892847776,
+          "whole_verifier_budget_seconds": 240,
+          "entry_tool": "tools/grade_gw_p2.py",
+          "entry_tool_sha256": "e29050ef16acde3a7e04f26440103144a9fda5400b78da61f2d5fbb4c5432f0c",
+          "solver_original_image_verified": true,
+          "stopped_solver_to_read_only_capture": true,
+          "private_data_not_mounted_into_solver": true,
+          "model_calls": 0
+        },
+        {
+          "variant_id": "gravitational-wave-detection--p2--dev-401",
+          "control": "missing_output_negative",
+          "status": "completed",
+          "reward": 0,
+          "predicates_completed": 0,
+          "elapsed_seconds": 7.063598811626434,
+          "whole_verifier_budget_seconds": 240,
+          "entry_tool": "tools/grade_gw_p2.py",
+          "entry_tool_sha256": "e29050ef16acde3a7e04f26440103144a9fda5400b78da61f2d5fbb4c5432f0c",
+          "solver_original_image_verified": true,
+          "stopped_solver_to_read_only_capture": true,
+          "private_data_not_mounted_into_solver": true,
+          "model_calls": 0
+        }
+      ],
+      "model_calls": 0,
+      "benchmark_agent_runs": 0
+    },
+    "exoplanet_p3": [
+      {
+        "variant_id": "exoplanet-detection-period--p3--dev-401",
+        "control": "trusted_positive",
+        "status": "valid",
+        "reward": 1,
+        "predicates_completed": 4,
+        "cli_version": "codex-cli 0.147.0",
+        "private_data_not_mounted_into_solver": true,
+        "original_image_id_preserved": true
+      },
+      {
+        "variant_id": "exoplanet-detection-period--p3--dev-401",
+        "control": "missing_output_negative",
+        "status": "valid",
+        "reward": 0,
+        "predicates_completed": 4,
+        "cli_version": "codex-cli 0.147.0",
+        "private_data_not_mounted_into_solver": true,
+        "original_image_id_preserved": true
+      }
+    ]
+  },
+  "new_model_calls": 0,
+  "new_205_variant_model_experiments": 0,
+  "build_scope": {
+    "gw_recovery_builds": 1,
+    "controller_builds": 2,
+    "task_science_or_grader_source_changes": 0
+  },
+  "public_image_fixture_files_verified": 132,
+  "auditor_source_sha256": "f4c359a706f58a059fb374e68b4d35b273cfcb3edfe508cfa67660732989c041",
+  "entry_tool_sha256s": {
+    "load_images.py": "3824335b6bb69c882f55330fde776d4734c0d5ecb139f5fb3aad553cd1e5bcd8",
+    "run_tfidf.py": "ce12d4b56dac8c4958f1cde00bb2d2294553de3e5c3a7e78494d97aa73d0cc7b",
+    "grade_tfidf.py": "63324049e0ad49ebd461e8d4ad5fd2062043544c1fc7b7fecc4a07f086346e97",
+    "inspect_task.py": "0f6ae8e136fd7a61544ad55075be66f078065871cc8112948332db8be3b35fed",
+    "grade_exoplanet_p3.py": "7d2f86f94640de7e1e847abc1b89ec9baadc6049ca3aa56fce1511342994bd67",
+    "download.py": "a8a2b48313e69e81add8334894a984dba4bc8bcf90ed793c3b72eaba5fe1a790",
+    "prepare_workspace.py": "67295a0d44be76aa5c2d2158ce17be062e91b323871fece15982eff1205aeb99",
+    "grade_gw_p2.py": "e29050ef16acde3a7e04f26440103144a9fda5400b78da61f2d5fbb4c5432f0c"
+  },
+  "all_original_release_assets_unchanged": 97,
+  "scientific_reproduction_limit": "These are infrastructure and grading controls, not new model experiment results."
+}

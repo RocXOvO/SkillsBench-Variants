@@ -1,0 +1,37 @@
+services:
+  engine:
+    image: docker:29.5.0-dind@sha256:8e3fae900cbfbdc14e8abca89a9e44363065cb535f34a09283c59cc0dde2de20
+    privileged: true
+    environment:
+      DOCKER_TLS_CERTDIR: ""
+    command: ["dockerd", "--host=unix:///var/run/docker.sock", "--feature=containerd-snapshotter=true", "--group=${VARIANTS_DOCKER_GID:?Set VARIANTS_DOCKER_GID to the host user group ID}"]
+    volumes:
+      - ${VARIANTS_WORKSPACE:?Set VARIANTS_WORKSPACE}/engine-socket:/var/run
+      - engine-data:/var/lib/docker
+      - ${VARIANTS_WORKSPACE:?Set VARIANTS_WORKSPACE}/rootfs/data/amax:/data/amax
+      - ${VARIANTS_WORKSPACE:?Set VARIANTS_WORKSPACE}/rootfs/home/amax:/home/amax
+      - ${VARIANTS_DOWNLOADS:?Set VARIANTS_DOWNLOADS}:/downloads:ro
+      - ${VARIANTS_WORKSPACE:?Set VARIANTS_WORKSPACE}:${VARIANTS_WORKSPACE}
+    healthcheck:
+      test: ["CMD", "docker", "info"]
+      interval: 5s
+      timeout: 10s
+      retries: 60
+  controller:
+    image: skillsbench-variants/infra-controller:20261012-r1
+    build: .
+    profiles: ["tools"]
+    depends_on:
+      engine:
+        condition: service_healthy
+    environment:
+      PYTHONDONTWRITEBYTECODE: "1"
+    working_dir: /infra
+    volumes:
+      - ${VARIANTS_WORKSPACE:?Set VARIANTS_WORKSPACE}/engine-socket:/var/run
+      - ${VARIANTS_WORKSPACE:?Set VARIANTS_WORKSPACE}/rootfs/data/amax:/data/amax
+      - ${VARIANTS_WORKSPACE:?Set VARIANTS_WORKSPACE}/rootfs/home/amax:/home/amax
+      - ${VARIANTS_DOWNLOADS:?Set VARIANTS_DOWNLOADS}:/downloads:ro
+      - .:/infra:ro
+volumes:
+  engine-data:

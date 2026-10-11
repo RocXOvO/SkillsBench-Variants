@@ -1,0 +1,82 @@
+{
+  "status": "VERIFIED",
+  "archive": "variant-runtime-images-20261012.tar.gz",
+  "bytes": 12010770609,
+  "sha256": "1a93790e45e52e2a28000a69d19873627c731cac50dc3aefab6bab903bdb8875",
+  "expected_images": 13,
+  "verified_original_image_ids": [
+    "sha256:03ec9b80ffafca6c3371e9fddd1437138f8504f48552449805a9117bac805e72",
+    "sha256:303a1bde3cff49454dc181e6376a80f02449f2f2c079c46bf4e46e521d782525",
+    "sha256:401505db507c66c79f26982860d42d38db1633beadc627ec9a6d21d58a91477f",
+    "sha256:46b646c48dec47632e462afd0dbaf0c8af9e618f87322ab711e062eb86cd118f",
+    "sha256:6f9dcdcb6d24178e91bc12a7861ac757bfb01b274fe5750f2a3919da3cd99d24",
+    "sha256:70b59ff7973a371a936ef6e500f8086930b883497cf597e6fbdc75f94b0ad812",
+    "sha256:875b8204353a2853253f57d69ff3643ed7604762592c687e72358845ae5e28c4",
+    "sha256:8e3fae900cbfbdc14e8abca89a9e44363065cb535f34a09283c59cc0dde2de20",
+    "sha256:93f4ac443d48df758410d67c457f497cd440069d80ca714ab769da733eb50f7f",
+    "sha256:9da6faba2c338c2ddddfb7b219c3ae601c7560750bb9d55803c75b227a9265f4",
+    "sha256:b2e830e333055abd5e1b0ccc0fb29679a4efaae206d2e18138721d94840a467b",
+    "sha256:e5c22c2bdfa726a5777482a22744e5a5c0c1ccabb4e9b2c304d6618009514b9a",
+    "sha256:eca8e0027ad3c53bb0c082667fd3a55c3a5b7322c7d21afadc458588f2b38f1e"
+  ],
+  "original_image_to_linux_amd64_config": {
+    "sha256:03ec9b80ffafca6c3371e9fddd1437138f8504f48552449805a9117bac805e72": [
+      "sha256:c9e78e1c8a576df24116e166789260a026b00b75f21eebe121e7a5ae256b7890"
+    ],
+    "sha256:303a1bde3cff49454dc181e6376a80f02449f2f2c079c46bf4e46e521d782525": [
+      "sha256:840b76bdbfa8529f8b3bf91aa47b6653760d655982d90d669f1e163a8898ea35"
+    ],
+    "sha256:401505db507c66c79f26982860d42d38db1633beadc627ec9a6d21d58a91477f": [
+      "sha256:dbee597b49ba2727fb3bed64e1457949cc701feceb9347cb4461429869a4aeb6"
+    ],
+    "sha256:46b646c48dec47632e462afd0dbaf0c8af9e618f87322ab711e062eb86cd118f": [
+      "sha256:8c530ea604935c3078e42629f20407ade766b477e64658f7449166db22ff08ef"
+    ],
+    "sha256:6f9dcdcb6d24178e91bc12a7861ac757bfb01b274fe5750f2a3919da3cd99d24": [
+      "sha256:96f6273bbf034b22fa0e418984005cc0cb9017e66ad2cda6dabb308699d89220"
+    ],
+    "sha256:70b59ff7973a371a936ef6e500f8086930b883497cf597e6fbdc75f94b0ad812": [
+      "sha256:e043785cf6c1511aa9d9c27143dc2b2bcc255aa9fa19a58bc344684a7eb28963"
+    ],
+    "sha256:875b8204353a2853253f57d69ff3643ed7604762592c687e72358845ae5e28c4": [
+      "sha256:4ead52d8512e16fddb3debdb0553bc8bb26c4c6d1a3e0cdf4f9c9ac4e657c41e"
+    ],
+    "sha256:8e3fae900cbfbdc14e8abca89a9e44363065cb535f34a09283c59cc0dde2de20": [
+      "sha256:71837a59b95c3653383ca90ce81fbcee4f34adb0fbbf8b357e75da9affc77579"
+    ],
+    "sha256:93f4ac443d48df758410d67c457f497cd440069d80ca714ab769da733eb50f7f": [
+      "sha256:55d6a7d48bba2a43ec0d0545ed2c38a0fe9658d290d5f6fa885b39f60bd7b7e3"
+    ],
+    "sha256:9da6faba2c338c2ddddfb7b219c3ae601c7560750bb9d55803c75b227a9265f4": [
+      "sha256:1661c41ce0a1a3600d6285aa363cd92dbe288a1274e3e9092662ec6c1eea744c"
+    ],
+    "sha256:b2e830e333055abd5e1b0ccc0fb29679a4efaae206d2e18138721d94840a467b": [
+      "sha256:b82958b467250969bb2be34e3852be32d9ea0450d9e5a1316811807e6559e8f8"
+    ],
+    "sha256:e5c22c2bdfa726a5777482a22744e5a5c0c1ccabb4e9b2c304d6618009514b9a": [
+      "sha256:ca0b768d1e688bbf4c4f1aea9b02732d9f4f6253fdd84cb3bf5fff1cb4af52bf"
+    ],
+    "sha256:eca8e0027ad3c53bb0c082667fd3a55c3a5b7322c7d21afadc458588f2b38f1e": [
+      "sha256:decdc5cba8244184d3f5183a233a5b94a8b882ce5c3399f491e70c35a3beae62"
+    ]
+  },
+  "archive_members": 149,
+  "verified_blob_digests": 144,
+  "verified_layer_digests": 66,
+  "layer_files_scanned": 210364,
+  "credential_filename_or_pattern_matches": [],
+  "public_sandbox_ci_fixture_matches": [
+    {
+      "member": "blobs/sha256/126d97fa563f153552813081df7761c1804eb30d4a8ac4c20dc19c247da6f3eb",
+      "layer_path": "usr/local/lib/python3.12/dist-packages/transformers/testing_utils.py",
+      "file_sha256": "8b007f12e30a2bf1c23944c5730a294888ad3a80ef3d7a553df3dd08a69aa451",
+      "token_sha256": "5de261506c0ff857b7c1af7059f842fb0a36d1ca2e4895da542c5eb726f2c802",
+      "classification": "upstream public sandbox CI fixture",
+      "primary_source": "https://github.com/huggingface/transformers/blob/main/src/transformers/testing_utils.py"
+    }
+  ],
+  "credential_scan_pattern_version": 4,
+  "new_image_loads": 0,
+  "new_builds": 0,
+  "new_containers": 0
+}

@@ -1,0 +1,681 @@
+{
+  "schema": "skillsbench-variants-missing-report-coverage.v1",
+  "report_date": "2026-10-12",
+  "reported_subset_count": 205,
+  "delivery_task_count": 233,
+  "exact_recipient_plan_verified": false,
+  "reason": "Recipient PREPARED_PLAN.json and full 205 ID list were not supplied; delivery covers the complete parent 233 batch.",
+  "named_report_ids": 57,
+  "category_counts": {
+    "independent_grader_environment": 48,
+    "host_grader_environment": 2,
+    "external_grader_entry": 1,
+    "existing_grader_recipe": 6
+  },
+  "original_plan_sha256": "1bdad4fd8dcbe8761aeb414ebf9c26803af5c7283cd1cda08676cbaa5ce493ff",
+  "original_manifest_sha256": "f335146a645097e3f8d2cddbb855bab0026eddc25f51dfb97e615ce2e147e8be",
+  "rows": [
+    {
+      "variant_id": "adaptive-cruise-control--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:6e24bd675a73adb8ca4b79f82039765ad03bb1442caae65a57472c2dcd825783",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/adaptive-cruise-control--p2--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "adaptive-cruise-control--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:4d8b22d75356550333ecc2664ea09b02b8728146b05a1d547959bf7c974c293b",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/adaptive-cruise-control--p3--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "dynamic-object-aware-egomotion--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:5fd5ebca1b437f80022c375732a3fa17f3b7db50fdfa8e24478f83690c3584d3",
+      "deployment_mode": "original_runner_and_registered_scorer",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/dynamic-object-aware-egomotion--p3--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "earthquake-phase-association--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:4322be448a54fffb6fe4757be37f033360af6e554a1fdd719c9cd101f107b5a9",
+      "deployment_mode": "original_runner_and_registered_scorer",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/earthquake-phase-association--p2--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "econ-detrending-correlation--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:604ce6cadf77915fef4f33b89fa6eddb830467b9399d0d564def6738051318f2",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/econ-detrending-correlation--p2--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "econ-detrending-correlation--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:604ce6cadf77915fef4f33b89fa6eddb830467b9399d0d564def6738051318f2",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/econ-detrending-correlation--p3--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "edit-pdf--p1--sr-ext-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:aff87a250becf273f9b294907475e319a1df9132501d900ac89ea270cfc00087",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/edit-pdf--p1--sr-ext-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "edit-pdf--p2--sr-ext-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:aff87a250becf273f9b294907475e319a1df9132501d900ac89ea270cfc00087",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/edit-pdf--p2--sr-ext-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "edit-pdf--p3--sr-ext-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:aff87a250becf273f9b294907475e319a1df9132501d900ac89ea270cfc00087",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/edit-pdf--p3--sr-ext-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "energy-market-pricing--p1--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:7bc36553a8a4a83b4509a839a6a11437d20a721ba9ded1aa8f1240799dac767f",
+      "deployment_mode": "original_runner_and_registered_scorer",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/energy-market-pricing--p1--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "energy-market-pricing--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:7bc36553a8a4a83b4509a839a6a11437d20a721ba9ded1aa8f1240799dac767f",
+      "deployment_mode": "original_runner_and_registered_scorer",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/energy-market-pricing--p2--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "energy-market-pricing--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:8b84079f8af2239249701bc127ce1eb64b67ad0efed6dbbce98dfb3428ea5ec9",
+      "deployment_mode": "original_runner_and_registered_scorer",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/energy-market-pricing--p3--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "energy-unit-commitment--p1--sr-ext-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:cb32e79f73b952a2dab2dd1997ab8a423d589cc2ec321d9428b73d26fa096e26",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/energy-unit-commitment--p1--sr-ext-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "energy-unit-commitment--p2--sr-ext-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:f91526bae7f2c1259ad81df8fb0f8f0921103becba9dd5c89c131eec6b6e62fb",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/energy-unit-commitment--p2--sr-ext-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "energy-unit-commitment--p3--sr-ext-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:c00df5d3e639e5732893e0bf9becba9dd5e5ed85c106e6b5ed42ef47242e763a",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/energy-unit-commitment--p3--sr-ext-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "enterprise-information-search--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/enterprise-information-search--p3--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "glm-lake-mendota--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:521d61f4065c3888a7f318bd05841459527db61548c0d0cafdb1dbd4a4014d1d",
+      "deployment_mode": "original_runner_and_registered_scorer",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/glm-lake-mendota--p2--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "gravitational-wave-detection--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:3b50e63f024f63379f64ae274c4441931c3e452b998f7ac9774dbcaacf3606eb",
+      "deployment_mode": "original_runner_and_registered_scorer",
+      "resolution": "historical_context_rebuild_and_export",
+      "task_files": "variant-tasks-233-20261010/tasks/gravitational-wave-detection--p2--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {
+        "replacement_receipt": "metadata/GW-P2-REBUILD.json",
+        "exact_original_image_id_restored": false,
+        "command": [
+          "python",
+          "-I",
+          "/opt/grader/run.py"
+        ],
+        "private_mount": "/opt/grader:ro",
+        "capture_mount": "/capture:ro",
+        "logs_mount": "/logs/verifier:rw",
+        "capture_source": "/root/detection_results.csv",
+        "workdir": "/root",
+        "reward_json": "<logs>/committed.json",
+        "reward_file": "<logs>/reward.txt",
+        "completed_status": "completed",
+        "engineering_reward": null,
+        "whole_verifier_timeout_sec": 240,
+        "host_entry": "tools/grade_gw_p2.py"
+      }
+    },
+    {
+      "variant_id": "gravitational-wave-detection--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:85ce1ec62407216eabb7f32c84621674e4f4374d5179eaee7da304c49304de6a",
+      "deployment_mode": "original_runner_and_registered_scorer",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/gravitational-wave-detection--p3--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "grid-dispatch-operator--p1--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:3056539247c35ffc7f0da1e0d273fbfc8dbc5917c1f068695432aa56965ff350",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/grid-dispatch-operator--p1--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "grid-dispatch-operator--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:193628227d5f70b2163d9c54fd3e1a72decfb8663b9a4d397a7b3d087812e7ad",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/grid-dispatch-operator--p3--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "hvac-control--p1--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:ac6e0a588eccdd4a14fe219254f805b3a7da1fdd107c494087989c7ac71cabcc",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/hvac-control--p1--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "hvac-control--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:ac6e0a588eccdd4a14fe219254f805b3a7da1fdd107c494087989c7ac71cabcc",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/hvac-control--p3--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "invoice-fraud-detection--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:71cab6d86da81524dbd8847970b938064687a4276d3a06a6d4b038a23e638d1d",
+      "deployment_mode": "original_runner_and_registered_scorer",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/invoice-fraud-detection--p2--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "manufacturing-fjsp-optimization--p1--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/manufacturing-fjsp-optimization--p1--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "manufacturing-fjsp-optimization--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/manufacturing-fjsp-optimization--p2--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "manufacturing-fjsp-optimization--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/manufacturing-fjsp-optimization--p3--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "mars-clouds-clustering--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:b44b0c4946567e02f6e3fa38967e4cc36e7390d6659b2e52a5802916abc93be6",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/mars-clouds-clustering--p2--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "multilingual-video-dubbing--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:b234145d73bea70de326d34f5d8d8e98b2017cd2b4291638b22d8ac5c917ba3a",
+      "deployment_mode": "original_runner_and_registered_scorer",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/multilingual-video-dubbing--p3--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "organize-messy-files--p1--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:059c319f94e6bf5be7e2506a91c37f00785180530f8b8d3af704d32a0a724c64",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/organize-messy-files--p1--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "parallel-tfidf-search--p1--dev-401",
+      "report_category": "host_grader_environment",
+      "delivered_effective_grader_image": "sha256:f807d85f5de5b182990065f80974ef51d57c0e8f2f9be5b0391b0ba307a0f9c3",
+      "deployment_mode": "linux_host_supervised_exclusive_api",
+      "resolution": "original_host_entry_and_clean_measurement_image",
+      "task_files": "variant-tasks-233-20261010/tasks/parallel-tfidf-search--p1--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {
+        "host_entry": "tools/run_tfidf.py",
+        "source_entry": "/home/amax/spark-native-work/skillrevise-variant-extension-20260924-r1/preflight/tfidf-integration-r6/staged/parallel-tfidf-search--p1--dev-401/task-root/private/grader/test.sh",
+        "task_root": "/home/amax/spark-native-work/skillrevise-variant-extension-20260924-r1/preflight/tfidf-integration-r6/staged/parallel-tfidf-search--p1--dev-401/task-root",
+        "generator_workdir": "/root",
+        "generator_network": "none",
+        "generator_cpus": 8,
+        "generator_memory_mb": 4096,
+        "snapshot_helper": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/tfidf_added_p1_snapshot_PREPARE_20261003_r1.py",
+        "measurement_cpus": 8,
+        "measurement_memory_mb": 4096,
+        "whole_verifier_timeout_sec": 900,
+        "reward_file": "<fresh host run>/reward.txt",
+        "status_file": "<fresh host run>/status.json",
+        "completed_status": "completed",
+        "engineering_exit_code": 75,
+        "engineering_reward": null,
+        "direct_snapshot_entry": "tools/grade_tfidf.py"
+      }
+    },
+    {
+      "variant_id": "parallel-tfidf-search--p2--dev-401",
+      "report_category": "host_grader_environment",
+      "delivered_effective_grader_image": "sha256:0eaefb647eb7d40945a81b41862314f39a614d34f55b8b51f13782f4339a57ff",
+      "deployment_mode": "linux_host_supervised_exclusive_api",
+      "resolution": "original_host_entry_and_clean_measurement_image",
+      "task_files": "variant-tasks-233-20261010/tasks/parallel-tfidf-search--p2--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {
+        "host_entry": "tools/run_tfidf.py",
+        "source_entry": "/home/amax/spark-native-work/skillrevise-variant-extension-20260924-r1/preflight/tfidf-integration-r6/staged/parallel-tfidf-search--p2--dev-401/task-root/private/grader/test.sh",
+        "task_root": "/home/amax/spark-native-work/skillrevise-variant-extension-20260924-r1/preflight/tfidf-integration-r6/staged/parallel-tfidf-search--p2--dev-401/task-root",
+        "generator_workdir": "/root",
+        "generator_network": "none",
+        "generator_cpus": 8,
+        "generator_memory_mb": 4096,
+        "snapshot_helper": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/tfidf_added_p1_snapshot_PREPARE_20261003_r1.py",
+        "measurement_cpus": 8,
+        "measurement_memory_mb": 4096,
+        "whole_verifier_timeout_sec": 900,
+        "reward_file": "<fresh host run>/reward.txt",
+        "status_file": "<fresh host run>/status.json",
+        "completed_status": "completed",
+        "engineering_exit_code": 75,
+        "engineering_reward": null,
+        "direct_snapshot_entry": "tools/grade_tfidf.py"
+      }
+    },
+    {
+      "variant_id": "paratransit-routing--p1--sr-ext-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:66b3643fa54f590593fe77bf642e63d41de3b3ebb83978093dc6fc4c459c1b47",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/paratransit-routing--p1--sr-ext-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "paratransit-routing--p2--sr-ext-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:d2c0e3df752ea0d2ed5e2e2472d933c12eb8c97e5a8afed5983df9576bb5cc11",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/paratransit-routing--p2--sr-ext-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "paratransit-routing--p3--sr-ext-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:8f4e6e5057e700a09df394b717f38930e99689f7cd97281dbb0691369b8f1617",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/paratransit-routing--p3--sr-ext-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "pddl-tpp-planning--p1--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/pddl-tpp-planning--p1--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "pddl-tpp-planning--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/pddl-tpp-planning--p2--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "pddl-tpp-planning--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/pddl-tpp-planning--p3--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "protein-expression-analysis--p1--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:9239cd663e69138c6e32e47d4f72f377481432801aa162a6beb7f9211329983b",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/protein-expression-analysis--p1--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "protein-expression-analysis--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:ad39e0b8b73856ea1cc3350823bfd46dc2fdc27dd95e02688838176cae28f906",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/protein-expression-analysis--p2--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "protein-expression-analysis--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:a8bdd50149420d1d473cdeca20cb83c79f22b574309c139c8c331eff78d1d688",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/protein-expression-analysis--p3--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "r2r-mpc-control--p1--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:ac6e0a588eccdd4a14fe219254f805b3a7da1fdd107c494087989c7ac71cabcc",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/r2r-mpc-control--p1--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "r2r-mpc-control--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:ac6e0a588eccdd4a14fe219254f805b3a7da1fdd107c494087989c7ac71cabcc",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/r2r-mpc-control--p2--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "r2r-mpc-control--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:ac6e0a588eccdd4a14fe219254f805b3a7da1fdd107c494087989c7ac71cabcc",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/r2r-mpc-control--p3--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "radar-vital-signs--p1--sr-ext-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:7b3b710d9f0efc6995a3adb4aa42f63ff5586db1de7fe222e92231f589436357",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/radar-vital-signs--p1--sr-ext-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "radar-vital-signs--p3--sr-ext-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:7b3b710d9f0efc6995a3adb4aa42f63ff5586db1de7fe222e92231f589436357",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/radar-vital-signs--p3--sr-ext-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "reserves-at-risk-calc--p1--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:16320073cc016d5780c81051ca566a7a8a2237dec1e25f6615bc9e900fbfe0be",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/reserves-at-risk-calc--p1--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "reserves-at-risk-calc--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:310b87ac824a6b53a24fa104ebc37805a5120a154a754fc10fdcc8ea6e58f298",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/reserves-at-risk-calc--p2--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "reserves-at-risk-calc--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:19b261fdc205af4d1fa885364d168b8f94c44f0a7d95af44ab199da758326c2e",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/reserves-at-risk-calc--p3--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "threejs-to-obj--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "delivered_effective_grader_image": "sha256:3ed589a2899caee4e781be5781ccc73c447fb96889b85c4047828ae62c81c0cd",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/threejs-to-obj--p2--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "exoplanet-detection-period--p3--dev-401",
+      "report_category": "external_grader_entry",
+      "delivered_effective_grader_image": "sha256:ec75d3c7acc431f9f5fad6776b29234f3dcd6d104c8be498b2de3508bdda3361",
+      "deployment_mode": "stopped_output_external_pytest",
+      "resolution": "official_external_entry_and_actual_grader_export",
+      "task_files": "variant-tasks-233-20261010/tasks/exoplanet-detection-period--p3--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {
+        "host_entry": "tools/grade_exoplanet_p3.py",
+        "source_entry": "/data/amax/spark-repro/transfer-frozen-sources-V6dLhH/grade_ready_exoplanet_p3.py:one",
+        "capture_source": "/root/period.txt",
+        "capture_destination": "/capture/root/period.txt",
+        "private_mount": "/tests:ro",
+        "observer_mount": "/observer/jpg_phase_record.py:ro",
+        "logs_mount": "/logs:rw",
+        "workdir": "/tmp",
+        "network": "none",
+        "read_only_rootfs": true,
+        "cpus": 1,
+        "memory_mb": 8192,
+        "whole_verifier_timeout_sec": 240,
+        "command": [
+          "python3",
+          "-B",
+          "-m",
+          "pytest",
+          "-c",
+          "/dev/null",
+          "--rootdir=/tests",
+          "--confcutdir=/tests",
+          "-p",
+          "no:cacheprovider",
+          "-p",
+          "jpg_phase_record",
+          "--assert=plain",
+          "/tests/test_outputs.py"
+        ],
+        "environment": {
+          "PYTHONPATH": "/observer",
+          "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"
+        },
+        "reward_json": "<fresh run>/exoplanet-evaluation/result.json",
+        "valid_status": "valid",
+        "engineering_reward": null
+      }
+    },
+    {
+      "variant_id": "exoplanet-detection-period--p1--dev-401",
+      "report_category": "existing_grader_recipe",
+      "delivered_effective_grader_image": "sha256:dfcbe4c22f6f3abcd27b9dfb0ad7f13abd1c0f37748453853b604ac5216fbdac",
+      "deployment_mode": "original_runner_and_registered_scorer",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/exoplanet-detection-period--p1--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "offer-letter-generator--p1--dev-401",
+      "report_category": "existing_grader_recipe",
+      "delivered_effective_grader_image": "sha256:3a950e5226098efb8addd5c715634ec65779daa624482ed36e474021b10af3d5",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/offer-letter-generator--p1--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "offer-letter-generator--p2--dev-401",
+      "report_category": "existing_grader_recipe",
+      "delivered_effective_grader_image": "sha256:f10edcb93f94cc1f2ea73e33f93769585bf478c697f6bb7909e0a90b3bacff29",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/offer-letter-generator--p2--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "paper-anonymizer--p2--dev-401",
+      "report_category": "existing_grader_recipe",
+      "delivered_effective_grader_image": "sha256:ba84acf395a83a1d0e24fb0edcf8411fa45b5097cc7be44d39b0c016fa8822da",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/paper-anonymizer--p2--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "quantum-numerical-simulation--p1--dev-401",
+      "report_category": "existing_grader_recipe",
+      "delivered_effective_grader_image": "sha256:c3b03fec281ed5786f4bbe8a49630a6fb553d182d7e0dafbd5e2efd33bbbdb01",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/quantum-numerical-simulation--p1--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    },
+    {
+      "variant_id": "quantum-numerical-simulation--p2--dev-401",
+      "report_category": "existing_grader_recipe",
+      "delivered_effective_grader_image": "sha256:c3b03fec281ed5786f4bbe8a49630a6fb553d182d7e0dafbd5e2efd33bbbdb01",
+      "deployment_mode": "original_runner_integrated_grader",
+      "resolution": "original_image_export",
+      "task_files": "variant-tasks-233-20261010/tasks/quantum-numerical-simulation--p2--dev-401",
+      "deployment_index": "DEPLOYMENT-233.json",
+      "special_entry": {}
+    }
+  ]
+}
