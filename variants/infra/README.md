@@ -4,6 +4,8 @@
 
 ## 缺失清单如何对应
 
+逐个变体的交付位置见 [缺失清单对照表](docs/MISSING-FILES-ALIGNMENT.md)；完整镜像 ID、归档 SHA256、入口、预算和核查结果见 [REPORT-ALIGNMENT.json](metadata/REPORT-ALIGNMENT.json)。
+
 | 报告要求 | 交付材料 | 对应索引 |
 |---|---|---|
 | 48 项独立 grader 环境无 Dockerfile | 原镜像导出，覆盖 47 项；GW P2 提供历史完整构建上下文、固定基础镜像、重建镜像和验证记录 | `metadata/REPORT-COVERAGE.json`、`metadata/IMAGES.json` |

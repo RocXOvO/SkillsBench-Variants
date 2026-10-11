@@ -1,0 +1,2851 @@
+{
+  "schema": "skillsbench-variants-report-alignment.v1",
+  "status": "VERIFIED",
+  "checked_at_utc": "2026-10-11T22:58:09.661369+00:00",
+  "source_report_title": "SkillsBench-Variants 部署缺失清单",
+  "source_report_sha256": "c294aa77696a685a96b4f606e28c5a02e22e31e1abd500fa1a1f14ac2e8d77b5",
+  "reported_subset_count": 205,
+  "recipient_prepared_plan_verified": false,
+  "scope_note": "The report names 57 IDs; all match the complete delivered 233 parent batch. The exact 205 recipient plan is unavailable.",
+  "named_report_ids": 57,
+  "report_category_counts": {
+    "independent_grader_environment": 48,
+    "host_grader_environment": 2,
+    "external_grader_entry": 1,
+    "existing_grader_recipe": 6
+  },
+  "unmatched_named_ids": [],
+  "named_rows_missing_delivered_materials": [],
+  "parent_batch_deployment_rows": 233,
+  "parent_batch_original_nonempty_image_refs": 268,
+  "original_image_refs_preserved": 267,
+  "unavailable_original_image_refs": [
+    "sha256:20bcd779be042a3545c88357ee66fe9e38dc85d1d30f3f8e8821d177c1e7fa67"
+  ],
+  "exception_resolution": "GW P2: delivered historical-context rebuild with a new ID, full inputs and controls; not original image byte identity.",
+  "delivered_images_indexed": 282,
+  "all_parent_deployed_solver_and_grader_images_located": true,
+  "all_parent_agent_and_verifier_budgets_bound": true,
+  "existing_execution_validation": "VALIDATION.json",
+  "new_experiments_started_in_this_alignment": 0,
+  "metadata_hashes": {
+    "REPORT-COVERAGE.json": "2beb868b333ee522a9b6e55d647fef84b421b46f95c5282af792650a62fec4cd",
+    "DEPLOYMENT-233.json": "38c6277c6a6f1359d00a880b8b2a1a058211f399f800807858617036acc01bbb",
+    "ENTRYPOINTS-233.json": "ca4152dbe2e891189d2e171cbe605d6c64d20d79ec2fddfa3f673b1da64f8e1d",
+    "IMAGES.json": "f76ad14800fc3b88fb1b11f782765496ab8d8a128ac4df40f98aceb847e3b23f",
+    "SOURCE-FILES.json": "a212ae7565296d7c114ec69b2a0881603b0fc7bf90a3ff0561c4d119dc95e500",
+    "DEPENDENCY-ALIASES.json": "0130b29780d637980536cd1b48c4477df49ad50e7cd2a89c546ee8f3030db920",
+    "PACKAGES.json": "b5aab5632872ec9a59efa383cce86a1aed59c79d3cbd144095345c37e7381ea5",
+    "VALIDATION.json": "2103f0acdc61c17b9c6f2eb88be384f2d736c39d30e9c338d24906b92c9a253f"
+  },
+  "rows": [
+    {
+      "variant_id": "adaptive-cruise-control--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:6e24bd675a73adb8ca4b79f82039765ad03bb1442caae65a57472c2dcd825783",
+      "delivered_grading_or_measurement_image": "sha256:6e24bd675a73adb8ca4b79f82039765ad03bb1442caae65a57472c2dcd825783",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:3869e5f3a7f866fd769600da031fd1535254c66d481e7497f894e05aa3f38e77",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/adaptive-cruise-control--p2--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "4773093f0a2f0f08200cbc6e9026989011ffa2a6da0b3b48e1e49da99f4144f2"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/adaptive-cruise-control--p2--dev-401/attempt-01.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/adaptive-cruise-control--p2--dev-401/attempt-01.json",
+        "sha256": "a5e029c78b959f29bb8c7af4e33066599c3aff42b3a14e71da967404afd63864"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/ccc0964bc24c7cb9df0a92afdd6cafd31561be8ba3fc6fc1a6dc5ac25342cc59/run_reviewed_transfer.py"
+      ],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1800.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 1,
+          "gpus": 0,
+          "memory": "2G",
+          "storage": "5G"
+        },
+        "verifier": {
+          "timeout_sec": 1800.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "adaptive-cruise-control--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:4d8b22d75356550333ecc2664ea09b02b8728146b05a1d547959bf7c974c293b",
+      "delivered_grading_or_measurement_image": "sha256:4d8b22d75356550333ecc2664ea09b02b8728146b05a1d547959bf7c974c293b",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:afbb14d48b71500cc94d2822b97a2b952bf13b7cc4bb475dac374e5788fe9fb7",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/adaptive-cruise-control--p3--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "4773093f0a2f0f08200cbc6e9026989011ffa2a6da0b3b48e1e49da99f4144f2"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/adaptive-cruise-control--p3--dev-401/attempt-01.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/adaptive-cruise-control--p3--dev-401/attempt-01.json",
+        "sha256": "2bbd0c835d3476a6cf5569e15df0eebece8377a91bd6f548f2d0a128d83d9c7c"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/737f19ed7c8270e540094c7d501cf8c453fe34cbe021776f7eafa553c72c27e1/run_reviewed_transfer.py"
+      ],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1800.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 1,
+          "gpus": 0,
+          "memory": "2G",
+          "storage": "5G"
+        },
+        "verifier": {
+          "timeout_sec": 1800.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "dynamic-object-aware-egomotion--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:5fd5ebca1b437f80022c375732a3fa17f3b7db50fdfa8e24478f83690c3584d3",
+      "delivered_grading_or_measurement_image": "sha256:5fd5ebca1b437f80022c375732a3fa17f3b7db50fdfa8e24478f83690c3584d3",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:1d74faff4ef10c5ae0a25687b9ca4f3b9f3a8e82e22d88c22182d206d3b07890",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/dynamic-object-aware-egomotion--p3--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "ce4dacd18afb0fe35561277e06642b55f3f653be0c4de8f46799d66836577832"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/runs/trace-native-correct-233-20261007-r1/launch_manifest.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/runs/trace-native-correct-233-20261007-r1/launch_manifest.json",
+        "sha256": "269bd30c02e03bde58613c7ad0d30eade197dac8261eac98f5d635d50210e15f"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/trace_batch_runner_bridge_r4.py"
+      ],
+      "deployment_mode": "original_runner_and_registered_scorer",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1200.0
+        },
+        "environment": {
+          "build_timeout_sec": 1200.0,
+          "cpus": 2,
+          "memory_mb": 4096,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 900.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "earthquake-phase-association--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:4322be448a54fffb6fe4757be37f033360af6e554a1fdd719c9cd101f107b5a9",
+      "delivered_grading_or_measurement_image": "sha256:4322be448a54fffb6fe4757be37f033360af6e554a1fdd719c9cd101f107b5a9",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:3349f028c44876eeb33c4c4df3016038e7fafcb8083f9d9b1bf95ff54ad1741c",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/earthquake-phase-association--p2--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "726ce07424d5d1994123a2ece66124db6166f3b38fc7a6511237b7c0bcaa0683"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/runs/trace-native-correct-233-20261007-r1/launch_manifest.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/runs/trace-native-correct-233-20261007-r1/launch_manifest.json",
+        "sha256": "269bd30c02e03bde58613c7ad0d30eade197dac8261eac98f5d635d50210e15f"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/trace_batch_runner_bridge_r4.py"
+      ],
+      "deployment_mode": "original_runner_and_registered_scorer",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 3600.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 900.0,
+          "cpus": 8,
+          "gpus": 0,
+          "memory_mb": 8192,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "env": {},
+          "timeout_sec": 240.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "econ-detrending-correlation--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:604ce6cadf77915fef4f33b89fa6eddb830467b9399d0d564def6738051318f2",
+      "delivered_grading_or_measurement_image": "sha256:604ce6cadf77915fef4f33b89fa6eddb830467b9399d0d564def6738051318f2",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:effe06430183afc215bd7cd9b8930eb5864d843ab0769036a891ab930e129dc4",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/econ-detrending-correlation--p2--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "c5095438f4d813db0d0235e0f12e5a9f818411b533e0a0d539f0e7ae54155423"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/native-variant-econ-p2-r1/generic-package-self-refine-prepared-r1.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/native-variant-econ-p2-r1/generic-package-self-refine-prepared-r1.json",
+        "sha256": "4c9985f5f8da91b2f4dcc385bfe5c8d746af714cc795c587bbe1c5ad961db0c9"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 900.0
+        },
+        "environment": {
+          "build_timeout_sec": 600.0,
+          "cpus": 1,
+          "memory_mb": 4096,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 240.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "econ-detrending-correlation--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:604ce6cadf77915fef4f33b89fa6eddb830467b9399d0d564def6738051318f2",
+      "delivered_grading_or_measurement_image": "sha256:604ce6cadf77915fef4f33b89fa6eddb830467b9399d0d564def6738051318f2",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:8acfe6789af001194424e6fa957737a20d81e669988b6cece94a221a4a03088e",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/econ-detrending-correlation--p3--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "c5095438f4d813db0d0235e0f12e5a9f818411b533e0a0d539f0e7ae54155423"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/native-variant-econ-p3-r1/generic-package-self-refine-prepared-r1.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/native-variant-econ-p3-r1/generic-package-self-refine-prepared-r1.json",
+        "sha256": "6e33ce22234c11ae863130fb8bc0f1b4e3a72628a879fbe84ea29ab9777745dc"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 900.0
+        },
+        "environment": {
+          "build_timeout_sec": 600.0,
+          "cpus": 1,
+          "memory_mb": 4096,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 240.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "edit-pdf--p1--sr-ext-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:aff87a250becf273f9b294907475e319a1df9132501d900ac89ea270cfc00087",
+      "delivered_grading_or_measurement_image": "sha256:aff87a250becf273f9b294907475e319a1df9132501d900ac89ea270cfc00087",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:f27ffbeb1d36f602a6081d2982a5d7c0c55cd12e3efb16e45ccef72a3b7a6171",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/edit-pdf--p1--sr-ext-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "5dafb3874d6b3b7df2ffe17c8207eefdf34e4dbae395446c6e4be4f9e502c948",
+        "note": "Use fresh official grader entry; historical Bike recovery runner main must not run against new solvers."
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/protocol/Root-added14-actual-launch-source-budget-binding-PREPARE-20261003-r1.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/protocol/Root-added14-actual-launch-source-budget-binding-PREPARE-20261003-r1.json",
+        "sha256": "74702e912f98cf853f08f147568d727979484756bdc3f2191429857a8b726713"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/b16b476427a40f299e3446f979251e5bf7cd3ff345cb64293d8bc4a6e5a0f296/run_reviewed_transfer.py"
+      ],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1800.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 1,
+          "gpus": 0,
+          "memory_mb": 4096,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "env": {},
+          "timeout_sec": 900.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "edit-pdf--p2--sr-ext-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:aff87a250becf273f9b294907475e319a1df9132501d900ac89ea270cfc00087",
+      "delivered_grading_or_measurement_image": "sha256:aff87a250becf273f9b294907475e319a1df9132501d900ac89ea270cfc00087",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:af3b84fb2df861b762bc3f5dcbdf37e868269f9802dd0204617b184ae365697c",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/edit-pdf--p2--sr-ext-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "5dafb3874d6b3b7df2ffe17c8207eefdf34e4dbae395446c6e4be4f9e502c948",
+        "note": "Use fresh official grader entry; historical Bike recovery runner main must not run against new solvers."
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/protocol/Root-added14-actual-launch-source-budget-binding-PREPARE-20261003-r1.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/protocol/Root-added14-actual-launch-source-budget-binding-PREPARE-20261003-r1.json",
+        "sha256": "74702e912f98cf853f08f147568d727979484756bdc3f2191429857a8b726713"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/b16b476427a40f299e3446f979251e5bf7cd3ff345cb64293d8bc4a6e5a0f296/run_reviewed_transfer.py"
+      ],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1800.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 1,
+          "gpus": 0,
+          "memory_mb": 4096,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "env": {},
+          "timeout_sec": 900.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "edit-pdf--p3--sr-ext-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:aff87a250becf273f9b294907475e319a1df9132501d900ac89ea270cfc00087",
+      "delivered_grading_or_measurement_image": "sha256:aff87a250becf273f9b294907475e319a1df9132501d900ac89ea270cfc00087",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:295bae52840241a3bb6a70005d272e9199bb14248ff73ddcdb982be9cbb20b6a",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/edit-pdf--p3--sr-ext-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "5dafb3874d6b3b7df2ffe17c8207eefdf34e4dbae395446c6e4be4f9e502c948",
+        "note": "Use fresh official grader entry; historical Bike recovery runner main must not run against new solvers."
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/protocol/Root-added14-actual-launch-source-budget-binding-PREPARE-20261003-r1.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/protocol/Root-added14-actual-launch-source-budget-binding-PREPARE-20261003-r1.json",
+        "sha256": "74702e912f98cf853f08f147568d727979484756bdc3f2191429857a8b726713"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/b16b476427a40f299e3446f979251e5bf7cd3ff345cb64293d8bc4a6e5a0f296/run_reviewed_transfer.py"
+      ],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1800.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 1,
+          "gpus": 0,
+          "memory_mb": 4096,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "env": {},
+          "timeout_sec": 900.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "energy-market-pricing--p1--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:7bc36553a8a4a83b4509a839a6a11437d20a721ba9ded1aa8f1240799dac767f",
+      "delivered_grading_or_measurement_image": "sha256:7bc36553a8a4a83b4509a839a6a11437d20a721ba9ded1aa8f1240799dac767f",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:39d1b48f9e8d1b948340977bf1fc6fb8156b6e123eabd13161ad060f59a5955b",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/energy-market-pricing--p1--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "9f1ea01664cbe67c1b4e917abc082aaf0ef16cc6506ca37080666114cb37ae14"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh-six-manifest.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh-six-manifest.json",
+        "sha256": "4392e1bbe3b9c0eec970c1c5f19475dba0dc84b1c838e6ff630c6e7c8fda7898"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "original_runner_and_registered_scorer",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1800.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 1,
+          "gpus": 0,
+          "memory_mb": 4096,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 900.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "energy-market-pricing--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:7bc36553a8a4a83b4509a839a6a11437d20a721ba9ded1aa8f1240799dac767f",
+      "delivered_grading_or_measurement_image": "sha256:7bc36553a8a4a83b4509a839a6a11437d20a721ba9ded1aa8f1240799dac767f",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:6b357cf5f27bee39bdf5cd6f0c56b0a595e3f1f2b7be58a46c8b3b21edba1858",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/energy-market-pricing--p2--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "9f1ea01664cbe67c1b4e917abc082aaf0ef16cc6506ca37080666114cb37ae14"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh-six-manifest.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh-six-manifest.json",
+        "sha256": "4392e1bbe3b9c0eec970c1c5f19475dba0dc84b1c838e6ff630c6e7c8fda7898"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "original_runner_and_registered_scorer",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1800.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 1,
+          "gpus": 0,
+          "memory_mb": 4096,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 900.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "energy-market-pricing--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:8b84079f8af2239249701bc127ce1eb64b67ad0efed6dbbce98dfb3428ea5ec9",
+      "delivered_grading_or_measurement_image": "sha256:8b84079f8af2239249701bc127ce1eb64b67ad0efed6dbbce98dfb3428ea5ec9",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:3ec08ae7e5794dae59b7c460981a7b24f450efbae63a433c73354cf2e87b39d3",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/energy-market-pricing--p3--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "9f1ea01664cbe67c1b4e917abc082aaf0ef16cc6506ca37080666114cb37ae14"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh-six-manifest.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh-six-manifest.json",
+        "sha256": "4392e1bbe3b9c0eec970c1c5f19475dba0dc84b1c838e6ff630c6e7c8fda7898"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "original_runner_and_registered_scorer",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1800.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 1,
+          "gpus": 0,
+          "memory_mb": 4096,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 900.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "energy-unit-commitment--p1--sr-ext-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:cb32e79f73b952a2dab2dd1997ab8a423d589cc2ec321d9428b73d26fa096e26",
+      "delivered_grading_or_measurement_image": "sha256:cb32e79f73b952a2dab2dd1997ab8a423d589cc2ec321d9428b73d26fa096e26",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:99de329815fbff441ac7684fbb1b585af307f7658ad1ff72864b11221728c968",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/energy-unit-commitment--p1--sr-ext-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "578c5a874dc515dc89f6145824e05cc90fc8d7ad21075ffd6bed8b258037e804"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh20-source-plan-v2.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh20-source-plan-v2.json",
+        "sha256": "821cd8321cc8fc2d3d4a182ab8b7ccbb6fa5dd85aa34db600e3afb89be7c3ff2"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 900.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 2,
+          "gpus": 0,
+          "memory_mb": 8192,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 900.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "energy-unit-commitment--p2--sr-ext-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:f91526bae7f2c1259ad81df8fb0f8f0921103becba9dd5c89c131eec6b6e62fb",
+      "delivered_grading_or_measurement_image": "sha256:f91526bae7f2c1259ad81df8fb0f8f0921103becba9dd5c89c131eec6b6e62fb",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:987ab63661a8525f9f75f59fd5f5f13b71781b166f6d40841647a495c3a40eab",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/energy-unit-commitment--p2--sr-ext-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "578c5a874dc515dc89f6145824e05cc90fc8d7ad21075ffd6bed8b258037e804"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh20-source-plan-v2.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh20-source-plan-v2.json",
+        "sha256": "821cd8321cc8fc2d3d4a182ab8b7ccbb6fa5dd85aa34db600e3afb89be7c3ff2"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 900.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 2,
+          "gpus": 0,
+          "memory_mb": 8192,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 900.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "energy-unit-commitment--p3--sr-ext-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:c00df5d3e639e5732893e0bf9becba9dd5e5ed85c106e6b5ed42ef47242e763a",
+      "delivered_grading_or_measurement_image": "sha256:c00df5d3e639e5732893e0bf9becba9dd5e5ed85c106e6b5ed42ef47242e763a",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:40cd5bd213be1775021a65573732d5b31e33651633869a4be7b6904e67c87a9d",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/energy-unit-commitment--p3--sr-ext-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "578c5a874dc515dc89f6145824e05cc90fc8d7ad21075ffd6bed8b258037e804",
+        "note": "Use fresh official grader entry; historical Bike recovery runner main must not run against new solvers."
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/protocol/Root-added14-actual-launch-source-budget-binding-PREPARE-20261003-r1.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/protocol/Root-added14-actual-launch-source-budget-binding-PREPARE-20261003-r1.json",
+        "sha256": "74702e912f98cf853f08f147568d727979484756bdc3f2191429857a8b726713"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/b16b476427a40f299e3446f979251e5bf7cd3ff345cb64293d8bc4a6e5a0f296/run_reviewed_transfer.py"
+      ],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 900.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 2,
+          "gpus": 0,
+          "memory_mb": 8192,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 900.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "enterprise-information-search--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+      "delivered_grading_or_measurement_image": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:76c972a7210edb3fa194d788233951543baa8db5c61018ecb06921ae214c06de",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/enterprise-information-search--p3--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "2d1c27919a05c7e8f108384c7ae036d1ae78d3e6d449cdd63e56eecc4fecd323"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/enterprise-information-search--p3--dev-401/attempt-01.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/enterprise-information-search--p3--dev-401/attempt-01.json",
+        "sha256": "4394013d39d9da8a27451a9a11fbdb203daedc4caae493a9ade0307a334cd2ac"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/dfc92bfb17344ab76f84fc3fe7fa4f301e141640cdbe4ac9df30588646d079c2/run_reviewed_transfer.py"
+      ],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1800.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 1,
+          "gpus": 0,
+          "memory_mb": 2048,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "env": {},
+          "timeout_sec": 600.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "glm-lake-mendota--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:521d61f4065c3888a7f318bd05841459527db61548c0d0cafdb1dbd4a4014d1d",
+      "delivered_grading_or_measurement_image": "sha256:521d61f4065c3888a7f318bd05841459527db61548c0d0cafdb1dbd4a4014d1d",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:9a35ab54314b3f8208ae8461477b3de86caa0e1d44a7cec2fcd316bbb4711617",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/glm-lake-mendota--p2--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "dbf5d66b49bc0bec49f86ef7a13931909330372d71dd94a040d21525618bceb6"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/runs/trace-native-correct-233-20261007-r1/launch_manifest.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/runs/trace-native-correct-233-20261007-r1/launch_manifest.json",
+        "sha256": "269bd30c02e03bde58613c7ad0d30eade197dac8261eac98f5d635d50210e15f"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/trace_batch_runner_bridge_r4.py"
+      ],
+      "deployment_mode": "original_runner_and_registered_scorer",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 3600.0
+        },
+        "environment": {
+          "build_timeout_sec": 600.0,
+          "cpus": 2,
+          "memory_mb": 4096,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 600.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "gravitational-wave-detection--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "historical_context_rebuild_and_export",
+      "original_grader_image": "sha256:20bcd779be042a3545c88357ee66fe9e38dc85d1d30f3f8e8821d177c1e7fa67",
+      "delivered_grading_or_measurement_image": "sha256:3b50e63f024f63379f64ae274c4441931c3e452b998f7ac9774dbcaacf3606eb",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:99678fc27b36a2f018437633b808cc76742640fc385c3a10d0773062448d4d92",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/gravitational-wave-detection--p2--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "f97a9f0fab0b36caa9b8be027277106b659eb9d2240caaa92e3e8c54e826d56e"
+      },
+      "host_entry": "tools/grade_gw_p2.py",
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/runs/trace-native-correct-233-20261007-r1/launch_manifest.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/runs/trace-native-correct-233-20261007-r1/launch_manifest.json",
+        "sha256": "269bd30c02e03bde58613c7ad0d30eade197dac8261eac98f5d635d50210e15f"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/trace_batch_runner_bridge_r4.py"
+      ],
+      "deployment_mode": "original_runner_and_registered_scorer",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 3600.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 1800.0,
+          "cpus": 8,
+          "gpus": 0,
+          "memory_mb": 8192,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "env": {},
+          "timeout_sec": 240.0
+        }
+      },
+      "special_interface": {
+        "replacement_receipt": "metadata/GW-P2-REBUILD.json",
+        "exact_original_image_id_restored": false,
+        "command": [
+          "python",
+          "-I",
+          "/opt/grader/run.py"
+        ],
+        "private_mount": "/opt/grader:ro",
+        "capture_mount": "/capture:ro",
+        "logs_mount": "/logs/verifier:rw",
+        "capture_source": "/root/detection_results.csv",
+        "workdir": "/root",
+        "reward_json": "<logs>/committed.json",
+        "reward_file": "<logs>/reward.txt",
+        "completed_status": "completed",
+        "engineering_reward": null,
+        "whole_verifier_timeout_sec": 240,
+        "host_entry": "tools/grade_gw_p2.py"
+      },
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "gravitational-wave-detection--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:85ce1ec62407216eabb7f32c84621674e4f4374d5179eaee7da304c49304de6a",
+      "delivered_grading_or_measurement_image": "sha256:85ce1ec62407216eabb7f32c84621674e4f4374d5179eaee7da304c49304de6a",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:538199e7a58ebc3a081eac09dc54c5c4ad54cf0e1c25835090be272082a77608",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/gravitational-wave-detection--p3--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "139b5c8ee6d0a755a0179e30ea403d0390b1b4cc4db6cf04baf3f9767b98251d"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/runs/trace-native-correct-233-20261007-r1/launch_manifest.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/runs/trace-native-correct-233-20261007-r1/launch_manifest.json",
+        "sha256": "269bd30c02e03bde58613c7ad0d30eade197dac8261eac98f5d635d50210e15f"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/trace_batch_runner_bridge_r4.py"
+      ],
+      "deployment_mode": "original_runner_and_registered_scorer",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 3600.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 1800.0,
+          "cpus": 8,
+          "gpus": 0,
+          "memory_mb": 8192,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "env": {},
+          "timeout_sec": 240.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "grid-dispatch-operator--p1--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:3056539247c35ffc7f0da1e0d273fbfc8dbc5917c1f068695432aa56965ff350",
+      "delivered_grading_or_measurement_image": "sha256:3056539247c35ffc7f0da1e0d273fbfc8dbc5917c1f068695432aa56965ff350",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:08af85a379578199d29f3d1350691bde61a409193c703b5215f489e60750fd03",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/grid-dispatch-operator--p1--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "9f1ea01664cbe67c1b4e917abc082aaf0ef16cc6506ca37080666114cb37ae14"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/flink-grid-3-grader-only-input-plan-r1.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/flink-grid-3-grader-only-input-plan-r1.json",
+        "sha256": "b848301ee77525a2aba0422aecd1cc98febea8413bb39c14ce4a31bd88a89e81"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1800.0
+        },
+        "environment": {
+          "build_timeout_sec": 600.0,
+          "cpus": 1,
+          "memory_mb": 2048,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 600.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "grid-dispatch-operator--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:193628227d5f70b2163d9c54fd3e1a72decfb8663b9a4d397a7b3d087812e7ad",
+      "delivered_grading_or_measurement_image": "sha256:193628227d5f70b2163d9c54fd3e1a72decfb8663b9a4d397a7b3d087812e7ad",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:56fb10a0510cdb144aa0aba718c2f91369bffce079e33f2e3ccac6d708538146",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/grid-dispatch-operator--p3--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "9f1ea01664cbe67c1b4e917abc082aaf0ef16cc6506ca37080666114cb37ae14"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/flink-grid-3-grader-only-input-plan-r1.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/flink-grid-3-grader-only-input-plan-r1.json",
+        "sha256": "b848301ee77525a2aba0422aecd1cc98febea8413bb39c14ce4a31bd88a89e81"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1800.0
+        },
+        "environment": {
+          "build_timeout_sec": 600.0,
+          "cpus": 1,
+          "memory_mb": 2048,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 600.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "hvac-control--p1--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:ac6e0a588eccdd4a14fe219254f805b3a7da1fdd107c494087989c7ac71cabcc",
+      "delivered_grading_or_measurement_image": "sha256:ac6e0a588eccdd4a14fe219254f805b3a7da1fdd107c494087989c7ac71cabcc",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:810effc93d3a75d40abd3d4737a4ed6e7c8ae49cce061cf046be1d49a4c22b62",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/hvac-control--p1--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "726ce07424d5d1994123a2ece66124db6166f3b38fc7a6511237b7c0bcaa0683"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/hvac-control--p1--dev-401/attempt-01.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/hvac-control--p1--dev-401/attempt-01.json",
+        "sha256": "de3813d17b8da256100115890794a0a2a01145504eea53820700ab1ff1fc31a1"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/ce892882afc6f4da986799f5fa50705523e6fdbe8462e55a9508023f14695f7d/run_reviewed_transfer.py"
+      ],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1800.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 2,
+          "gpus": 0,
+          "memory": "2G",
+          "storage": "5G"
+        },
+        "verifier": {
+          "timeout_sec": 1800.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "hvac-control--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:ac6e0a588eccdd4a14fe219254f805b3a7da1fdd107c494087989c7ac71cabcc",
+      "delivered_grading_or_measurement_image": "sha256:ac6e0a588eccdd4a14fe219254f805b3a7da1fdd107c494087989c7ac71cabcc",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:810effc93d3a75d40abd3d4737a4ed6e7c8ae49cce061cf046be1d49a4c22b62",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/hvac-control--p3--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "726ce07424d5d1994123a2ece66124db6166f3b38fc7a6511237b7c0bcaa0683"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/replacement8-source-plan-v1.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/replacement8-source-plan-v1.json",
+        "sha256": "089c529836b09a06f21292cc8b0b118bfa042732886e1848d4bd9d2d98d2d312"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1800.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 2,
+          "gpus": 0,
+          "memory": "2G",
+          "storage": "5G"
+        },
+        "verifier": {
+          "timeout_sec": 1800.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "invoice-fraud-detection--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:71cab6d86da81524dbd8847970b938064687a4276d3a06a6d4b038a23e638d1d",
+      "delivered_grading_or_measurement_image": "sha256:71cab6d86da81524dbd8847970b938064687a4276d3a06a6d4b038a23e638d1d",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:99dcdef8acb60900bc9a67ec2f5bb887aa9923dff75e9257e7e5401930e95725",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/invoice-fraud-detection--p2--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "9bc7f8332d16ab9f02d786eec2d202aa58a4d147029badb44b7169950877cbcc"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/native-variant-invoice-p2-r1/generic-package-self-refine-prepared-r1.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/native-variant-invoice-p2-r1/generic-package-self-refine-prepared-r1.json",
+        "sha256": "d674657b9db6d12951d4cc697b4c572e9c3405082c36630cf4ef19862bfcbea0"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "original_runner_and_registered_scorer",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 900.0
+        },
+        "environment": {
+          "build_timeout_sec": 600.0,
+          "cpus": 1,
+          "memory_mb": 4096,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 240.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "manufacturing-fjsp-optimization--p1--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+      "delivered_grading_or_measurement_image": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:2304da23b5b9b2494d5ad8bbe6f9d7658ebaa25bd2a15ddde3ee3555e2d5fb0e",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/manufacturing-fjsp-optimization--p1--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "178cce282b76cf5bb5afe26698c486d88e3b1882ac9d0cd2997db8f0cc94fe32"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/manufacturing-fjsp-optimization--p1--dev-401/attempt-01.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/manufacturing-fjsp-optimization--p1--dev-401/attempt-01.json",
+        "sha256": "f292e122cb218b7008be2ac51475d21e74ae84abf65a3665087d74a8af6b758a"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/d2ff1367515632a1e5d74e70b7e0d0f1a818b72f60e483cb251584c7e7f54327/run_reviewed_transfer.py"
+      ],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1800.0
+        },
+        "environment": {
+          "build_timeout_sec": 600.0,
+          "cpus": 2,
+          "memory_mb": 4096,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 450.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "manufacturing-fjsp-optimization--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+      "delivered_grading_or_measurement_image": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:b447ad1b57c3ad410b5ce6b5968c39cb3407bff4028118c8abb3faf0ddde732f",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/manufacturing-fjsp-optimization--p2--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "178cce282b76cf5bb5afe26698c486d88e3b1882ac9d0cd2997db8f0cc94fe32"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/manufacturing-fjsp-optimization--p2--dev-401/attempt-01.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/manufacturing-fjsp-optimization--p2--dev-401/attempt-01.json",
+        "sha256": "0279b7f544bbfd642fd060128ae0cc7eed428f891271fc30ce5a2e035b6a41c4"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/d2ff1367515632a1e5d74e70b7e0d0f1a818b72f60e483cb251584c7e7f54327/run_reviewed_transfer.py"
+      ],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1800.0
+        },
+        "environment": {
+          "build_timeout_sec": 600.0,
+          "cpus": 2,
+          "memory_mb": 4096,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 450.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "manufacturing-fjsp-optimization--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+      "delivered_grading_or_measurement_image": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:22eee2374a0a1e1b531f646e7f43b38cc59532b6652f9139a6b10e2918bd2ed4",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/manufacturing-fjsp-optimization--p3--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "178cce282b76cf5bb5afe26698c486d88e3b1882ac9d0cd2997db8f0cc94fe32"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/manufacturing-fjsp-optimization--p3--dev-401/attempt-01.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/manufacturing-fjsp-optimization--p3--dev-401/attempt-01.json",
+        "sha256": "8e2e43e9a47d1d136994e2f6b55bd86fc5f22c33a8cccb5b6872c83d6adc287e"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/d2ff1367515632a1e5d74e70b7e0d0f1a818b72f60e483cb251584c7e7f54327/run_reviewed_transfer.py"
+      ],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1800.0
+        },
+        "environment": {
+          "build_timeout_sec": 600.0,
+          "cpus": 2,
+          "memory_mb": 4096,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 450.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "mars-clouds-clustering--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:b44b0c4946567e02f6e3fa38967e4cc36e7390d6659b2e52a5802916abc93be6",
+      "delivered_grading_or_measurement_image": "sha256:b44b0c4946567e02f6e3fa38967e4cc36e7390d6659b2e52a5802916abc93be6",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:43193d848c09619e8563d8f96b6b7cedb58673441bc0364b814db783e3a55fca",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/mars-clouds-clustering--p2--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "79d5221dd4404cac53469a711a9ae6567c69ec7b210fd686cdce7ce60db26ff7"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/mars-clouds-clustering--p2--dev-401/attempt-01.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/mars-clouds-clustering--p2--dev-401/attempt-01.json",
+        "sha256": "7ce52268192ad8ee027dcd5ba15cc585659943d88bdf76fc67779cecbfd121ba"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/a9b0cc5dddc581a9d68c45db62ecc38567aaaaae114f8d548ba462412f87c32f/run_reviewed_transfer.py"
+      ],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 3600.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 900.0,
+          "cpus": 4,
+          "gpus": 0,
+          "memory_mb": 4096,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 1800.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "multilingual-video-dubbing--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:b234145d73bea70de326d34f5d8d8e98b2017cd2b4291638b22d8ac5c917ba3a",
+      "delivered_grading_or_measurement_image": "sha256:b234145d73bea70de326d34f5d8d8e98b2017cd2b4291638b22d8ac5c917ba3a",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:a23d9cfad9b485987235e3a8a95a53a9a3b15e23225a8d6109209fdc44b897d5",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/multilingual-video-dubbing--p3--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "453b31302868b6fbc88220b407213d5583533fa53654f25821fd9d7fcf252d18"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh-six-manifest.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh-six-manifest.json",
+        "sha256": "4392e1bbe3b9c0eec970c1c5f19475dba0dc84b1c838e6ff630c6e7c8fda7898"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "original_runner_and_registered_scorer",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 2700.0
+        },
+        "environment": {
+          "build_timeout_sec": 1200.0,
+          "cpus": 2,
+          "memory_mb": 4096,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 1350.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "organize-messy-files--p1--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:059c319f94e6bf5be7e2506a91c37f00785180530f8b8d3af704d32a0a724c64",
+      "delivered_grading_or_measurement_image": "sha256:059c319f94e6bf5be7e2506a91c37f00785180530f8b8d3af704d32a0a724c64",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:95bec9b8bcc1d3f9fcb2951707f055ec05f70121dcc05f9898ff556ff1d7b4b8",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/organize-messy-files--p1--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "f12d6a8551323f8527056cb461be047e495b7959c03d72f3c0f18b955d39d1f4"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/organize-messy-files--p1--dev-401/attempt-01.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/organize-messy-files--p1--dev-401/attempt-01.json",
+        "sha256": "7e9caa89c6bbbd6897d0b85eeca404096dd37e452f879c7b30085072af077ae9"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/288d3c2835711d163d8cf03fc02d25b7c45ee7bd3fc8267ffecb65a9cb48e66d/run_reviewed_transfer.py"
+      ],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 900.0
+        },
+        "environment": {
+          "build_timeout_sec": 600.0,
+          "cpus": 4,
+          "memory_mb": 4096,
+          "storage_mb": 20480
+        },
+        "verifier": {
+          "timeout_sec": 900.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "parallel-tfidf-search--p1--dev-401",
+      "report_category": "host_grader_environment",
+      "resolution": "original_host_entry_and_clean_measurement_image",
+      "original_grader_image": null,
+      "delivered_grading_or_measurement_image": "sha256:f807d85f5de5b182990065f80974ef51d57c0e8f2f9be5b0391b0ba307a0f9c3",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:f807d85f5de5b182990065f80974ef51d57c0e8f2f9be5b0391b0ba307a0f9c3",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/parallel-tfidf-search--p1--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "19061e008105fde6ff5063762ffe260ff02d74e1a6844c90188f82f247d2b378"
+      },
+      "host_entry": "tools/run_tfidf.py",
+      "external_or_host_source_entry": "/home/amax/spark-native-work/skillrevise-variant-extension-20260924-r1/preflight/tfidf-integration-r6/staged/parallel-tfidf-search--p1--dev-401/task-root/private/grader/test.sh",
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/protocol/Root-tfidf-p1-Trace-formal-PREPARE-20261003-r1/p1-trace-self-evo-formal-disabled-job-r1.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/protocol/Root-tfidf-p1-Trace-formal-PREPARE-20261003-r1/p1-trace-self-evo-formal-disabled-job-r1.json",
+        "sha256": "ce6766827fb87ca634661379509494c1fc949be27af2737d8093488017ea0a49"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "linux_host_supervised_exclusive_api",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1800.0
+        },
+        "environment": {
+          "build_timeout_sec": 600.0,
+          "cpus": 8,
+          "memory_mb": 4096,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 900.0
+        }
+      },
+      "special_interface": {
+        "host_entry": "tools/run_tfidf.py",
+        "source_entry": "/home/amax/spark-native-work/skillrevise-variant-extension-20260924-r1/preflight/tfidf-integration-r6/staged/parallel-tfidf-search--p1--dev-401/task-root/private/grader/test.sh",
+        "task_root": "/home/amax/spark-native-work/skillrevise-variant-extension-20260924-r1/preflight/tfidf-integration-r6/staged/parallel-tfidf-search--p1--dev-401/task-root",
+        "generator_workdir": "/root",
+        "generator_network": "none",
+        "generator_cpus": 8,
+        "generator_memory_mb": 4096,
+        "snapshot_helper": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/tfidf_added_p1_snapshot_PREPARE_20261003_r1.py",
+        "measurement_cpus": 8,
+        "measurement_memory_mb": 4096,
+        "whole_verifier_timeout_sec": 900,
+        "reward_file": "<fresh host run>/reward.txt",
+        "status_file": "<fresh host run>/status.json",
+        "completed_status": "completed",
+        "engineering_exit_code": 75,
+        "engineering_reward": null,
+        "direct_snapshot_entry": "tools/grade_tfidf.py"
+      },
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "parallel-tfidf-search--p2--dev-401",
+      "report_category": "host_grader_environment",
+      "resolution": "original_host_entry_and_clean_measurement_image",
+      "original_grader_image": null,
+      "delivered_grading_or_measurement_image": "sha256:0eaefb647eb7d40945a81b41862314f39a614d34f55b8b51f13782f4339a57ff",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:0eaefb647eb7d40945a81b41862314f39a614d34f55b8b51f13782f4339a57ff",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/parallel-tfidf-search--p2--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "19061e008105fde6ff5063762ffe260ff02d74e1a6844c90188f82f247d2b378"
+      },
+      "host_entry": "tools/run_tfidf.py",
+      "external_or_host_source_entry": "/home/amax/spark-native-work/skillrevise-variant-extension-20260924-r1/preflight/tfidf-integration-r6/staged/parallel-tfidf-search--p2--dev-401/task-root/private/grader/test.sh",
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/protocol/sol-tfidf-p2-G-formal-PREPARE-20261003-r1/p2-generic-package-self-refine-formal-disabled-job-r1.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/protocol/sol-tfidf-p2-G-formal-PREPARE-20261003-r1/p2-generic-package-self-refine-formal-disabled-job-r1.json",
+        "sha256": "9e5925a11de72fa8a0f6d4fc9c77e266ab660eed6cd605f44685c53209596210"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "linux_host_supervised_exclusive_api",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1800.0
+        },
+        "environment": {
+          "build_timeout_sec": 600.0,
+          "cpus": 8,
+          "memory_mb": 4096,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 900.0
+        }
+      },
+      "special_interface": {
+        "host_entry": "tools/run_tfidf.py",
+        "source_entry": "/home/amax/spark-native-work/skillrevise-variant-extension-20260924-r1/preflight/tfidf-integration-r6/staged/parallel-tfidf-search--p2--dev-401/task-root/private/grader/test.sh",
+        "task_root": "/home/amax/spark-native-work/skillrevise-variant-extension-20260924-r1/preflight/tfidf-integration-r6/staged/parallel-tfidf-search--p2--dev-401/task-root",
+        "generator_workdir": "/root",
+        "generator_network": "none",
+        "generator_cpus": 8,
+        "generator_memory_mb": 4096,
+        "snapshot_helper": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/tfidf_added_p1_snapshot_PREPARE_20261003_r1.py",
+        "measurement_cpus": 8,
+        "measurement_memory_mb": 4096,
+        "whole_verifier_timeout_sec": 900,
+        "reward_file": "<fresh host run>/reward.txt",
+        "status_file": "<fresh host run>/status.json",
+        "completed_status": "completed",
+        "engineering_exit_code": 75,
+        "engineering_reward": null,
+        "direct_snapshot_entry": "tools/grade_tfidf.py"
+      },
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "paratransit-routing--p1--sr-ext-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:66b3643fa54f590593fe77bf642e63d41de3b3ebb83978093dc6fc4c459c1b47",
+      "delivered_grading_or_measurement_image": "sha256:66b3643fa54f590593fe77bf642e63d41de3b3ebb83978093dc6fc4c459c1b47",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:5870a8a8ea260dc1d239c30f39d88b59cfc56e5362aba88eaf921ebb0ea2c604",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/paratransit-routing--p1--sr-ext-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "dd73c4d8b3e456b8b698927e8683b65988091d475ecb5a34d6317561cdc7f947",
+        "note": "Use fresh official grader entry; historical Bike recovery runner main must not run against new solvers."
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/protocol/Root-added14-actual-launch-source-budget-binding-PREPARE-20261003-r1.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/protocol/Root-added14-actual-launch-source-budget-binding-PREPARE-20261003-r1.json",
+        "sha256": "74702e912f98cf853f08f147568d727979484756bdc3f2191429857a8b726713"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/b16b476427a40f299e3446f979251e5bf7cd3ff345cb64293d8bc4a6e5a0f296/run_reviewed_transfer.py"
+      ],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 900.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 2,
+          "gpus": 0,
+          "memory_mb": 8192,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 900.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "paratransit-routing--p2--sr-ext-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:d2c0e3df752ea0d2ed5e2e2472d933c12eb8c97e5a8afed5983df9576bb5cc11",
+      "delivered_grading_or_measurement_image": "sha256:d2c0e3df752ea0d2ed5e2e2472d933c12eb8c97e5a8afed5983df9576bb5cc11",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:016f29107bb362fb35400a0b75e2c9461627241513aa7d09928db76aece4e050",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/paratransit-routing--p2--sr-ext-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "dd73c4d8b3e456b8b698927e8683b65988091d475ecb5a34d6317561cdc7f947",
+        "note": "Use fresh official grader entry; historical Bike recovery runner main must not run against new solvers."
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/protocol/Root-Paratransit-P23-source-delta-PREPARE-20261003-r1/source-delta-intake-r1.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/protocol/Root-Paratransit-P23-source-delta-PREPARE-20261003-r1/source-delta-intake-r1.json",
+        "sha256": "b21469b379ed5ce9c1ebad70def3400393a32e6236b05ba176351829a76d453b"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/b16b476427a40f299e3446f979251e5bf7cd3ff345cb64293d8bc4a6e5a0f296/run_reviewed_transfer.py"
+      ],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 900.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 2,
+          "gpus": 0,
+          "memory_mb": 8192,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 900.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "paratransit-routing--p3--sr-ext-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:8f4e6e5057e700a09df394b717f38930e99689f7cd97281dbb0691369b8f1617",
+      "delivered_grading_or_measurement_image": "sha256:8f4e6e5057e700a09df394b717f38930e99689f7cd97281dbb0691369b8f1617",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:a34097043fbbe133585998c961ed595acec3828f2565ea2f31c8fed77db31b45",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/paratransit-routing--p3--sr-ext-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "dd73c4d8b3e456b8b698927e8683b65988091d475ecb5a34d6317561cdc7f947",
+        "note": "Use fresh official grader entry; historical Bike recovery runner main must not run against new solvers."
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/protocol/Root-Paratransit-P23-source-delta-PREPARE-20261003-r1/source-delta-intake-r1.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/protocol/Root-Paratransit-P23-source-delta-PREPARE-20261003-r1/source-delta-intake-r1.json",
+        "sha256": "b21469b379ed5ce9c1ebad70def3400393a32e6236b05ba176351829a76d453b"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/b16b476427a40f299e3446f979251e5bf7cd3ff345cb64293d8bc4a6e5a0f296/run_reviewed_transfer.py"
+      ],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 900.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 2,
+          "gpus": 0,
+          "memory_mb": 8192,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 900.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "pddl-tpp-planning--p1--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+      "delivered_grading_or_measurement_image": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:4f9ec12eed0d96218c6e3458c81775618305b3b742a161ae8748dfa9f3d58dc2",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/pddl-tpp-planning--p1--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "f416c93682aaf8d71d054a3fbcd5841df96bb85e65528c0d7aa5f9417fd50f51"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh20-source-plan-v2.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh20-source-plan-v2.json",
+        "sha256": "821cd8321cc8fc2d3d4a182ab8b7ccbb6fa5dd85aa34db600e3afb89be7c3ff2"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 600.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 1,
+          "gpus": 0,
+          "memory_mb": 2048,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "env": {},
+          "timeout_sec": 600.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "pddl-tpp-planning--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+      "delivered_grading_or_measurement_image": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:5b456ad3528f547e804b588cbb853eae82d20ce8bbc5d02d18e8e0125123b82a",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/pddl-tpp-planning--p2--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "f416c93682aaf8d71d054a3fbcd5841df96bb85e65528c0d7aa5f9417fd50f51"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh20-source-plan-v2.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh20-source-plan-v2.json",
+        "sha256": "821cd8321cc8fc2d3d4a182ab8b7ccbb6fa5dd85aa34db600e3afb89be7c3ff2"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 600.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 1,
+          "gpus": 0,
+          "memory_mb": 2048,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "env": {},
+          "timeout_sec": 600.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "pddl-tpp-planning--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+      "delivered_grading_or_measurement_image": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:175337cf15c4d40870299a56000227dd6073ab8103a151c1fd49302c11ac4e7a",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/pddl-tpp-planning--p3--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "f416c93682aaf8d71d054a3fbcd5841df96bb85e65528c0d7aa5f9417fd50f51"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh20-source-plan-v2.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh20-source-plan-v2.json",
+        "sha256": "821cd8321cc8fc2d3d4a182ab8b7ccbb6fa5dd85aa34db600e3afb89be7c3ff2"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 600.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 1,
+          "gpus": 0,
+          "memory_mb": 2048,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "env": {},
+          "timeout_sec": 600.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "protein-expression-analysis--p1--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:9239cd663e69138c6e32e47d4f72f377481432801aa162a6beb7f9211329983b",
+      "delivered_grading_or_measurement_image": "sha256:9239cd663e69138c6e32e47d4f72f377481432801aa162a6beb7f9211329983b",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:09b61246c2481f8419749476c6851048b5e7f576f72270c81cbd2c09b492a0ef",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/protein-expression-analysis--p1--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "bf41211b639f61e512875ca80ca3d590eab79762d149dc46aba5dfddc79f1906"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/native-variant-protein-p1-r1/generic-package-self-refine-prepared-r1.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/native-variant-protein-p1-r1/generic-package-self-refine-prepared-r1.json",
+        "sha256": "1a74fb56f8e84f6d6c5f2f86b33a98b1f30f0f5c88cf0b3931c968cd6553d4f0"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1800.0
+        },
+        "environment": {
+          "build_timeout_sec": 900.0,
+          "cpus": 2,
+          "memory_mb": 8192,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 1800.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "protein-expression-analysis--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:ad39e0b8b73856ea1cc3350823bfd46dc2fdc27dd95e02688838176cae28f906",
+      "delivered_grading_or_measurement_image": "sha256:ad39e0b8b73856ea1cc3350823bfd46dc2fdc27dd95e02688838176cae28f906",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:cd5b1c29e52ad5018faff8829b12810266ae5c18186e742f2ac1f32f488b5885",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/protein-expression-analysis--p2--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "bf41211b639f61e512875ca80ca3d590eab79762d149dc46aba5dfddc79f1906"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/native-variant-protein-p2-r1c/generic-package-self-refine-prepared-r1c.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/native-variant-protein-p2-r1c/generic-package-self-refine-prepared-r1c.json",
+        "sha256": "c5c8e9f15116cfa2663fbab0fadb2afdbfafdf86edf702950acb7b479fd268bb"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1800.0
+        },
+        "environment": {
+          "build_timeout_sec": 900.0,
+          "cpus": 2,
+          "memory_mb": 8192,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 1800.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "protein-expression-analysis--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:a8bdd50149420d1d473cdeca20cb83c79f22b574309c139c8c331eff78d1d688",
+      "delivered_grading_or_measurement_image": "sha256:a8bdd50149420d1d473cdeca20cb83c79f22b574309c139c8c331eff78d1d688",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:829e9a303874cefb258a9b0643dc77cf5a383e6e1ca386d2fab94f3ae8136a3a",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/protein-expression-analysis--p3--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "bf41211b639f61e512875ca80ca3d590eab79762d149dc46aba5dfddc79f1906"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/native-variant-protein-p3-r1c/generic-package-self-refine-prepared-r1c.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/native-variant-protein-p3-r1c/generic-package-self-refine-prepared-r1c.json",
+        "sha256": "dada98feac331b41247718cdba90a88cd1f30b97f05c29a04be56919e6d59b5c"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1800.0
+        },
+        "environment": {
+          "build_timeout_sec": 900.0,
+          "cpus": 2,
+          "memory_mb": 8192,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 1800.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "r2r-mpc-control--p1--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:ac6e0a588eccdd4a14fe219254f805b3a7da1fdd107c494087989c7ac71cabcc",
+      "delivered_grading_or_measurement_image": "sha256:ac6e0a588eccdd4a14fe219254f805b3a7da1fdd107c494087989c7ac71cabcc",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:787e0e6a37cb832bce3818b2ba457b8049bb4ccc1d32dfaaaa6370802f21c8f1",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/r2r-mpc-control--p1--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "726ce07424d5d1994123a2ece66124db6166f3b38fc7a6511237b7c0bcaa0683"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/r2r-mpc-control--p1--dev-401/attempt-01.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/r2r-mpc-control--p1--dev-401/attempt-01.json",
+        "sha256": "ecc3a49efb3600e05fe8770eee7b91381ba3c7a50b276f9ecd17f5dfc6d5e915"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/data/amax/spark-repro/transfer-frozen-sources-V6dLhH/run_reviewed_transfer.py",
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/12d69aaa499f55477cfc7441d393adc1670faf59e7bcd25a062234c7ff76d086/run_reviewed_transfer.py"
+      ],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1200.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 4,
+          "gpus": 0,
+          "memory": "4G",
+          "storage": "5G"
+        },
+        "verifier": {
+          "timeout_sec": 1200.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "r2r-mpc-control--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:ac6e0a588eccdd4a14fe219254f805b3a7da1fdd107c494087989c7ac71cabcc",
+      "delivered_grading_or_measurement_image": "sha256:ac6e0a588eccdd4a14fe219254f805b3a7da1fdd107c494087989c7ac71cabcc",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:787e0e6a37cb832bce3818b2ba457b8049bb4ccc1d32dfaaaa6370802f21c8f1",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/r2r-mpc-control--p2--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "726ce07424d5d1994123a2ece66124db6166f3b38fc7a6511237b7c0bcaa0683"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/r2r-mpc-control--p2--dev-401/attempt-01.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/r2r-mpc-control--p2--dev-401/attempt-01.json",
+        "sha256": "69443ce3da83a192af1ce744951b0529024dc4c0bf4fc7190e4419ba53a1d9ce"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/dfc92bfb17344ab76f84fc3fe7fa4f301e141640cdbe4ac9df30588646d079c2/run_reviewed_transfer.py"
+      ],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1200.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 4,
+          "gpus": 0,
+          "memory": "4G",
+          "storage": "5G"
+        },
+        "verifier": {
+          "timeout_sec": 1200.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "r2r-mpc-control--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:ac6e0a588eccdd4a14fe219254f805b3a7da1fdd107c494087989c7ac71cabcc",
+      "delivered_grading_or_measurement_image": "sha256:ac6e0a588eccdd4a14fe219254f805b3a7da1fdd107c494087989c7ac71cabcc",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:787e0e6a37cb832bce3818b2ba457b8049bb4ccc1d32dfaaaa6370802f21c8f1",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/r2r-mpc-control--p3--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "726ce07424d5d1994123a2ece66124db6166f3b38fc7a6511237b7c0bcaa0683"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/r2r-mpc-control--p3--dev-401/attempt-01.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/r2r-mpc-control--p3--dev-401/attempt-01.json",
+        "sha256": "0bbb7b95eca3590acb5527bfc429774553e268e2bd682f573815bacb0dca5257"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/a371103cdaae2bffec633bf198e0ff08a4eacbcf29da8881c252fcbd0cd84fbc/run_reviewed_transfer.py"
+      ],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1200.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 4,
+          "gpus": 0,
+          "memory": "4G",
+          "storage": "5G"
+        },
+        "verifier": {
+          "timeout_sec": 1200.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "radar-vital-signs--p1--sr-ext-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:7b3b710d9f0efc6995a3adb4aa42f63ff5586db1de7fe222e92231f589436357",
+      "delivered_grading_or_measurement_image": "sha256:7b3b710d9f0efc6995a3adb4aa42f63ff5586db1de7fe222e92231f589436357",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:93ad9fd066e750e5888a3fc058d9a3f610e0738fc79c64f50a85d3a57b2beb58",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/radar-vital-signs--p1--sr-ext-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "5dafb3874d6b3b7df2ffe17c8207eefdf34e4dbae395446c6e4be4f9e502c948"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh20-source-plan-v2.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh20-source-plan-v2.json",
+        "sha256": "821cd8321cc8fc2d3d4a182ab8b7ccbb6fa5dd85aa34db600e3afb89be7c3ff2"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1200.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 1,
+          "gpus": 0,
+          "memory_mb": 2048,
+          "storage_mb": 5120
+        },
+        "verifier": {
+          "env": {},
+          "timeout_sec": 600.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "radar-vital-signs--p3--sr-ext-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:7b3b710d9f0efc6995a3adb4aa42f63ff5586db1de7fe222e92231f589436357",
+      "delivered_grading_or_measurement_image": "sha256:7b3b710d9f0efc6995a3adb4aa42f63ff5586db1de7fe222e92231f589436357",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:301a5d2bd3c12a616d83e84b880ce1ed87d30faf572f7c8d61a7cbbe038c33c4",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/radar-vital-signs--p3--sr-ext-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "5dafb3874d6b3b7df2ffe17c8207eefdf34e4dbae395446c6e4be4f9e502c948"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh20-source-plan-v2.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh20-source-plan-v2.json",
+        "sha256": "821cd8321cc8fc2d3d4a182ab8b7ccbb6fa5dd85aa34db600e3afb89be7c3ff2"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1200.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 1,
+          "gpus": 0,
+          "memory_mb": 2048,
+          "storage_mb": 5120
+        },
+        "verifier": {
+          "env": {},
+          "timeout_sec": 600.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "reserves-at-risk-calc--p1--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:16320073cc016d5780c81051ca566a7a8a2237dec1e25f6615bc9e900fbfe0be",
+      "delivered_grading_or_measurement_image": "sha256:16320073cc016d5780c81051ca566a7a8a2237dec1e25f6615bc9e900fbfe0be",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:47f2553b15b3aee34b03d7e9201a928c64fda6d8bef3488d3f160d64704cb617",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/reserves-at-risk-calc--p1--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "d0e2cbed777e5e1e2c1ca8018ef877bcfd66f027f42c4df6d276b5144e29be87"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/reserves-at-risk-calc--p1--dev-401/attempt-01.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/reserves-at-risk-calc--p1--dev-401/attempt-01.json",
+        "sha256": "d1984eef01090a81a540a1c4f052c46539a5496709803d6be01238aa4cbf2f4e"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/86cdccdfa45e1be9f04a126ffda65cb391ac0168edb784aeb4d44cbdfbc094c0/run_reviewed_transfer.py"
+      ],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 600.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 1,
+          "gpus": 0,
+          "memory_mb": 2048,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "env": {},
+          "timeout_sec": 600.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "reserves-at-risk-calc--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:310b87ac824a6b53a24fa104ebc37805a5120a154a754fc10fdcc8ea6e58f298",
+      "delivered_grading_or_measurement_image": "sha256:310b87ac824a6b53a24fa104ebc37805a5120a154a754fc10fdcc8ea6e58f298",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:f269915effe7b8058ec1bb7eff214400a672d4722ec9e2aa3b61e72428e97e43",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/reserves-at-risk-calc--p2--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "d0e2cbed777e5e1e2c1ca8018ef877bcfd66f027f42c4df6d276b5144e29be87"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/reserves-at-risk-calc--p2--dev-401/attempt-01.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/reserves-at-risk-calc--p2--dev-401/attempt-01.json",
+        "sha256": "66686137078132aafa717efd1d340bbf3003bd9f464805aaf670e79b5183acca"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/86cdccdfa45e1be9f04a126ffda65cb391ac0168edb784aeb4d44cbdfbc094c0/run_reviewed_transfer.py"
+      ],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 600.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 1,
+          "gpus": 0,
+          "memory_mb": 2048,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "env": {},
+          "timeout_sec": 600.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "reserves-at-risk-calc--p3--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:19b261fdc205af4d1fa885364d168b8f94c44f0a7d95af44ab199da758326c2e",
+      "delivered_grading_or_measurement_image": "sha256:19b261fdc205af4d1fa885364d168b8f94c44f0a7d95af44ab199da758326c2e",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:c8cb24ee46dab6667fdfd5b208049878175a0763cb4d573f82145021c54a911c",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/reserves-at-risk-calc--p3--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "d0e2cbed777e5e1e2c1ca8018ef877bcfd66f027f42c4df6d276b5144e29be87"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/reserves-at-risk-calc--p3--dev-401/attempt-01.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/manifests/reserves-at-risk-calc--p3--dev-401/attempt-01.json",
+        "sha256": "45273bc6e0c7dca48c55920c5980c9b6272532a3030db5a5010bcfd285d423ac"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/86cdccdfa45e1be9f04a126ffda65cb391ac0168edb784aeb4d44cbdfbc094c0/run_reviewed_transfer.py"
+      ],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 600.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 1,
+          "gpus": 0,
+          "memory_mb": 2048,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "env": {},
+          "timeout_sec": 600.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "threejs-to-obj--p2--dev-401",
+      "report_category": "independent_grader_environment",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:3ed589a2899caee4e781be5781ccc73c447fb96889b85c4047828ae62c81c0cd",
+      "delivered_grading_or_measurement_image": "sha256:3ed589a2899caee4e781be5781ccc73c447fb96889b85c4047828ae62c81c0cd",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:439ba44f4fa19fb8d9d5f8586b5d7fca5cedc466cd5bac354193f9cc00338662",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/threejs-to-obj--p2--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "f06fd54b6e34e5c4440dffd786c50a0a9f089cbfa5e9771f3cc45746d7a0ed68"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/native-variant-threejs-obj-p2-DRAFT-r1/generic-package-self-refine-prepared-r1.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/native-variant-threejs-obj-p2-DRAFT-r1/generic-package-self-refine-prepared-r1.json",
+        "sha256": "a8df24557ad1f413999108ed79e923fabb9285d0159737ce37b18775319824bc"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 300.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 600.0,
+          "cpus": 1,
+          "gpus": 0,
+          "memory_mb": 4096,
+          "storage_mb": 8192
+        },
+        "verifier": {
+          "env": {},
+          "timeout_sec": 300.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "exoplanet-detection-period--p3--dev-401",
+      "report_category": "external_grader_entry",
+      "resolution": "official_external_entry_and_actual_grader_export",
+      "original_grader_image": "sha256:c2ec3a0ef438c80bccc218d55025ac0ec45afb0b1e54ff28409d869e9c8cf8da",
+      "delivered_grading_or_measurement_image": "sha256:ec75d3c7acc431f9f5fad6776b29234f3dcd6d104c8be498b2de3508bdda3361",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:c2ec3a0ef438c80bccc218d55025ac0ec45afb0b1e54ff28409d869e9c8cf8da",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/exoplanet-detection-period--p3--dev-401",
+      "task_grader_dockerfile_present": false,
+      "official_task_entry": null,
+      "host_entry": "tools/grade_exoplanet_p3.py",
+      "external_or_host_source_entry": "/data/amax/spark-repro/transfer-frozen-sources-V6dLhH/grade_ready_exoplanet_p3.py:one",
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/runs/trace-native-correct-233-20261007-r1/launch_manifest.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/runs/trace-native-correct-233-20261007-r1/launch_manifest.json",
+        "sha256": "269bd30c02e03bde58613c7ad0d30eade197dac8261eac98f5d635d50210e15f"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/trace_batch_runner_bridge_r4.py"
+      ],
+      "deployment_mode": "stopped_output_external_pytest",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 3600.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 900.0,
+          "cpus": 1,
+          "gpus": 0,
+          "memory_mb": 8192,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "env": {},
+          "timeout_sec": 240.0
+        }
+      },
+      "special_interface": {
+        "host_entry": "tools/grade_exoplanet_p3.py",
+        "source_entry": "/data/amax/spark-repro/transfer-frozen-sources-V6dLhH/grade_ready_exoplanet_p3.py:one",
+        "capture_source": "/root/period.txt",
+        "capture_destination": "/capture/root/period.txt",
+        "private_mount": "/tests:ro",
+        "observer_mount": "/observer/jpg_phase_record.py:ro",
+        "logs_mount": "/logs:rw",
+        "workdir": "/tmp",
+        "network": "none",
+        "read_only_rootfs": true,
+        "cpus": 1,
+        "memory_mb": 8192,
+        "whole_verifier_timeout_sec": 240,
+        "command": [
+          "python3",
+          "-B",
+          "-m",
+          "pytest",
+          "-c",
+          "/dev/null",
+          "--rootdir=/tests",
+          "--confcutdir=/tests",
+          "-p",
+          "no:cacheprovider",
+          "-p",
+          "jpg_phase_record",
+          "--assert=plain",
+          "/tests/test_outputs.py"
+        ],
+        "environment": {
+          "PYTHONPATH": "/observer",
+          "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"
+        },
+        "reward_json": "<fresh run>/exoplanet-evaluation/result.json",
+        "valid_status": "valid",
+        "engineering_reward": null
+      },
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "exoplanet-detection-period--p1--dev-401",
+      "report_category": "existing_grader_recipe",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:dfcbe4c22f6f3abcd27b9dfb0ad7f13abd1c0f37748453853b604ac5216fbdac",
+      "delivered_grading_or_measurement_image": "sha256:dfcbe4c22f6f3abcd27b9dfb0ad7f13abd1c0f37748453853b604ac5216fbdac",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:a4edff18beb535c7e249c11fa8e6e8ac00a6bbd6498aedc033218df0cda2e743",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/exoplanet-detection-period--p1--dev-401",
+      "task_grader_dockerfile_present": true,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "f97a9f0fab0b36caa9b8be027277106b659eb9d2240caaa92e3e8c54e826d56e"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh-six-manifest.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh-six-manifest.json",
+        "sha256": "4392e1bbe3b9c0eec970c1c5f19475dba0dc84b1c838e6ff630c6e7c8fda7898"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "original_runner_and_registered_scorer",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 3600.0
+        },
+        "environment": {
+          "allow_internet": true,
+          "build_timeout_sec": 900.0,
+          "cpus": 1,
+          "gpus": 0,
+          "memory_mb": 8192,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "env": {},
+          "timeout_sec": 240.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "offer-letter-generator--p1--dev-401",
+      "report_category": "existing_grader_recipe",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:3a950e5226098efb8addd5c715634ec65779daa624482ed36e474021b10af3d5",
+      "delivered_grading_or_measurement_image": "sha256:3a950e5226098efb8addd5c715634ec65779daa624482ed36e474021b10af3d5",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:a1c8e787ca8182194ae70167bb040db1f13e69f59e1d7ceaa9b7b94225a66388",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/offer-letter-generator--p1--dev-401",
+      "task_grader_dockerfile_present": true,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "fe5b1f24e6da17f5917f0fd1a2bea45238144c87206c6a620c19511589f4c9be"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/native-variant-offer-p1-r1/generic-package-self-refine-prepared-r1.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/native-variant-offer-p1-r1/generic-package-self-refine-prepared-r1.json",
+        "sha256": "c9f0ea35578a181cfad0dc2b20ca3431514c823fa8b9817356a2ed9eb7041d43"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 900.0
+        },
+        "environment": {
+          "build_timeout_sec": 600.0,
+          "cpus": 1,
+          "memory_mb": 4096,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 900.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "offer-letter-generator--p2--dev-401",
+      "report_category": "existing_grader_recipe",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:f10edcb93f94cc1f2ea73e33f93769585bf478c697f6bb7909e0a90b3bacff29",
+      "delivered_grading_or_measurement_image": "sha256:f10edcb93f94cc1f2ea73e33f93769585bf478c697f6bb7909e0a90b3bacff29",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:392974dbd6b4973eabe0630c5a13b31f3249125404dc0d2402b9a3d980421524",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/offer-letter-generator--p2--dev-401",
+      "task_grader_dockerfile_present": true,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "fe5b1f24e6da17f5917f0fd1a2bea45238144c87206c6a620c19511589f4c9be"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/native-variant-offer-p2-r1/generic-package-self-refine-prepared-r1.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/native-variant-offer-p2-r1/generic-package-self-refine-prepared-r1.json",
+        "sha256": "05afc52ef88c692a4de0f772d660e02a698bfd34109de1d3023b9638e73743b5"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 900.0
+        },
+        "environment": {
+          "build_timeout_sec": 600.0,
+          "cpus": 1,
+          "memory_mb": 4096,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 900.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "paper-anonymizer--p2--dev-401",
+      "report_category": "existing_grader_recipe",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:ba84acf395a83a1d0e24fb0edcf8411fa45b5097cc7be44d39b0c016fa8822da",
+      "delivered_grading_or_measurement_image": "sha256:ba84acf395a83a1d0e24fb0edcf8411fa45b5097cc7be44d39b0c016fa8822da",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:8b577874fd0f19b47459035d9796b802af25a08cb9d69812705fb3a5429b2e34",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/paper-anonymizer--p2--dev-401",
+      "task_grader_dockerfile_present": true,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "f97a9f0fab0b36caa9b8be027277106b659eb9d2240caaa92e3e8c54e826d56e"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/skillrevise-variants-20260924-r1/prepared-manifests/paper-anonymizer--p2--dev-401/attempt-01.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/prepared-manifests/paper-anonymizer--p2--dev-401/attempt-01.json",
+        "sha256": "3ea96de7284bb00cae048d7404a79c6a561836e18f4c7ac2035e58bafc27db67"
+      },
+      "original_runner_package_paths": [
+        "runtime/original/home/amax/spark-native-work/skillrevise-variants-20260924-r1/code/c824ffa6804d5c1c7bacda6bda9cb9a56e9babc4827b376e575cf64f4cefbaed/run_reviewed_transfer.py"
+      ],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 1000.0
+        },
+        "environment": {
+          "build_timeout_sec": 300.0,
+          "cpus": 1,
+          "memory_mb": 4096,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 300.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "quantum-numerical-simulation--p1--dev-401",
+      "report_category": "existing_grader_recipe",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:c3b03fec281ed5786f4bbe8a49630a6fb553d182d7e0dafbd5e2efd33bbbdb01",
+      "delivered_grading_or_measurement_image": "sha256:c3b03fec281ed5786f4bbe8a49630a6fb553d182d7e0dafbd5e2efd33bbbdb01",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:ed4c12006b0006b8fbf7ca1baefe352149dabbb336c271142ee72d17eab7266a",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/quantum-numerical-simulation--p1--dev-401",
+      "task_grader_dockerfile_present": true,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "7dd5d3b0783b942ccd1f11a34d34ea1df9c9555832a3a698723eb72026570544"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh20-source-plan-v2.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh20-source-plan-v2.json",
+        "sha256": "821cd8321cc8fc2d3d4a182ab8b7ccbb6fa5dd85aa34db600e3afb89be7c3ff2"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 7200.0
+        },
+        "environment": {
+          "build_timeout_sec": 600.0,
+          "cpus": 8,
+          "memory_mb": 10240,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 240.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    },
+    {
+      "variant_id": "quantum-numerical-simulation--p2--dev-401",
+      "report_category": "existing_grader_recipe",
+      "resolution": "original_image_export",
+      "original_grader_image": "sha256:c3b03fec281ed5786f4bbe8a49630a6fb553d182d7e0dafbd5e2efd33bbbdb01",
+      "delivered_grading_or_measurement_image": "sha256:c3b03fec281ed5786f4bbe8a49630a6fb553d182d7e0dafbd5e2efd33bbbdb01",
+      "grader_image_archive": "variant-environments-20261012.tar.zst",
+      "grader_image_archive_sha256": "0d2ad8e5ef5695646a3eaa07b183afb688d711833e6e1c1f1c205a328d30f871",
+      "solver_image": "sha256:ed4c12006b0006b8fbf7ca1baefe352149dabbb336c271142ee72d17eab7266a",
+      "solver_image_archive": "variant-environments-20261012.tar.zst",
+      "task_archive": "variant-tasks-233-20261010.tar.gz",
+      "task_archive_root": "variant-tasks-233-20261010/tasks/quantum-numerical-simulation--p2--dev-401",
+      "task_grader_dockerfile_present": true,
+      "official_task_entry": {
+        "task_relative_path": "private/grader/test.sh",
+        "sha256": "7dd5d3b0783b942ccd1f11a34d34ea1df9c9555832a3a698723eb72026570544"
+      },
+      "host_entry": null,
+      "external_or_host_source_entry": null,
+      "authoritative_source_manifest": {
+        "original_path": "/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh20-source-plan-v2.json",
+        "package_path": "runtime/original/home/amax/spark-native-work/self-evo-skillsbench-20260926-r1/server_queue/skilllearn-233-recovery-20261008-r1/fresh20-source-plan-v2.json",
+        "sha256": "821cd8321cc8fc2d3d4a182ab8b7ccbb6fa5dd85aa34db600e3afb89be7c3ff2"
+      },
+      "original_runner_package_paths": [],
+      "deployment_mode": "original_runner_integrated_grader",
+      "budgets": {
+        "agent": {
+          "timeout_sec": 7200.0
+        },
+        "environment": {
+          "build_timeout_sec": 600.0,
+          "cpus": 8,
+          "memory_mb": 10240,
+          "storage_mb": 10240
+        },
+        "verifier": {
+          "timeout_sec": 240.0
+        }
+      },
+      "special_interface": {},
+      "deployment_index": "DEPLOYMENT-233.json",
+      "entrypoint_index": "ENTRYPOINTS-233.json",
+      "status": "DELIVERED_AND_INDEX_MATCHED"
+    }
+  ]
+}

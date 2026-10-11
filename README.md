@@ -13,6 +13,7 @@
 - [部署补充 Release](https://github.com/RocXOvO/SkillsBench-Variants/releases/tag/deployment-supplement-20261012)：完整镜像导出、原运行器及依赖、固定 CLI、特殊评分入口和部署索引。
 - [交接与运行说明](variants/infra/README.md)：文件分布、下载、路径恢复、Linux 环境准备和评分协议。接手跑实验从这里开始。
 - [缺失清单逐项对应](variants/infra/metadata/REPORT-COVERAGE.json)：报告明确列出的 57 项和全部 233 项部署材料。
+- [缺失清单交付对照表](variants/infra/docs/MISSING-FILES-ALIGNMENT.md)：按原报告逐项列出镜像所在包、评分入口与交付方案，配套完整 ID 和 SHA256 核查记录。
 
 部署补充按原报告覆盖整个 233 批：48 项缺 grader 配方提供可执行评分镜像；TF-IDF P1/P2 明确为宿主机评分，并提供准确测量环境和启动工具；exoplanet P3 提供原目录外评分入口。报告未附完整 205 项计划，交付采用全 233 项覆盖，接入方可按已有冻结 skill 范围选取。
 
