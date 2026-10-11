@@ -1,0 +1,113 @@
+{
+  "server": "amax70 (219.223.251.70)",
+  "four_method_batch": {
+    "variants": 233,
+    "methods": [
+      "Generic",
+      "SkillLearn",
+      "Trace",
+      "SkillRevise"
+    ],
+    "source_tasks": 81,
+    "per_perturbation": {
+      "p1": 81,
+      "p2": 71,
+      "p3": 81
+    },
+    "public_build_context_layout": [
+      {
+        "variant_id": "edit-pdf--p1--sr-ext-401",
+        "dockerfile": "public/Dockerfile",
+        "build_context": "public/"
+      },
+      {
+        "variant_id": "edit-pdf--p2--sr-ext-401",
+        "dockerfile": "public/Dockerfile",
+        "build_context": "public/"
+      },
+      {
+        "variant_id": "edit-pdf--p3--sr-ext-401",
+        "dockerfile": "public/Dockerfile",
+        "build_context": "public/"
+      },
+      {
+        "variant_id": "radar-vital-signs--p1--sr-ext-401",
+        "dockerfile": "public/Dockerfile",
+        "build_context": "public/"
+      },
+      {
+        "variant_id": "radar-vital-signs--p3--sr-ext-401",
+        "dockerfile": "public/Dockerfile",
+        "build_context": "public/"
+      }
+    ]
+  },
+  "historical_three_method_batch": {
+    "variants": 222,
+    "methods": [
+      "CoEvoSkills",
+      "SPARK",
+      "SkillEvolver"
+    ],
+    "source_tasks": 77,
+    "per_perturbation": {
+      "p1": 77,
+      "p2": 68,
+      "p3": 77
+    }
+  },
+  "id_membership_comparison": {
+    "shared_ids": 213,
+    "only_four_method_233": [
+      "bike-rebalance--p1--sr-ext-401",
+      "bike-rebalance--p2--sr-ext-401",
+      "bike-rebalance--p3--sr-ext-401",
+      "edit-pdf--p1--sr-ext-401",
+      "edit-pdf--p2--sr-ext-401",
+      "edit-pdf--p3--sr-ext-401",
+      "energy-unit-commitment--p1--sr-ext-401",
+      "energy-unit-commitment--p2--sr-ext-401",
+      "energy-unit-commitment--p3--sr-ext-401",
+      "parallel-tfidf-search--p1--dev-401",
+      "parallel-tfidf-search--p2--dev-401",
+      "parallel-tfidf-search--p3--dev-401",
+      "paratransit-routing--p1--sr-ext-401",
+      "paratransit-routing--p2--sr-ext-401",
+      "paratransit-routing--p3--sr-ext-401",
+      "radar-vital-signs--p1--sr-ext-401",
+      "radar-vital-signs--p3--sr-ext-401",
+      "software-dependency-audit--p1--dev-401",
+      "software-dependency-audit--p2--dev-401",
+      "software-dependency-audit--p3--dev-401"
+    ],
+    "only_historical_222": [
+      "gh-repo-analytics--p1--dev-401",
+      "gh-repo-analytics--p2--dev-401",
+      "gh-repo-analytics--p3--dev-401",
+      "speaker-diarization-subtitles--p1--dev-401",
+      "speaker-diarization-subtitles--p2--dev-401",
+      "speaker-diarization-subtitles--p3--dev-401",
+      "trend-anomaly-causal-inference--p1--dev-401",
+      "trend-anomaly-causal-inference--p2--dev-401",
+      "trend-anomaly-causal-inference--p3--dev-401"
+    ],
+    "same_id_does_not_certify_same_package_version": true
+  },
+  "archive_contents": "Task source files and assets only. Historical source tests/solutions are retained where available. Task packages are not new experimental results.",
+  "historical_result_counts": {
+    "coevoskills": 221,
+    "spark": 221,
+    "skillevolver": 222,
+    "no_skill": 222
+  },
+  "historical_excluded_condition_cells": [
+    {
+      "variant_id": "pg-essay-to-audiobook--p3--dev-401",
+      "condition": "coevoskills"
+    },
+    {
+      "variant_id": "pg-essay-to-audiobook--p3--dev-401",
+      "condition": "spark"
+    }
+  ]
+}

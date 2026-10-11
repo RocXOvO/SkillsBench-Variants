@@ -1,0 +1,19 @@
+{
+  "archive": "/Users/duchongyang/Documents/ICLR/output/variant-packages-20261011/variant-tasks-222-20261011.tar.gz",
+  "archive_sha256": "ad453d35fac186596db0ea91c94eb3606e5131f466be18a23fbe54ed6dbbc388",
+  "archive_bytes": 5487309013,
+  "manifest": "/Users/duchongyang/Documents/ICLR/output/variant-packages-20261011/MANIFEST-222.json",
+  "manifest_sha256": "9d1f831f7858275dc35e91423de4e7ee5eb67a42390ebeaa7952ad1c92a7f601",
+  "variant_count": 222,
+  "logical_files_verified": 12086,
+  "expected_file_count": 12086,
+  "archive_extra_metadata_members": [
+    "variant-tasks-222/MANIFEST.json",
+    "variant-tasks-222/README.txt"
+  ],
+  "mode_mismatches": [],
+  "forbidden_credential_filenames": [],
+  "high_confidence_credential_matches": [],
+  "validated_source_metadata_amendments": [],
+  "status": "VERIFIED"
+}
